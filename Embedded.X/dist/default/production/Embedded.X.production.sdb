@@ -1,0 +1,62 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F884 ]
+[d frameptr 6 ]
+"60 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+[e E36 . `uc
+TETRIS_UNIT_HEIGHT 4
+]
+"113
+[e E279 . `uc
+TETRIS_NUM_UNITS 2
+]
+"52
+[v _Tetris_PlayerTopmostY Tetris_PlayerTopmostY `(uc  1 s 1 Tetris_PlayerTopmostY ]
+"57
+[v _Tetris_PlayerOverlapsEnvironment Tetris_PlayerOverlapsEnvironment `(uc  1 s 1 Tetris_PlayerOverlapsEnvironment ]
+"69
+[v _Tetris_PlayerTouchingLeftBound Tetris_PlayerTouchingLeftBound `(uc  1 s 1 Tetris_PlayerTouchingLeftBound ]
+"80
+[v _Tetris_PlayerTouchingRightBound Tetris_PlayerTouchingRightBound `(uc  1 s 1 Tetris_PlayerTouchingRightBound ]
+"91
+[v _Tetris_RemovePlayerFromTable Tetris_RemovePlayerFromTable `(v  1 s 1 Tetris_RemovePlayerFromTable ]
+"100
+[v _Tetris_ApplyPlayerToTable Tetris_ApplyPlayerToTable `(v  1 s 1 Tetris_ApplyPlayerToTable ]
+"109
+[v _Tetris_SelectRandomPlayerUnit Tetris_SelectRandomPlayerUnit `(v  1 s 1 Tetris_SelectRandomPlayerUnit ]
+"121
+[v _Tetris_ResetPlayer Tetris_ResetPlayer `(v  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
+[v _memset memset `(*.1v  1 e 1 0 ]
+"12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+[v _rand rand `(i  1 e 2 0 ]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c
+[v ___bmul __bmul `(uc  1 e 1 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"5 C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+[v _main main `(v  1 e 1 0 ]
+[s S22 . 2 `uc 1 x 1 0 `uc 1 y 1 1 ]
+"11 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+[v _Tetris_unitPivot Tetris_unitPivot `DCS22  1 s 2 Tetris_unitPivot ]
+"16
+[v _Tetris_playerStartingPosition Tetris_playerStartingPosition `DCS22  1 s 2 Tetris_playerStartingPosition ]
+[s S26 . 33 `uc 1 numRotations 1 0 `[4][4]ui 1 bits 32 1 ]
+"21
+[v _Tetris_units Tetris_units `DC[2]S26  1 s 66 Tetris_units ]
+"5 C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"8
+} 0

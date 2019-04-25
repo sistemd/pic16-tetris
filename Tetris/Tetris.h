@@ -1,0 +1,59 @@
+#pragma once
+
+#include <stdint.h>
+
+enum
+{
+	TETRIS_MAX_ROTATIONS = 4,
+};
+
+typedef enum {
+	TETRIS_TABLE_WIDTH = 16,
+	TETRIS_TABLE_HEIGHT = 32,
+} Tetris_TableSize;
+
+typedef enum
+{
+	TETRIS_UNIT_HEIGHT = 4,
+} Tetris_UnitSize;
+
+typedef struct {
+	uint8_t x;
+	uint8_t y;
+} Position;
+
+typedef struct {
+	uint8_t numRotations;
+	uint16_t bits[TETRIS_UNIT_HEIGHT][TETRIS_MAX_ROTATIONS];
+} Tetris_Unit;
+
+typedef struct {
+	Position position;
+	const Tetris_Unit *unit;
+	uint16_t unitBits[TETRIS_UNIT_HEIGHT];
+	uint8_t rotation;
+} Tetris_Player;
+/*
+  unitBits is kept in sync with position.x and allows for
+  easier and faster environment overlap checking.
+*/
+
+typedef struct {
+	uint16_t table[TETRIS_TABLE_HEIGHT];
+	Tetris_Player player;
+	uint16_t currentScore;
+} Tetris_Game;
+
+extern const Tetris_Unit *Tetris_GetRandomUnit(void);
+
+extern const Tetris_Unit *Tetris_GetUnit(char designator);
+
+extern void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit);
+
+extern void Tetris_Update(Tetris_Game *game);
+
+extern void Tetris_MovePlayerLeft(Tetris_Game *game);
+
+extern void Tetris_MovePlayerRight(Tetris_Game *game);
+
+extern void Tetris_RotatePlayer(Tetris_Game *game);
