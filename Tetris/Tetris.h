@@ -52,6 +52,9 @@ extern void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit);
 
 extern void Tetris_Update(Tetris_Game *game);
 
+// This is mostly exposed to be testable, not really useful as part of the interface
+extern uint8_t Tetris_MovePlayerDown(Tetris_Game *game);
+
 extern void Tetris_MovePlayerLeft(Tetris_Game *game);
 
 extern void Tetris_MovePlayerRight(Tetris_Game *game);

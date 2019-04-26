@@ -37,8 +37,9 @@
     <ClInclude Include="CUnit\Headers\TestDB.h" />
     <ClInclude Include="CUnit\Headers\TestRun.h" />
     <ClInclude Include="CUnit\Headers\Util.h" />
+    <ClInclude Include="TableEquality.h" />
     <ClInclude Include="MovementTests.h" />
-    <ClInclude Include="TestRotation.h" />
+    <ClInclude Include="RotationTests.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

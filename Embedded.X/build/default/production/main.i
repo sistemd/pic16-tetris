@@ -152,9 +152,9 @@ enum
 };
 
 typedef enum {
- TETRIS_WIDTH = 16,
- TETRIS_HEIGHT = 32,
-} Tetris_GameSize;
+ TETRIS_TABLE_WIDTH = 16,
+ TETRIS_TABLE_HEIGHT = 32,
+} Tetris_TableSize;
 
 typedef enum
 {
@@ -173,7 +173,7 @@ typedef struct {
 
 typedef struct {
  Position position;
- Tetris_Unit const *unit;
+ const Tetris_Unit *unit;
  uint16_t unitBits[TETRIS_UNIT_HEIGHT];
  uint8_t rotation;
 } Tetris_Player;
@@ -183,12 +183,16 @@ typedef struct {
 
 
 typedef struct {
- uint16_t table[TETRIS_HEIGHT];
+ uint16_t table[TETRIS_TABLE_HEIGHT];
  Tetris_Player player;
  uint16_t currentScore;
 } Tetris_Game;
 
-extern void Tetris_ResetGame(Tetris_Game *game);
+extern const Tetris_Unit *Tetris_GetRandomUnit(void);
+
+extern const Tetris_Unit *Tetris_GetUnit(char designator);
+
+extern void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit);
 
 extern void Tetris_Update(Tetris_Game *game);
 
@@ -2689,5 +2693,8 @@ extern __bank0 __bit __timeout;
 
 void main(void)
 {
-    static Tetris_Game game1;
+    Tetris_Game game;
+    Tetris_ResetGame(&game, Tetris_GetRandomUnit());
+    Tetris_MovePlayerLeft(&game);
+    Tetris_RotatePlayer(&game);
 }

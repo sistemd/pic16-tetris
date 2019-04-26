@@ -5,7 +5,7 @@
 
 enum
 {
-	TETRIS_NUM_UNITS = 2,
+	TETRIS_NUM_UNITS = 3,
 };
 
 static Position const Tetris_unitPivot = {
@@ -44,6 +44,35 @@ static Tetris_Unit const Tetris_units[TETRIS_NUM_UNITS] = {
 				0b00011000,
 				0b00011000,
 				0b00000000,
+			},
+		},
+	},
+	{
+		.numRotations = 4,
+		.bits = {
+			{
+				0b00000000,
+				0b00010000,
+				0b00111000,
+				0b00000000,
+			},
+			{
+				0b00000000,
+				0b00010000,
+				0b00011000,
+				0b00010000,
+			},
+			{
+				0b00000000,
+				0b00000000,
+				0b00111000,
+				0b00010000,
+			},
+			{
+				0b00000000,
+				0b00010000,
+				0b00110000,
+				0b00010000,
 			},
 		},
 	},
@@ -106,15 +135,51 @@ static void Tetris_ApplyPlayerToTable(Tetris_Game *game)
 	}
 }
 
-static void Tetris_SetPlayerUnit(Tetris_Player *player, const Tetris_Unit *unit)
+static uint8_t Tetris_CountUnitBits(const uint16_t *unitBits)
 {
-	uint8_t shift = Tetris_playerStartingPosition.x - Tetris_unitPivot.x;
-	player->unit = unit;
+	uint8_t result = 0;
 	for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
 	{
-		player->unitBits[i] = player->unit->bits[0][i];
-		player->unitBits[i] <<= 8 - shift;
+		uint16_t mask = 1;
+		for (uint8_t j = 0; j < 16; ++j)
+		{
+			if (unitBits[i] & mask)
+				++result;
+			mask <<= 1;
+		}
 	}
+	return result;
+}
+
+static void Tetris_UpdatePlayerUnitBits(Tetris_Player *player)
+{
+	for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
+		player->unitBits[i] = player->unit->bits[player->rotation][i];
+
+	int8_t shift = 8 - player->position.x + Tetris_unitPivot.x;
+
+	if (shift > 0)
+	{
+		for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
+			player->unitBits[i] <<= shift;
+	}
+	else
+	{
+		shift = -shift;
+		for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
+			player->unitBits[i] >>= shift;
+	}
+}
+
+static uint8_t Tetris_PlayerUnitBitsAreValid(const Tetris_Player *player)
+{
+	return Tetris_CountUnitBits(player->unit->bits[player->rotation]) == Tetris_CountUnitBits(player->unitBits);
+}
+
+static void Tetris_SetPlayerUnit(Tetris_Player *player, const Tetris_Unit *unit)
+{
+	player->unit = unit;
+	Tetris_UpdatePlayerUnitBits(player);
 }
 
 static void Tetris_ResetPlayer(Tetris_Player *player, const Tetris_Unit *playerUnit)
@@ -136,6 +201,7 @@ const Tetris_Unit *Tetris_GetUnit(char designator)
 	{
 	case 'I': return Tetris_units + 0;
 	case 'O': return Tetris_units + 1;
+	case 'T': return Tetris_units + 2;
 	}
 
 	return NULL;
@@ -151,6 +217,20 @@ void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit)
 void Tetris_Update(Tetris_Game *game)
 {
 
+}
+
+uint8_t Tetris_MovePlayerDown(Tetris_Game *game)
+{
+	Tetris_RemovePlayerFromTable(game);
+	++game->player.position.y;
+	if (Tetris_PlayerOverlapsEnvironment(game))
+	{
+		--game->player.position.y;
+		Tetris_ApplyPlayerToTable(game);
+		return 0;
+	}
+	Tetris_ApplyPlayerToTable(game);
+	return 1;
 }
 
 void Tetris_MovePlayerLeft(Tetris_Game *game)
@@ -202,7 +282,16 @@ void Tetris_MovePlayerRight(Tetris_Game *game)
 void Tetris_RotatePlayer(Tetris_Game *game)
 {
 	Tetris_RemovePlayerFromTable(game);
+
+	uint8_t oldRotation = game->player.rotation;
 	++game->player.rotation;
 	game->player.rotation %= game->player.unit->numRotations;
+	Tetris_UpdatePlayerUnitBits(&game->player);
+	if (!Tetris_PlayerUnitBitsAreValid(&game->player) || Tetris_PlayerOverlapsEnvironment(game))
+	{
+		game->player.rotation = oldRotation;
+		Tetris_UpdatePlayerUnitBits(&game->player);
+	}
+
 	Tetris_ApplyPlayerToTable(game);
 }

@@ -1,451 +1,2726 @@
 
 
 Microchip MPLAB XC8 Assembler V2.05 build -831301201 
-                                                                                               Thu Apr 25 21:12:26 2019
+                                                                                               Fri Apr 26 21:37:52 2019
 
 Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
      1                           	processor	16F884
      2                           	opt	pw 120
      3                           	opt	flic
-     4                           	psect	idataCOMMON,global,class=CODE,delta=2
+     4                           	psect	idataBANK0,global,class=CODE,delta=2
      5                           	psect	strings,global,class=STRING,delta=2
      6                           	psect	cinit,global,class=CODE,merge=1,delta=2
-     7                           	psect	dataCOMMON,global,class=COMMON,space=1,delta=1
-     8                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1
-     9                           	psect	clrtext,global,class=CODE,delta=2
-    10                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+     7                           	psect	dataBANK0,global,class=BANK0,space=1,delta=1
+     8                           	psect	cstackBANK1,global,class=BANK1,space=1,delta=1
+     9                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1
+    10                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1
     11                           	psect	maintext,global,class=CODE,split=1,delta=2
-    12                           	dabs	1,0x7E,2
-    13  0000                     
-    14                           ; Version 2.05
-    15                           ; Generated 20/12/2018 GMT
-    16                           ; 
-    17                           ; Copyright © 2018, Microchip Technology Inc. and its subsidiaries ("Microchip")
-    18                           ; All rights reserved.
-    19                           ; 
-    20                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+    12                           	psect	text1,local,class=CODE,merge=1,delta=2
+    13                           	psect	text2,local,class=CODE,merge=1,delta=2,group=1
+    14                           	psect	text3,local,class=CODE,merge=1,delta=2
+    15                           	psect	text4,local,class=CODE,merge=1,delta=2
+    16                           	psect	text5,local,class=CODE,merge=1,delta=2
+    17                           	psect	text6,local,class=CODE,merge=1,delta=2,group=2
+    18                           	psect	text7,local,class=CODE,merge=1,delta=2
+    19                           	psect	text8,local,class=CODE,merge=1,delta=2
+    20                           	psect	text9,local,class=CODE,merge=1,delta=2
+    21                           	psect	text10,local,class=CODE,merge=1,delta=2
+    22                           	psect	text11,local,class=CODE,merge=1,delta=2
+    23                           	psect	text12,local,class=CODE,merge=1,delta=2
+    24                           	psect	text13,local,class=CODE,merge=1,delta=2
+    25                           	psect	text14,local,class=CODE,merge=1,delta=2
+    26                           	psect	text15,local,class=CODE,merge=1,delta=2
+    27                           	psect	text16,local,class=CODE,merge=1,delta=2
+    28                           	psect	text17,local,class=CODE,merge=1,delta=2,group=2
+    29                           	psect	text18,local,class=CODE,merge=1,delta=2,group=1
+    30                           	psect	text19,local,class=CODE,merge=1,delta=2,group=1
+    31                           	dabs	1,0x7E,2
+    32  0000                     
+    33                           ; Version 2.05
+    34                           ; Generated 20/12/2018 GMT
+    35                           ; 
+    36                           ; Copyright © 2018, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    37                           ; All rights reserved.
+    38                           ; 
+    39                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
       +                          ip").
-    21                           ; 
-    22                           ; Redistribution and use in source and binary forms, with or without modification, are
-    23                           ; permitted provided that the following conditions are met:
-    24                           ; 
-    25                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
-      +                          t of
-    26                           ;        conditions and the following disclaimer.
-    27                           ; 
-    28                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
-      +                          list
-    29                           ;        of conditions and the following disclaimer in the documentation and/or other
-    30                           ;        materials provided with the distribution.
-    31                           ; 
-    32                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
-      +                          is
-    33                           ;        software without specific prior written permission.
-    34                           ; 
-    35                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
-    36                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
-      +                          OR
-    37                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
-      +                          T,
-    38                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
-    39                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
-    40                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
-      +                          RICT
-    41                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
-      +                          SE OF
-    42                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    40                           ; 
+    41                           ; Redistribution and use in source and binary forms, with or without modification, are
+    42                           ; permitted provided that the following conditions are met:
     43                           ; 
-    44                           ; 
-    45                           ; Code-generator required, PIC16F884 Definitions
+    44                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    45                           ;        conditions and the following disclaimer.
     46                           ; 
-    47                           ; SFR Addresses
-    48  0000                     	;# 
-    49  0001                     	;# 
-    50  0002                     	;# 
-    51  0003                     	;# 
-    52  0004                     	;# 
-    53  0005                     	;# 
-    54  0006                     	;# 
-    55  0007                     	;# 
-    56  0008                     	;# 
-    57  0009                     	;# 
-    58  000A                     	;# 
-    59  000B                     	;# 
-    60  000C                     	;# 
-    61  000D                     	;# 
-    62  000E                     	;# 
-    63  000E                     	;# 
-    64  000F                     	;# 
-    65  0010                     	;# 
-    66  0011                     	;# 
-    67  0012                     	;# 
-    68  0013                     	;# 
-    69  0014                     	;# 
-    70  0015                     	;# 
-    71  0015                     	;# 
-    72  0016                     	;# 
-    73  0017                     	;# 
-    74  0018                     	;# 
-    75  0019                     	;# 
-    76  001A                     	;# 
-    77  001B                     	;# 
-    78  001B                     	;# 
-    79  001C                     	;# 
-    80  001D                     	;# 
-    81  001E                     	;# 
-    82  001F                     	;# 
-    83  0081                     	;# 
-    84  0085                     	;# 
-    85  0086                     	;# 
-    86  0087                     	;# 
-    87  0088                     	;# 
-    88  0089                     	;# 
-    89  008C                     	;# 
-    90  008D                     	;# 
-    91  008E                     	;# 
-    92  008F                     	;# 
-    93  0090                     	;# 
-    94  0091                     	;# 
-    95  0092                     	;# 
-    96  0093                     	;# 
-    97  0093                     	;# 
-    98  0093                     	;# 
-    99  0094                     	;# 
-   100  0095                     	;# 
-   101  0096                     	;# 
-   102  0097                     	;# 
-   103  0098                     	;# 
-   104  0099                     	;# 
-   105  009A                     	;# 
-   106  009B                     	;# 
-   107  009C                     	;# 
-   108  009D                     	;# 
-   109  009E                     	;# 
-   110  009F                     	;# 
-   111  0105                     	;# 
-   112  0107                     	;# 
-   113  0108                     	;# 
-   114  0109                     	;# 
-   115  010C                     	;# 
-   116  010C                     	;# 
-   117  010D                     	;# 
-   118  010E                     	;# 
-   119  010F                     	;# 
-   120  0185                     	;# 
-   121  0187                     	;# 
-   122  0188                     	;# 
-   123  0189                     	;# 
-   124  018C                     	;# 
-   125  018D                     	;# 
-   126  0000                     	;# 
-   127  0001                     	;# 
-   128  0002                     	;# 
-   129  0003                     	;# 
-   130  0004                     	;# 
-   131  0005                     	;# 
-   132  0006                     	;# 
-   133  0007                     	;# 
-   134  0008                     	;# 
-   135  0009                     	;# 
-   136  000A                     	;# 
-   137  000B                     	;# 
-   138  000C                     	;# 
-   139  000D                     	;# 
-   140  000E                     	;# 
-   141  000E                     	;# 
-   142  000F                     	;# 
-   143  0010                     	;# 
-   144  0011                     	;# 
-   145  0012                     	;# 
-   146  0013                     	;# 
-   147  0014                     	;# 
-   148  0015                     	;# 
-   149  0015                     	;# 
-   150  0016                     	;# 
-   151  0017                     	;# 
-   152  0018                     	;# 
-   153  0019                     	;# 
-   154  001A                     	;# 
-   155  001B                     	;# 
-   156  001B                     	;# 
-   157  001C                     	;# 
-   158  001D                     	;# 
-   159  001E                     	;# 
-   160  001F                     	;# 
-   161  0081                     	;# 
-   162  0085                     	;# 
-   163  0086                     	;# 
-   164  0087                     	;# 
-   165  0088                     	;# 
-   166  0089                     	;# 
-   167  008C                     	;# 
-   168  008D                     	;# 
-   169  008E                     	;# 
-   170  008F                     	;# 
-   171  0090                     	;# 
-   172  0091                     	;# 
-   173  0092                     	;# 
-   174  0093                     	;# 
-   175  0093                     	;# 
-   176  0093                     	;# 
-   177  0094                     	;# 
-   178  0095                     	;# 
-   179  0096                     	;# 
-   180  0097                     	;# 
-   181  0098                     	;# 
-   182  0099                     	;# 
-   183  009A                     	;# 
-   184  009B                     	;# 
-   185  009C                     	;# 
-   186  009D                     	;# 
-   187  009E                     	;# 
-   188  009F                     	;# 
-   189  0105                     	;# 
-   190  0107                     	;# 
-   191  0108                     	;# 
-   192  0109                     	;# 
-   193  010C                     	;# 
-   194  010C                     	;# 
-   195  010D                     	;# 
-   196  010E                     	;# 
-   197  010F                     	;# 
-   198  0185                     	;# 
-   199  0187                     	;# 
-   200  0188                     	;# 
-   201  0189                     	;# 
-   202  018C                     	;# 
-   203  018D                     	;# 
-   204                           
-   205                           	psect	idataCOMMON
-   206  07DB                     __pidataCOMMON:	
-   207                           
-   208                           ;initializer for _randx
-   209  07DB  3401               	retlw	1
-   210  07DC  3400               	retlw	0
-   211  07DD  3400               	retlw	0
-   212  07DE  3400               	retlw	0
-   213                           
-   214                           	psect	strings
-   215  0002                     __pstrings:	
-   216  0002                     stringtab:	
-   217  0002                     __stringtab:	
-   218  0002                     stringcode:	
-   219                           ;	String table - string pointers are 1 byte each
-   220                           
-   221  0002                     stringdir:	
-   222  0002  3000               	movlw	high stringdir
-   223  0003  008A               	movwf	10
-   224  0004  0804               	movf	4,w
-   225  0005  0A84               	incf	4,f
-   226  0006  0782               	addwf	2,f
-   227  0007                     __stringbase:	
-   228  0007  3400               	retlw	0
-   229  0008                     __end_of__stringtab:	
-   230  0008                     _Tetris_playerStartingPosition:	
-   231  0008  3408               	retlw	8
-   232  0009  3402               	retlw	2
-   233  000A                     __end_of_Tetris_playerStartingPosition:	
-   234  000A                     _Tetris_unitPivot:	
-   235  000A  3403               	retlw	3
-   236  000B  3402               	retlw	2
-   237  000C                     __end_of_Tetris_unitPivot:	
-   238  000C                     _Tetris_units:	
-   239  000C  3402               	retlw	2
-   240  000D  3410               	retlw	16
-   241  000E  3400               	retlw	0
-   242  000F  3410               	retlw	16
-   243  0010  3400               	retlw	0
-   244  0011  3410               	retlw	16
-   245  0012  3400               	retlw	0
-   246  0013  3410               	retlw	16
-   247  0014  3400               	retlw	0
-   248  0015  3400               	retlw	0
-   249  0016  3400               	retlw	0
-   250  0017  3400               	retlw	0
-   251  0018  3400               	retlw	0
-   252  0019  343C               	retlw	60
-   253  001A  3400               	retlw	0
-   254  001B  3400               	retlw	0
-   255  001C  3400               	retlw	0
-   256  001D  3400               	retlw	0
-   257  001E  3400               	retlw	0
-   258  001F  3400               	retlw	0
-   259  0020  3400               	retlw	0
-   260  0021  3400               	retlw	0
-   261  0022  3400               	retlw	0
-   262  0023  3400               	retlw	0
-   263  0024  3400               	retlw	0
-   264  0025  3400               	retlw	0
-   265  0026  3400               	retlw	0
-   266  0027  3400               	retlw	0
-   267  0028  3400               	retlw	0
-   268  0029  3400               	retlw	0
-   269  002A  3400               	retlw	0
-   270  002B  3400               	retlw	0
-   271  002C  3400               	retlw	0
-   272  002D  3401               	retlw	1
-   273  002E  3400               	retlw	0
-   274  002F  3400               	retlw	0
-   275  0030  3418               	retlw	24
-   276  0031  3400               	retlw	0
-   277  0032  3418               	retlw	24
-   278  0033  3400               	retlw	0
-   279  0034  3400               	retlw	0
-   280  0035  3400               	retlw	0
-   281  0036  3400               	retlw	0
-   282  0037  3400               	retlw	0
-   283  0038  3400               	retlw	0
-   284  0039  3400               	retlw	0
-   285  003A  3400               	retlw	0
-   286  003B  3400               	retlw	0
-   287  003C  3400               	retlw	0
-   288  003D  3400               	retlw	0
-   289  003E  3400               	retlw	0
-   290  003F  3400               	retlw	0
-   291  0040  3400               	retlw	0
-   292  0041  3400               	retlw	0
-   293  0042  3400               	retlw	0
-   294  0043  3400               	retlw	0
-   295  0044  3400               	retlw	0
-   296  0045  3400               	retlw	0
-   297  0046  3400               	retlw	0
-   298  0047  3400               	retlw	0
-   299  0048  3400               	retlw	0
-   300  0049  3400               	retlw	0
-   301  004A  3400               	retlw	0
-   302  004B  3400               	retlw	0
-   303  004C  3400               	retlw	0
-   304  004D  3400               	retlw	0
-   305  004E                     __end_of_Tetris_units:	
-   306                           
-   307                           	psect	cinit
-   308  07E7                     start_initialization:	
-   309                           ; #config settings
-   310                           
-   311  07E7                     __initialization:	
-   312                           
-   313                           ; Initialize objects allocated to COMMON
-   314  07E7  118A  27DB  118A   	fcall	__pidataCOMMON	;fetch initializer
-   315  07EA  00F0               	movwf	__pdataCOMMON& (0+127)
-   316  07EB  118A  27DC  118A   	fcall	__pidataCOMMON+1	;fetch initializer
-   317  07EE  00F1               	movwf	(__pdataCOMMON+1)& (0+127)
-   318  07EF  118A  27DD  118A   	fcall	__pidataCOMMON+2	;fetch initializer
-   319  07F2  00F2               	movwf	(__pdataCOMMON+2)& (0+127)
-   320  07F3  118A  27DE  118A   	fcall	__pidataCOMMON+3	;fetch initializer
-   321  07F6  00F3               	movwf	(__pdataCOMMON+3)& (0+127)
-   322                           
-   323                           ; Clear objects allocated to BANK0
-   324  07F7  1383               	bcf	3,7	;select IRP bank0
-   325  07F8  3020               	movlw	low __pbssBANK0
-   326  07F9  0084               	movwf	4
-   327  07FA  306E               	movlw	low (__pbssBANK0+78)
-   328  07FB  118A  27DF         	fcall	clear_ram0
-   329  07FD                     end_of_initialization:	
-   330                           ;End of C runtime variable initialization code
-   331                           
-   332  07FD                     __end_of__initialization:	
-   333  07FD  0183               	clrf	3
-   334  07FE  118A  2FD9         	ljmp	_main	;jump to C main() function
+    47                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    48                           ;        of conditions and the following disclaimer in the documentation and/or other
+    49                           ;        materials provided with the distribution.
+    50                           ; 
+    51                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    52                           ;        software without specific prior written permission.
+    53                           ; 
+    54                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    55                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    56                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    57                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    58                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    59                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    60                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    61                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    62                           ; 
+    63                           ; 
+    64                           ; Code-generator required, PIC16F884 Definitions
+    65                           ; 
+    66                           ; SFR Addresses
+    67  0000                     	;# 
+    68  0001                     	;# 
+    69  0002                     	;# 
+    70  0003                     	;# 
+    71  0004                     	;# 
+    72  0005                     	;# 
+    73  0006                     	;# 
+    74  0007                     	;# 
+    75  0008                     	;# 
+    76  0009                     	;# 
+    77  000A                     	;# 
+    78  000B                     	;# 
+    79  000C                     	;# 
+    80  000D                     	;# 
+    81  000E                     	;# 
+    82  000E                     	;# 
+    83  000F                     	;# 
+    84  0010                     	;# 
+    85  0011                     	;# 
+    86  0012                     	;# 
+    87  0013                     	;# 
+    88  0014                     	;# 
+    89  0015                     	;# 
+    90  0015                     	;# 
+    91  0016                     	;# 
+    92  0017                     	;# 
+    93  0018                     	;# 
+    94  0019                     	;# 
+    95  001A                     	;# 
+    96  001B                     	;# 
+    97  001B                     	;# 
+    98  001C                     	;# 
+    99  001D                     	;# 
+   100  001E                     	;# 
+   101  001F                     	;# 
+   102  0081                     	;# 
+   103  0085                     	;# 
+   104  0086                     	;# 
+   105  0087                     	;# 
+   106  0088                     	;# 
+   107  0089                     	;# 
+   108  008C                     	;# 
+   109  008D                     	;# 
+   110  008E                     	;# 
+   111  008F                     	;# 
+   112  0090                     	;# 
+   113  0091                     	;# 
+   114  0092                     	;# 
+   115  0093                     	;# 
+   116  0093                     	;# 
+   117  0093                     	;# 
+   118  0094                     	;# 
+   119  0095                     	;# 
+   120  0096                     	;# 
+   121  0097                     	;# 
+   122  0098                     	;# 
+   123  0099                     	;# 
+   124  009A                     	;# 
+   125  009B                     	;# 
+   126  009C                     	;# 
+   127  009D                     	;# 
+   128  009E                     	;# 
+   129  009F                     	;# 
+   130  0105                     	;# 
+   131  0107                     	;# 
+   132  0108                     	;# 
+   133  0109                     	;# 
+   134  010C                     	;# 
+   135  010C                     	;# 
+   136  010D                     	;# 
+   137  010E                     	;# 
+   138  010F                     	;# 
+   139  0185                     	;# 
+   140  0187                     	;# 
+   141  0188                     	;# 
+   142  0189                     	;# 
+   143  018C                     	;# 
+   144  018D                     	;# 
+   145  0000                     	;# 
+   146  0001                     	;# 
+   147  0002                     	;# 
+   148  0003                     	;# 
+   149  0004                     	;# 
+   150  0005                     	;# 
+   151  0006                     	;# 
+   152  0007                     	;# 
+   153  0008                     	;# 
+   154  0009                     	;# 
+   155  000A                     	;# 
+   156  000B                     	;# 
+   157  000C                     	;# 
+   158  000D                     	;# 
+   159  000E                     	;# 
+   160  000E                     	;# 
+   161  000F                     	;# 
+   162  0010                     	;# 
+   163  0011                     	;# 
+   164  0012                     	;# 
+   165  0013                     	;# 
+   166  0014                     	;# 
+   167  0015                     	;# 
+   168  0015                     	;# 
+   169  0016                     	;# 
+   170  0017                     	;# 
+   171  0018                     	;# 
+   172  0019                     	;# 
+   173  001A                     	;# 
+   174  001B                     	;# 
+   175  001B                     	;# 
+   176  001C                     	;# 
+   177  001D                     	;# 
+   178  001E                     	;# 
+   179  001F                     	;# 
+   180  0081                     	;# 
+   181  0085                     	;# 
+   182  0086                     	;# 
+   183  0087                     	;# 
+   184  0088                     	;# 
+   185  0089                     	;# 
+   186  008C                     	;# 
+   187  008D                     	;# 
+   188  008E                     	;# 
+   189  008F                     	;# 
+   190  0090                     	;# 
+   191  0091                     	;# 
+   192  0092                     	;# 
+   193  0093                     	;# 
+   194  0093                     	;# 
+   195  0093                     	;# 
+   196  0094                     	;# 
+   197  0095                     	;# 
+   198  0096                     	;# 
+   199  0097                     	;# 
+   200  0098                     	;# 
+   201  0099                     	;# 
+   202  009A                     	;# 
+   203  009B                     	;# 
+   204  009C                     	;# 
+   205  009D                     	;# 
+   206  009E                     	;# 
+   207  009F                     	;# 
+   208  0105                     	;# 
+   209  0107                     	;# 
+   210  0108                     	;# 
+   211  0109                     	;# 
+   212  010C                     	;# 
+   213  010C                     	;# 
+   214  010D                     	;# 
+   215  010E                     	;# 
+   216  010F                     	;# 
+   217  0185                     	;# 
+   218  0187                     	;# 
+   219  0188                     	;# 
+   220  0189                     	;# 
+   221  018C                     	;# 
+   222  018D                     	;# 
+   223                           
+   224                           	psect	idataBANK0
+   225  041B                     __pidataBANK0:	
+   226                           
+   227                           ;initializer for _randx
+   228  041B  3401               	retlw	1
+   229  041C  3400               	retlw	0
+   230  041D  3400               	retlw	0
+   231  041E  3400               	retlw	0
+   232                           
+   233                           	psect	strings
+   234  0002                     __pstrings:	
+   235  0002                     stringtab:	
+   236  0002                     __stringtab:	
+   237                           
+   238                           ;	String table - string pointers are 1 byte each
+   239  0002  1BFF               	btfsc	btemp+1,7
+   240  0003  280C               	ljmp	stringcode
+   241  0004  1383               	bcf	3,7
+   242  0005  187F               	btfsc	btemp+1,0
+   243  0006  1783               	bsf	3,7
+   244  0007  0800               	movf	0,w
+   245  0008  0A84               	incf	4,f
+   246  0009  1903               	skipnz
+   247  000A  0AFF               	incf	btemp+1,f
+   248  000B  0008               	return
+   249  000C                     stringcode:	
+   250  000C                     stringdir:	
+   251  000C  3000               	movlw	high stringdir
+   252  000D  008A               	movwf	10
+   253  000E  0804               	movf	4,w
+   254  000F  0A84               	incf	4,f
+   255  0010  0782               	addwf	2,f
+   256  0011                     __stringbase:	
+   257  0011  3400               	retlw	0
+   258  0012                     __end_of__stringtab:	
+   259  0012                     _Tetris_playerStartingPosition:	
+   260  0012  3408               	retlw	8
+   261  0013  3402               	retlw	2
+   262  0014                     __end_of_Tetris_playerStartingPosition:	
+   263  0014                     _Tetris_unitPivot:	
+   264  0014  3403               	retlw	3
+   265  0015  3402               	retlw	2
+   266  0016                     __end_of_Tetris_unitPivot:	
+   267  0016                     _Tetris_units:	
+   268  0016  3402               	retlw	2
+   269  0017  3410               	retlw	16
+   270  0018  3400               	retlw	0
+   271  0019  3410               	retlw	16
+   272  001A  3400               	retlw	0
+   273  001B  3410               	retlw	16
+   274  001C  3400               	retlw	0
+   275  001D  3410               	retlw	16
+   276  001E  3400               	retlw	0
+   277  001F  3400               	retlw	0
+   278  0020  3400               	retlw	0
+   279  0021  3400               	retlw	0
+   280  0022  3400               	retlw	0
+   281  0023  343C               	retlw	60
+   282  0024  3400               	retlw	0
+   283  0025  3400               	retlw	0
+   284  0026  3400               	retlw	0
+   285  0027  3400               	retlw	0
+   286  0028  3400               	retlw	0
+   287  0029  3400               	retlw	0
+   288  002A  3400               	retlw	0
+   289  002B  3400               	retlw	0
+   290  002C  3400               	retlw	0
+   291  002D  3400               	retlw	0
+   292  002E  3400               	retlw	0
+   293  002F  3400               	retlw	0
+   294  0030  3400               	retlw	0
+   295  0031  3400               	retlw	0
+   296  0032  3400               	retlw	0
+   297  0033  3400               	retlw	0
+   298  0034  3400               	retlw	0
+   299  0035  3400               	retlw	0
+   300  0036  3400               	retlw	0
+   301  0037  3401               	retlw	1
+   302  0038  3400               	retlw	0
+   303  0039  3400               	retlw	0
+   304  003A  3418               	retlw	24
+   305  003B  3400               	retlw	0
+   306  003C  3418               	retlw	24
+   307  003D  3400               	retlw	0
+   308  003E  3400               	retlw	0
+   309  003F  3400               	retlw	0
+   310  0040  3400               	retlw	0
+   311  0041  3400               	retlw	0
+   312  0042  3400               	retlw	0
+   313  0043  3400               	retlw	0
+   314  0044  3400               	retlw	0
+   315  0045  3400               	retlw	0
+   316  0046  3400               	retlw	0
+   317  0047  3400               	retlw	0
+   318  0048  3400               	retlw	0
+   319  0049  3400               	retlw	0
+   320  004A  3400               	retlw	0
+   321  004B  3400               	retlw	0
+   322  004C  3400               	retlw	0
+   323  004D  3400               	retlw	0
+   324  004E  3400               	retlw	0
+   325  004F  3400               	retlw	0
+   326  0050  3400               	retlw	0
+   327  0051  3400               	retlw	0
+   328  0052  3400               	retlw	0
+   329  0053  3400               	retlw	0
+   330  0054  3400               	retlw	0
+   331  0055  3400               	retlw	0
+   332  0056  3400               	retlw	0
+   333  0057  3400               	retlw	0
+   334  0058                     __end_of_Tetris_units:	
    335                           
-   336                           	psect	dataCOMMON
-   337  0070                     __pdataCOMMON:	
-   338  0070                     _randx:	
-   339  0070                     	ds	4
-   340                           
-   341                           	psect	bssBANK0
-   342  0020                     __pbssBANK0:	
-   343  0020                     main@game1:	
-   344  0020                     	ds	78
-   345                           
-   346                           	psect	clrtext
-   347  07DF                     clear_ram0:	
-   348                           ;	Called with FSR containing the base address, and
-   349                           ;	W with the last address+1
-   350                           
-   351  07DF  0064               	clrwdt	;clear the watchdog before getting into this loop
-   352  07E0                     clrloop0:	
-   353  07E0  0180               	clrf	0	;clear RAM location pointed to by FSR
-   354  07E1  0A84               	incf	4,f	;increment pointer
-   355  07E2  0604               	xorwf	4,w	;XOR with final address
-   356  07E3  1903               	btfsc	3,2	;have we reached the end yet?
-   357  07E4  3400               	retlw	0	;all done for this memory range, return
-   358  07E5  0604               	xorwf	4,w	;XOR again to restore value
-   359  07E6  2FE0               	goto	clrloop0	;do the next byte
-   360                           
-   361                           	psect	cstackCOMMON
-   362  0000                     __pcstackCOMMON:	
-   363  0000                     ?_main:	
-   364  0000                     ??_main:	
-   365                           ; 1 bytes @ 0x0
+   336                           	psect	cinit
+   337  07EE                     start_initialization:	
+   338                           ; #config settings
+   339                           
+   340  07EE                     __initialization:	
+   341                           
+   342                           ; Initialize objects allocated to BANK0
+   343  07EE  118A  241B  118A   	fcall	__pidataBANK0	;fetch initializer
+   344  07F1  00B2               	movwf	__pdataBANK0& (0+127)
+   345  07F2  118A  241C  118A   	fcall	__pidataBANK0+1	;fetch initializer
+   346  07F5  00B3               	movwf	(__pdataBANK0+1)& (0+127)
+   347  07F6  118A  241D  118A   	fcall	__pidataBANK0+2	;fetch initializer
+   348  07F9  00B4               	movwf	(__pdataBANK0+2)& (0+127)
+   349  07FA  118A  241E         	fcall	__pidataBANK0+3	;fetch initializer
+   350  07FC  00B5               	movwf	(__pdataBANK0+3)& (0+127)
+   351  07FD                     end_of_initialization:	
+   352                           ;End of C runtime variable initialization code
+   353                           
+   354  07FD                     __end_of__initialization:	
+   355  07FD  0183               	clrf	3
+   356  07FE  118A  2C60         	ljmp	_main	;jump to C main() function
+   357                           
+   358                           	psect	dataBANK0
+   359  0032                     __pdataBANK0:	
+   360  0032                     _randx:	
+   361  0032                     	ds	4
+   362                           
+   363                           	psect	cstackBANK1
+   364  00A0                     __pcstackBANK1:	
+   365  00A0                     main@game:	
    366                           
-   367                           
-   368                           	psect	maintext
-   369  07D9                     __pmaintext:	
-   370                           ; 1 bytes @ 0x0
-   371 ;;
-   372 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
-   373 ;;
-   374 ;; *************** function _main *****************
-   375 ;; Defined at:
-   376 ;;		line 5 in file "main.c"
-   377 ;; Parameters:    Size  Location     Type
-   378 ;;		None
-   379 ;; Auto vars:     Size  Location     Type
-   380 ;;		None
-   381 ;; Return value:  Size  Location     Type
-   382 ;;                  1    wreg      void 
-   383 ;; Registers used:
-   384 ;;		None
-   385 ;; Tracked objects:
-   386 ;;		On entry : B00/0
-   387 ;;		On exit  : 0/0
-   388 ;;		Unchanged: 0/0
-   389 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
-   390 ;;      Params:         0       0       0       0
-   391 ;;      Locals:         0       0       0       0
-   392 ;;      Temps:          0       0       0       0
-   393 ;;      Totals:         0       0       0       0
-   394 ;;Total ram usage:        0 bytes
-   395 ;; This function calls:
-   396 ;;		Nothing
-   397 ;; This function is called by:
-   398 ;;		Startup code after reset
-   399 ;; This function uses a non-reentrant model
-   400 ;;
-   401                           
+   367                           ; 78 bytes @ 0x0
+   368  00A0                     	ds	78
+   369                           
+   370                           	psect	cstackCOMMON
+   371  0070                     __pcstackCOMMON:	
+   372  0070                     ?_Tetris_GetRandomUnit:	
+   373  0070                     ?_Tetris_MovePlayerLeft:	
+   374                           ; 1 bytes @ 0x0
+   375                           
+   376  0070                     ?_Tetris_RotatePlayer:	
+   377                           ; 1 bytes @ 0x0
+   378                           
+   379  0070                     ?_memset:	
+   380                           ; 1 bytes @ 0x0
+   381                           
+   382  0070                     ?_main:	
+   383                           ; 1 bytes @ 0x0
+   384                           
+   385  0070                     ?_Tetris_PlayerTopmostY:	
+   386                           ; 1 bytes @ 0x0
+   387                           
+   388  0070                     ??_Tetris_PlayerTopmostY:	
+   389                           ; 1 bytes @ 0x0
+   390                           
+   391  0070                     ?_Tetris_PlayerOverlapsEnvironment:	
+   392                           ; 1 bytes @ 0x0
+   393                           
+   394  0070                     ?_Tetris_PlayerTouchingLeftBound:	
+   395                           ; 1 bytes @ 0x0
+   396                           
+   397  0070                     ??_Tetris_PlayerTouchingLeftBound:	
+   398                           ; 1 bytes @ 0x0
+   399                           
+   400  0070                     ?_Tetris_RemovePlayerFromTable:	
+   401                           ; 1 bytes @ 0x0
    402                           
-   403                           ;psect for function _main
-   404  07D9                     _main:	
+   403  0070                     ?_Tetris_ApplyPlayerToTable:	
+   404                           ; 1 bytes @ 0x0
    405                           
-   406                           ;incstack = 0
-   407                           ; Regs used in _main: []
-   408  07D9  118A  2800         	ljmp	start
-   409  07DB                     __end_of_main:	
-   410  007E                     btemp	set	126	;btemp
-   411  007E                     wtemp0	set	126
+   406  0070                     ?_Tetris_CountUnitBits:	
+   407                           ; 1 bytes @ 0x0
+   408                           
+   409  0070                     ?_Tetris_UpdatePlayerUnitBits:	
+   410                           ; 1 bytes @ 0x0
+   411                           
+   412  0070                     ??_Tetris_UpdatePlayerUnitBits:	
+   413                           ; 1 bytes @ 0x0
+   414                           
+   415  0070                     ?_Tetris_PlayerUnitBitsAreValid:	
+   416                           ; 1 bytes @ 0x0
+   417                           
+   418  0070                     ?___lbmod:	
+   419                           ; 1 bytes @ 0x0
+   420                           
+   421  0070                     ?___lmul:	
+   422                           ; 1 bytes @ 0x0
+   423                           
+   424  0070                     ___lbmod@divisor:	
+   425                           ; 4 bytes @ 0x0
+   426                           
+   427  0070                     Tetris_CountUnitBits@unitBits:	
+   428                           ; 1 bytes @ 0x0
+   429                           
+   430  0070                     memset@c:	
+   431                           ; 2 bytes @ 0x0
+   432                           
+   433  0070                     ___lmul@multiplier:	
+   434                           ; 2 bytes @ 0x0
+   435                           
+   436                           
+   437                           ; 4 bytes @ 0x0
+   438  0070                     	ds	1
+   439  0071                     ??___lbmod:	
+   440                           
+   441                           ; 1 bytes @ 0x1
+   442  0071                     	ds	1
+   443  0072                     ??_Tetris_CountUnitBits:	
+   444  0072                     Tetris_PlayerTopmostY@player:	
+   445                           ; 1 bytes @ 0x2
+   446                           
+   447  0072                     memset@n:	
+   448                           ; 1 bytes @ 0x2
+   449                           
+   450                           
+   451                           ; 2 bytes @ 0x2
+   452  0072                     	ds	1
+   453  0073                     ??_Tetris_RemovePlayerFromTable:	
+   454  0073                     ??_Tetris_ApplyPlayerToTable:	
+   455                           ; 1 bytes @ 0x3
+   456                           
+   457  0073                     Tetris_PlayerOverlapsEnvironment@start:	
+   458                           ; 1 bytes @ 0x3
+   459                           
+   460                           
+   461                           ; 1 bytes @ 0x3
+   462  0073                     	ds	1
+   463  0074                     ??_memset:	
+   464  0074                     Tetris_PlayerOverlapsEnvironment@game:	
+   465                           ; 1 bytes @ 0x4
+   466                           
+   467  0074                     Tetris_PlayerTouchingLeftBound@player:	
+   468                           ; 1 bytes @ 0x4
+   469                           
+   470  0074                     ___lbmod@dividend:	
+   471                           ; 1 bytes @ 0x4
+   472                           
+   473  0074                     ___lmul@multiplicand:	
+   474                           ; 1 bytes @ 0x4
+   475                           
+   476                           
+   477                           ; 4 bytes @ 0x4
+   478  0074                     	ds	1
+   479  0075                     Tetris_PlayerOverlapsEnvironment@i:	
+   480  0075                     Tetris_PlayerTouchingLeftBound@i:	
+   481                           ; 1 bytes @ 0x5
+   482                           
+   483  0075                     ___lbmod@counter:	
+   484                           ; 1 bytes @ 0x5
+   485                           
+   486  0075                     memset@p1:	
+   487                           ; 1 bytes @ 0x5
+   488                           
+   489                           
+   490                           ; 1 bytes @ 0x5
+   491  0075                     	ds	1
+   492  0076                     ___lbmod@rem:	
+   493  0076                     memset@p:	
+   494                           ; 1 bytes @ 0x6
+   495                           
+   496                           
+   497                           ; 1 bytes @ 0x6
+   498  0076                     	ds	1
+   499  0077                     Tetris_UpdatePlayerUnitBits@i_197:	
+   500  0077                     Tetris_CountUnitBits@mask:	
+   501                           ; 1 bytes @ 0x7
+   502                           
+   503                           
+   504                           ; 2 bytes @ 0x7
+   505  0077                     	ds	1
+   506  0078                     ??___lmul:	
+   507  0078                     Tetris_UpdatePlayerUnitBits@i_198:	
+   508                           ; 1 bytes @ 0x8
+   509                           
+   510                           
+   511                           ; 1 bytes @ 0x8
+   512  0078                     	ds	1
+   513  0079                     Tetris_CountUnitBits@result:	
+   514  0079                     Tetris_UpdatePlayerUnitBits@i:	
+   515                           ; 1 bytes @ 0x9
+   516                           
+   517  0079                     ___lmul@product:	
+   518                           ; 1 bytes @ 0x9
+   519                           
+   520                           
+   521                           ; 4 bytes @ 0x9
+   522  0079                     	ds	1
+   523  007A                     Tetris_CountUnitBits@j:	
+   524  007A                     Tetris_UpdatePlayerUnitBits@shift:	
+   525                           ; 1 bytes @ 0xA
+   526                           
+   527                           
+   528                           ; 1 bytes @ 0xA
+   529  007A                     	ds	1
+   530  007B                     Tetris_RemovePlayerFromTable@start:	
+   531  007B                     Tetris_ApplyPlayerToTable@start:	
+   532                           ; 1 bytes @ 0xB
+   533                           
+   534  007B                     Tetris_CountUnitBits@i:	
+   535                           ; 1 bytes @ 0xB
+   536                           
+   537  007B                     Tetris_UpdatePlayerUnitBits@player:	
+   538                           ; 1 bytes @ 0xB
+   539                           
+   540                           
+   541                           ; 1 bytes @ 0xB
+   542  007B                     	ds	1
+   543  007C                     ?_Tetris_SetPlayerUnit:	
+   544  007C                     Tetris_RemovePlayerFromTable@game:	
+   545                           ; 1 bytes @ 0xC
+   546                           
+   547  007C                     Tetris_ApplyPlayerToTable@game:	
+   548                           ; 1 bytes @ 0xC
+   549                           
+   550  007C                     Tetris_PlayerUnitBitsAreValid@player:	
+   551                           ; 1 bytes @ 0xC
+   552                           
+   553  007C                     Tetris_SetPlayerUnit@unit:	
+   554                           ; 1 bytes @ 0xC
+   555                           
+   556                           
+   557                           ; 1 bytes @ 0xC
+   558  007C                     	ds	1
+   559  007D                     ??_Tetris_SetPlayerUnit:	
+   560  007D                     ??___bmul:	
+   561                           ; 1 bytes @ 0xD
+   562                           
+   563  007D                     Tetris_RemovePlayerFromTable@i:	
+   564                           ; 1 bytes @ 0xD
+   565                           
+   566  007D                     Tetris_ApplyPlayerToTable@i:	
+   567                           ; 1 bytes @ 0xD
+   568                           
+   569                           
+   570                           ; 1 bytes @ 0xD
+   571  007D                     	ds	1
+   572                           
+   573                           	psect	cstackBANK0
+   574  0020                     __pcstackBANK0:	
+   575  0020                     ??_Tetris_PlayerOverlapsEnvironment:	
+   576  0020                     ??_Tetris_PlayerUnitBitsAreValid:	
+   577                           ; 1 bytes @ 0x0
+   578                           
+   579  0020                     ?_rand:	
+   580                           ; 1 bytes @ 0x0
+   581                           
+   582  0020                     Tetris_SetPlayerUnit@player:	
+   583                           ; 2 bytes @ 0x0
+   584                           
+   585                           
+   586                           ; 1 bytes @ 0x0
+   587  0020                     	ds	1
+   588  0021                     ?_Tetris_ResetPlayer:	
+   589  0021                     Tetris_ResetPlayer@playerUnit:	
+   590                           ; 1 bytes @ 0x1
+   591                           
+   592                           
+   593                           ; 1 bytes @ 0x1
+   594  0021                     	ds	1
+   595  0022                     ??_rand:	
+   596  0022                     ??_Tetris_ResetPlayer:	
+   597                           ; 1 bytes @ 0x2
+   598                           
+   599                           
+   600                           ; 1 bytes @ 0x2
+   601  0022                     	ds	2
+   602  0024                     Tetris_ResetPlayer@player:	
+   603                           
+   604                           ; 1 bytes @ 0x4
+   605  0024                     	ds	3
+   606  0027                     ?___bmul:	
+   607  0027                     ___bmul@multiplicand:	
+   608                           ; 1 bytes @ 0x7
+   609                           
+   610                           
+   611                           ; 1 bytes @ 0x7
+   612  0027                     	ds	1
+   613  0028                     ___bmul@product:	
+   614                           
+   615                           ; 1 bytes @ 0x8
+   616  0028                     	ds	1
+   617  0029                     ___bmul@multiplier:	
+   618                           
+   619                           ; 1 bytes @ 0x9
+   620  0029                     	ds	1
+   621  002A                     ??_Tetris_GetRandomUnit:	
+   622                           
+   623                           ; 1 bytes @ 0xA
+   624  002A                     	ds	1
+   625  002B                     ?_Tetris_ResetGame:	
+   626  002B                     Tetris_ResetGame@playerUnit:	
+   627                           ; 1 bytes @ 0xB
+   628                           
+   629                           
+   630                           ; 1 bytes @ 0xB
+   631  002B                     	ds	1
+   632  002C                     ??_Tetris_ResetGame:	
+   633  002C                     ??_Tetris_MovePlayerLeft:	
+   634                           ; 1 bytes @ 0xC
+   635                           
+   636  002C                     ??_Tetris_RotatePlayer:	
+   637                           ; 1 bytes @ 0xC
+   638                           
+   639                           
+   640                           ; 1 bytes @ 0xC
+   641  002C                     	ds	1
+   642  002D                     Tetris_ResetGame@game:	
+   643                           
+   644                           ; 1 bytes @ 0xD
+   645  002D                     	ds	1
+   646  002E                     Tetris_MovePlayerLeft@i:	
+   647  002E                     Tetris_RotatePlayer@oldRotation:	
+   648                           ; 1 bytes @ 0xE
+   649                           
+   650                           
+   651                           ; 1 bytes @ 0xE
+   652  002E                     	ds	1
+   653  002F                     Tetris_MovePlayerLeft@i_270:	
+   654  002F                     Tetris_RotatePlayer@game:	
+   655                           ; 1 bytes @ 0xF
+   656                           
+   657                           
+   658                           ; 1 bytes @ 0xF
+   659  002F                     	ds	1
+   660  0030                     Tetris_MovePlayerLeft@game:	
+   661                           
+   662                           ; 1 bytes @ 0x10
+   663  0030                     	ds	1
+   664  0031                     ??_main:	
+   665                           
+   666                           ; 1 bytes @ 0x11
+   667  0031                     	ds	1
+   668                           
+   669                           	psect	maintext
+   670  0460                     __pmaintext:	
+   671 ;;
+   672 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+   673 ;;
+   674 ;; *************** function _main *****************
+   675 ;; Defined at:
+   676 ;;		line 5 in file "main.c"
+   677 ;; Parameters:    Size  Location     Type
+   678 ;;		None
+   679 ;; Auto vars:     Size  Location     Type
+   680 ;;  game           78    0[BANK1 ] struct .
+   681 ;; Return value:  Size  Location     Type
+   682 ;;                  1    wreg      void 
+   683 ;; Registers used:
+   684 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   685 ;; Tracked objects:
+   686 ;;		On entry : B00/0
+   687 ;;		On exit  : 0/0
+   688 ;;		Unchanged: 0/0
+   689 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   690 ;;      Params:         0       0       0       0
+   691 ;;      Locals:         0       0      78       0
+   692 ;;      Temps:          0       1       0       0
+   693 ;;      Totals:         0       1      78       0
+   694 ;;Total ram usage:       79 bytes
+   695 ;; Hardware stack levels required when called:    5
+   696 ;; This function calls:
+   697 ;;		_Tetris_GetRandomUnit
+   698 ;;		_Tetris_MovePlayerLeft
+   699 ;;		_Tetris_ResetGame
+   700 ;;		_Tetris_RotatePlayer
+   701 ;; This function is called by:
+   702 ;;		Startup code after reset
+   703 ;; This function uses a non-reentrant model
+   704 ;;
+   705                           
+   706                           
+   707                           ;psect for function _main
+   708  0460                     _main:	
+   709                           
+   710                           ;main.c: 7:     Tetris_Game game;;main.c: 8:     Tetris_ResetGame(&game, Tetris_GetRando
+      +                          mUnit());
+   711                           
+   712                           ;incstack = 0
+   713                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   714  0460  118A  243C  118A   	fcall	_Tetris_GetRandomUnit
+   715  0463  1283               	bcf	3,5	;RP0=0, select bank0
+   716  0464  1303               	bcf	3,6	;RP1=0, select bank0
+   717  0465  00B1               	movwf	??_main
+   718  0466  0831               	movf	??_main,w
+   719  0467  00AB               	movwf	Tetris_ResetGame@playerUnit
+   720  0468  30A0               	movlw	(low (main@game| 0))& (0+255)
+   721  0469  118A  24AF  118A   	fcall	_Tetris_ResetGame
+   722                           
+   723                           ;main.c: 9:     Tetris_MovePlayerLeft(&game);
+   724  046C  30A0               	movlw	(low (main@game| 0))& (0+255)
+   725  046D  118A  26B1  118A   	fcall	_Tetris_MovePlayerLeft
+   726                           
+   727                           ;main.c: 10:     Tetris_RotatePlayer(&game);
+   728  0470  30A0               	movlw	(low (main@game| 0))& (0+255)
+   729  0471  118A  2708         	fcall	_Tetris_RotatePlayer
+   730  0473  118A  2800         	ljmp	start
+   731  0475                     __end_of_main:	
+   732                           
+   733                           	psect	text1
+   734  0708                     __ptext1:	
+   735 ;; *************** function _Tetris_RotatePlayer *****************
+   736 ;; Defined at:
+   737 ;;		line 238 in file "../Tetris/Tetris.c"
+   738 ;; Parameters:    Size  Location     Type
+   739 ;;  game            1    wreg     PTR struct .
+   740 ;;		 -> main@game(78), 
+   741 ;; Auto vars:     Size  Location     Type
+   742 ;;  game            1   15[BANK0 ] PTR struct .
+   743 ;;		 -> main@game(78), 
+   744 ;;  oldRotation     1   14[BANK0 ] unsigned char 
+   745 ;; Return value:  Size  Location     Type
+   746 ;;                  1    wreg      void 
+   747 ;; Registers used:
+   748 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   749 ;; Tracked objects:
+   750 ;;		On entry : 0/0
+   751 ;;		On exit  : 0/0
+   752 ;;		Unchanged: 0/0
+   753 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   754 ;;      Params:         0       0       0       0
+   755 ;;      Locals:         0       2       0       0
+   756 ;;      Temps:          0       2       0       0
+   757 ;;      Totals:         0       4       0       0
+   758 ;;Total ram usage:        4 bytes
+   759 ;; Hardware stack levels used:    1
+   760 ;; Hardware stack levels required when called:    3
+   761 ;; This function calls:
+   762 ;;		_Tetris_ApplyPlayerToTable
+   763 ;;		_Tetris_PlayerOverlapsEnvironment
+   764 ;;		_Tetris_PlayerUnitBitsAreValid
+   765 ;;		_Tetris_RemovePlayerFromTable
+   766 ;;		_Tetris_UpdatePlayerUnitBits
+   767 ;;		___lbmod
+   768 ;; This function is called by:
+   769 ;;		_main
+   770 ;; This function uses a non-reentrant model
+   771 ;;
+   772                           
+   773                           
+   774                           ;psect for function _Tetris_RotatePlayer
+   775  0708                     _Tetris_RotatePlayer:	
+   776                           
+   777                           ;incstack = 0
+   778                           ; Regs used in _Tetris_RotatePlayer: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack
+      +                          ]
+   779                           ;Tetris_RotatePlayer@game stored from wreg
+   780  0708  1283               	bcf	3,5	;RP0=0, select bank0
+   781  0709  1303               	bcf	3,6	;RP1=0, select bank0
+   782  070A  00AF               	movwf	Tetris_RotatePlayer@game
+   783                           
+   784                           ;../Tetris/Tetris.c: 238: void Tetris_RotatePlayer(Tetris_Game *game);../Tetris/Tetris.c
+      +                          : 239: {;../Tetris/Tetris.c: 240:  Tetris_RemovePlayerFromTable(game);
+   785  070B  082F               	movf	Tetris_RotatePlayer@game,w
+   786  070C  118A  2577  118A   	fcall	_Tetris_RemovePlayerFromTable
+   787                           
+   788                           ;../Tetris/Tetris.c: 242:  uint8_t oldRotation = game->player.rotation;
+   789  070F  1283               	bcf	3,5	;RP0=0, select bank0
+   790  0710  1303               	bcf	3,6	;RP1=0, select bank0
+   791  0711  082F               	movf	Tetris_RotatePlayer@game,w
+   792  0712  3E4B               	addlw	75
+   793  0713  0084               	movwf	4
+   794  0714  1383               	bcf	3,7	;select IRP bank0
+   795  0715  0800               	movf	0,w
+   796  0716  00AC               	movwf	??_Tetris_RotatePlayer
+   797  0717  082C               	movf	??_Tetris_RotatePlayer,w
+   798  0718  00AE               	movwf	Tetris_RotatePlayer@oldRotation
+   799                           
+   800                           ;../Tetris/Tetris.c: 243:  ++game->player.rotation;
+   801  0719  3001               	movlw	1
+   802  071A  00AC               	movwf	??_Tetris_RotatePlayer
+   803  071B  082F               	movf	Tetris_RotatePlayer@game,w
+   804  071C  3E4B               	addlw	75
+   805  071D  0084               	movwf	4
+   806  071E  082C               	movf	??_Tetris_RotatePlayer,w
+   807  071F  0780               	addwf	0,f
+   808                           
+   809                           ;../Tetris/Tetris.c: 244:  game->player.rotation %= game->player.unit->numRotations;
+   810  0720  082F               	movf	Tetris_RotatePlayer@game,w
+   811  0721  3E42               	addlw	66
+   812  0722  0084               	movwf	4
+   813  0723  0800               	movf	0,w
+   814  0724  0084               	movwf	4
+   815  0725  118A  200C  118A   	fcall	stringdir
+   816  0728  00AC               	movwf	??_Tetris_RotatePlayer
+   817  0729  082C               	movf	??_Tetris_RotatePlayer,w
+   818  072A  00F0               	movwf	___lbmod@divisor
+   819  072B  082F               	movf	Tetris_RotatePlayer@game,w
+   820  072C  3E4B               	addlw	75
+   821  072D  0084               	movwf	4
+   822  072E  0800               	movf	0,w
+   823  072F  118A  24EF  118A   	fcall	___lbmod
+   824  0732  1283               	bcf	3,5	;RP0=0, select bank0
+   825  0733  1303               	bcf	3,6	;RP1=0, select bank0
+   826  0734  00AD               	movwf	??_Tetris_RotatePlayer+1
+   827  0735  082F               	movf	Tetris_RotatePlayer@game,w
+   828  0736  3E4B               	addlw	75
+   829  0737  0084               	movwf	4
+   830  0738  082D               	movf	??_Tetris_RotatePlayer+1,w
+   831  0739  1383               	bcf	3,7	;select IRP bank0
+   832  073A  0080               	movwf	0
+   833                           
+   834                           ;../Tetris/Tetris.c: 245:  Tetris_UpdatePlayerUnitBits(&game->player);
+   835  073B  082F               	movf	Tetris_RotatePlayer@game,w
+   836  073C  3E40               	addlw	64
+   837  073D  118A  2768  118A   	fcall	_Tetris_UpdatePlayerUnitBits
+   838                           
+   839                           ;../Tetris/Tetris.c: 246:  if (!Tetris_PlayerUnitBitsAreValid(&game->player) || Tetris_P
+      +                          layerOverlapsEnvironment(game))
+   840  0740  1283               	bcf	3,5	;RP0=0, select bank0
+   841  0741  1303               	bcf	3,6	;RP1=0, select bank0
+   842  0742  082F               	movf	Tetris_RotatePlayer@game,w
+   843  0743  3E40               	addlw	64
+   844  0744  118A  2544  118A   	fcall	_Tetris_PlayerUnitBitsAreValid
+   845  0747  3A00               	xorlw	0
+   846  0748  1903               	skipnz
+   847  0749  2F53               	goto	l1358
+   848  074A  1283               	bcf	3,5	;RP0=0, select bank0
+   849  074B  1303               	bcf	3,6	;RP1=0, select bank0
+   850  074C  082F               	movf	Tetris_RotatePlayer@game,w
+   851  074D  118A  25EA  118A   	fcall	_Tetris_PlayerOverlapsEnvironment
+   852  0750  3A00               	xorlw	0
+   853  0751  1903               	skipnz
+   854  0752  2F62               	goto	l1362
+   855  0753                     l1358:	
+   856                           
+   857                           ;../Tetris/Tetris.c: 247:  {;../Tetris/Tetris.c: 248:   game->player.rotation = oldRotat
+      +                          ion;
+   858  0753  1283               	bcf	3,5	;RP0=0, select bank0
+   859  0754  1303               	bcf	3,6	;RP1=0, select bank0
+   860  0755  082E               	movf	Tetris_RotatePlayer@oldRotation,w
+   861  0756  00AC               	movwf	??_Tetris_RotatePlayer
+   862  0757  082F               	movf	Tetris_RotatePlayer@game,w
+   863  0758  3E4B               	addlw	75
+   864  0759  0084               	movwf	4
+   865  075A  082C               	movf	??_Tetris_RotatePlayer,w
+   866  075B  1383               	bcf	3,7	;select IRP bank0
+   867  075C  0080               	movwf	0
+   868                           
+   869                           ;../Tetris/Tetris.c: 249:   Tetris_UpdatePlayerUnitBits(&game->player);
+   870  075D  082F               	movf	Tetris_RotatePlayer@game,w
+   871  075E  3E40               	addlw	64
+   872  075F  118A  2768  118A   	fcall	_Tetris_UpdatePlayerUnitBits
+   873  0762                     l1362:	
+   874                           
+   875                           ;../Tetris/Tetris.c: 252:  Tetris_ApplyPlayerToTable(game);
+   876  0762  1283               	bcf	3,5	;RP0=0, select bank0
+   877  0763  1303               	bcf	3,6	;RP1=0, select bank0
+   878  0764  082F               	movf	Tetris_RotatePlayer@game,w
+   879  0765  118A  2512         	fcall	_Tetris_ApplyPlayerToTable
+   880  0767  0008               	return
+   881  0768                     __end_of_Tetris_RotatePlayer:	
+   882                           
+   883                           	psect	text2
+   884  04EF                     __ptext2:	
+   885 ;; *************** function ___lbmod *****************
+   886 ;; Defined at:
+   887 ;;		line 4 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c"
+   888 ;; Parameters:    Size  Location     Type
+   889 ;;  dividend        1    wreg     unsigned char 
+   890 ;;  divisor         1    0[COMMON] unsigned char 
+   891 ;; Auto vars:     Size  Location     Type
+   892 ;;  dividend        1    4[COMMON] unsigned char 
+   893 ;;  rem             1    6[COMMON] unsigned char 
+   894 ;;  counter         1    5[COMMON] unsigned char 
+   895 ;; Return value:  Size  Location     Type
+   896 ;;                  1    wreg      unsigned char 
+   897 ;; Registers used:
+   898 ;;		wreg, status,2, status,0
+   899 ;; Tracked objects:
+   900 ;;		On entry : 0/0
+   901 ;;		On exit  : 0/0
+   902 ;;		Unchanged: 0/0
+   903 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   904 ;;      Params:         1       0       0       0
+   905 ;;      Locals:         3       0       0       0
+   906 ;;      Temps:          3       0       0       0
+   907 ;;      Totals:         7       0       0       0
+   908 ;;Total ram usage:        7 bytes
+   909 ;; Hardware stack levels used:    1
+   910 ;; This function calls:
+   911 ;;		Nothing
+   912 ;; This function is called by:
+   913 ;;		_Tetris_RotatePlayer
+   914 ;; This function uses a non-reentrant model
+   915 ;;
+   916                           
+   917                           
+   918                           ;psect for function ___lbmod
+   919  04EF                     ___lbmod:	
+   920                           
+   921                           ;incstack = 0
+   922                           ; Regs used in ___lbmod: [wreg+status,2+status,0]
+   923                           ;___lbmod@dividend stored from wreg
+   924  04EF  00F4               	movwf	___lbmod@dividend
+   925  04F0  3008               	movlw	8
+   926  04F1  00F1               	movwf	??___lbmod
+   927  04F2  0871               	movf	??___lbmod,w
+   928  04F3  00F5               	movwf	___lbmod@counter
+   929  04F4  01F6               	clrf	___lbmod@rem
+   930  04F5                     l1288:	
+   931  04F5  0874               	movf	___lbmod@dividend,w
+   932  04F6  00F1               	movwf	??___lbmod
+   933  04F7  3007               	movlw	7
+   934  04F8                     u745:	
+   935  04F8  1003               	clrc
+   936  04F9  0CF1               	rrf	??___lbmod,f
+   937  04FA  3EFF               	addlw	-1
+   938  04FB  1D03               	skipz
+   939  04FC  2CF8               	goto	u745
+   940  04FD  0876               	movf	___lbmod@rem,w
+   941  04FE  00F2               	movwf	??___lbmod+1
+   942  04FF  0772               	addwf	??___lbmod+1,w
+   943  0500  0471               	iorwf	??___lbmod,w
+   944  0501  00F3               	movwf	??___lbmod+2
+   945  0502  0873               	movf	??___lbmod+2,w
+   946  0503  00F6               	movwf	___lbmod@rem
+   947  0504  1003               	clrc
+   948  0505  0DF4               	rlf	___lbmod@dividend,f
+   949  0506  0870               	movf	___lbmod@divisor,w
+   950  0507  0276               	subwf	___lbmod@rem,w
+   951  0508  1C03               	skipc
+   952  0509  2D0C               	goto	l420
+   953  050A  0870               	movf	___lbmod@divisor,w
+   954  050B  02F6               	subwf	___lbmod@rem,f
+   955  050C                     l420:	
+   956  050C  3001               	movlw	1
+   957  050D  02F5               	subwf	___lbmod@counter,f
+   958  050E  1D03               	btfss	3,2
+   959  050F  2CF5               	goto	l1288
+   960  0510  0876               	movf	___lbmod@rem,w
+   961  0511  0008               	return
+   962  0512                     __end_of___lbmod:	
+   963                           
+   964                           	psect	text3
+   965  0544                     __ptext3:	
+   966 ;; *************** function _Tetris_PlayerUnitBitsAreValid *****************
+   967 ;; Defined at:
+   968 ;;		line 145 in file "../Tetris/Tetris.c"
+   969 ;; Parameters:    Size  Location     Type
+   970 ;;  player          1    wreg     PTR const struct .
+   971 ;;		 -> game.player(13), main@game(78), 
+   972 ;; Auto vars:     Size  Location     Type
+   973 ;;  player          1   12[COMMON] PTR const struct .
+   974 ;;		 -> game.player(13), main@game(78), 
+   975 ;; Return value:  Size  Location     Type
+   976 ;;                  1    wreg      unsigned char 
+   977 ;; Registers used:
+   978 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   979 ;; Tracked objects:
+   980 ;;		On entry : 0/0
+   981 ;;		On exit  : 0/0
+   982 ;;		Unchanged: 0/0
+   983 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+   984 ;;      Params:         0       0       0       0
+   985 ;;      Locals:         1       0       0       0
+   986 ;;      Temps:          0       4       0       0
+   987 ;;      Totals:         1       4       0       0
+   988 ;;Total ram usage:        5 bytes
+   989 ;; Hardware stack levels used:    1
+   990 ;; Hardware stack levels required when called:    2
+   991 ;; This function calls:
+   992 ;;		_Tetris_CountUnitBits
+   993 ;; This function is called by:
+   994 ;;		_Tetris_RotatePlayer
+   995 ;; This function uses a non-reentrant model
+   996 ;;
+   997                           
+   998                           
+   999                           ;psect for function _Tetris_PlayerUnitBitsAreValid
+  1000  0544                     _Tetris_PlayerUnitBitsAreValid:	
+  1001                           
+  1002                           ;incstack = 0
+  1003                           ; Regs used in _Tetris_PlayerUnitBitsAreValid: [wreg-fsr0h+status,2+status,0+btemp+1+pcl
+      +                          ath+cstack]
+  1004                           ;Tetris_PlayerUnitBitsAreValid@player stored from wreg
+  1005  0544  00FC               	movwf	Tetris_PlayerUnitBitsAreValid@player
+  1006                           
+  1007                           ;../Tetris/Tetris.c: 145: static uint8_t Tetris_PlayerUnitBitsAreValid(const Tetris_Play
+      +                          er *player);../Tetris/Tetris.c: 146: {;../Tetris/Tetris.c: 147:  return Tetris_CountUnit
+      +                          Bits(player->unit->bits[player->rotation]) == Tetris_CountUnitBits(player->unitBits);
+  1008  0545  087C               	movf	Tetris_PlayerUnitBitsAreValid@player,w
+  1009  0546  3E03               	addlw	3
+  1010  0547  00F0               	movwf	Tetris_CountUnitBits@unitBits
+  1011  0548  3000               	movlw	0
+  1012  0549  00F1               	movwf	Tetris_CountUnitBits@unitBits+1
+  1013  054A  118A  262B  118A   	fcall	_Tetris_CountUnitBits
+  1014  054D  1283               	bcf	3,5	;RP0=0, select bank0
+  1015  054E  1303               	bcf	3,6	;RP1=0, select bank0
+  1016  054F  00A0               	movwf	??_Tetris_PlayerUnitBitsAreValid
+  1017  0550  087C               	movf	Tetris_PlayerUnitBitsAreValid@player,w
+  1018  0551  3E0B               	addlw	11
+  1019  0552  0084               	movwf	4
+  1020  0553  1383               	bcf	3,7	;select IRP bank0
+  1021  0554  0800               	movf	0,w
+  1022  0555  00A1               	movwf	??_Tetris_PlayerUnitBitsAreValid+1
+  1023  0556  3003               	movlw	3
+  1024  0557                     u675:	
+  1025  0557  1003               	clrc
+  1026  0558  0DA1               	rlf	??_Tetris_PlayerUnitBitsAreValid+1,f
+  1027  0559  3EFF               	addlw	-1
+  1028  055A  1D03               	skipz
+  1029  055B  2D57               	goto	u675
+  1030  055C  087C               	movf	Tetris_PlayerUnitBitsAreValid@player,w
+  1031  055D  3E02               	addlw	2
+  1032  055E  0084               	movwf	4
+  1033  055F  0800               	movf	0,w
+  1034  0560  0721               	addwf	??_Tetris_PlayerUnitBitsAreValid+1,w
+  1035  0561  00A2               	movwf	??_Tetris_PlayerUnitBitsAreValid+2
+  1036  0562  3001               	movlw	1
+  1037  0563  0722               	addwf	??_Tetris_PlayerUnitBitsAreValid+2,w
+  1038  0564  00A3               	movwf	??_Tetris_PlayerUnitBitsAreValid+3
+  1039  0565  0823               	movf	??_Tetris_PlayerUnitBitsAreValid+3,w
+  1040  0566  00F0               	movwf	Tetris_CountUnitBits@unitBits
+  1041  0567  3000               	movlw	0
+  1042  0568  1D03               	btfss	3,2
+  1043  0569  3080               	movlw	128
+  1044  056A  00F1               	movwf	Tetris_CountUnitBits@unitBits+1
+  1045  056B  118A  262B  118A   	fcall	_Tetris_CountUnitBits
+  1046  056E  1283               	bcf	3,5	;RP0=0, select bank0
+  1047  056F  1303               	bcf	3,6	;RP1=0, select bank0
+  1048  0570  0620               	xorwf	??_Tetris_PlayerUnitBitsAreValid,w
+  1049  0571  1D03               	btfss	3,2
+  1050  0572  2D75               	goto	u680
+  1051  0573  3001               	movlw	1
+  1052  0574  0008               	return
+  1053  0575                     u680:	
+  1054  0575  3000               	movlw	0
+  1055  0576  0008               	return
+  1056  0577                     __end_of_Tetris_PlayerUnitBitsAreValid:	
+  1057                           
+  1058                           	psect	text4
+  1059  062B                     __ptext4:	
+  1060 ;; *************** function _Tetris_CountUnitBits *****************
+  1061 ;; Defined at:
+  1062 ;;		line 109 in file "../Tetris/Tetris.c"
+  1063 ;; Parameters:    Size  Location     Type
+  1064 ;;  unitBits        2    0[COMMON] PTR const unsigned int 
+  1065 ;;		 -> game.player(13), Tetris_units.bits(32), Tetris_units(66), main@game(78), 
+  1066 ;; Auto vars:     Size  Location     Type
+  1067 ;;  j               1   10[COMMON] unsigned char 
+  1068 ;;  mask            2    7[COMMON] unsigned int 
+  1069 ;;  i               1   11[COMMON] unsigned char 
+  1070 ;;  result          1    9[COMMON] unsigned char 
+  1071 ;; Return value:  Size  Location     Type
+  1072 ;;                  1    wreg      unsigned char 
+  1073 ;; Registers used:
+  1074 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath
+  1075 ;; Tracked objects:
+  1076 ;;		On entry : 0/0
+  1077 ;;		On exit  : 0/0
+  1078 ;;		Unchanged: 0/0
+  1079 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1080 ;;      Params:         2       0       0       0
+  1081 ;;      Locals:         5       0       0       0
+  1082 ;;      Temps:          5       0       0       0
+  1083 ;;      Totals:        12       0       0       0
+  1084 ;;Total ram usage:       12 bytes
+  1085 ;; Hardware stack levels used:    2
+  1086 ;; This function calls:
+  1087 ;;		Nothing
+  1088 ;; This function is called by:
+  1089 ;;		_Tetris_PlayerUnitBitsAreValid
+  1090 ;; This function uses a non-reentrant model
+  1091 ;;
+  1092                           
+  1093                           
+  1094                           ;psect for function _Tetris_CountUnitBits
+  1095  062B                     _Tetris_CountUnitBits:	
+  1096                           
+  1097                           ;../Tetris/Tetris.c: 109: static uint8_t Tetris_CountUnitBits(const uint16_t *unitBits);
+      +                          ../Tetris/Tetris.c: 110: {;../Tetris/Tetris.c: 111:  uint8_t result = 0;
+  1098                           
+  1099                           ;incstack = 0
+  1100                           ; Regs used in _Tetris_CountUnitBits: [wreg-fsr0h+status,2+status,0+btemp+1+pclath]
+  1101  062B  01F9               	clrf	Tetris_CountUnitBits@result
+  1102                           
+  1103                           ;../Tetris/Tetris.c: 112:  for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
+  1104  062C  01FB               	clrf	Tetris_CountUnitBits@i
+  1105  062D                     l1132:	
+  1106                           
+  1107                           ;../Tetris/Tetris.c: 113:  {;../Tetris/Tetris.c: 114:   uint16_t mask = 1;
+  1108  062D  3001               	movlw	1
+  1109  062E  00F7               	movwf	Tetris_CountUnitBits@mask
+  1110  062F  3000               	movlw	0
+  1111  0630  00F8               	movwf	Tetris_CountUnitBits@mask+1
+  1112                           
+  1113                           ;../Tetris/Tetris.c: 115:   for (uint8_t j = 0; j < 16; ++j)
+  1114  0631  01FA               	clrf	Tetris_CountUnitBits@j
+  1115  0632                     l1140:	
+  1116                           
+  1117                           ;../Tetris/Tetris.c: 116:   {;../Tetris/Tetris.c: 117:    if (unitBits[i] & mask)
+  1118  0632  087B               	movf	Tetris_CountUnitBits@i,w
+  1119  0633  00F2               	movwf	??_Tetris_CountUnitBits
+  1120  0634  0772               	addwf	??_Tetris_CountUnitBits,w
+  1121  0635  0770               	addwf	Tetris_CountUnitBits@unitBits,w
+  1122  0636  0084               	movwf	4
+  1123  0637  0871               	movf	Tetris_CountUnitBits@unitBits+1,w
+  1124  0638  1803               	skipnc
+  1125  0639  0A71               	incf	Tetris_CountUnitBits@unitBits+1,w
+  1126  063A  1283               	bcf	3,5	;RP0=0, select bank0
+  1127  063B  1303               	bcf	3,6	;RP1=0, select bank0
+  1128  063C  00FF               	movwf	127
+  1129  063D  118A  2002  118A   	fcall	stringtab
+  1130  0640  00F3               	movwf	??_Tetris_CountUnitBits+1
+  1131  0641  118A  2002  118A   	fcall	stringtab
+  1132  0644  00F4               	movwf	??_Tetris_CountUnitBits+2
+  1133  0645  0877               	movf	Tetris_CountUnitBits@mask,w
+  1134  0646  0573               	andwf	??_Tetris_CountUnitBits+1,w
+  1135  0647  00F5               	movwf	??_Tetris_CountUnitBits+3
+  1136  0648  0878               	movf	Tetris_CountUnitBits@mask+1,w
+  1137  0649  0574               	andwf	??_Tetris_CountUnitBits+2,w
+  1138  064A  00F6               	movwf	??_Tetris_CountUnitBits+4
+  1139  064B  0875               	movf	??_Tetris_CountUnitBits+3,w
+  1140  064C  0476               	iorwf	??_Tetris_CountUnitBits+4,w
+  1141  064D  1903               	btfsc	3,2
+  1142  064E  2E53               	goto	l1144
+  1143                           
+  1144                           ;../Tetris/Tetris.c: 118:     ++result;
+  1145  064F  3001               	movlw	1
+  1146  0650  00F2               	movwf	??_Tetris_CountUnitBits
+  1147  0651  0872               	movf	??_Tetris_CountUnitBits,w
+  1148  0652  07F9               	addwf	Tetris_CountUnitBits@result,f
+  1149  0653                     l1144:	
+  1150                           
+  1151                           ;../Tetris/Tetris.c: 119:    mask <<= 1;
+  1152  0653  3001               	movlw	1
+  1153  0654                     u535:	
+  1154  0654  1003               	clrc
+  1155  0655  0DF7               	rlf	Tetris_CountUnitBits@mask,f
+  1156  0656  0DF8               	rlf	Tetris_CountUnitBits@mask+1,f
+  1157  0657  3EFF               	addlw	-1
+  1158  0658  1D03               	skipz
+  1159  0659  2E54               	goto	u535
+  1160                           
+  1161                           ;../Tetris/Tetris.c: 120:   }
+  1162  065A  3001               	movlw	1
+  1163  065B  00F2               	movwf	??_Tetris_CountUnitBits
+  1164  065C  0872               	movf	??_Tetris_CountUnitBits,w
+  1165  065D  07FA               	addwf	Tetris_CountUnitBits@j,f
+  1166  065E  3010               	movlw	16
+  1167  065F  027A               	subwf	Tetris_CountUnitBits@j,w
+  1168  0660  1C03               	skipc
+  1169  0661  2E32               	goto	l1140
+  1170                           
+  1171                           ;../Tetris/Tetris.c: 121:  }
+  1172  0662  3001               	movlw	1
+  1173  0663  00F2               	movwf	??_Tetris_CountUnitBits
+  1174  0664  0872               	movf	??_Tetris_CountUnitBits,w
+  1175  0665  07FB               	addwf	Tetris_CountUnitBits@i,f
+  1176  0666  3004               	movlw	4
+  1177  0667  027B               	subwf	Tetris_CountUnitBits@i,w
+  1178  0668  1C03               	skipc
+  1179  0669  2E2D               	goto	l1132
+  1180                           
+  1181                           ;../Tetris/Tetris.c: 122:  return result;
+  1182  066A  0879               	movf	Tetris_CountUnitBits@result,w
+  1183  066B  0008               	return
+  1184  066C                     __end_of_Tetris_CountUnitBits:	
+  1185                           
+  1186                           	psect	text5
+  1187  04AF                     __ptext5:	
+  1188 ;; *************** function _Tetris_ResetGame *****************
+  1189 ;; Defined at:
+  1190 ;;		line 180 in file "../Tetris/Tetris.c"
+  1191 ;; Parameters:    Size  Location     Type
+  1192 ;;  game            1    wreg     PTR struct .
+  1193 ;;		 -> main@game(78), 
+  1194 ;;  playerUnit      1   11[BANK0 ] PTR const struct .
+  1195 ;;		 -> Tetris_units(66), 
+  1196 ;; Auto vars:     Size  Location     Type
+  1197 ;;  game            1   13[BANK0 ] PTR struct .
+  1198 ;;		 -> main@game(78), 
+  1199 ;; Return value:  Size  Location     Type
+  1200 ;;                  1    wreg      void 
+  1201 ;; Registers used:
+  1202 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+  1203 ;; Tracked objects:
+  1204 ;;		On entry : 0/0
+  1205 ;;		On exit  : 0/0
+  1206 ;;		Unchanged: 0/0
+  1207 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1208 ;;      Params:         0       1       0       0
+  1209 ;;      Locals:         0       1       0       0
+  1210 ;;      Temps:          0       1       0       0
+  1211 ;;      Totals:         0       3       0       0
+  1212 ;;Total ram usage:        3 bytes
+  1213 ;; Hardware stack levels used:    1
+  1214 ;; Hardware stack levels required when called:    4
+  1215 ;; This function calls:
+  1216 ;;		_Tetris_ApplyPlayerToTable
+  1217 ;;		_Tetris_ResetPlayer
+  1218 ;;		_memset
+  1219 ;; This function is called by:
+  1220 ;;		_main
+  1221 ;; This function uses a non-reentrant model
+  1222 ;;
+  1223                           
+  1224                           
+  1225                           ;psect for function _Tetris_ResetGame
+  1226  04AF                     _Tetris_ResetGame:	
+  1227                           
+  1228                           ;incstack = 0
+  1229                           ; Regs used in _Tetris_ResetGame: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+  1230                           ;Tetris_ResetGame@game stored from wreg
+  1231  04AF  1283               	bcf	3,5	;RP0=0, select bank0
+  1232  04B0  1303               	bcf	3,6	;RP1=0, select bank0
+  1233  04B1  00AD               	movwf	Tetris_ResetGame@game
+  1234                           
+  1235                           ;../Tetris/Tetris.c: 180: void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *pl
+      +                          ayerUnit);../Tetris/Tetris.c: 181: {;../Tetris/Tetris.c: 182:  memset(game, 0, sizeof *g
+      +                          ame);
+  1236  04B2  3000               	movlw	0
+  1237  04B3  00F0               	movwf	memset@c
+  1238  04B4  00F1               	movwf	memset@c+1
+  1239  04B5  304E               	movlw	78
+  1240  04B6  00F2               	movwf	memset@n
+  1241  04B7  3000               	movlw	0
+  1242  04B8  00F3               	movwf	memset@n+1
+  1243  04B9  082D               	movf	Tetris_ResetGame@game,w
+  1244  04BA  118A  2475  118A   	fcall	_memset
+  1245                           
+  1246                           ;../Tetris/Tetris.c: 183:  Tetris_ResetPlayer(&game->player, playerUnit);
+  1247  04BD  1283               	bcf	3,5	;RP0=0, select bank0
+  1248  04BE  1303               	bcf	3,6	;RP1=0, select bank0
+  1249  04BF  082B               	movf	Tetris_ResetGame@playerUnit,w
+  1250  04C0  00AC               	movwf	??_Tetris_ResetGame
+  1251  04C1  082C               	movf	??_Tetris_ResetGame,w
+  1252  04C2  00A1               	movwf	Tetris_ResetPlayer@playerUnit
+  1253  04C3  082D               	movf	Tetris_ResetGame@game,w
+  1254  04C4  3E40               	addlw	64
+  1255  04C5  118A  24CE  118A   	fcall	_Tetris_ResetPlayer
+  1256                           
+  1257                           ;../Tetris/Tetris.c: 184:  Tetris_ApplyPlayerToTable(game);
+  1258  04C8  1283               	bcf	3,5	;RP0=0, select bank0
+  1259  04C9  1303               	bcf	3,6	;RP1=0, select bank0
+  1260  04CA  082D               	movf	Tetris_ResetGame@game,w
+  1261  04CB  118A  2512         	fcall	_Tetris_ApplyPlayerToTable
+  1262  04CD  0008               	return
+  1263  04CE                     __end_of_Tetris_ResetGame:	
+  1264                           
+  1265                           	psect	text6
+  1266  0475                     __ptext6:	
+  1267 ;; *************** function _memset *****************
+  1268 ;; Defined at:
+  1269 ;;		line 8 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c"
+  1270 ;; Parameters:    Size  Location     Type
+  1271 ;;  p1              1    wreg     PTR void 
+  1272 ;;		 -> main@game(78), 
+  1273 ;;  c               2    0[COMMON] int 
+  1274 ;;  n               2    2[COMMON] unsigned int 
+  1275 ;; Auto vars:     Size  Location     Type
+  1276 ;;  p1              1    5[COMMON] PTR void 
+  1277 ;;		 -> main@game(78), 
+  1278 ;;  p               1    6[COMMON] PTR unsigned char 
+  1279 ;;		 -> main@game(78), 
+  1280 ;; Return value:  Size  Location     Type
+  1281 ;;                  1    wreg      PTR void 
+  1282 ;; Registers used:
+  1283 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1284 ;; Tracked objects:
+  1285 ;;		On entry : 0/0
+  1286 ;;		On exit  : 0/0
+  1287 ;;		Unchanged: 0/0
+  1288 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1289 ;;      Params:         4       0       0       0
+  1290 ;;      Locals:         2       0       0       0
+  1291 ;;      Temps:          1       0       0       0
+  1292 ;;      Totals:         7       0       0       0
+  1293 ;;Total ram usage:        7 bytes
+  1294 ;; Hardware stack levels used:    1
+  1295 ;; This function calls:
+  1296 ;;		Nothing
+  1297 ;; This function is called by:
+  1298 ;;		_Tetris_ResetGame
+  1299 ;; This function uses a non-reentrant model
+  1300 ;;
+  1301                           
+  1302                           
+  1303                           ;psect for function _memset
+  1304  0475                     _memset:	
+  1305                           
+  1306                           ;incstack = 0
+  1307                           ; Regs used in _memset: [wreg-fsr0h+status,2+status,0]
+  1308                           ;memset@p1 stored from wreg
+  1309  0475  00F5               	movwf	memset@p1
+  1310  0476  0875               	movf	memset@p1,w
+  1311  0477  00F4               	movwf	??_memset
+  1312  0478  0874               	movf	??_memset,w
+  1313  0479  00F6               	movwf	memset@p
+  1314  047A                     l1268:	
+  1315  047A  3001               	movlw	1
+  1316  047B  02F2               	subwf	memset@n,f
+  1317  047C  3000               	movlw	0
+  1318  047D  1C03               	skipc
+  1319  047E  03F3               	decf	memset@n+1,f
+  1320  047F  02F3               	subwf	memset@n+1,f
+  1321  0480  0A72               	incf	memset@n,w
+  1322  0481  1903               	btfsc	3,2
+  1323  0482  0A73               	incf	memset@n+1,w
+  1324  0483  1903               	btfsc	3,2
+  1325  0484  0008               	return
+  1326  0485  0870               	movf	memset@c,w
+  1327  0486  00F4               	movwf	??_memset
+  1328  0487  0876               	movf	memset@p,w
+  1329  0488  0084               	movwf	4
+  1330  0489  0874               	movf	??_memset,w
+  1331  048A  1383               	bcf	3,7	;select IRP bank0
+  1332  048B  0080               	movwf	0
+  1333  048C  3001               	movlw	1
+  1334  048D  00F4               	movwf	??_memset
+  1335  048E  0874               	movf	??_memset,w
+  1336  048F  07F6               	addwf	memset@p,f
+  1337  0490  2C7A               	goto	l1268
+  1338  0491                     __end_of_memset:	
+  1339                           
+  1340                           	psect	text7
+  1341  04CE                     __ptext7:	
+  1342 ;; *************** function _Tetris_ResetPlayer *****************
+  1343 ;; Defined at:
+  1344 ;;		line 156 in file "../Tetris/Tetris.c"
+  1345 ;; Parameters:    Size  Location     Type
+  1346 ;;  player          1    wreg     PTR struct .
+  1347 ;;		 -> main@game(78), 
+  1348 ;;  playerUnit      1    1[BANK0 ] PTR const struct .
+  1349 ;;		 -> Tetris_units(66), 
+  1350 ;; Auto vars:     Size  Location     Type
+  1351 ;;  player          1    4[BANK0 ] PTR struct .
+  1352 ;;		 -> main@game(78), 
+  1353 ;; Return value:  Size  Location     Type
+  1354 ;;                  1    wreg      void 
+  1355 ;; Registers used:
+  1356 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+  1357 ;; Tracked objects:
+  1358 ;;		On entry : 0/0
+  1359 ;;		On exit  : 0/0
+  1360 ;;		Unchanged: 0/0
+  1361 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1362 ;;      Params:         0       1       0       0
+  1363 ;;      Locals:         0       1       0       0
+  1364 ;;      Temps:          0       2       0       0
+  1365 ;;      Totals:         0       4       0       0
+  1366 ;;Total ram usage:        4 bytes
+  1367 ;; Hardware stack levels used:    1
+  1368 ;; Hardware stack levels required when called:    3
+  1369 ;; This function calls:
+  1370 ;;		_Tetris_SetPlayerUnit
+  1371 ;; This function is called by:
+  1372 ;;		_Tetris_ResetGame
+  1373 ;; This function uses a non-reentrant model
+  1374 ;;
+  1375                           
+  1376                           
+  1377                           ;psect for function _Tetris_ResetPlayer
+  1378  04CE                     _Tetris_ResetPlayer:	
+  1379                           
+  1380                           ;incstack = 0
+  1381                           ; Regs used in _Tetris_ResetPlayer: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+  1382                           ;Tetris_ResetPlayer@player stored from wreg
+  1383  04CE  1283               	bcf	3,5	;RP0=0, select bank0
+  1384  04CF  1303               	bcf	3,6	;RP1=0, select bank0
+  1385  04D0  00A4               	movwf	Tetris_ResetPlayer@player
+  1386                           
+  1387                           ;../Tetris/Tetris.c: 156: static void Tetris_ResetPlayer(Tetris_Player *player, const Te
+      +                          tris_Unit *playerUnit);../Tetris/Tetris.c: 157: {;../Tetris/Tetris.c: 158:  player->posi
+      +                          tion = Tetris_playerStartingPosition;
+  1388  04D1  3001               	movlw	low (_Tetris_playerStartingPosition-__stringbase)
+  1389  04D2  0084               	movwf	4
+  1390  04D3  118A  200C  118A   	fcall	stringdir
+  1391  04D6  00A2               	movwf	??_Tetris_ResetPlayer
+  1392  04D7  118A  200C  118A   	fcall	stringdir
+  1393  04DA  00A3               	movwf	??_Tetris_ResetPlayer+1
+  1394  04DB  0824               	movf	Tetris_ResetPlayer@player,w
+  1395  04DC  0084               	movwf	4
+  1396  04DD  0822               	movf	??_Tetris_ResetPlayer,w
+  1397  04DE  1383               	bcf	3,7	;select IRP bank0
+  1398  04DF  0080               	movwf	0
+  1399  04E0  0A84               	incf	4,f
+  1400  04E1  0823               	movf	??_Tetris_ResetPlayer+1,w
+  1401  04E2  0080               	movwf	0
+  1402                           
+  1403                           ;../Tetris/Tetris.c: 159:  player->rotation = 0;
+  1404  04E3  0824               	movf	Tetris_ResetPlayer@player,w
+  1405  04E4  3E0B               	addlw	11
+  1406  04E5  0084               	movwf	4
+  1407  04E6  0180               	clrf	0
+  1408                           
+  1409                           ;../Tetris/Tetris.c: 160:  Tetris_SetPlayerUnit(player, playerUnit);
+  1410  04E7  0821               	movf	Tetris_ResetPlayer@playerUnit,w
+  1411  04E8  00A2               	movwf	??_Tetris_ResetPlayer
+  1412  04E9  0822               	movf	??_Tetris_ResetPlayer,w
+  1413  04EA  00FC               	movwf	Tetris_SetPlayerUnit@unit
+  1414  04EB  0824               	movf	Tetris_ResetPlayer@player,w
+  1415  04EC  118A  242D         	fcall	_Tetris_SetPlayerUnit
+  1416  04EE  0008               	return
+  1417  04EF                     __end_of_Tetris_ResetPlayer:	
+  1418                           
+  1419                           	psect	text8
+  1420  042D                     __ptext8:	
+  1421 ;; *************** function _Tetris_SetPlayerUnit *****************
+  1422 ;; Defined at:
+  1423 ;;		line 150 in file "../Tetris/Tetris.c"
+  1424 ;; Parameters:    Size  Location     Type
+  1425 ;;  player          1    wreg     PTR struct .
+  1426 ;;		 -> main@game(78), 
+  1427 ;;  unit            1   12[COMMON] PTR const struct .
+  1428 ;;		 -> Tetris_units(66), 
+  1429 ;; Auto vars:     Size  Location     Type
+  1430 ;;  player          1    0[BANK0 ] PTR struct .
+  1431 ;;		 -> main@game(78), 
+  1432 ;; Return value:  Size  Location     Type
+  1433 ;;                  1    wreg      void 
+  1434 ;; Registers used:
+  1435 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+  1436 ;; Tracked objects:
+  1437 ;;		On entry : 0/0
+  1438 ;;		On exit  : 0/0
+  1439 ;;		Unchanged: 0/0
+  1440 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1441 ;;      Params:         1       0       0       0
+  1442 ;;      Locals:         0       1       0       0
+  1443 ;;      Temps:          1       0       0       0
+  1444 ;;      Totals:         2       1       0       0
+  1445 ;;Total ram usage:        3 bytes
+  1446 ;; Hardware stack levels used:    1
+  1447 ;; Hardware stack levels required when called:    2
+  1448 ;; This function calls:
+  1449 ;;		_Tetris_UpdatePlayerUnitBits
+  1450 ;; This function is called by:
+  1451 ;;		_Tetris_ResetPlayer
+  1452 ;; This function uses a non-reentrant model
+  1453 ;;
+  1454                           
+  1455                           
+  1456                           ;psect for function _Tetris_SetPlayerUnit
+  1457  042D                     _Tetris_SetPlayerUnit:	
+  1458                           
+  1459                           ;incstack = 0
+  1460                           ; Regs used in _Tetris_SetPlayerUnit: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstac
+      +                          k]
+  1461                           ;Tetris_SetPlayerUnit@player stored from wreg
+  1462  042D  1283               	bcf	3,5	;RP0=0, select bank0
+  1463  042E  1303               	bcf	3,6	;RP1=0, select bank0
+  1464  042F  00A0               	movwf	Tetris_SetPlayerUnit@player
+  1465                           
+  1466                           ;../Tetris/Tetris.c: 150: static void Tetris_SetPlayerUnit(Tetris_Player *player, const 
+      +                          Tetris_Unit *unit);../Tetris/Tetris.c: 151: {;../Tetris/Tetris.c: 152:  player->unit = u
+      +                          nit;
+  1467  0430  087C               	movf	Tetris_SetPlayerUnit@unit,w
+  1468  0431  00FD               	movwf	??_Tetris_SetPlayerUnit
+  1469  0432  0820               	movf	Tetris_SetPlayerUnit@player,w
+  1470  0433  3E02               	addlw	2
+  1471  0434  0084               	movwf	4
+  1472  0435  087D               	movf	??_Tetris_SetPlayerUnit,w
+  1473  0436  1383               	bcf	3,7	;select IRP bank0
+  1474  0437  0080               	movwf	0
+  1475                           
+  1476                           ;../Tetris/Tetris.c: 153:  Tetris_UpdatePlayerUnitBits(player);
+  1477  0438  0820               	movf	Tetris_SetPlayerUnit@player,w
+  1478  0439  118A  2768         	fcall	_Tetris_UpdatePlayerUnitBits
+  1479  043B  0008               	return
+  1480  043C                     __end_of_Tetris_SetPlayerUnit:	
+  1481                           
+  1482                           	psect	text9
+  1483  0768                     __ptext9:	
+  1484 ;; *************** function _Tetris_UpdatePlayerUnitBits *****************
+  1485 ;; Defined at:
+  1486 ;;		line 125 in file "../Tetris/Tetris.c"
+  1487 ;; Parameters:    Size  Location     Type
+  1488 ;;  player          1    wreg     PTR struct .
+  1489 ;;		 -> main@game(78), 
+  1490 ;; Auto vars:     Size  Location     Type
+  1491 ;;  player          1   11[COMMON] PTR struct .
+  1492 ;;		 -> main@game(78), 
+  1493 ;;  i               1    8[COMMON] unsigned char 
+  1494 ;;  i               1    7[COMMON] unsigned char 
+  1495 ;;  i               1    9[COMMON] unsigned char 
+  1496 ;;  shift           1   10[COMMON] char 
+  1497 ;; Return value:  Size  Location     Type
+  1498 ;;                  1    wreg      void 
+  1499 ;; Registers used:
+  1500 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath
+  1501 ;; Tracked objects:
+  1502 ;;		On entry : 0/0
+  1503 ;;		On exit  : 0/0
+  1504 ;;		Unchanged: 0/0
+  1505 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1506 ;;      Params:         0       0       0       0
+  1507 ;;      Locals:         5       0       0       0
+  1508 ;;      Temps:          7       0       0       0
+  1509 ;;      Totals:        12       0       0       0
+  1510 ;;Total ram usage:       12 bytes
+  1511 ;; Hardware stack levels used:    2
+  1512 ;; This function calls:
+  1513 ;;		Nothing
+  1514 ;; This function is called by:
+  1515 ;;		_Tetris_SetPlayerUnit
+  1516 ;;		_Tetris_RotatePlayer
+  1517 ;; This function uses a non-reentrant model
+  1518 ;;
+  1519                           
+  1520                           
+  1521                           ;psect for function _Tetris_UpdatePlayerUnitBits
+  1522  0768                     _Tetris_UpdatePlayerUnitBits:	
+  1523                           
+  1524                           ;incstack = 0
+  1525                           ; Regs used in _Tetris_UpdatePlayerUnitBits: [wreg-fsr0h+status,2+status,0+btemp+1+pclat
+      +                          h]
+  1526                           ;Tetris_UpdatePlayerUnitBits@player stored from wreg
+  1527  0768  00FB               	movwf	Tetris_UpdatePlayerUnitBits@player
+  1528                           
+  1529                           ;../Tetris/Tetris.c: 125: static void Tetris_UpdatePlayerUnitBits(Tetris_Player *player)
+      +                          ;../Tetris/Tetris.c: 126: {;../Tetris/Tetris.c: 127:  for (uint8_t i = 0; i < TETRIS_UNI
+      +                          T_HEIGHT; ++i)
+  1530  0769  01F9               	clrf	Tetris_UpdatePlayerUnitBits@i
+  1531  076A                     l1086:	
+  1532                           
+  1533                           ;../Tetris/Tetris.c: 128:   player->unitBits[i] = player->unit->bits[player->rotation][i
+      +                          ];
+  1534  076A  087B               	movf	Tetris_UpdatePlayerUnitBits@player,w
+  1535  076B  3E0B               	addlw	11
+  1536  076C  0084               	movwf	4
+  1537  076D  1383               	bcf	3,7	;select IRP bank0
+  1538  076E  0800               	movf	0,w
+  1539  076F  00F0               	movwf	??_Tetris_UpdatePlayerUnitBits
+  1540  0770  3003               	movlw	3
+  1541  0771                     u455:	
+  1542  0771  1003               	clrc
+  1543  0772  0DF0               	rlf	??_Tetris_UpdatePlayerUnitBits,f
+  1544  0773  3EFF               	addlw	-1
+  1545  0774  1D03               	skipz
+  1546  0775  2F71               	goto	u455
+  1547  0776  087B               	movf	Tetris_UpdatePlayerUnitBits@player,w
+  1548  0777  3E02               	addlw	2
+  1549  0778  0084               	movwf	4
+  1550  0779  0800               	movf	0,w
+  1551  077A  0770               	addwf	??_Tetris_UpdatePlayerUnitBits,w
+  1552  077B  00F1               	movwf	??_Tetris_UpdatePlayerUnitBits+1
+  1553  077C  0879               	movf	Tetris_UpdatePlayerUnitBits@i,w
+  1554  077D  00F2               	movwf	??_Tetris_UpdatePlayerUnitBits+2
+  1555  077E  0772               	addwf	??_Tetris_UpdatePlayerUnitBits+2,w
+  1556  077F  0771               	addwf	??_Tetris_UpdatePlayerUnitBits+1,w
+  1557  0780  3E01               	addlw	1
+  1558  0781  0084               	movwf	4
+  1559  0782  118A  200C  118A   	fcall	stringdir
+  1560  0785  00F3               	movwf	??_Tetris_UpdatePlayerUnitBits+3
+  1561  0786  118A  200C  118A   	fcall	stringdir
+  1562  0789  00F4               	movwf	??_Tetris_UpdatePlayerUnitBits+4
+  1563  078A  0879               	movf	Tetris_UpdatePlayerUnitBits@i,w
+  1564  078B  00F5               	movwf	??_Tetris_UpdatePlayerUnitBits+5
+  1565  078C  0775               	addwf	??_Tetris_UpdatePlayerUnitBits+5,w
+  1566  078D  077B               	addwf	Tetris_UpdatePlayerUnitBits@player,w
+  1567  078E  00F6               	movwf	??_Tetris_UpdatePlayerUnitBits+6
+  1568  078F  0876               	movf	??_Tetris_UpdatePlayerUnitBits+6,w
+  1569  0790  3E03               	addlw	3
+  1570  0791  0084               	movwf	4
+  1571  0792  0873               	movf	??_Tetris_UpdatePlayerUnitBits+3,w
+  1572  0793  0080               	movwf	0
+  1573  0794  0A84               	incf	4,f
+  1574  0795  0874               	movf	??_Tetris_UpdatePlayerUnitBits+4,w
+  1575  0796  0080               	movwf	0
+  1576  0797  3001               	movlw	1
+  1577  0798  00F0               	movwf	??_Tetris_UpdatePlayerUnitBits
+  1578  0799  0870               	movf	??_Tetris_UpdatePlayerUnitBits,w
+  1579  079A  07F9               	addwf	Tetris_UpdatePlayerUnitBits@i,f
+  1580  079B  3004               	movlw	4
+  1581  079C  0279               	subwf	Tetris_UpdatePlayerUnitBits@i,w
+  1582  079D  1C03               	skipc
+  1583  079E  2F6A               	goto	l1086
+  1584                           
+  1585                           ;../Tetris/Tetris.c: 130:  int8_t shift = 8 - player->position.x + Tetris_unitPivot.x;
+  1586  079F  087B               	movf	Tetris_UpdatePlayerUnitBits@player,w
+  1587  07A0  0084               	movwf	4
+  1588  07A1  0800               	movf	0,w
+  1589  07A2  00F0               	movwf	??_Tetris_UpdatePlayerUnitBits
+  1590  07A3  3003               	movlw	low (_Tetris_unitPivot-__stringbase)
+  1591  07A4  0084               	movwf	4
+  1592  07A5  118A  200C  118A   	fcall	stringdir
+  1593  07A8  00F1               	movwf	??_Tetris_UpdatePlayerUnitBits+1
+  1594  07A9  0870               	movf	??_Tetris_UpdatePlayerUnitBits,w
+  1595  07AA  0271               	subwf	??_Tetris_UpdatePlayerUnitBits+1,w
+  1596  07AB  3E08               	addlw	8
+  1597  07AC  00F2               	movwf	??_Tetris_UpdatePlayerUnitBits+2
+  1598  07AD  0872               	movf	??_Tetris_UpdatePlayerUnitBits+2,w
+  1599  07AE  00FA               	movwf	Tetris_UpdatePlayerUnitBits@shift
+  1600                           
+  1601                           ;../Tetris/Tetris.c: 132:  if (shift > 0)
+  1602  07AF  087A               	movf	Tetris_UpdatePlayerUnitBits@shift,w
+  1603  07B0  3A80               	xorlw	128
+  1604  07B1  3E7F               	addlw	-129
+  1605  07B2  1C03               	skipc
+  1606  07B3  2FD0               	goto	l1108
+  1607                           
+  1608                           ;../Tetris/Tetris.c: 133:  {;../Tetris/Tetris.c: 134:   for (uint8_t i = 0; i < TETRIS_U
+      +                          NIT_HEIGHT; ++i)
+  1609  07B4  01F7               	clrf	Tetris_UpdatePlayerUnitBits@i_197
+  1610  07B5                     l1102:	
+  1611                           
+  1612                           ;../Tetris/Tetris.c: 135:    player->unitBits[i] <<= shift;
+  1613  07B5  0877               	movf	Tetris_UpdatePlayerUnitBits@i_197,w
+  1614  07B6  00F0               	movwf	??_Tetris_UpdatePlayerUnitBits
+  1615  07B7  0770               	addwf	??_Tetris_UpdatePlayerUnitBits,w
+  1616  07B8  077B               	addwf	Tetris_UpdatePlayerUnitBits@player,w
+  1617  07B9  00F1               	movwf	??_Tetris_UpdatePlayerUnitBits+1
+  1618  07BA  0871               	movf	??_Tetris_UpdatePlayerUnitBits+1,w
+  1619  07BB  3E03               	addlw	3
+  1620  07BC  0084               	movwf	4
+  1621  07BD  0A7A               	incf	Tetris_UpdatePlayerUnitBits@shift,w
+  1622  07BE  2FC4               	goto	u480
+  1623  07BF                     u485:	
+  1624  07BF  1003               	clrc
+  1625  07C0  0D80               	rlf	0,f
+  1626  07C1  0A84               	incf	4,f
+  1627  07C2  0D80               	rlf	0,f
+  1628  07C3  0384               	decf	4,f
+  1629  07C4                     u480:	
+  1630  07C4  3EFF               	addlw	-1
+  1631  07C5  1D03               	skipz
+  1632  07C6  2FBF               	goto	u485
+  1633  07C7  3001               	movlw	1
+  1634  07C8  00F0               	movwf	??_Tetris_UpdatePlayerUnitBits
+  1635  07C9  0870               	movf	??_Tetris_UpdatePlayerUnitBits,w
+  1636  07CA  07F7               	addwf	Tetris_UpdatePlayerUnitBits@i_197,f
+  1637  07CB  3004               	movlw	4
+  1638  07CC  0277               	subwf	Tetris_UpdatePlayerUnitBits@i_197,w
+  1639  07CD  1803               	btfsc	3,0
+  1640  07CE  0008               	return
+  1641  07CF  2FB5               	goto	l1102
+  1642  07D0                     l1108:	
+  1643                           
+  1644                           ;../Tetris/Tetris.c: 138:  {;../Tetris/Tetris.c: 139:   shift = -shift;
+  1645  07D0  09FA               	comf	Tetris_UpdatePlayerUnitBits@shift,f
+  1646  07D1  0AFA               	incf	Tetris_UpdatePlayerUnitBits@shift,f
+  1647                           
+  1648                           ;../Tetris/Tetris.c: 140:   for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
+  1649  07D2  01F8               	clrf	Tetris_UpdatePlayerUnitBits@i_198
+  1650  07D3                     l1116:	
+  1651                           
+  1652                           ;../Tetris/Tetris.c: 141:    player->unitBits[i] >>= shift;
+  1653  07D3  0878               	movf	Tetris_UpdatePlayerUnitBits@i_198,w
+  1654  07D4  00F0               	movwf	??_Tetris_UpdatePlayerUnitBits
+  1655  07D5  0770               	addwf	??_Tetris_UpdatePlayerUnitBits,w
+  1656  07D6  077B               	addwf	Tetris_UpdatePlayerUnitBits@player,w
+  1657  07D7  00F1               	movwf	??_Tetris_UpdatePlayerUnitBits+1
+  1658  07D8  0871               	movf	??_Tetris_UpdatePlayerUnitBits+1,w
+  1659  07D9  3E03               	addlw	3
+  1660  07DA  0084               	movwf	4
+  1661  07DB  0A7A               	incf	Tetris_UpdatePlayerUnitBits@shift,w
+  1662  07DC  2FE2               	goto	u500
+  1663  07DD                     u505:	
+  1664  07DD  0A84               	incf	4,f
+  1665  07DE  1003               	clrc
+  1666  07DF  0C80               	rrf	0,f
+  1667  07E0  0384               	decf	4,f
+  1668  07E1  0C80               	rrf	0,f
+  1669  07E2                     u500:	
+  1670  07E2  3EFF               	addlw	-1
+  1671  07E3  1D03               	skipz
+  1672  07E4  2FDD               	goto	u505
+  1673  07E5  3001               	movlw	1
+  1674  07E6  00F0               	movwf	??_Tetris_UpdatePlayerUnitBits
+  1675  07E7  0870               	movf	??_Tetris_UpdatePlayerUnitBits,w
+  1676  07E8  07F8               	addwf	Tetris_UpdatePlayerUnitBits@i_198,f
+  1677  07E9  3004               	movlw	4
+  1678  07EA  0278               	subwf	Tetris_UpdatePlayerUnitBits@i_198,w
+  1679  07EB  1803               	btfsc	3,0
+  1680  07EC  0008               	return
+  1681  07ED  2FD3               	goto	l1116
+  1682  07EE                     __end_of_Tetris_UpdatePlayerUnitBits:	
+  1683                           
+  1684                           	psect	text10
+  1685  06B1                     __ptext10:	
+  1686 ;; *************** function _Tetris_MovePlayerLeft *****************
+  1687 ;; Defined at:
+  1688 ;;		line 192 in file "../Tetris/Tetris.c"
+  1689 ;; Parameters:    Size  Location     Type
+  1690 ;;  game            1    wreg     PTR struct .
+  1691 ;;		 -> main@game(78), 
+  1692 ;; Auto vars:     Size  Location     Type
+  1693 ;;  game            1   16[BANK0 ] PTR struct .
+  1694 ;;		 -> main@game(78), 
+  1695 ;;  i               1   15[BANK0 ] unsigned char 
+  1696 ;;  i               1   14[BANK0 ] unsigned char 
+  1697 ;; Return value:  Size  Location     Type
+  1698 ;;                  1    wreg      void 
+  1699 ;; Registers used:
+  1700 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  1701 ;; Tracked objects:
+  1702 ;;		On entry : 0/0
+  1703 ;;		On exit  : 0/0
+  1704 ;;		Unchanged: 0/0
+  1705 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1706 ;;      Params:         0       0       0       0
+  1707 ;;      Locals:         0       3       0       0
+  1708 ;;      Temps:          0       2       0       0
+  1709 ;;      Totals:         0       5       0       0
+  1710 ;;Total ram usage:        5 bytes
+  1711 ;; Hardware stack levels used:    1
+  1712 ;; Hardware stack levels required when called:    3
+  1713 ;; This function calls:
+  1714 ;;		_Tetris_ApplyPlayerToTable
+  1715 ;;		_Tetris_PlayerOverlapsEnvironment
+  1716 ;;		_Tetris_PlayerTouchingLeftBound
+  1717 ;;		_Tetris_RemovePlayerFromTable
+  1718 ;; This function is called by:
+  1719 ;;		_main
+  1720 ;; This function uses a non-reentrant model
+  1721 ;;
+  1722                           
+  1723                           
+  1724                           ;psect for function _Tetris_MovePlayerLeft
+  1725  06B1                     _Tetris_MovePlayerLeft:	
+  1726                           
+  1727                           ;incstack = 0
+  1728                           ; Regs used in _Tetris_MovePlayerLeft: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  1729                           ;Tetris_MovePlayerLeft@game stored from wreg
+  1730  06B1  1283               	bcf	3,5	;RP0=0, select bank0
+  1731  06B2  1303               	bcf	3,6	;RP1=0, select bank0
+  1732  06B3  00B0               	movwf	Tetris_MovePlayerLeft@game
+  1733                           
+  1734                           ;../Tetris/Tetris.c: 192: void Tetris_MovePlayerLeft(Tetris_Game *game);../Tetris/Tetris
+      +                          .c: 193: {;../Tetris/Tetris.c: 194:  if (Tetris_PlayerTouchingLeftBound(&game->player))
+  1735  06B4  0830               	movf	Tetris_MovePlayerLeft@game,w
+  1736  06B5  3E40               	addlw	64
+  1737  06B6  118A  2491  118A   	fcall	_Tetris_PlayerTouchingLeftBound
+  1738  06B9  3A00               	xorlw	0
+  1739  06BA  1D03               	btfss	3,2
+  1740  06BB  0008               	return
+  1741                           
+  1742                           ;../Tetris/Tetris.c: 197:  Tetris_RemovePlayerFromTable(game);
+  1743  06BC  1283               	bcf	3,5	;RP0=0, select bank0
+  1744  06BD  1303               	bcf	3,6	;RP1=0, select bank0
+  1745  06BE  0830               	movf	Tetris_MovePlayerLeft@game,w
+  1746  06BF  118A  2577  118A   	fcall	_Tetris_RemovePlayerFromTable
+  1747                           
+  1748                           ;../Tetris/Tetris.c: 199:  for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
+  1749  06C2  1283               	bcf	3,5	;RP0=0, select bank0
+  1750  06C3  1303               	bcf	3,6	;RP1=0, select bank0
+  1751  06C4  01AE               	clrf	Tetris_MovePlayerLeft@i
+  1752  06C5                     l1322:	
+  1753                           
+  1754                           ;../Tetris/Tetris.c: 200:   game->player.unitBits[i] <<= 1;
+  1755  06C5  082E               	movf	Tetris_MovePlayerLeft@i,w
+  1756  06C6  00AC               	movwf	??_Tetris_MovePlayerLeft
+  1757  06C7  072C               	addwf	??_Tetris_MovePlayerLeft,w
+  1758  06C8  0730               	addwf	Tetris_MovePlayerLeft@game,w
+  1759  06C9  00AD               	movwf	??_Tetris_MovePlayerLeft+1
+  1760  06CA  082D               	movf	??_Tetris_MovePlayerLeft+1,w
+  1761  06CB  3E43               	addlw	67
+  1762  06CC  0084               	movwf	4
+  1763  06CD  1003               	clrc
+  1764  06CE  1383               	bcf	3,7	;select IRP bank0
+  1765  06CF  0D80               	rlf	0,f
+  1766  06D0  0A84               	incf	4,f
+  1767  06D1  0D80               	rlf	0,f
+  1768  06D2  0384               	decf	4,f
+  1769  06D3  3001               	movlw	1
+  1770  06D4  00AC               	movwf	??_Tetris_MovePlayerLeft
+  1771  06D5  082C               	movf	??_Tetris_MovePlayerLeft,w
+  1772  06D6  07AE               	addwf	Tetris_MovePlayerLeft@i,f
+  1773  06D7  3004               	movlw	4
+  1774  06D8  022E               	subwf	Tetris_MovePlayerLeft@i,w
+  1775  06D9  1C03               	skipc
+  1776  06DA  2EC5               	goto	l1322
+  1777                           
+  1778                           ;../Tetris/Tetris.c: 202:  if (Tetris_PlayerOverlapsEnvironment(game))
+  1779  06DB  0830               	movf	Tetris_MovePlayerLeft@game,w
+  1780  06DC  118A  25EA  118A   	fcall	_Tetris_PlayerOverlapsEnvironment
+  1781  06DF  3A00               	xorlw	0
+  1782  06E0  1903               	skipnz
+  1783  06E1  2EFC               	goto	l1342
+  1784                           
+  1785                           ;../Tetris/Tetris.c: 203:  {;../Tetris/Tetris.c: 204:   for (uint8_t i = 0; i < TETRIS_U
+      +                          NIT_HEIGHT; ++i)
+  1786  06E2  1283               	bcf	3,5	;RP0=0, select bank0
+  1787  06E3  1303               	bcf	3,6	;RP1=0, select bank0
+  1788  06E4  01AF               	clrf	Tetris_MovePlayerLeft@i_270
+  1789  06E5                     l1336:	
+  1790                           
+  1791                           ;../Tetris/Tetris.c: 205:    game->player.unitBits[i] >>= 1;
+  1792  06E5  082F               	movf	Tetris_MovePlayerLeft@i_270,w
+  1793  06E6  00AC               	movwf	??_Tetris_MovePlayerLeft
+  1794  06E7  072C               	addwf	??_Tetris_MovePlayerLeft,w
+  1795  06E8  0730               	addwf	Tetris_MovePlayerLeft@game,w
+  1796  06E9  00AD               	movwf	??_Tetris_MovePlayerLeft+1
+  1797  06EA  082D               	movf	??_Tetris_MovePlayerLeft+1,w
+  1798  06EB  3E43               	addlw	67
+  1799  06EC  0084               	movwf	4
+  1800  06ED  0A84               	incf	4,f
+  1801  06EE  1003               	clrc
+  1802  06EF  1383               	bcf	3,7	;select IRP bank0
+  1803  06F0  0C80               	rrf	0,f
+  1804  06F1  0384               	decf	4,f
+  1805  06F2  0C80               	rrf	0,f
+  1806  06F3  3001               	movlw	1
+  1807  06F4  00AC               	movwf	??_Tetris_MovePlayerLeft
+  1808  06F5  082C               	movf	??_Tetris_MovePlayerLeft,w
+  1809  06F6  07AF               	addwf	Tetris_MovePlayerLeft@i_270,f
+  1810  06F7  3004               	movlw	4
+  1811  06F8  022F               	subwf	Tetris_MovePlayerLeft@i_270,w
+  1812  06F9  1803               	btfsc	3,0
+  1813  06FA  2F04               	goto	l1344
+  1814  06FB  2EE5               	goto	l1336
+  1815  06FC                     l1342:	
+  1816                           
+  1817                           ;../Tetris/Tetris.c: 208:  {;../Tetris/Tetris.c: 209:   --game->player.position.x;
+  1818  06FC  1283               	bcf	3,5	;RP0=0, select bank0
+  1819  06FD  1303               	bcf	3,6	;RP1=0, select bank0
+  1820  06FE  0830               	movf	Tetris_MovePlayerLeft@game,w
+  1821  06FF  3E40               	addlw	64
+  1822  0700  0084               	movwf	4
+  1823  0701  3001               	movlw	1
+  1824  0702  1383               	bcf	3,7	;select IRP bank0
+  1825  0703  0280               	subwf	0,f
+  1826  0704                     l1344:	
+  1827                           
+  1828                           ;../Tetris/Tetris.c: 212:  Tetris_ApplyPlayerToTable(game);
+  1829  0704  0830               	movf	Tetris_MovePlayerLeft@game,w
+  1830  0705  118A  2512         	fcall	_Tetris_ApplyPlayerToTable
+  1831  0707  0008               	return
+  1832  0708                     __end_of_Tetris_MovePlayerLeft:	
+  1833                           
+  1834                           	psect	text11
+  1835  0577                     __ptext11:	
+  1836 ;; *************** function _Tetris_RemovePlayerFromTable *****************
+  1837 ;; Defined at:
+  1838 ;;		line 91 in file "../Tetris/Tetris.c"
+  1839 ;; Parameters:    Size  Location     Type
+  1840 ;;  game            1    wreg     PTR struct .
+  1841 ;;		 -> main@game(78), 
+  1842 ;; Auto vars:     Size  Location     Type
+  1843 ;;  game            1   12[COMMON] PTR struct .
+  1844 ;;		 -> main@game(78), 
+  1845 ;;  i               1   13[COMMON] unsigned char 
+  1846 ;;  start           1   11[COMMON] unsigned char 
+  1847 ;; Return value:  Size  Location     Type
+  1848 ;;                  1    wreg      void 
+  1849 ;; Registers used:
+  1850 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  1851 ;; Tracked objects:
+  1852 ;;		On entry : 0/0
+  1853 ;;		On exit  : 0/0
+  1854 ;;		Unchanged: 0/0
+  1855 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1856 ;;      Params:         0       0       0       0
+  1857 ;;      Locals:         3       0       0       0
+  1858 ;;      Temps:          8       0       0       0
+  1859 ;;      Totals:        11       0       0       0
+  1860 ;;Total ram usage:       11 bytes
+  1861 ;; Hardware stack levels used:    1
+  1862 ;; Hardware stack levels required when called:    2
+  1863 ;; This function calls:
+  1864 ;;		_Tetris_PlayerTopmostY
+  1865 ;; This function is called by:
+  1866 ;;		_Tetris_MovePlayerLeft
+  1867 ;;		_Tetris_RotatePlayer
+  1868 ;;		_Tetris_MovePlayerRight
+  1869 ;; This function uses a non-reentrant model
+  1870 ;;
+  1871                           
+  1872                           
+  1873                           ;psect for function _Tetris_RemovePlayerFromTable
+  1874  0577                     _Tetris_RemovePlayerFromTable:	
+  1875                           
+  1876                           ;incstack = 0
+  1877                           ; Regs used in _Tetris_RemovePlayerFromTable: [wreg-fsr0h+status,2+status,0+pclath+cstac
+      +                          k]
+  1878                           ;Tetris_RemovePlayerFromTable@game stored from wreg
+  1879  0577  00FC               	movwf	Tetris_RemovePlayerFromTable@game
+  1880                           
+  1881                           ;../Tetris/Tetris.c: 91: static void Tetris_RemovePlayerFromTable(Tetris_Game *game);../
+      +                          Tetris/Tetris.c: 92: {;../Tetris/Tetris.c: 93:  uint8_t start = Tetris_PlayerTopmostY(&g
+      +                          ame->player);
+  1882  0578  087C               	movf	Tetris_RemovePlayerFromTable@game,w
+  1883  0579  3E40               	addlw	64
+  1884  057A  118A  241F  118A   	fcall	_Tetris_PlayerTopmostY
+  1885  057D  00F3               	movwf	??_Tetris_RemovePlayerFromTable
+  1886  057E  0873               	movf	??_Tetris_RemovePlayerFromTable,w
+  1887  057F  00FB               	movwf	Tetris_RemovePlayerFromTable@start
+  1888                           
+  1889                           ;../Tetris/Tetris.c: 94:  for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
+  1890  0580  01FD               	clrf	Tetris_RemovePlayerFromTable@i
+  1891  0581                     l1224:	
+  1892                           
+  1893                           ;../Tetris/Tetris.c: 95:  {;../Tetris/Tetris.c: 96:   game->table[start + i] &= ~game->p
+      +                          layer.unitBits[i];
+  1894  0581  087D               	movf	Tetris_RemovePlayerFromTable@i,w
+  1895  0582  00F3               	movwf	??_Tetris_RemovePlayerFromTable
+  1896  0583  0773               	addwf	??_Tetris_RemovePlayerFromTable,w
+  1897  0584  077C               	addwf	Tetris_RemovePlayerFromTable@game,w
+  1898  0585  00F4               	movwf	??_Tetris_RemovePlayerFromTable+1
+  1899  0586  0874               	movf	??_Tetris_RemovePlayerFromTable+1,w
+  1900  0587  3E43               	addlw	67
+  1901  0588  0084               	movwf	4
+  1902  0589  1383               	bcf	3,7	;select IRP bank0
+  1903  058A  0800               	movf	0,w
+  1904  058B  00F5               	movwf	??_Tetris_RemovePlayerFromTable+2
+  1905  058C  0A84               	incf	4,f
+  1906  058D  0800               	movf	0,w
+  1907  058E  00F6               	movwf	??_Tetris_RemovePlayerFromTable+3
+  1908  058F  09F5               	comf	??_Tetris_RemovePlayerFromTable+2,f
+  1909  0590  09F6               	comf	??_Tetris_RemovePlayerFromTable+3,f
+  1910  0591  087B               	movf	Tetris_RemovePlayerFromTable@start,w
+  1911  0592  00F7               	movwf	??_Tetris_RemovePlayerFromTable+4
+  1912  0593  0777               	addwf	??_Tetris_RemovePlayerFromTable+4,w
+  1913  0594  077C               	addwf	Tetris_RemovePlayerFromTable@game,w
+  1914  0595  00F8               	movwf	??_Tetris_RemovePlayerFromTable+5
+  1915  0596  087D               	movf	Tetris_RemovePlayerFromTable@i,w
+  1916  0597  00F9               	movwf	??_Tetris_RemovePlayerFromTable+6
+  1917  0598  0779               	addwf	??_Tetris_RemovePlayerFromTable+6,w
+  1918  0599  0778               	addwf	??_Tetris_RemovePlayerFromTable+5,w
+  1919  059A  00FA               	movwf	??_Tetris_RemovePlayerFromTable+7
+  1920  059B  087A               	movf	??_Tetris_RemovePlayerFromTable+7,w
+  1921  059C  0084               	movwf	4
+  1922  059D  0875               	movf	??_Tetris_RemovePlayerFromTable+2,w
+  1923  059E  0580               	andwf	0,f
+  1924  059F  0A84               	incf	4,f
+  1925  05A0  0876               	movf	??_Tetris_RemovePlayerFromTable+3,w
+  1926  05A1  0580               	andwf	0,f
+  1927                           
+  1928                           ;../Tetris/Tetris.c: 97:  }
+  1929  05A2  3001               	movlw	1
+  1930  05A3  00F3               	movwf	??_Tetris_RemovePlayerFromTable
+  1931  05A4  0873               	movf	??_Tetris_RemovePlayerFromTable,w
+  1932  05A5  07FD               	addwf	Tetris_RemovePlayerFromTable@i,f
+  1933  05A6  3004               	movlw	4
+  1934  05A7  027D               	subwf	Tetris_RemovePlayerFromTable@i,w
+  1935  05A8  1803               	btfsc	3,0
+  1936  05A9  0008               	return
+  1937  05AA  2D81               	goto	l1224
+  1938  05AB                     __end_of_Tetris_RemovePlayerFromTable:	
+  1939                           
+  1940                           	psect	text12
+  1941  0491                     __ptext12:	
+  1942 ;; *************** function _Tetris_PlayerTouchingLeftBound *****************
+  1943 ;; Defined at:
+  1944 ;;		line 69 in file "../Tetris/Tetris.c"
+  1945 ;; Parameters:    Size  Location     Type
+  1946 ;;  player          1    wreg     PTR struct .
+  1947 ;;		 -> main@game(78), 
+  1948 ;; Auto vars:     Size  Location     Type
+  1949 ;;  player          1    4[COMMON] PTR struct .
+  1950 ;;		 -> main@game(78), 
+  1951 ;;  i               1    5[COMMON] unsigned char 
+  1952 ;; Return value:  Size  Location     Type
+  1953 ;;                  1    wreg      unsigned char 
+  1954 ;; Registers used:
+  1955 ;;		wreg, fsr0l, fsr0h, status,2, status,0
+  1956 ;; Tracked objects:
+  1957 ;;		On entry : 0/0
+  1958 ;;		On exit  : 0/0
+  1959 ;;		Unchanged: 0/0
+  1960 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  1961 ;;      Params:         0       0       0       0
+  1962 ;;      Locals:         2       0       0       0
+  1963 ;;      Temps:          4       0       0       0
+  1964 ;;      Totals:         6       0       0       0
+  1965 ;;Total ram usage:        6 bytes
+  1966 ;; Hardware stack levels used:    1
+  1967 ;; This function calls:
+  1968 ;;		Nothing
+  1969 ;; This function is called by:
+  1970 ;;		_Tetris_MovePlayerLeft
+  1971 ;; This function uses a non-reentrant model
+  1972 ;;
+  1973                           
+  1974                           
+  1975                           ;psect for function _Tetris_PlayerTouchingLeftBound
+  1976  0491                     _Tetris_PlayerTouchingLeftBound:	
+  1977                           
+  1978                           ;incstack = 0
+  1979                           ; Regs used in _Tetris_PlayerTouchingLeftBound: [wreg-fsr0h+status,2+status,0]
+  1980                           ;Tetris_PlayerTouchingLeftBound@player stored from wreg
+  1981  0491  00F4               	movwf	Tetris_PlayerTouchingLeftBound@player
+  1982                           
+  1983                           ;../Tetris/Tetris.c: 69: static uint8_t Tetris_PlayerTouchingLeftBound(Tetris_Player *pl
+      +                          ayer);../Tetris/Tetris.c: 70: {;../Tetris/Tetris.c: 71:  for (uint8_t i = 0; i < TETRIS_
+      +                          UNIT_HEIGHT; ++i)
+  1984  0492  01F5               	clrf	Tetris_PlayerTouchingLeftBound@i
+  1985  0493                     l1202:	
+  1986                           
+  1987                           ;../Tetris/Tetris.c: 72:  {;../Tetris/Tetris.c: 73:   if (player->unitBits[i] & 0x8000)
+  1988  0493  0875               	movf	Tetris_PlayerTouchingLeftBound@i,w
+  1989  0494  00F0               	movwf	??_Tetris_PlayerTouchingLeftBound
+  1990  0495  0770               	addwf	??_Tetris_PlayerTouchingLeftBound,w
+  1991  0496  0774               	addwf	Tetris_PlayerTouchingLeftBound@player,w
+  1992  0497  00F1               	movwf	??_Tetris_PlayerTouchingLeftBound+1
+  1993  0498  0871               	movf	??_Tetris_PlayerTouchingLeftBound+1,w
+  1994  0499  3E03               	addlw	3
+  1995  049A  0084               	movwf	4
+  1996  049B  1383               	bcf	3,7	;select IRP bank0
+  1997  049C  0800               	movf	0,w
+  1998  049D  00F2               	movwf	??_Tetris_PlayerTouchingLeftBound+2
+  1999  049E  0A84               	incf	4,f
+  2000  049F  0800               	movf	0,w
+  2001  04A0  00F3               	movwf	??_Tetris_PlayerTouchingLeftBound+3
+  2002  04A1  1FF3               	btfss	??_Tetris_PlayerTouchingLeftBound+3,7
+  2003  04A2  2CA5               	goto	l1208
+  2004                           
+  2005                           ;../Tetris/Tetris.c: 74:    return 1;
+  2006  04A3  3001               	movlw	1
+  2007  04A4  0008               	return
+  2008  04A5                     l1208:	
+  2009                           
+  2010                           ;../Tetris/Tetris.c: 75:  }
+  2011  04A5  3001               	movlw	1
+  2012  04A6  00F0               	movwf	??_Tetris_PlayerTouchingLeftBound
+  2013  04A7  0870               	movf	??_Tetris_PlayerTouchingLeftBound,w
+  2014  04A8  07F5               	addwf	Tetris_PlayerTouchingLeftBound@i,f
+  2015  04A9  3004               	movlw	4
+  2016  04AA  0275               	subwf	Tetris_PlayerTouchingLeftBound@i,w
+  2017  04AB  1C03               	skipc
+  2018  04AC  2C93               	goto	l1202
+  2019                           
+  2020                           ;../Tetris/Tetris.c: 77:  return 0;
+  2021  04AD  3000               	movlw	0
+  2022  04AE  0008               	return
+  2023  04AF                     __end_of_Tetris_PlayerTouchingLeftBound:	
+  2024                           
+  2025                           	psect	text13
+  2026  05EA                     __ptext13:	
+  2027 ;; *************** function _Tetris_PlayerOverlapsEnvironment *****************
+  2028 ;; Defined at:
+  2029 ;;		line 57 in file "../Tetris/Tetris.c"
+  2030 ;; Parameters:    Size  Location     Type
+  2031 ;;  game            1    wreg     PTR struct .
+  2032 ;;		 -> main@game(78), 
+  2033 ;; Auto vars:     Size  Location     Type
+  2034 ;;  game            1    4[COMMON] PTR struct .
+  2035 ;;		 -> main@game(78), 
+  2036 ;;  i               1    5[COMMON] unsigned char 
+  2037 ;;  start           1    3[COMMON] unsigned char 
+  2038 ;; Return value:  Size  Location     Type
+  2039 ;;                  1    wreg      unsigned char 
+  2040 ;; Registers used:
+  2041 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  2042 ;; Tracked objects:
+  2043 ;;		On entry : 0/0
+  2044 ;;		On exit  : 0/0
+  2045 ;;		Unchanged: 0/0
+  2046 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2047 ;;      Params:         0       0       0       0
+  2048 ;;      Locals:         3       0       0       0
+  2049 ;;      Temps:          0      12       0       0
+  2050 ;;      Totals:         3      12       0       0
+  2051 ;;Total ram usage:       15 bytes
+  2052 ;; Hardware stack levels used:    1
+  2053 ;; Hardware stack levels required when called:    2
+  2054 ;; This function calls:
+  2055 ;;		_Tetris_PlayerTopmostY
+  2056 ;; This function is called by:
+  2057 ;;		_Tetris_MovePlayerLeft
+  2058 ;;		_Tetris_RotatePlayer
+  2059 ;;		_Tetris_MovePlayerRight
+  2060 ;; This function uses a non-reentrant model
+  2061 ;;
+  2062                           
+  2063                           
+  2064                           ;psect for function _Tetris_PlayerOverlapsEnvironment
+  2065  05EA                     _Tetris_PlayerOverlapsEnvironment:	
+  2066                           
+  2067                           ;incstack = 0
+  2068                           ; Regs used in _Tetris_PlayerOverlapsEnvironment: [wreg-fsr0h+status,2+status,0+pclath+c
+      +                          stack]
+  2069                           ;Tetris_PlayerOverlapsEnvironment@game stored from wreg
+  2070  05EA  00F4               	movwf	Tetris_PlayerOverlapsEnvironment@game
+  2071                           
+  2072                           ;../Tetris/Tetris.c: 57: static uint8_t Tetris_PlayerOverlapsEnvironment(Tetris_Game *ga
+      +                          me);../Tetris/Tetris.c: 58: {;../Tetris/Tetris.c: 59:  uint8_t start = Tetris_PlayerTopm
+      +                          ostY(&game->player);
+  2073  05EB  0874               	movf	Tetris_PlayerOverlapsEnvironment@game,w
+  2074  05EC  3E40               	addlw	64
+  2075  05ED  118A  241F  118A   	fcall	_Tetris_PlayerTopmostY
+  2076  05F0  1283               	bcf	3,5	;RP0=0, select bank0
+  2077  05F1  1303               	bcf	3,6	;RP1=0, select bank0
+  2078  05F2  00A0               	movwf	??_Tetris_PlayerOverlapsEnvironment
+  2079  05F3  0820               	movf	??_Tetris_PlayerOverlapsEnvironment,w
+  2080  05F4  00F3               	movwf	Tetris_PlayerOverlapsEnvironment@start
+  2081                           
+  2082                           ;../Tetris/Tetris.c: 60:  for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
+  2083  05F5  01F5               	clrf	Tetris_PlayerOverlapsEnvironment@i
+  2084  05F6                     l1182:	
+  2085                           
+  2086                           ;../Tetris/Tetris.c: 61:  {;../Tetris/Tetris.c: 62:   if (game->player.unitBits[i] & gam
+      +                          e->table[i + start])
+  2087  05F6  0875               	movf	Tetris_PlayerOverlapsEnvironment@i,w
+  2088  05F7  00A0               	movwf	??_Tetris_PlayerOverlapsEnvironment
+  2089  05F8  0720               	addwf	??_Tetris_PlayerOverlapsEnvironment,w
+  2090  05F9  0774               	addwf	Tetris_PlayerOverlapsEnvironment@game,w
+  2091  05FA  00A1               	movwf	??_Tetris_PlayerOverlapsEnvironment+1
+  2092  05FB  0873               	movf	Tetris_PlayerOverlapsEnvironment@start,w
+  2093  05FC  00A2               	movwf	??_Tetris_PlayerOverlapsEnvironment+2
+  2094  05FD  0722               	addwf	??_Tetris_PlayerOverlapsEnvironment+2,w
+  2095  05FE  0721               	addwf	??_Tetris_PlayerOverlapsEnvironment+1,w
+  2096  05FF  00A3               	movwf	??_Tetris_PlayerOverlapsEnvironment+3
+  2097  0600  0823               	movf	??_Tetris_PlayerOverlapsEnvironment+3,w
+  2098  0601  0084               	movwf	4
+  2099  0602  1383               	bcf	3,7	;select IRP bank0
+  2100  0603  0800               	movf	0,w
+  2101  0604  00A4               	movwf	??_Tetris_PlayerOverlapsEnvironment+4
+  2102  0605  0A84               	incf	4,f
+  2103  0606  0800               	movf	0,w
+  2104  0607  00A5               	movwf	??_Tetris_PlayerOverlapsEnvironment+5
+  2105  0608  0875               	movf	Tetris_PlayerOverlapsEnvironment@i,w
+  2106  0609  00A6               	movwf	??_Tetris_PlayerOverlapsEnvironment+6
+  2107  060A  0726               	addwf	??_Tetris_PlayerOverlapsEnvironment+6,w
+  2108  060B  0774               	addwf	Tetris_PlayerOverlapsEnvironment@game,w
+  2109  060C  00A7               	movwf	??_Tetris_PlayerOverlapsEnvironment+7
+  2110  060D  0827               	movf	??_Tetris_PlayerOverlapsEnvironment+7,w
+  2111  060E  3E43               	addlw	67
+  2112  060F  0084               	movwf	4
+  2113  0610  0800               	movf	0,w
+  2114  0611  00A8               	movwf	??_Tetris_PlayerOverlapsEnvironment+8
+  2115  0612  0A84               	incf	4,f
+  2116  0613  0800               	movf	0,w
+  2117  0614  00A9               	movwf	??_Tetris_PlayerOverlapsEnvironment+9
+  2118  0615  0824               	movf	??_Tetris_PlayerOverlapsEnvironment+4,w
+  2119  0616  0528               	andwf	??_Tetris_PlayerOverlapsEnvironment+8,w
+  2120  0617  00AA               	movwf	??_Tetris_PlayerOverlapsEnvironment+10
+  2121  0618  0825               	movf	??_Tetris_PlayerOverlapsEnvironment+5,w
+  2122  0619  0529               	andwf	??_Tetris_PlayerOverlapsEnvironment+9,w
+  2123  061A  00AB               	movwf	??_Tetris_PlayerOverlapsEnvironment+11
+  2124  061B  082A               	movf	??_Tetris_PlayerOverlapsEnvironment+10,w
+  2125  061C  042B               	iorwf	??_Tetris_PlayerOverlapsEnvironment+11,w
+  2126  061D  1903               	btfsc	3,2
+  2127  061E  2E21               	goto	l1188
+  2128                           
+  2129                           ;../Tetris/Tetris.c: 63:    return 1;
+  2130  061F  3001               	movlw	1
+  2131  0620  0008               	return
+  2132  0621                     l1188:	
+  2133                           
+  2134                           ;../Tetris/Tetris.c: 64:  }
+  2135  0621  3001               	movlw	1
+  2136  0622  00A0               	movwf	??_Tetris_PlayerOverlapsEnvironment
+  2137  0623  0820               	movf	??_Tetris_PlayerOverlapsEnvironment,w
+  2138  0624  07F5               	addwf	Tetris_PlayerOverlapsEnvironment@i,f
+  2139  0625  3004               	movlw	4
+  2140  0626  0275               	subwf	Tetris_PlayerOverlapsEnvironment@i,w
+  2141  0627  1C03               	skipc
+  2142  0628  2DF6               	goto	l1182
+  2143                           
+  2144                           ;../Tetris/Tetris.c: 66:  return 0;
+  2145  0629  3000               	movlw	0
+  2146  062A  0008               	return
+  2147  062B                     __end_of_Tetris_PlayerOverlapsEnvironment:	
+  2148                           
+  2149                           	psect	text14
+  2150  0512                     __ptext14:	
+  2151 ;; *************** function _Tetris_ApplyPlayerToTable *****************
+  2152 ;; Defined at:
+  2153 ;;		line 100 in file "../Tetris/Tetris.c"
+  2154 ;; Parameters:    Size  Location     Type
+  2155 ;;  game            1    wreg     PTR struct .
+  2156 ;;		 -> main@game(78), 
+  2157 ;; Auto vars:     Size  Location     Type
+  2158 ;;  game            1   12[COMMON] PTR struct .
+  2159 ;;		 -> main@game(78), 
+  2160 ;;  i               1   13[COMMON] unsigned char 
+  2161 ;;  start           1   11[COMMON] unsigned char 
+  2162 ;; Return value:  Size  Location     Type
+  2163 ;;                  1    wreg      void 
+  2164 ;; Registers used:
+  2165 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+  2166 ;; Tracked objects:
+  2167 ;;		On entry : 0/0
+  2168 ;;		On exit  : 0/0
+  2169 ;;		Unchanged: 0/0
+  2170 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2171 ;;      Params:         0       0       0       0
+  2172 ;;      Locals:         3       0       0       0
+  2173 ;;      Temps:          8       0       0       0
+  2174 ;;      Totals:        11       0       0       0
+  2175 ;;Total ram usage:       11 bytes
+  2176 ;; Hardware stack levels used:    1
+  2177 ;; Hardware stack levels required when called:    2
+  2178 ;; This function calls:
+  2179 ;;		_Tetris_PlayerTopmostY
+  2180 ;; This function is called by:
+  2181 ;;		_Tetris_ResetGame
+  2182 ;;		_Tetris_MovePlayerLeft
+  2183 ;;		_Tetris_RotatePlayer
+  2184 ;;		_Tetris_MovePlayerRight
+  2185 ;; This function uses a non-reentrant model
+  2186 ;;
+  2187                           
+  2188                           
+  2189                           ;psect for function _Tetris_ApplyPlayerToTable
+  2190  0512                     _Tetris_ApplyPlayerToTable:	
+  2191                           
+  2192                           ;incstack = 0
+  2193                           ; Regs used in _Tetris_ApplyPlayerToTable: [wreg-fsr0h+status,2+status,0+pclath+cstack]
+  2194                           ;Tetris_ApplyPlayerToTable@game stored from wreg
+  2195  0512  00FC               	movwf	Tetris_ApplyPlayerToTable@game
+  2196                           
+  2197                           ;../Tetris/Tetris.c: 100: static void Tetris_ApplyPlayerToTable(Tetris_Game *game);../Te
+      +                          tris/Tetris.c: 101: {;../Tetris/Tetris.c: 102:  uint8_t start = Tetris_PlayerTopmostY(&g
+      +                          ame->player);
+  2198  0513  087C               	movf	Tetris_ApplyPlayerToTable@game,w
+  2199  0514  3E40               	addlw	64
+  2200  0515  118A  241F  118A   	fcall	_Tetris_PlayerTopmostY
+  2201  0518  00F3               	movwf	??_Tetris_ApplyPlayerToTable
+  2202  0519  0873               	movf	??_Tetris_ApplyPlayerToTable,w
+  2203  051A  00FB               	movwf	Tetris_ApplyPlayerToTable@start
+  2204                           
+  2205                           ;../Tetris/Tetris.c: 103:  for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
+  2206  051B  01FD               	clrf	Tetris_ApplyPlayerToTable@i
+  2207  051C                     l1238:	
+  2208                           
+  2209                           ;../Tetris/Tetris.c: 104:  {;../Tetris/Tetris.c: 105:   game->table[start + i] |= game->
+      +                          player.unitBits[i];
+  2210  051C  087D               	movf	Tetris_ApplyPlayerToTable@i,w
+  2211  051D  00F3               	movwf	??_Tetris_ApplyPlayerToTable
+  2212  051E  0773               	addwf	??_Tetris_ApplyPlayerToTable,w
+  2213  051F  077C               	addwf	Tetris_ApplyPlayerToTable@game,w
+  2214  0520  00F4               	movwf	??_Tetris_ApplyPlayerToTable+1
+  2215  0521  0874               	movf	??_Tetris_ApplyPlayerToTable+1,w
+  2216  0522  3E43               	addlw	67
+  2217  0523  0084               	movwf	4
+  2218  0524  1383               	bcf	3,7	;select IRP bank0
+  2219  0525  0800               	movf	0,w
+  2220  0526  00F5               	movwf	??_Tetris_ApplyPlayerToTable+2
+  2221  0527  0A84               	incf	4,f
+  2222  0528  0800               	movf	0,w
+  2223  0529  00F6               	movwf	??_Tetris_ApplyPlayerToTable+3
+  2224  052A  087B               	movf	Tetris_ApplyPlayerToTable@start,w
+  2225  052B  00F7               	movwf	??_Tetris_ApplyPlayerToTable+4
+  2226  052C  0777               	addwf	??_Tetris_ApplyPlayerToTable+4,w
+  2227  052D  077C               	addwf	Tetris_ApplyPlayerToTable@game,w
+  2228  052E  00F8               	movwf	??_Tetris_ApplyPlayerToTable+5
+  2229  052F  087D               	movf	Tetris_ApplyPlayerToTable@i,w
+  2230  0530  00F9               	movwf	??_Tetris_ApplyPlayerToTable+6
+  2231  0531  0779               	addwf	??_Tetris_ApplyPlayerToTable+6,w
+  2232  0532  0778               	addwf	??_Tetris_ApplyPlayerToTable+5,w
+  2233  0533  00FA               	movwf	??_Tetris_ApplyPlayerToTable+7
+  2234  0534  087A               	movf	??_Tetris_ApplyPlayerToTable+7,w
+  2235  0535  0084               	movwf	4
+  2236  0536  0875               	movf	??_Tetris_ApplyPlayerToTable+2,w
+  2237  0537  0480               	iorwf	0,f
+  2238  0538  0A84               	incf	4,f
+  2239  0539  0876               	movf	??_Tetris_ApplyPlayerToTable+3,w
+  2240  053A  0480               	iorwf	0,f
+  2241                           
+  2242                           ;../Tetris/Tetris.c: 106:  }
+  2243  053B  3001               	movlw	1
+  2244  053C  00F3               	movwf	??_Tetris_ApplyPlayerToTable
+  2245  053D  0873               	movf	??_Tetris_ApplyPlayerToTable,w
+  2246  053E  07FD               	addwf	Tetris_ApplyPlayerToTable@i,f
+  2247  053F  3004               	movlw	4
+  2248  0540  027D               	subwf	Tetris_ApplyPlayerToTable@i,w
+  2249  0541  1803               	btfsc	3,0
+  2250  0542  0008               	return
+  2251  0543  2D1C               	goto	l1238
+  2252  0544                     __end_of_Tetris_ApplyPlayerToTable:	
+  2253                           
+  2254                           	psect	text15
+  2255  041F                     __ptext15:	
+  2256 ;; *************** function _Tetris_PlayerTopmostY *****************
+  2257 ;; Defined at:
+  2258 ;;		line 52 in file "../Tetris/Tetris.c"
+  2259 ;; Parameters:    Size  Location     Type
+  2260 ;;  player          1    wreg     PTR struct .
+  2261 ;;		 -> main@game(78), 
+  2262 ;; Auto vars:     Size  Location     Type
+  2263 ;;  player          1    2[COMMON] PTR struct .
+  2264 ;;		 -> main@game(78), 
+  2265 ;; Return value:  Size  Location     Type
+  2266 ;;                  1    wreg      unsigned char 
+  2267 ;; Registers used:
+  2268 ;;		wreg, fsr0l, fsr0h, status,2, status,0, pclath
+  2269 ;; Tracked objects:
+  2270 ;;		On entry : 0/0
+  2271 ;;		On exit  : 0/0
+  2272 ;;		Unchanged: 0/0
+  2273 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2274 ;;      Params:         0       0       0       0
+  2275 ;;      Locals:         1       0       0       0
+  2276 ;;      Temps:          2       0       0       0
+  2277 ;;      Totals:         3       0       0       0
+  2278 ;;Total ram usage:        3 bytes
+  2279 ;; Hardware stack levels used:    2
+  2280 ;; This function calls:
+  2281 ;;		Nothing
+  2282 ;; This function is called by:
+  2283 ;;		_Tetris_PlayerOverlapsEnvironment
+  2284 ;;		_Tetris_RemovePlayerFromTable
+  2285 ;;		_Tetris_ApplyPlayerToTable
+  2286 ;; This function uses a non-reentrant model
+  2287 ;;
+  2288                           
+  2289                           
+  2290                           ;psect for function _Tetris_PlayerTopmostY
+  2291  041F                     _Tetris_PlayerTopmostY:	
+  2292                           
+  2293                           ;incstack = 0
+  2294                           ; Regs used in _Tetris_PlayerTopmostY: [wreg-fsr0h+status,2+status,0+pclath]
+  2295                           ;Tetris_PlayerTopmostY@player stored from wreg
+  2296  041F  00F2               	movwf	Tetris_PlayerTopmostY@player
+  2297                           
+  2298                           ;../Tetris/Tetris.c: 52: static uint8_t Tetris_PlayerTopmostY(Tetris_Player *player);../
+      +                          Tetris/Tetris.c: 53: {;../Tetris/Tetris.c: 54:  return player->position.y - Tetris_unitP
+      +                          ivot.y;
+  2299  0420  3004               	movlw	low (((_Tetris_unitPivot+1)-__stringbase)| (0+32768))
+  2300  0421  0084               	movwf	4
+  2301  0422  118A  200C         	fcall	stringdir
+  2302  0424  00F0               	movwf	??_Tetris_PlayerTopmostY
+  2303  0425  0A72               	incf	Tetris_PlayerTopmostY@player,w
+  2304  0426  0084               	movwf	4
+  2305  0427  1383               	bcf	3,7	;select IRP bank0
+  2306  0428  0800               	movf	0,w
+  2307  0429  00F1               	movwf	??_Tetris_PlayerTopmostY+1
+  2308  042A  0870               	movf	??_Tetris_PlayerTopmostY,w
+  2309  042B  0271               	subwf	??_Tetris_PlayerTopmostY+1,w
+  2310  042C  0008               	return
+  2311  042D                     __end_of_Tetris_PlayerTopmostY:	
+  2312                           
+  2313                           	psect	text16
+  2314  043C                     __ptext16:	
+  2315 ;; *************** function _Tetris_GetRandomUnit *****************
+  2316 ;; Defined at:
+  2317 ;;		line 163 in file "../Tetris/Tetris.c"
+  2318 ;; Parameters:    Size  Location     Type
+  2319 ;;		None
+  2320 ;; Auto vars:     Size  Location     Type
+  2321 ;;		None
+  2322 ;; Return value:  Size  Location     Type
+  2323 ;;                  1    wreg      PTR const struct .
+  2324 ;; Registers used:
+  2325 ;;		wreg, status,2, status,0, pclath, cstack
+  2326 ;; Tracked objects:
+  2327 ;;		On entry : 0/0
+  2328 ;;		On exit  : 0/0
+  2329 ;;		Unchanged: 0/0
+  2330 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2331 ;;      Params:         0       0       0       0
+  2332 ;;      Locals:         0       0       0       0
+  2333 ;;      Temps:          0       1       0       0
+  2334 ;;      Totals:         0       1       0       0
+  2335 ;;Total ram usage:        1 bytes
+  2336 ;; Hardware stack levels used:    1
+  2337 ;; Hardware stack levels required when called:    2
+  2338 ;; This function calls:
+  2339 ;;		___bmul
+  2340 ;;		_rand
+  2341 ;; This function is called by:
+  2342 ;;		_main
+  2343 ;; This function uses a non-reentrant model
+  2344 ;;
+  2345                           
+  2346                           
+  2347                           ;psect for function _Tetris_GetRandomUnit
+  2348  043C                     _Tetris_GetRandomUnit:	
+  2349                           
+  2350                           ;../Tetris/Tetris.c: 166:  return Tetris_units + (rand() % TETRIS_NUM_UNITS);
+  2351                           
+  2352                           ;incstack = 0
+  2353                           ; Regs used in _Tetris_GetRandomUnit: [wreg+status,2+status,0+pclath+cstack]
+  2354  043C  3021               	movlw	33
+  2355  043D  1283               	bcf	3,5	;RP0=0, select bank0
+  2356  043E  1303               	bcf	3,6	;RP1=0, select bank0
+  2357  043F  00AA               	movwf	??_Tetris_GetRandomUnit
+  2358  0440  082A               	movf	??_Tetris_GetRandomUnit,w
+  2359  0441  00A7               	movwf	___bmul@multiplicand
+  2360  0442  118A  266C  118A   	fcall	_rand
+  2361  0445  1283               	bcf	3,5	;RP0=0, select bank0
+  2362  0446  1303               	bcf	3,6	;RP1=0, select bank0
+  2363  0447  0820               	movf	?_rand,w
+  2364  0448  3901               	andlw	1
+  2365  0449  118A  244D         	fcall	___bmul
+  2366  044B  3E05               	addlw	low ((_Tetris_units-__stringbase)| (0+32768))
+  2367  044C  0008               	return
+  2368  044D                     __end_of_Tetris_GetRandomUnit:	
+  2369                           
+  2370                           	psect	text17
+  2371  066C                     __ptext17:	
+  2372 ;; *************** function _rand *****************
+  2373 ;; Defined at:
+  2374 ;;		line 12 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c"
+  2375 ;; Parameters:    Size  Location     Type
+  2376 ;;		None
+  2377 ;; Auto vars:     Size  Location     Type
+  2378 ;;		None
+  2379 ;; Return value:  Size  Location     Type
+  2380 ;;                  2    0[BANK0 ] int 
+  2381 ;; Registers used:
+  2382 ;;		wreg, status,2, status,0, pclath, cstack
+  2383 ;; Tracked objects:
+  2384 ;;		On entry : 0/0
+  2385 ;;		On exit  : 0/0
+  2386 ;;		Unchanged: 0/0
+  2387 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2388 ;;      Params:         0       2       0       0
+  2389 ;;      Locals:         0       0       0       0
+  2390 ;;      Temps:          0       5       0       0
+  2391 ;;      Totals:         0       7       0       0
+  2392 ;;Total ram usage:        7 bytes
+  2393 ;; Hardware stack levels used:    1
+  2394 ;; Hardware stack levels required when called:    1
+  2395 ;; This function calls:
+  2396 ;;		___lmul
+  2397 ;; This function is called by:
+  2398 ;;		_Tetris_GetRandomUnit
+  2399 ;; This function uses a non-reentrant model
+  2400 ;;
+  2401                           
+  2402                           
+  2403                           ;psect for function _rand
+  2404  066C                     _rand:	
+  2405                           
+  2406                           ;incstack = 0
+  2407                           ; Regs used in _rand: [wreg+status,2+status,0+pclath+cstack]
+  2408  066C  1283               	bcf	3,5	;RP0=0, select bank0
+  2409  066D  1303               	bcf	3,6	;RP1=0, select bank0
+  2410  066E  0835               	movf	_randx+3,w
+  2411  066F  00F3               	movwf	___lmul@multiplier+3
+  2412  0670  0834               	movf	_randx+2,w
+  2413  0671  00F2               	movwf	___lmul@multiplier+2
+  2414  0672  0833               	movf	_randx+1,w
+  2415  0673  00F1               	movwf	___lmul@multiplier+1
+  2416  0674  0832               	movf	_randx,w
+  2417  0675  00F0               	movwf	___lmul@multiplier
+  2418  0676  3041               	movlw	65
+  2419  0677  00F7               	movwf	___lmul@multiplicand+3
+  2420  0678  30C6               	movlw	198
+  2421  0679  00F6               	movwf	___lmul@multiplicand+2
+  2422  067A  304E               	movlw	78
+  2423  067B  00F5               	movwf	___lmul@multiplicand+1
+  2424  067C  306D               	movlw	109
+  2425  067D  00F4               	movwf	___lmul@multiplicand
+  2426  067E  118A  25AB  118A   	fcall	___lmul
+  2427  0681  0873               	movf	?___lmul+3,w
+  2428  0682  1283               	bcf	3,5	;RP0=0, select bank0
+  2429  0683  1303               	bcf	3,6	;RP1=0, select bank0
+  2430  0684  00B5               	movwf	_randx+3
+  2431  0685  0872               	movf	?___lmul+2,w
+  2432  0686  00B4               	movwf	_randx+2
+  2433  0687  0871               	movf	?___lmul+1,w
+  2434  0688  00B3               	movwf	_randx+1
+  2435  0689  0870               	movf	?___lmul,w
+  2436  068A  00B2               	movwf	_randx
+  2437  068B  3039               	movlw	57
+  2438  068C  07B2               	addwf	_randx,f
+  2439  068D  3030               	movlw	48
+  2440  068E  1803               	skipnc
+  2441  068F  3031               	movlw	49
+  2442  0690  07B3               	addwf	_randx+1,f
+  2443  0691  3000               	movlw	0
+  2444  0692  1803               	skipnc
+  2445  0693  3001               	movlw	1
+  2446  0694  07B4               	addwf	_randx+2,f
+  2447  0695  3000               	movlw	0
+  2448  0696  1803               	skipnc
+  2449  0697  3001               	movlw	1
+  2450  0698  07B5               	addwf	_randx+3,f
+  2451  0699  0832               	movf	_randx,w
+  2452  069A  00A2               	movwf	??_rand
+  2453  069B  0833               	movf	_randx+1,w
+  2454  069C  00A3               	movwf	??_rand+1
+  2455  069D  0834               	movf	_randx+2,w
+  2456  069E  00A4               	movwf	??_rand+2
+  2457  069F  0835               	movf	_randx+3,w
+  2458  06A0  00A5               	movwf	??_rand+3
+  2459  06A1  3010               	movlw	16
+  2460  06A2  00A6               	movwf	??_rand+4
+  2461  06A3                     u705:	
+  2462  06A3  0D25               	rlf	??_rand+3,w
+  2463  06A4  0CA5               	rrf	??_rand+3,f
+  2464  06A5  0CA4               	rrf	??_rand+2,f
+  2465  06A6  0CA3               	rrf	??_rand+1,f
+  2466  06A7  0CA2               	rrf	??_rand,f
+  2467  06A8  0BA6               	decfsz	??_rand+4,f
+  2468  06A9  2EA3               	goto	u705
+  2469  06AA  30FF               	movlw	255
+  2470  06AB  0522               	andwf	??_rand,w
+  2471  06AC  00A0               	movwf	?_rand
+  2472  06AD  307F               	movlw	127
+  2473  06AE  0523               	andwf	??_rand+1,w
+  2474  06AF  00A1               	movwf	?_rand+1
+  2475  06B0  0008               	return
+  2476  06B1                     __end_of_rand:	
+  2477                           
+  2478                           	psect	text18
+  2479  05AB                     __ptext18:	
+  2480 ;; *************** function ___lmul *****************
+  2481 ;; Defined at:
+  2482 ;;		line 15 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c"
+  2483 ;; Parameters:    Size  Location     Type
+  2484 ;;  multiplier      4    0[COMMON] unsigned long 
+  2485 ;;  multiplicand    4    4[COMMON] unsigned long 
+  2486 ;; Auto vars:     Size  Location     Type
+  2487 ;;  product         4    9[COMMON] unsigned long 
+  2488 ;; Return value:  Size  Location     Type
+  2489 ;;                  4    0[COMMON] unsigned long 
+  2490 ;; Registers used:
+  2491 ;;		wreg, status,2, status,0
+  2492 ;; Tracked objects:
+  2493 ;;		On entry : 0/0
+  2494 ;;		On exit  : 0/0
+  2495 ;;		Unchanged: 0/0
+  2496 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2497 ;;      Params:         8       0       0       0
+  2498 ;;      Locals:         4       0       0       0
+  2499 ;;      Temps:          1       0       0       0
+  2500 ;;      Totals:        13       0       0       0
+  2501 ;;Total ram usage:       13 bytes
+  2502 ;; Hardware stack levels used:    1
+  2503 ;; This function calls:
+  2504 ;;		Nothing
+  2505 ;; This function is called by:
+  2506 ;;		_rand
+  2507 ;; This function uses a non-reentrant model
+  2508 ;;
+  2509                           
+  2510                           
+  2511                           ;psect for function ___lmul
+  2512  05AB                     ___lmul:	
+  2513                           
+  2514                           ;incstack = 0
+  2515                           ; Regs used in ___lmul: [wreg+status,2+status,0]
+  2516  05AB  3000               	movlw	0
+  2517  05AC  00FC               	movwf	___lmul@product+3
+  2518  05AD  3000               	movlw	0
+  2519  05AE  00FB               	movwf	___lmul@product+2
+  2520  05AF  3000               	movlw	0
+  2521  05B0  00FA               	movwf	___lmul@product+1
+  2522  05B1  3000               	movlw	0
+  2523  05B2  00F9               	movwf	___lmul@product
+  2524  05B3                     l1162:	
+  2525  05B3  1C70               	btfss	___lmul@multiplier,0
+  2526  05B4  2DC9               	goto	l1166
+  2527  05B5  0874               	movf	___lmul@multiplicand,w
+  2528  05B6  07F9               	addwf	___lmul@product,f
+  2529  05B7  0875               	movf	___lmul@multiplicand+1,w
+  2530  05B8  1103               	clrz
+  2531  05B9  1803               	skipnc
+  2532  05BA  3E01               	addlw	1
+  2533  05BB  1D03               	btfss	3,2
+  2534  05BC  07FA               	addwf	___lmul@product+1,f
+  2535  05BD  0876               	movf	___lmul@multiplicand+2,w
+  2536  05BE  1103               	clrz
+  2537  05BF  1803               	skipnc
+  2538  05C0  3E01               	addlw	1
+  2539  05C1  1D03               	btfss	3,2
+  2540  05C2  07FB               	addwf	___lmul@product+2,f
+  2541  05C3  0877               	movf	___lmul@multiplicand+3,w
+  2542  05C4  1103               	clrz
+  2543  05C5  1803               	skipnc
+  2544  05C6  3E01               	addlw	1
+  2545  05C7  1D03               	btfss	3,2
+  2546  05C8  07FC               	addwf	___lmul@product+3,f
+  2547  05C9                     l1166:	
+  2548  05C9  3001               	movlw	1
+  2549  05CA  00F8               	movwf	??___lmul
+  2550  05CB                     u585:	
+  2551  05CB  1003               	clrc
+  2552  05CC  0DF4               	rlf	___lmul@multiplicand,f
+  2553  05CD  0DF5               	rlf	___lmul@multiplicand+1,f
+  2554  05CE  0DF6               	rlf	___lmul@multiplicand+2,f
+  2555  05CF  0DF7               	rlf	___lmul@multiplicand+3,f
+  2556  05D0  0BF8               	decfsz	??___lmul,f
+  2557  05D1  2DCB               	goto	u585
+  2558  05D2  3001               	movlw	1
+  2559  05D3                     u595:	
+  2560  05D3  1003               	clrc
+  2561  05D4  0CF3               	rrf	___lmul@multiplier+3,f
+  2562  05D5  0CF2               	rrf	___lmul@multiplier+2,f
+  2563  05D6  0CF1               	rrf	___lmul@multiplier+1,f
+  2564  05D7  0CF0               	rrf	___lmul@multiplier,f
+  2565  05D8  3EFF               	addlw	-1
+  2566  05D9  1D03               	skipz
+  2567  05DA  2DD3               	goto	u595
+  2568  05DB  0873               	movf	___lmul@multiplier+3,w
+  2569  05DC  0472               	iorwf	___lmul@multiplier+2,w
+  2570  05DD  0471               	iorwf	___lmul@multiplier+1,w
+  2571  05DE  0470               	iorwf	___lmul@multiplier,w
+  2572  05DF  1D03               	skipz
+  2573  05E0  2DB3               	goto	l1162
+  2574  05E1  087C               	movf	___lmul@product+3,w
+  2575  05E2  00F3               	movwf	?___lmul+3
+  2576  05E3  087B               	movf	___lmul@product+2,w
+  2577  05E4  00F2               	movwf	?___lmul+2
+  2578  05E5  087A               	movf	___lmul@product+1,w
+  2579  05E6  00F1               	movwf	?___lmul+1
+  2580  05E7  0879               	movf	___lmul@product,w
+  2581  05E8  00F0               	movwf	?___lmul
+  2582  05E9  0008               	return
+  2583  05EA                     __end_of___lmul:	
+  2584                           
+  2585                           	psect	text19
+  2586  044D                     __ptext19:	
+  2587 ;; *************** function ___bmul *****************
+  2588 ;; Defined at:
+  2589 ;;		line 4 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul8.c"
+  2590 ;; Parameters:    Size  Location     Type
+  2591 ;;  multiplier      1    wreg     unsigned char 
+  2592 ;;  multiplicand    1    7[BANK0 ] unsigned char 
+  2593 ;; Auto vars:     Size  Location     Type
+  2594 ;;  multiplier      1    9[BANK0 ] unsigned char 
+  2595 ;;  product         1    8[BANK0 ] unsigned char 
+  2596 ;; Return value:  Size  Location     Type
+  2597 ;;                  1    wreg      unsigned char 
+  2598 ;; Registers used:
+  2599 ;;		wreg, status,2, status,0
+  2600 ;; Tracked objects:
+  2601 ;;		On entry : 0/0
+  2602 ;;		On exit  : 0/0
+  2603 ;;		Unchanged: 0/0
+  2604 ;; Data sizes:     COMMON   BANK0   BANK1   BANK2
+  2605 ;;      Params:         0       1       0       0
+  2606 ;;      Locals:         0       2       0       0
+  2607 ;;      Temps:          1       0       0       0
+  2608 ;;      Totals:         1       3       0       0
+  2609 ;;Total ram usage:        4 bytes
+  2610 ;; Hardware stack levels used:    1
+  2611 ;; This function calls:
+  2612 ;;		Nothing
+  2613 ;; This function is called by:
+  2614 ;;		_Tetris_GetRandomUnit
+  2615 ;; This function uses a non-reentrant model
+  2616 ;;
+  2617                           
+  2618                           
+  2619                           ;psect for function ___bmul
+  2620  044D                     ___bmul:	
+  2621                           
+  2622                           ;incstack = 0
+  2623                           ; Regs used in ___bmul: [wreg+status,2+status,0]
+  2624                           ;___bmul@multiplier stored from wreg
+  2625  044D  1283               	bcf	3,5	;RP0=0, select bank0
+  2626  044E  1303               	bcf	3,6	;RP1=0, select bank0
+  2627  044F  00A9               	movwf	___bmul@multiplier
+  2628  0450  01A8               	clrf	___bmul@product
+  2629  0451                     l1272:	
+  2630  0451  1C29               	btfss	___bmul@multiplier,0
+  2631  0452  2C57               	goto	l1276
+  2632  0453  0827               	movf	___bmul@multiplicand,w
+  2633  0454  00FD               	movwf	??___bmul
+  2634  0455  087D               	movf	??___bmul,w
+  2635  0456  07A8               	addwf	___bmul@product,f
+  2636  0457                     l1276:	
+  2637  0457  1003               	clrc
+  2638  0458  0DA7               	rlf	___bmul@multiplicand,f
+  2639  0459  1003               	clrc
+  2640  045A  0CA9               	rrf	___bmul@multiplier,f
+  2641  045B  0829               	movf	___bmul@multiplier,w
+  2642  045C  1D03               	btfss	3,2
+  2643  045D  2C51               	goto	l1272
+  2644  045E  0828               	movf	___bmul@product,w
+  2645  045F  0008               	return
+  2646  0460                     __end_of___bmul:	
+  2647  007E                     btemp	set	126	;btemp
+  2648  007E                     wtemp0	set	126
 
 
 Data Sizes:
     Strings     0
     Constant    70
     Data        4
-    BSS         78
+    BSS         0
     Persistent  0
     Stack       0
 
 Auto Spaces:
     Space          Size  Autos    Used
-    COMMON           14      0       4
-    BANK0            80      0      78
-    BANK1            80      0       0
+    COMMON           14     14      14
+    BANK0            80     18      22
+    BANK1            80     78      78
     BANK2            80      0       0
 
 Pointer List with Targets:
 
-    Tetris_RotatePlayer@game.unit	PTR const struct . size(1) Largest target is 66
+    Tetris_MovePlayerRight@game.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
 
-    Tetris_MovePlayerRight@game.unit	PTR const struct . size(1) Largest target is 66
+    Tetris_RotatePlayer@game.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
 
     Tetris_MovePlayerLeft@game.unit	PTR const struct . size(1) Largest target is 66
@@ -463,8 +2738,20 @@ Pointer List with Targets:
     Tetris_PlayerOverlapsEnvironment@game.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
 
+    main@game.unit	PTR const struct . size(1) Largest target is 66
+		 -> Tetris_units(CODE[66]), 
+
+    memset@p1	PTR void  size(1) Largest target is 79
+		 -> main@game(BANK1[78]), 
+
+    memset@p	PTR unsigned char  size(1) Largest target is 79
+		 -> main@game(BANK1[78]), 
+
     Tetris_RotatePlayer@game.player.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
+
+    Tetris_RotatePlayer@game	PTR struct . size(1) Largest target is 79
+		 -> main@game(BANK1[78]), 
 
     Tetris_MovePlayerRight@game.player.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
@@ -472,22 +2759,68 @@ Pointer List with Targets:
     Tetris_MovePlayerLeft@game.player.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
 
+    Tetris_MovePlayerLeft@game	PTR struct . size(1) Largest target is 79
+		 -> main@game(BANK1[78]), 
+
     Tetris_ResetGame@game.player.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
 
-    sp__memset	PTR void  size(1) Largest target is 0
+    Tetris_ResetGame@playerUnit	PTR const struct . size(1) Largest target is 66
+		 -> Tetris_units(CODE[66]), 
+
+    sp__memset	PTR void  size(1) Largest target is 79
+		 -> main@game(BANK1[78]), 
+
+    Tetris_ResetGame@game	PTR struct . size(1) Largest target is 79
+		 -> main@game(BANK1[78]), 
+
+    sp__Tetris_GetUnit	PTR const struct . size(1) Largest target is 66
+		 -> NULL(NULL[0]), Tetris_units(CODE[66]), 
+
+    Tetris_ResetPlayer@playerUnit	PTR const struct . size(1) Largest target is 66
+		 -> Tetris_units(CODE[66]), 
 
     Tetris_ResetPlayer@player.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
 
-    Tetris_SelectRandomPlayerUnit@player.unit	PTR const struct . size(1) Largest target is 66
+    Tetris_ResetPlayer@player	PTR struct . size(1) Largest target is 79
+		 -> main@game(BANK1[78]), 
+
+    Tetris_SetPlayerUnit@player.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
+
+    Tetris_SetPlayerUnit@unit	PTR const struct . size(1) Largest target is 66
+		 -> Tetris_units(CODE[66]), 
+
+    Tetris_SetPlayerUnit@player	PTR struct . size(1) Largest target is 79
+		 -> main@game(BANK1[78]), 
+
+    Tetris_PlayerUnitBitsAreValid@player.unit	PTR const struct . size(1) Largest target is 66
+		 -> Tetris_units(CODE[66]), 
+
+    Tetris_PlayerUnitBitsAreValid@player	PTR const struct . size(1) Largest target is 79
+		 -> game.player(BANK0[13]), main@game(BANK1[78]), 
+
+    Tetris_UpdatePlayerUnitBits@player.unit	PTR const struct . size(1) Largest target is 66
+		 -> Tetris_units(CODE[66]), 
+
+    Tetris_UpdatePlayerUnitBits@player	PTR struct . size(1) Largest target is 79
+		 -> main@game(BANK1[78]), 
+
+    Tetris_CountUnitBits@unitBits	PTR const unsigned int  size(2) Largest target is 79
+		 -> game.player(BANK0[13]), Tetris_units.bits(CODE[32]), Tetris_units(CODE[66]), main@game(BANK1[78]), 
 
     Tetris_ApplyPlayerToTable@game.player.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
 
+    Tetris_ApplyPlayerToTable@game	PTR struct . size(1) Largest target is 79
+		 -> main@game(BANK1[78]), 
+
     Tetris_RemovePlayerFromTable@game.player.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
+
+    Tetris_RemovePlayerFromTable@game	PTR struct . size(1) Largest target is 79
+		 -> main@game(BANK1[78]), 
 
     Tetris_PlayerTouchingRightBound@player.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
@@ -495,26 +2828,56 @@ Pointer List with Targets:
     Tetris_PlayerTouchingLeftBound@player.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
 
+    Tetris_PlayerTouchingLeftBound@player	PTR struct . size(1) Largest target is 79
+		 -> main@game(BANK1[78]), 
+
     Tetris_PlayerOverlapsEnvironment@game.player.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
 
+    Tetris_PlayerOverlapsEnvironment@game	PTR struct . size(1) Largest target is 79
+		 -> main@game(BANK1[78]), 
+
     Tetris_PlayerTopmostY@player.unit	PTR const struct . size(1) Largest target is 66
+		 -> Tetris_units(CODE[66]), 
+
+    Tetris_PlayerTopmostY@player	PTR struct . size(1) Largest target is 79
+		 -> main@game(BANK1[78]), 
+
+    sp__Tetris_GetRandomUnit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
 
     S29$unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
 
-    F1332.player.unit	PTR const struct . size(1) Largest target is 66
+    game.player.unit	PTR const struct . size(1) Largest target is 66
 		 -> Tetris_units(CODE[66]), 
 
 
 Critical Paths under _main in COMMON
 
-    None.
+    _Tetris_RotatePlayer->_Tetris_ApplyPlayerToTable
+    _Tetris_RotatePlayer->_Tetris_RemovePlayerFromTable
+    _Tetris_PlayerUnitBitsAreValid->_Tetris_CountUnitBits
+    _Tetris_ResetGame->_Tetris_ApplyPlayerToTable
+    _Tetris_ResetPlayer->_Tetris_SetPlayerUnit
+    _Tetris_SetPlayerUnit->_Tetris_UpdatePlayerUnitBits
+    _Tetris_MovePlayerLeft->_Tetris_ApplyPlayerToTable
+    _Tetris_MovePlayerLeft->_Tetris_RemovePlayerFromTable
+    _Tetris_RemovePlayerFromTable->_Tetris_PlayerTopmostY
+    _Tetris_PlayerOverlapsEnvironment->_Tetris_PlayerTopmostY
+    _Tetris_ApplyPlayerToTable->_Tetris_PlayerTopmostY
+    _Tetris_GetRandomUnit->___bmul
+    _rand->___lmul
 
 Critical Paths under _main in BANK0
 
-    None.
+    _main->_Tetris_MovePlayerLeft
+    _Tetris_RotatePlayer->_Tetris_PlayerOverlapsEnvironment
+    _Tetris_ResetGame->_Tetris_GetRandomUnit
+    _Tetris_ResetPlayer->_Tetris_SetPlayerUnit
+    _Tetris_MovePlayerLeft->_Tetris_PlayerOverlapsEnvironment
+    _Tetris_GetRandomUnit->___bmul
+    ___bmul->_rand
 
 Critical Paths under _main in BANK1
 
@@ -529,14 +2892,143 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
  ---------------------------------------------------------------------------------
- (0) _main                                                 0     0      0       0
+ (0) _main                                                79    79      0    6745
+                                             17 BANK0      1     1      0
+                                              0 BANK1     78    78      0
+               _Tetris_GetRandomUnit
+              _Tetris_MovePlayerLeft
+                   _Tetris_ResetGame
+                _Tetris_RotatePlayer
  ---------------------------------------------------------------------------------
- Estimated maximum stack depth 0
+ (1) _Tetris_RotatePlayer                                  4     4      0    2767
+                                             12 BANK0      4     4      0
+          _Tetris_ApplyPlayerToTable
+   _Tetris_PlayerOverlapsEnvironment
+      _Tetris_PlayerUnitBitsAreValid
+       _Tetris_RemovePlayerFromTable
+        _Tetris_UpdatePlayerUnitBits
+                            ___lbmod
+ ---------------------------------------------------------------------------------
+ (2) ___lbmod                                              7     6      1     235
+                                              0 COMMON     7     6      1
+ ---------------------------------------------------------------------------------
+ (2) _Tetris_PlayerUnitBitsAreValid                        5     5      0     435
+                                             12 COMMON     1     1      0
+                                              0 BANK0      4     4      0
+               _Tetris_CountUnitBits
+ ---------------------------------------------------------------------------------
+ (4) _Tetris_CountUnitBits                                12    10      2     336
+                                              0 COMMON    12    10      2
+ ---------------------------------------------------------------------------------
+ (1) _Tetris_ResetGame                                     3     2      1    1829
+                                             11 BANK0      3     2      1
+          _Tetris_ApplyPlayerToTable
+               _Tetris_GetRandomUnit (ARG)
+                 _Tetris_ResetPlayer
+                             _memset
+ ---------------------------------------------------------------------------------
+ (2) _memset                                               7     3      4     281
+                                              0 COMMON     7     3      4
+ ---------------------------------------------------------------------------------
+ (2) _Tetris_ResetPlayer                                   4     3      1     919
+                                              1 BANK0      4     3      1
+               _Tetris_SetPlayerUnit
+ ---------------------------------------------------------------------------------
+ (3) _Tetris_SetPlayerUnit                                 3     2      1     722
+                                             12 COMMON     2     1      1
+                                              0 BANK0      1     1      0
+        _Tetris_UpdatePlayerUnitBits
+ ---------------------------------------------------------------------------------
+ (3) _Tetris_UpdatePlayerUnitBits                         12    12      0     547
+                                              0 COMMON    12    12      0
+ ---------------------------------------------------------------------------------
+ (1) _Tetris_MovePlayerLeft                                5     5      0    1676
+                                             12 BANK0      5     5      0
+          _Tetris_ApplyPlayerToTable
+   _Tetris_PlayerOverlapsEnvironment
+     _Tetris_PlayerTouchingLeftBound
+       _Tetris_RemovePlayerFromTable
+ ---------------------------------------------------------------------------------
+ (2) _Tetris_RemovePlayerFromTable                        11    11      0     399
+                                              3 COMMON    11    11      0
+              _Tetris_PlayerTopmostY
+ ---------------------------------------------------------------------------------
+ (2) _Tetris_PlayerTouchingLeftBound                       6     6      0     123
+                                              0 COMMON     6     6      0
+ ---------------------------------------------------------------------------------
+ (2) _Tetris_PlayerOverlapsEnvironment                    15    15      0     399
+                                              3 COMMON     3     3      0
+                                              0 BANK0     12    12      0
+              _Tetris_PlayerTopmostY
+ ---------------------------------------------------------------------------------
+ (2) _Tetris_ApplyPlayerToTable                           11    11      0     432
+                                              3 COMMON    11    11      0
+              _Tetris_PlayerTopmostY
+ ---------------------------------------------------------------------------------
+ (4) _Tetris_PlayerTopmostY                                3     3      0     121
+                                              0 COMMON     3     3      0
+ ---------------------------------------------------------------------------------
+ (1) _Tetris_GetRandomUnit                                 1     1      0     362
+                                             10 BANK0      1     1      0
+                             ___bmul
+                               _rand
+ ---------------------------------------------------------------------------------
+ (2) _rand                                                 7     5      2     244
+                                              0 BANK0      7     5      2
+                             ___lmul
+ ---------------------------------------------------------------------------------
+ (3) ___lmul                                              13     5      8     244
+                                              0 COMMON    13     5      8
+ ---------------------------------------------------------------------------------
+ (2) ___bmul                                               4     3      1     118
+                                             13 COMMON     1     1      0
+                                              7 BANK0      3     2      1
+                               _rand (ARG)
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 4
  ---------------------------------------------------------------------------------
 
  Call Graph Graphs:
 
  _main (ROOT)
+   _Tetris_GetRandomUnit
+     ___bmul
+       _rand (ARG)
+         ___lmul
+     _rand
+       ___lmul
+   _Tetris_MovePlayerLeft
+     _Tetris_ApplyPlayerToTable
+       _Tetris_PlayerTopmostY
+     _Tetris_PlayerOverlapsEnvironment
+       _Tetris_PlayerTopmostY
+     _Tetris_PlayerTouchingLeftBound
+     _Tetris_RemovePlayerFromTable
+       _Tetris_PlayerTopmostY
+   _Tetris_ResetGame
+     _Tetris_ApplyPlayerToTable
+       _Tetris_PlayerTopmostY
+     _Tetris_GetRandomUnit (ARG)
+       ___bmul
+         _rand (ARG)
+           ___lmul
+       _rand
+         ___lmul
+     _Tetris_ResetPlayer (ARG)
+       _Tetris_SetPlayerUnit
+         _Tetris_UpdatePlayerUnitBits
+     _memset (ARG)
+   _Tetris_RotatePlayer
+     _Tetris_ApplyPlayerToTable
+       _Tetris_PlayerTopmostY
+     _Tetris_PlayerOverlapsEnvironment
+       _Tetris_PlayerTopmostY
+     _Tetris_PlayerUnitBitsAreValid
+       _Tetris_CountUnitBits
+     _Tetris_RemovePlayerFromTable
+       _Tetris_PlayerTopmostY
+     _Tetris_UpdatePlayerUnitBits
+     ___lbmod
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
@@ -546,44 +3038,144 @@ BANK2               50      0       0       7        0.0%
 BITBANK2            50      0       0       6        0.0%
 SFR2                 0      0       0       5        0.0%
 BITSFR2              0      0       0       5        0.0%
-BANK1               50      0       0       5        0.0%
+BANK1               50     4E      4E       5       97.5%
 BITBANK1            50      0       0       4        0.0%
 SFR1                 0      0       0       2        0.0%
 BITSFR1              0      0       0       2        0.0%
-BANK0               50      0      4E       3       97.5%
+BANK0               50     12      16       3       27.5%
 BITBANK0            50      0       0       9        0.0%
 SFR0                 0      0       0       1        0.0%
 BITSFR0              0      0       0       1        0.0%
-COMMON               E      0       4       1       28.6%
+COMMON               E      E       E       1      100.0%
 BITCOMMON            E      0       0       0        0.0%
 CODE                 0      0       0       0        0.0%
-DATA                 0      0      52      10        0.0%
-ABS                  0      0      52       8        0.0%
+DATA                 0      0      72      10        0.0%
+ABS                  0      0      72       8        0.0%
 NULL                 0      0       0       0        0.0%
 STACK                0      0       0       2        0.0%
 EEDATA             100      0       0       0        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.05 build -831301201 
-Symbol Table                                                                                   Thu Apr 25 21:12:26 2019
+Symbol Table                                                                                   Fri Apr 26 21:37:52 2019
 
-                                    pc 0002                                     fsr 0004  
-                                  indf 0000                                   _main 07D9  
-                                 btemp 007E                                   start 0000  
-                                ?_main 0000                                  _randx 0070  
-                                pclath 000A                                  status 0003  
-                                wtemp0 007E                        __initialization 07E7  
-                         __end_of_main 07DB                                 ??_main 0000  
-                         __pdataCOMMON 0070                __end_of__initialization 07FD  
-                       __pcstackCOMMON 0000                             __pbssBANK0 0020  
-                           __pmaintext 07D9                             __stringtab 0002  
-__end_of_Tetris_playerStartingPosition 000A          _Tetris_playerStartingPosition 0008  
-                              clrloop0 07E0                   end_of_initialization 07FD  
-                     _Tetris_unitPivot 000A                          __pidataCOMMON 07DB  
-                  start_initialization 07E7                              ___latbits 0001  
-                 __end_of_Tetris_units 004E                              __pstrings 0002  
-             __end_of_Tetris_unitPivot 000C                              clear_ram0 07DF  
-                          __stringbase 0007                              main@game1 0020  
-                   __end_of__stringtab 0008                          __size_of_main 0002  
-                         _Tetris_units 000C                              stringcode 0002  
-                             stringdir 0002                               stringtab 0002  
+                                        pc 0002                             ___bmul@product 0028  
+                                       fsr 0004                                        l420 050C  
+                                      u500 07E2                                        u505 07DD  
+                                      u455 0771                                        u535 0654  
+                                      u480 07C4                                        u705 06A3  
+                                      u485 07BF                                        u680 0575  
+                                      u585 05CB                                        u745 04F8  
+                                      u595 05D3                                        u675 0557  
+                                      fsr0 0004                                        indf 0000  
+                                     l1102 07B5                                       l1202 0493  
+                                     l1116 07D3                                       l1108 07D0  
+                                     l1140 0632                                       l1132 062D  
+                                     l1208 04A5                                       l1224 0581  
+                                     l1144 0653                                       l1162 05B3  
+                                     l1322 06C5                                       l1166 05C9  
+                                     l1238 051C                                       l1182 05F6  
+                                     l1342 06FC                                       l1086 076A  
+                                     l1272 0451                                       l1344 0704  
+                                     l1336 06E5                                       l1362 0762  
+                                     l1276 0457                                       l1188 0621  
+                                     l1268 047A                                       l1358 0753  
+                                     l1288 04F5              ?_Tetris_RemovePlayerFromTable 0070  
+             Tetris_ResetPlayer@playerUnit 0021                 ?_Tetris_ApplyPlayerToTable 0070  
+                                     _main 0460                                       _rand 066C  
+                                     btemp 007E                                       start 0000  
+            Tetris_ApplyPlayerToTable@game 007C                          ___bmul@multiplier 0029  
+             __end_of_Tetris_CountUnitBits 066C      __end_of_Tetris_PlayerUnitBitsAreValid 0577  
+   __size_of_Tetris_PlayerUnitBitsAreValid 0033              _Tetris_PlayerUnitBitsAreValid 0544  
+                                    ?_main 0070                     ??_Tetris_GetRandomUnit 002A  
+                                    ?_rand 0020                            __end_of___lbmod 0512  
+                      ___lmul@multiplicand 0074                  __size_of_Tetris_ResetGame 001F  
+              Tetris_PlayerTopmostY@player 0072                                      _randx 0032  
+                     Tetris_ResetGame@game 002D                                      pclath 000A  
+                                    status 0003                                      wtemp0 007E  
+        __end_of_Tetris_ApplyPlayerToTable 0544        __end_of_Tetris_UpdatePlayerUnitBits 07EE  
+              _Tetris_UpdatePlayerUnitBits 0768                            __initialization 07EE  
+                             __end_of_main 0475                               __end_of_rand 06B1  
+                 Tetris_CountUnitBits@mask 0077                      Tetris_CountUnitBits@i 007B  
+                    Tetris_CountUnitBits@j 007A                                     ??_main 0031  
+                                   ??_rand 0022       Tetris_PlayerOverlapsEnvironment@game 0074  
+           __size_of_Tetris_MovePlayerLeft 0057              __end_of_Tetris_MovePlayerLeft 0708  
+           __size_of_Tetris_PlayerTopmostY 000E              __end_of_Tetris_PlayerTopmostY 042D  
+           ??_Tetris_RemovePlayerFromTable 0073                         _Tetris_ResetPlayer 04CE  
+                                   ___bmul 044D                                     ___lmul 05AB  
+                                ??___lbmod 0071                                     _memset 0475  
+                      ?_Tetris_ResetPlayer 0021             ?_Tetris_PlayerUnitBitsAreValid 0070  
+             Tetris_UpdatePlayerUnitBits@i 0079                       ??_Tetris_ResetPlayer 0022  
+                          ___lbmod@divisor 0070                       _Tetris_CountUnitBits 062B  
+                  __end_of__initialization 07FD                            ___lbmod@counter 0075  
+            __size_of_Tetris_SetPlayerUnit 000F                        ___bmul@multiplicand 0027  
+                           __pcstackCOMMON 0070                               __pidataBANK0 041B  
+ __end_of_Tetris_PlayerOverlapsEnvironment 062B  __size_of_Tetris_PlayerOverlapsEnvironment 0041  
+       ??_Tetris_PlayerOverlapsEnvironment 0020          ?_Tetris_PlayerOverlapsEnvironment 0070  
+         _Tetris_PlayerOverlapsEnvironment 05EA                           _Tetris_ResetGame 04AF  
+                    ?_Tetris_CountUnitBits 0070                ??_Tetris_ApplyPlayerToTable 0073  
+           Tetris_RotatePlayer@oldRotation 002E                                 __pmaintext 0460  
+                                  ?___bmul 0027                                    ?___lmul 0070  
+             __size_of_Tetris_RotatePlayer 0060                                    ?_memset 0070  
+                           ___lmul@product 0079                     Tetris_MovePlayerLeft@i 002E  
+                               __stringtab 0002      __end_of_Tetris_playerStartingPosition 0014  
+            _Tetris_playerStartingPosition 0012                            __size_of___bmul 0013  
+                 Tetris_SetPlayerUnit@unit 007C                            __size_of___lmul 003F  
+                                  ___lbmod 04EF            Tetris_PlayerTouchingLeftBound@i 0075  
+                          __size_of_memset 001C                  _Tetris_ApplyPlayerToTable 0512  
+                                  __ptext1 0708                                    __ptext2 04EF  
+                                  __ptext3 0544                                    __ptext4 062B  
+                                  __ptext5 04AF                                    __ptext6 0475  
+                                  __ptext7 04CE                                    __ptext8 042D  
+                                  __ptext9 0768              __size_of_Tetris_GetRandomUnit 0011  
+     __size_of_Tetris_UpdatePlayerUnitBits 0086                  Tetris_MovePlayerLeft@game 0030  
+                   ??_Tetris_CountUnitBits 0072                       end_of_initialization 07FD  
+                                  memset@c 0070                                    memset@n 0072  
+                                  memset@p 0076                           _Tetris_unitPivot 0014  
+        Tetris_UpdatePlayerUnitBits@player 007B                           ___lbmod@dividend 0074  
+            Tetris_RemovePlayerFromTable@i 007D                                ___lbmod@rem 0076  
+                    _Tetris_MovePlayerLeft 06B1            ??_Tetris_PlayerUnitBitsAreValid 0020  
+                    _Tetris_PlayerTopmostY 041F                   __end_of_Tetris_ResetGame 04CE  
+                           __end_of___bmul 0460                             __end_of___lmul 05EA  
+               Tetris_ResetGame@playerUnit 002B                             __end_of_memset 0491  
+             __end_of_Tetris_SetPlayerUnit 043C     __end_of_Tetris_PlayerTouchingLeftBound 04AF  
+  __size_of_Tetris_PlayerTouchingLeftBound 001E             _Tetris_PlayerTouchingLeftBound 0491  
+                      start_initialization 07EE        Tetris_PlayerUnitBitsAreValid@player 007C  
+                      _Tetris_RotatePlayer 0708                __size_of_Tetris_ResetPlayer 0021  
+                                 ??___bmul 007D                       ?_Tetris_RotatePlayer 0070  
+                                 ??___lmul 0078           Tetris_RemovePlayerFromTable@game 007C  
+                              __pdataBANK0 0032                                   ??_memset 0074  
+                                ___latbits 0001                              __pcstackBANK0 0020  
+                            __pcstackBANK1 00A0         __size_of_Tetris_ApplyPlayerToTable 0032  
+                   ?_Tetris_MovePlayerLeft 0070                     ?_Tetris_PlayerTopmostY 0070  
+                    ??_Tetris_RotatePlayer 002C                       __end_of_Tetris_units 0058  
+             ?_Tetris_UpdatePlayerUnitBits 0070                                   ?___lbmod 0070  
+                                __pstrings 0002                   __end_of_Tetris_unitPivot 0016  
+           Tetris_ApplyPlayerToTable@start 007B               __end_of_Tetris_GetRandomUnit 044D  
+                     _Tetris_SetPlayerUnit 042D              ??_Tetris_UpdatePlayerUnitBits 0070  
+               Tetris_CountUnitBits@result 0079                                __stringbase 0011  
+             Tetris_CountUnitBits@unitBits 0070                          ___lmul@multiplier 0070  
+        Tetris_PlayerOverlapsEnvironment@i 0075              __size_of_Tetris_CountUnitBits 0041  
+                    ?_Tetris_SetPlayerUnit 007C                          ?_Tetris_ResetGame 002B  
+               Tetris_SetPlayerUnit@player 0020                         ??_Tetris_ResetGame 002C  
+                         __size_of___lbmod 0023          Tetris_RemovePlayerFromTable@start 007B  
+                       __end_of__stringtab 0012                                   __ptext10 06B1  
+                                 __ptext11 0577                                   __ptext12 0491  
+                                 __ptext13 05EA                                   __ptext14 0512  
+                                 __ptext15 041F                                   __ptext16 043C  
+                                 __ptext17 066C                                   __ptext18 05AB  
+                                 __ptext19 044D       Tetris_PlayerTouchingLeftBound@player 0074  
+         ??_Tetris_PlayerTouchingLeftBound 0070            ?_Tetris_PlayerTouchingLeftBound 0070  
+                            __size_of_main 0015                              __size_of_rand 0045  
+                  Tetris_RotatePlayer@game 002F                 Tetris_MovePlayerLeft@i_270 002F  
+                                 main@game 00A0                       _Tetris_GetRandomUnit 043C  
+                  ??_Tetris_MovePlayerLeft 002C                                   memset@p1 0075  
+                             _Tetris_units 0016                    ??_Tetris_PlayerTopmostY 0070  
+               __end_of_Tetris_ResetPlayer 04EF                   Tetris_ResetPlayer@player 0024  
+                   ??_Tetris_SetPlayerUnit 007D                                  stringcode 000C  
+    Tetris_PlayerOverlapsEnvironment@start 0073           Tetris_UpdatePlayerUnitBits@i_197 0077  
+         Tetris_UpdatePlayerUnitBits@i_198 0078           Tetris_UpdatePlayerUnitBits@shift 007A  
+                    ?_Tetris_GetRandomUnit 0070                                   stringdir 000C  
+                                 stringtab 0002       __end_of_Tetris_RemovePlayerFromTable 05AB  
+    __size_of_Tetris_RemovePlayerFromTable 0034               _Tetris_RemovePlayerFromTable 0577  
+              __end_of_Tetris_RotatePlayer 0768                 Tetris_ApplyPlayerToTable@i 007D  

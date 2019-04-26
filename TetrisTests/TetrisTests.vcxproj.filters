@@ -68,7 +68,10 @@
     <ClInclude Include="MovementTests.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TestRotation.h">
+    <ClInclude Include="TableEquality.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RotationTests.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

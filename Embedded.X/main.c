@@ -4,5 +4,8 @@
 
 void main(void)
 {
-    static Tetris_Game game1;
+    Tetris_Game game;
+    Tetris_ResetGame(&game, Tetris_GetRandomUnit());
+    Tetris_MovePlayerLeft(&game);
+    Tetris_RotatePlayer(&game);
 }

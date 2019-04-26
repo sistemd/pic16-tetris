@@ -82,6 +82,10 @@ void MainLoop(Tetris_Game *game, SDL_Renderer *renderer)
 					Tetris_MovePlayerRight(game);
 					PrintBits(game->table);
 					break;
+				case SDLK_DOWN:
+					Tetris_MovePlayerDown(game);
+					PrintBits(game->table);
+					break;
 				case SDLK_SPACE:
 					Tetris_RotatePlayer(game);
 					PrintBits(game->table);
@@ -100,8 +104,9 @@ int main(int argc, char **argv)
 	SDL_CreateWindowAndRenderer(SCREEN_WIDTH, SCREEN_HEIGHT, 0, &window, &renderer);
 	
 	Tetris_Game tetrisGame;
-	Tetris_ResetGame(&tetrisGame, Tetris_GetRandomUnit());
+	Tetris_ResetGame(&tetrisGame, Tetris_GetUnit('I'));
 	tetrisGame.table[1] |= 0x0802;
+	tetrisGame.table[15] |= 0x0802;
 	MainLoop(&tetrisGame, renderer);
 
 	SDL_DestroyRenderer(renderer);

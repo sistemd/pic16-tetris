@@ -17,6 +17,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./../Tetris/Tetris.h: 41: typedef struct {
 [s S4 `ui -> 32 `i `S3 1 `ui 1 ]
 [n S4 . table player currentScore ]
+"51
+[; ;./../Tetris/Tetris.h: 51: extern void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit);
+[v _Tetris_ResetGame `(v ~T0 @X0 0 ef2`*S4`*CS2 ]
+"47
+[; ;./../Tetris/Tetris.h: 47: extern const Tetris_Unit *Tetris_GetRandomUnit(void);
+[v _Tetris_GetRandomUnit `(*CS2 ~T0 @X0 0 ef ]
+"55
+[; ;./../Tetris/Tetris.h: 55: extern void Tetris_MovePlayerLeft(Tetris_Game *game);
+[v _Tetris_MovePlayerLeft `(v ~T0 @X0 0 ef1`*S4 ]
+"59
+[; ;./../Tetris/Tetris.h: 59: extern void Tetris_RotatePlayer(Tetris_Game *game);
+[v _Tetris_RotatePlayer `(v ~T0 @X0 0 ef1`*S4 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -261,9 +273,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _main ]
 [f ]
 "7
-[; ;main.c: 7:     static Tetris_Game game1;
-[v F1332 `S4 ~T0 @X0 1 s game1 ]
+[; ;main.c: 7:     Tetris_Game game;
+[v _game `S4 ~T0 @X0 1 a ]
 "8
-[; ;main.c: 8: }
+[; ;main.c: 8:     Tetris_ResetGame(&game, Tetris_GetRandomUnit());
+[e ( _Tetris_ResetGame (2 , &U _game ( _Tetris_GetRandomUnit ..  ]
+"9
+[; ;main.c: 9:     Tetris_MovePlayerLeft(&game);
+[e ( _Tetris_MovePlayerLeft (1 &U _game ]
+"10
+[; ;main.c: 10:     Tetris_RotatePlayer(&game);
+[e ( _Tetris_RotatePlayer (1 &U _game ]
+"11
+[; ;main.c: 11: }
 [e :UE 142 ]
 }

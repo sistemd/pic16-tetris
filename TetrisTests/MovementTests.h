@@ -2,17 +2,8 @@
 
 #include "Tetris.h"
 #include "CUnit.h"
+#include "TableEquality.h"
 #include <stdint.h>
-
-#define ASSERT_TETRIS_TABLES_EQUAL(aAaAa, bBbBb)	\
-{													\
-	for (int i = 0; i < TETRIS_TABLE_HEIGHT; ++i)	\
-	{												\
-		uint16_t x = aAaAa[i];						\
-		uint16_t y = bBbBb[i];						\
-		CU_ASSERT_EQUAL(x, y);						\
-	}												\
-}													\
 
 inline void TestMovementLeftRight(void)
 {
@@ -166,6 +157,53 @@ inline void TestMovementLeftRight(void)
 
 	expectedTable[1] = 0b0000110000010000;
 	expectedTable[2] = 0b0001110000000000;
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 4);
+	CU_ASSERT_EQUAL(game.player.position.y, 2);
+
+	Tetris_ResetGame(&game, Tetris_GetUnit('I'));
+
+	expectedTable[0] = 0b0000000010000000;
+	expectedTable[1] = 0b0000000010000000;
+	expectedTable[2] = 0b0000000010000000;
+	expectedTable[3] = 0b0000000010000000;
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 8);
+	CU_ASSERT_EQUAL(game.player.position.y, 2);
+
+	game.table[3] |= 0b0001000000000000;
+	Tetris_MovePlayerLeft(&game);
+
+	expectedTable[0] = 0b0000000100000000;
+	expectedTable[1] = 0b0000000100000000;
+	expectedTable[2] = 0b0000000100000000;
+	expectedTable[3] = 0b0001000100000000;
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 7);
+	CU_ASSERT_EQUAL(game.player.position.y, 2);
+
+	Tetris_MovePlayerLeft(&game);
+	Tetris_MovePlayerLeft(&game);
+	Tetris_MovePlayerLeft(&game);
+
+	expectedTable[0] = 0b0000100000000000;
+	expectedTable[1] = 0b0000100000000000;
+	expectedTable[2] = 0b0000100000000000;
+	expectedTable[3] = 0b0001100000000000;
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 4);
+	CU_ASSERT_EQUAL(game.player.position.y, 2);
+
+	Tetris_MovePlayerLeft(&game);
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 4);
+	CU_ASSERT_EQUAL(game.player.position.y, 2);
+
+	Tetris_MovePlayerLeft(&game);
+	Tetris_MovePlayerLeft(&game);
+	Tetris_MovePlayerLeft(&game);
+
 	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
 	CU_ASSERT_EQUAL(game.player.position.x, 4);
 	CU_ASSERT_EQUAL(game.player.position.y, 2);
