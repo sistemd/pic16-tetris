@@ -126,13 +126,23 @@ static void Tetris_RemovePlayerFromTable(Tetris_Game *game)
 	}
 }
 
-static void Tetris_ApplyPlayerToTable(Tetris_Game *game)
+static uint8_t Tetris_ApplyPlayerToTable(Tetris_Game *game)
 {
 	uint8_t start = Tetris_PlayerTopmostY(&game->player);
+
 	for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
 	{
-		game->table[start + i] |= game->player.unitBits[i];
+		if (game->player.unitBits[i] == 0)
+			continue;
+
+		if (start + i >= TETRIS_TABLE_HEIGHT)
+			return 0;
 	}
+
+	for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
+		game->table[start + i] |= game->player.unitBits[i];
+
+	return 1;
 }
 
 static uint8_t Tetris_CountUnitBits(const uint16_t *unitBits)
@@ -189,6 +199,32 @@ static void Tetris_ResetPlayer(Tetris_Player *player, const Tetris_Unit *playerU
 	Tetris_SetPlayerUnit(player, playerUnit);
 }
 
+static void Tetris_ShiftTableDown(uint16_t *gameTable, uint8_t upto)
+{
+	uint8_t i;
+
+	for (i = upto; i != 0; --i)
+	{
+		if (gameTable[i] == 0)
+			break;
+		gameTable[i] = gameTable[i - 1];
+	}
+
+	gameTable[i] = 0;
+}
+
+static uint8_t Tetris_ScoreForRowsCleared(uint8_t rowsCleared)
+{
+	switch (rowsCleared)
+	{
+	case 0:  return 0;
+	case 1:  return 1;
+	case 2:  return 3;
+	case 3:  return 5;
+	default: return 7;
+	}
+}
+
 const Tetris_Unit *Tetris_GetRandomUnit(void)
 {
 	// FIXME The rand is biased because I use %
@@ -214,22 +250,54 @@ void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit)
 	Tetris_ApplyPlayerToTable(game);
 }
 
-void Tetris_Update(Tetris_Game *game)
+Tetris_GameState Tetris_UpdateGame(Tetris_Game *game)
 {
+	if (!Tetris_MovePlayerDown(game))
+	{
+		uint8_t rowsCleared = Tetris_ClearFilledRows(game->table);
+		game->currentScore += Tetris_ScoreForRowsCleared(rowsCleared);
 
+		Tetris_ResetPlayer(&game->player, Tetris_GetRandomUnit());
+		if (Tetris_PlayerOverlapsEnvironment(game))
+			return TETRIS_GAME_OVER;
+		Tetris_ApplyPlayerToTable(game);
+	}
+
+	return TETRIS_GAME_CONTINUES;
+}
+
+uint8_t Tetris_ClearFilledRows(uint16_t *gameTable)
+{
+	uint8_t rowsCleared = 0;
+
+	for (uint8_t i = 0; i < TETRIS_TABLE_HEIGHT;)
+	{
+		if (gameTable[i] == 0xFFFF)
+		{
+			Tetris_ShiftTableDown(gameTable, i);
+			++rowsCleared;
+		}
+		else
+		{
+			++i;
+		}
+	}
+
+	return rowsCleared;
 }
 
 uint8_t Tetris_MovePlayerDown(Tetris_Game *game)
 {
 	Tetris_RemovePlayerFromTable(game);
 	++game->player.position.y;
-	if (Tetris_PlayerOverlapsEnvironment(game))
+
+	if (Tetris_PlayerOverlapsEnvironment(game) || !Tetris_ApplyPlayerToTable(game))
 	{
 		--game->player.position.y;
 		Tetris_ApplyPlayerToTable(game);
 		return 0;
 	}
-	Tetris_ApplyPlayerToTable(game);
+
 	return 1;
 }
 

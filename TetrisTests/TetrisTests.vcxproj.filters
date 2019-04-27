@@ -74,5 +74,8 @@
     <ClInclude Include="RotationTests.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ClearingTests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

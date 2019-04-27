@@ -196,6 +196,9 @@ extern void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit);
 
 extern void Tetris_Update(Tetris_Game *game);
 
+
+extern uint8_t Tetris_MovePlayerDown(Tetris_Game *game);
+
 extern void Tetris_MovePlayerLeft(Tetris_Game *game);
 
 extern void Tetris_MovePlayerRight(Tetris_Game *game);
@@ -360,7 +363,7 @@ extern char * ftoa(float f, int * status);
 
 enum
 {
- TETRIS_NUM_UNITS = 2,
+ TETRIS_NUM_UNITS = 3,
 };
 
 static Position const Tetris_unitPivot = {
@@ -399,6 +402,35 @@ static Tetris_Unit const Tetris_units[TETRIS_NUM_UNITS] = {
     0b00011000,
     0b00011000,
     0b00000000,
+   },
+  },
+ },
+ {
+  .numRotations = 4,
+  .bits = {
+   {
+    0b00000000,
+    0b00010000,
+    0b00111000,
+    0b00000000,
+   },
+   {
+    0b00000000,
+    0b00010000,
+    0b00011000,
+    0b00010000,
+   },
+   {
+    0b00000000,
+    0b00000000,
+    0b00111000,
+    0b00010000,
+   },
+   {
+    0b00000000,
+    0b00010000,
+    0b00110000,
+    0b00010000,
    },
   },
  },
@@ -527,6 +559,7 @@ const Tetris_Unit *Tetris_GetUnit(char designator)
  {
  case 'I': return Tetris_units + 0;
  case 'O': return Tetris_units + 1;
+ case 'T': return Tetris_units + 2;
  }
 
  return (0);
@@ -542,6 +575,20 @@ void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit)
 void Tetris_Update(Tetris_Game *game)
 {
 
+}
+
+uint8_t Tetris_MovePlayerDown(Tetris_Game *game)
+{
+ Tetris_RemovePlayerFromTable(game);
+ ++game->player.position.y;
+ if (Tetris_PlayerOverlapsEnvironment(game))
+ {
+  --game->player.position.y;
+  Tetris_ApplyPlayerToTable(game);
+  return 0;
+ }
+ Tetris_ApplyPlayerToTable(game);
+ return 1;
 }
 
 void Tetris_MovePlayerLeft(Tetris_Game *game)

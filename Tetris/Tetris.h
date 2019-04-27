@@ -44,15 +44,25 @@ typedef struct {
 	uint16_t currentScore;
 } Tetris_Game;
 
+typedef enum {
+	TETRIS_GAME_OVER,
+	TETRIS_GAME_CONTINUES,
+} Tetris_GameState;
+
 extern const Tetris_Unit *Tetris_GetRandomUnit(void);
 
 extern const Tetris_Unit *Tetris_GetUnit(char designator);
 
 extern void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit);
 
-extern void Tetris_Update(Tetris_Game *game);
+extern Tetris_GameState Tetris_UpdateGame(Tetris_Game *game);
 
-// This is mostly exposed to be testable, not really useful as part of the interface
+/*
+  Tetris_MovePlayerDown and Tetris_ClearFilledRows are mostly
+  exposed to be testable and are not really useful as part of the interface.
+*/
+extern uint8_t Tetris_ClearFilledRows(uint16_t *gameTable);
+
 extern uint8_t Tetris_MovePlayerDown(Tetris_Game *game);
 
 extern void Tetris_MovePlayerLeft(Tetris_Game *game);

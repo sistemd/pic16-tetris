@@ -83,7 +83,8 @@ void MainLoop(Tetris_Game *game, SDL_Renderer *renderer)
 					PrintBits(game->table);
 					break;
 				case SDLK_DOWN:
-					Tetris_MovePlayerDown(game);
+					if (Tetris_UpdateGame(game) == TETRIS_GAME_OVER)
+						return;
 					PrintBits(game->table);
 					break;
 				case SDLK_SPACE:
@@ -104,7 +105,7 @@ int main(int argc, char **argv)
 	SDL_CreateWindowAndRenderer(SCREEN_WIDTH, SCREEN_HEIGHT, 0, &window, &renderer);
 	
 	Tetris_Game tetrisGame;
-	Tetris_ResetGame(&tetrisGame, Tetris_GetUnit('I'));
+	Tetris_ResetGame(&tetrisGame, Tetris_GetUnit('T'));
 	tetrisGame.table[1] |= 0x0802;
 	tetrisGame.table[15] |= 0x0802;
 	MainLoop(&tetrisGame, renderer);

@@ -4,6 +4,7 @@
 #include "CUnit.h"
 #include "TableEquality.h"
 #include <stdint.h>
+#include <string.h>
 
 inline void TestMovementLeftRight(void)
 {
@@ -207,4 +208,146 @@ inline void TestMovementLeftRight(void)
 	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
 	CU_ASSERT_EQUAL(game.player.position.x, 4);
 	CU_ASSERT_EQUAL(game.player.position.y, 2);
+}
+
+inline void TestMovementDown(void)
+{
+	Tetris_Game game;
+	Tetris_ResetGame(&game, Tetris_GetUnit('O'));
+	game.table[4] = 0b1100111111111111;
+
+	uint16_t expectedTable[TETRIS_TABLE_HEIGHT] = {
+		0b0000000000000000,
+		0b0000000011000000,
+		0b0000000011000000,
+		0b0000000000000000,
+		0b1100111111111111,
+	};
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 8);
+	CU_ASSERT_EQUAL(game.player.position.y, 2);
+
+	CU_ASSERT(Tetris_MovePlayerDown(&game));
+
+	expectedTable[3] = expectedTable[1];
+	expectedTable[1] = 0;
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 8);
+	CU_ASSERT_EQUAL(game.player.position.y, 3);
+
+	CU_ASSERT(!Tetris_MovePlayerDown(&game));
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 8);
+	CU_ASSERT_EQUAL(game.player.position.y, 3);
+
+	CU_ASSERT(!Tetris_MovePlayerDown(&game));
+	CU_ASSERT(!Tetris_MovePlayerDown(&game));
+	CU_ASSERT(!Tetris_MovePlayerDown(&game));
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 8);
+	CU_ASSERT_EQUAL(game.player.position.y, 3);
+
+	Tetris_MovePlayerLeft(&game);
+
+	expectedTable[2] = 0b0000000110000000;
+	expectedTable[3] = 0b0000000110000000;
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 7);
+	CU_ASSERT_EQUAL(game.player.position.y, 3);
+
+	Tetris_MovePlayerLeft(&game);
+	Tetris_MovePlayerLeft(&game);
+	Tetris_MovePlayerLeft(&game);
+	Tetris_MovePlayerLeft(&game);
+	Tetris_MovePlayerLeft(&game);
+
+	expectedTable[2] = 0b0011000000000000;
+	expectedTable[3] = 0b0011000000000000;
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 2);
+	CU_ASSERT_EQUAL(game.player.position.y, 3);
+
+	CU_ASSERT(Tetris_MovePlayerDown(&game));
+
+	expectedTable[2] = 0;
+	expectedTable[4] = 0b1111111111111111;
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 2);
+	CU_ASSERT_EQUAL(game.player.position.y, 4);
+
+	CU_ASSERT(Tetris_MovePlayerDown(&game));
+
+	expectedTable[3] = 0;
+	expectedTable[5] = 0b0011000000000000;
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 2);
+	CU_ASSERT_EQUAL(game.player.position.y, 5);
+
+	CU_ASSERT(Tetris_MovePlayerDown(&game));
+
+	expectedTable[4] = 0b1100111111111111;
+	expectedTable[6] = 0b0011000000000000;
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 2);
+	CU_ASSERT_EQUAL(game.player.position.y, 6);
+
+	Tetris_ResetGame(&game, Tetris_GetUnit('I'));
+
+	memset(expectedTable, 0, TETRIS_TABLE_HEIGHT * sizeof *expectedTable);
+
+	expectedTable[0] = 0b0000000010000000;
+	expectedTable[1] = 0b0000000010000000;
+	expectedTable[2] = 0b0000000010000000;
+	expectedTable[3] = 0b0000000010000000;
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 8);
+	CU_ASSERT_EQUAL(game.player.position.y, 2);
+
+	CU_ASSERT(Tetris_MovePlayerDown(&game));
+
+	expectedTable[0] = 0b0000000000000000;
+	expectedTable[1] = 0b0000000010000000;
+	expectedTable[2] = 0b0000000010000000;
+	expectedTable[3] = 0b0000000010000000;
+	expectedTable[4] = 0b0000000010000000;
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 8);
+	CU_ASSERT_EQUAL(game.player.position.y, 3);
+
+	for (int i = 0; i < 27; ++i)
+		CU_ASSERT(Tetris_MovePlayerDown(&game));
+
+	memset(expectedTable, 0, TETRIS_TABLE_HEIGHT * sizeof *expectedTable);
+
+	expectedTable[TETRIS_TABLE_HEIGHT - 4] = 0b0000000010000000;
+	expectedTable[TETRIS_TABLE_HEIGHT - 3] = 0b0000000010000000;
+	expectedTable[TETRIS_TABLE_HEIGHT - 2] = 0b0000000010000000;
+	expectedTable[TETRIS_TABLE_HEIGHT - 1] = 0b0000000010000000;
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 8);
+	CU_ASSERT_EQUAL(game.player.position.y, 30);
+
+	CU_ASSERT(!Tetris_MovePlayerDown(&game));
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 8);
+	CU_ASSERT_EQUAL(game.player.position.y, 30);
+
+	CU_ASSERT(!Tetris_MovePlayerDown(&game));
+
+	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
+	CU_ASSERT_EQUAL(game.player.position.x, 8);
+	CU_ASSERT_EQUAL(game.player.position.y, 30);
 }

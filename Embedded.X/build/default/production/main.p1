@@ -23,11 +23,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "47
 [; ;./../Tetris/Tetris.h: 47: extern const Tetris_Unit *Tetris_GetRandomUnit(void);
 [v _Tetris_GetRandomUnit `(*CS2 ~T0 @X0 0 ef ]
-"55
-[; ;./../Tetris/Tetris.h: 55: extern void Tetris_MovePlayerLeft(Tetris_Game *game);
+"58
+[; ;./../Tetris/Tetris.h: 58: extern void Tetris_MovePlayerLeft(Tetris_Game *game);
 [v _Tetris_MovePlayerLeft `(v ~T0 @X0 0 ef1`*S4 ]
-"59
-[; ;./../Tetris/Tetris.h: 59: extern void Tetris_RotatePlayer(Tetris_Game *game);
+"62
+[; ;./../Tetris/Tetris.h: 62: extern void Tetris_RotatePlayer(Tetris_Game *game);
 [v _Tetris_RotatePlayer `(v ~T0 @X0 0 ef1`*S4 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 54: __asm("INDF equ 00h");

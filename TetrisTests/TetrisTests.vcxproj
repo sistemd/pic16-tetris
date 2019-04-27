@@ -29,6 +29,7 @@
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClearingTests.h" />
     <ClInclude Include="CUnit\Headers\Basic.h" />
     <ClInclude Include="CUnit\Headers\CUError.h" />
     <ClInclude Include="CUnit\Headers\CUnit.h" />

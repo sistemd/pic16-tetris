@@ -3,46 +3,48 @@
 [d edition pro ]
 [d chip 16F884 ]
 [d frameptr 6 ]
-"60 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+"89 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
 [e E36 . `uc
 TETRIS_UNIT_HEIGHT 4
 ]
-"166
-[e E283 . `uc
-TETRIS_NUM_UNITS 2
+"195
+[e E285 . `uc
+TETRIS_NUM_UNITS 3
 ]
-"52
+"81
 [v _Tetris_PlayerTopmostY Tetris_PlayerTopmostY `(uc  1 s 1 Tetris_PlayerTopmostY ]
-"57
+"86
 [v _Tetris_PlayerOverlapsEnvironment Tetris_PlayerOverlapsEnvironment `(uc  1 s 1 Tetris_PlayerOverlapsEnvironment ]
-"69
+"98
 [v _Tetris_PlayerTouchingLeftBound Tetris_PlayerTouchingLeftBound `(uc  1 s 1 Tetris_PlayerTouchingLeftBound ]
-"80
-[v _Tetris_PlayerTouchingRightBound Tetris_PlayerTouchingRightBound `(uc  1 s 1 Tetris_PlayerTouchingRightBound ]
-"91
-[v _Tetris_RemovePlayerFromTable Tetris_RemovePlayerFromTable `(v  1 s 1 Tetris_RemovePlayerFromTable ]
-"100
-[v _Tetris_ApplyPlayerToTable Tetris_ApplyPlayerToTable `(v  1 s 1 Tetris_ApplyPlayerToTable ]
 "109
+[v _Tetris_PlayerTouchingRightBound Tetris_PlayerTouchingRightBound `(uc  1 s 1 Tetris_PlayerTouchingRightBound ]
+"120
+[v _Tetris_RemovePlayerFromTable Tetris_RemovePlayerFromTable `(v  1 s 1 Tetris_RemovePlayerFromTable ]
+"129
+[v _Tetris_ApplyPlayerToTable Tetris_ApplyPlayerToTable `(v  1 s 1 Tetris_ApplyPlayerToTable ]
+"138
 [v _Tetris_CountUnitBits Tetris_CountUnitBits `(uc  1 s 1 Tetris_CountUnitBits ]
-"125
+"154
 [v _Tetris_UpdatePlayerUnitBits Tetris_UpdatePlayerUnitBits `(v  1 s 1 Tetris_UpdatePlayerUnitBits ]
-"145
+"174
 [v _Tetris_PlayerUnitBitsAreValid Tetris_PlayerUnitBitsAreValid `(uc  1 s 1 Tetris_PlayerUnitBitsAreValid ]
-"150
+"179
 [v _Tetris_SetPlayerUnit Tetris_SetPlayerUnit `(v  1 s 1 Tetris_SetPlayerUnit ]
-"156
+"185
 [v _Tetris_ResetPlayer Tetris_ResetPlayer `(v  1 s 1 Tetris_ResetPlayer ]
 "25 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.h
 [s S26 . 33 `uc 1 numRotations 1 0 `[4][4]ui 1 bits 32 1 ]
-"163 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+"192 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
 [v _Tetris_GetRandomUnit Tetris_GetRandomUnit `(*.24DCS26  1 e 1 0 ]
-"180
+"210
 [v _Tetris_ResetGame Tetris_ResetGame `(v  1 e 1 0 ]
-"192
+"236
 [v _Tetris_MovePlayerLeft Tetris_MovePlayerLeft `(v  1 e 1 0 ]
-"238
+"282
 [v _Tetris_RotatePlayer Tetris_RotatePlayer `(v  1 e 1 0 ]
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
 [v ___lbmod __lbmod `(uc  1 e 1 0 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
@@ -70,7 +72,7 @@ TETRIS_NUM_UNITS 2
 [v _Tetris_playerStartingPosition Tetris_playerStartingPosition `DCS22  1 s 2 Tetris_playerStartingPosition ]
 [s S26 . 33 `uc 1 numRotations 1 0 `[4][4]ui 1 bits 32 1 ]
 "21
-[v _Tetris_units Tetris_units `DC[2]S26  1 s 66 Tetris_units ]
+[v _Tetris_units Tetris_units `DC[3]S26  1 s 99 Tetris_units ]
 "3 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
 [v _randx randx `l  1 s 4 randx ]
 "5 C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
@@ -82,7 +84,7 @@ TETRIS_NUM_UNITS 2
 [v main@game game `S34  1 a 78 0 ]
 "11
 } 0
-"238 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+"282 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
 [v _Tetris_RotatePlayer Tetris_RotatePlayer `(v  1 e 1 0 ]
 {
 [s S22 . 2 `uc 1 x 1 0 `uc 1 y 1 1 ]
@@ -90,14 +92,14 @@ TETRIS_NUM_UNITS 2
 [s S29 . 12 `S22 1 position 2 0 `*.24DCS26 1 unit 1 2 `[4]ui 1 unitBits 8 3 `uc 1 rotation 1 11 ]
 [s S34 . 78 `[32]ui 1 table 64 0 `S29 1 player 12 64 `ui 1 currentScore 2 76 ]
 [v Tetris_RotatePlayer@game game `*.4S34  1 a 1 wreg ]
-"242
+"286
 [v Tetris_RotatePlayer@oldRotation oldRotation `uc  1 a 1 14 ]
-"238
+"282
 [v Tetris_RotatePlayer@game game `*.4S34  1 a 1 wreg ]
-"240
-"238
+"284
+"282
 [v Tetris_RotatePlayer@game game `*.4S34  1 a 1 15 ]
-"253
+"297
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
 [v ___lbmod __lbmod `(uc  1 e 1 0 ]
@@ -114,7 +116,7 @@ TETRIS_NUM_UNITS 2
 [v ___lbmod@dividend dividend `uc  1 a 1 4 ]
 "18
 } 0
-"145 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+"174 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
 [v _Tetris_PlayerUnitBitsAreValid Tetris_PlayerUnitBitsAreValid `(uc  1 s 1 Tetris_PlayerUnitBitsAreValid ]
 {
 [s S22 . 2 `uc 1 x 1 0 `uc 1 y 1 1 ]
@@ -122,27 +124,27 @@ TETRIS_NUM_UNITS 2
 [s S29 . 12 `S22 1 position 2 0 `*.24DCS26 1 unit 1 2 `[4]ui 1 unitBits 8 3 `uc 1 rotation 1 11 ]
 [v Tetris_PlayerUnitBitsAreValid@player player `*.4DCS29  1 a 1 wreg ]
 [v Tetris_PlayerUnitBitsAreValid@player player `*.4DCS29  1 a 1 wreg ]
-"147
-"145
+"176
+"174
 [v Tetris_PlayerUnitBitsAreValid@player player `*.4DCS29  1 a 1 12 ]
-"148
+"177
 } 0
-"109
+"138
 [v _Tetris_CountUnitBits Tetris_CountUnitBits `(uc  1 s 1 Tetris_CountUnitBits ]
 {
-"115
+"144
 [v Tetris_CountUnitBits@j j `uc  1 a 1 10 ]
-"114
+"143
 [v Tetris_CountUnitBits@mask mask `ui  1 a 2 7 ]
-"112
+"141
 [v Tetris_CountUnitBits@i i `uc  1 a 1 11 ]
-"111
+"140
 [v Tetris_CountUnitBits@result result `uc  1 a 1 9 ]
-"109
+"138
 [v Tetris_CountUnitBits@unitBits unitBits `*.26DCui  1 p 2 0 ]
-"123
+"152
 } 0
-"180
+"210
 [v _Tetris_ResetGame Tetris_ResetGame `(v  1 e 1 0 ]
 {
 [s S22 . 2 `uc 1 x 1 0 `uc 1 y 1 1 ]
@@ -151,11 +153,11 @@ TETRIS_NUM_UNITS 2
 [s S34 . 78 `[32]ui 1 table 64 0 `S29 1 player 12 64 `ui 1 currentScore 2 76 ]
 [v Tetris_ResetGame@game game `*.4S34  1 a 1 wreg ]
 [v Tetris_ResetGame@game game `*.4S34  1 a 1 wreg ]
-[v Tetris_ResetGame@playerUnit playerUnit `*.24DCS26  1 p 1 11 ]
-"182
-"180
-[v Tetris_ResetGame@game game `*.4S34  1 a 1 13 ]
-"185
+[v Tetris_ResetGame@playerUnit playerUnit `*.24DCS26  1 p 1 18 ]
+"212
+"210
+[v Tetris_ResetGame@game game `*.4S34  1 a 1 20 ]
+"215
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
 [v _memset memset `(*.4v  1 e 1 0 ]
@@ -171,7 +173,7 @@ TETRIS_NUM_UNITS 2
 [v memset@p1 p1 `*.4v  1 a 1 5 ]
 "22
 } 0
-"156 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+"185 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
 [v _Tetris_ResetPlayer Tetris_ResetPlayer `(v  1 s 1 Tetris_ResetPlayer ]
 {
 [s S22 . 2 `uc 1 x 1 0 `uc 1 y 1 1 ]
@@ -180,12 +182,12 @@ TETRIS_NUM_UNITS 2
 [v Tetris_ResetPlayer@player player `*.4S29  1 a 1 wreg ]
 [v Tetris_ResetPlayer@player player `*.4S29  1 a 1 wreg ]
 [v Tetris_ResetPlayer@playerUnit playerUnit `*.24DCS26  1 p 1 1 ]
-"158
-"156
+"187
+"185
 [v Tetris_ResetPlayer@player player `*.4S29  1 a 1 4 ]
-"161
+"190
 } 0
-"150
+"179
 [v _Tetris_SetPlayerUnit Tetris_SetPlayerUnit `(v  1 s 1 Tetris_SetPlayerUnit ]
 {
 [s S22 . 2 `uc 1 x 1 0 `uc 1 y 1 1 ]
@@ -194,34 +196,34 @@ TETRIS_NUM_UNITS 2
 [v Tetris_SetPlayerUnit@player player `*.4S29  1 a 1 wreg ]
 [v Tetris_SetPlayerUnit@player player `*.4S29  1 a 1 wreg ]
 [v Tetris_SetPlayerUnit@unit unit `*.24DCS26  1 p 1 12 ]
-"152
-"150
+"181
+"179
 [v Tetris_SetPlayerUnit@player player `*.4S29  1 a 1 0 ]
-"154
+"183
 } 0
-"125
+"154
 [v _Tetris_UpdatePlayerUnitBits Tetris_UpdatePlayerUnitBits `(v  1 s 1 Tetris_UpdatePlayerUnitBits ]
 {
 [s S22 . 2 `uc 1 x 1 0 `uc 1 y 1 1 ]
 [s S26 . 33 `uc 1 numRotations 1 0 `[4][4]ui 1 bits 32 1 ]
 [s S29 . 12 `S22 1 position 2 0 `*.24DCS26 1 unit 1 2 `[4]ui 1 unitBits 8 3 `uc 1 rotation 1 11 ]
 [v Tetris_UpdatePlayerUnitBits@player player `*.4S29  1 a 1 wreg ]
-"140
+"169
 [v Tetris_UpdatePlayerUnitBits@i_198 i `uc  1 a 1 8 ]
-"134
+"163
 [v Tetris_UpdatePlayerUnitBits@i_197 i `uc  1 a 1 7 ]
-"127
+"156
 [v Tetris_UpdatePlayerUnitBits@i i `uc  1 a 1 9 ]
-"130
+"159
 [v Tetris_UpdatePlayerUnitBits@shift shift `c  1 a 1 10 ]
-"125
+"154
 [v Tetris_UpdatePlayerUnitBits@player player `*.4S29  1 a 1 wreg ]
-"127
-"125
+"156
+"154
 [v Tetris_UpdatePlayerUnitBits@player player `*.4S29  1 a 1 11 ]
-"143
+"172
 } 0
-"192
+"236
 [v _Tetris_MovePlayerLeft Tetris_MovePlayerLeft `(v  1 e 1 0 ]
 {
 [s S22 . 2 `uc 1 x 1 0 `uc 1 y 1 1 ]
@@ -229,18 +231,18 @@ TETRIS_NUM_UNITS 2
 [s S29 . 12 `S22 1 position 2 0 `*.24DCS26 1 unit 1 2 `[4]ui 1 unitBits 8 3 `uc 1 rotation 1 11 ]
 [s S34 . 78 `[32]ui 1 table 64 0 `S29 1 player 12 64 `ui 1 currentScore 2 76 ]
 [v Tetris_MovePlayerLeft@game game `*.4S34  1 a 1 wreg ]
-"204
-[v Tetris_MovePlayerLeft@i_270 i `uc  1 a 1 15 ]
-"199
+"248
+[v Tetris_MovePlayerLeft@i_281 i `uc  1 a 1 15 ]
+"243
 [v Tetris_MovePlayerLeft@i i `uc  1 a 1 14 ]
-"192
+"236
 [v Tetris_MovePlayerLeft@game game `*.4S34  1 a 1 wreg ]
-"194
-"192
+"238
+"236
 [v Tetris_MovePlayerLeft@game game `*.4S34  1 a 1 16 ]
-"213
+"257
 } 0
-"91
+"120
 [v _Tetris_RemovePlayerFromTable Tetris_RemovePlayerFromTable `(v  1 s 1 Tetris_RemovePlayerFromTable ]
 {
 [s S22 . 2 `uc 1 x 1 0 `uc 1 y 1 1 ]
@@ -248,34 +250,34 @@ TETRIS_NUM_UNITS 2
 [s S29 . 12 `S22 1 position 2 0 `*.24DCS26 1 unit 1 2 `[4]ui 1 unitBits 8 3 `uc 1 rotation 1 11 ]
 [s S34 . 78 `[32]ui 1 table 64 0 `S29 1 player 12 64 `ui 1 currentScore 2 76 ]
 [v Tetris_RemovePlayerFromTable@game game `*.4S34  1 a 1 wreg ]
-"94
+"123
 [v Tetris_RemovePlayerFromTable@i i `uc  1 a 1 13 ]
-"93
+"122
 [v Tetris_RemovePlayerFromTable@start start `uc  1 a 1 11 ]
-"91
+"120
 [v Tetris_RemovePlayerFromTable@game game `*.4S34  1 a 1 wreg ]
-"93
-"91
+"122
+"120
 [v Tetris_RemovePlayerFromTable@game game `*.4S34  1 a 1 12 ]
-"98
+"127
 } 0
-"69
+"98
 [v _Tetris_PlayerTouchingLeftBound Tetris_PlayerTouchingLeftBound `(uc  1 s 1 Tetris_PlayerTouchingLeftBound ]
 {
 [s S22 . 2 `uc 1 x 1 0 `uc 1 y 1 1 ]
 [s S26 . 33 `uc 1 numRotations 1 0 `[4][4]ui 1 bits 32 1 ]
 [s S29 . 12 `S22 1 position 2 0 `*.24DCS26 1 unit 1 2 `[4]ui 1 unitBits 8 3 `uc 1 rotation 1 11 ]
 [v Tetris_PlayerTouchingLeftBound@player player `*.4S29  1 a 1 wreg ]
-"71
+"100
 [v Tetris_PlayerTouchingLeftBound@i i `uc  1 a 1 5 ]
-"69
+"98
 [v Tetris_PlayerTouchingLeftBound@player player `*.4S29  1 a 1 wreg ]
-"71
-"69
+"100
+"98
 [v Tetris_PlayerTouchingLeftBound@player player `*.4S29  1 a 1 4 ]
-"78
+"107
 } 0
-"57
+"86
 [v _Tetris_PlayerOverlapsEnvironment Tetris_PlayerOverlapsEnvironment `(uc  1 s 1 Tetris_PlayerOverlapsEnvironment ]
 {
 [s S22 . 2 `uc 1 x 1 0 `uc 1 y 1 1 ]
@@ -283,18 +285,18 @@ TETRIS_NUM_UNITS 2
 [s S29 . 12 `S22 1 position 2 0 `*.24DCS26 1 unit 1 2 `[4]ui 1 unitBits 8 3 `uc 1 rotation 1 11 ]
 [s S34 . 78 `[32]ui 1 table 64 0 `S29 1 player 12 64 `ui 1 currentScore 2 76 ]
 [v Tetris_PlayerOverlapsEnvironment@game game `*.4S34  1 a 1 wreg ]
-"60
+"89
 [v Tetris_PlayerOverlapsEnvironment@i i `uc  1 a 1 5 ]
-"59
+"88
 [v Tetris_PlayerOverlapsEnvironment@start start `uc  1 a 1 3 ]
-"57
+"86
 [v Tetris_PlayerOverlapsEnvironment@game game `*.4S34  1 a 1 wreg ]
-"59
-"57
+"88
+"86
 [v Tetris_PlayerOverlapsEnvironment@game game `*.4S34  1 a 1 4 ]
-"67
+"96
 } 0
-"100
+"129
 [v _Tetris_ApplyPlayerToTable Tetris_ApplyPlayerToTable `(v  1 s 1 Tetris_ApplyPlayerToTable ]
 {
 [s S22 . 2 `uc 1 x 1 0 `uc 1 y 1 1 ]
@@ -302,18 +304,18 @@ TETRIS_NUM_UNITS 2
 [s S29 . 12 `S22 1 position 2 0 `*.24DCS26 1 unit 1 2 `[4]ui 1 unitBits 8 3 `uc 1 rotation 1 11 ]
 [s S34 . 78 `[32]ui 1 table 64 0 `S29 1 player 12 64 `ui 1 currentScore 2 76 ]
 [v Tetris_ApplyPlayerToTable@game game `*.4S34  1 a 1 wreg ]
-"103
-[v Tetris_ApplyPlayerToTable@i i `uc  1 a 1 13 ]
-"102
+"132
+[v Tetris_ApplyPlayerToTable@i i `uc  1 a 1 12 ]
+"131
 [v Tetris_ApplyPlayerToTable@start start `uc  1 a 1 11 ]
-"100
+"129
 [v Tetris_ApplyPlayerToTable@game game `*.4S34  1 a 1 wreg ]
-"102
-"100
-[v Tetris_ApplyPlayerToTable@game game `*.4S34  1 a 1 12 ]
-"107
+"131
+"129
+[v Tetris_ApplyPlayerToTable@game game `*.4S34  1 a 1 13 ]
+"136
 } 0
-"52
+"81
 [v _Tetris_PlayerTopmostY Tetris_PlayerTopmostY `(uc  1 s 1 Tetris_PlayerTopmostY ]
 {
 [s S22 . 2 `uc 1 x 1 0 `uc 1 y 1 1 ]
@@ -321,17 +323,17 @@ TETRIS_NUM_UNITS 2
 [s S29 . 12 `S22 1 position 2 0 `*.24DCS26 1 unit 1 2 `[4]ui 1 unitBits 8 3 `uc 1 rotation 1 11 ]
 [v Tetris_PlayerTopmostY@player player `*.4S29  1 a 1 wreg ]
 [v Tetris_PlayerTopmostY@player player `*.4S29  1 a 1 wreg ]
-"54
-"52
+"83
+"81
 [v Tetris_PlayerTopmostY@player player `*.4S29  1 a 1 2 ]
-"55
+"84
 } 0
 "25 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.h
 [s S26 . 33 `uc 1 numRotations 1 0 `[4][4]ui 1 bits 32 1 ]
-"163 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+"192 C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
 [v _Tetris_GetRandomUnit Tetris_GetRandomUnit `(*.24DCS26  1 e 1 0 ]
 {
-"167
+"196
 } 0
 "12 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
 [v _rand rand `(i  1 e 2 0 ]
@@ -353,11 +355,22 @@ TETRIS_NUM_UNITS 2
 {
 [v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
 "6
-[v ___bmul@product product `uc  1 a 1 8 ]
+[v ___bmul@product product `uc  1 a 1 15 ]
 "4
 [v ___bmul@multiplier multiplier `uc  1 a 1 wreg ]
-[v ___bmul@multiplicand multiplicand `uc  1 p 1 7 ]
+[v ___bmul@multiplicand multiplicand `uc  1 p 1 13 ]
 "6
-[v ___bmul@multiplier multiplier `uc  1 a 1 9 ]
+[v ___bmul@multiplier multiplier `uc  1 a 1 16 ]
 "51
+} 0
+"5 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"10
+[v ___awmod@sign sign `uc  1 a 1 12 ]
+[v ___awmod@counter counter `uc  1 a 1 11 ]
+"5
+[v ___awmod@divisor divisor `i  1 p 2 7 ]
+[v ___awmod@dividend dividend `i  1 p 2 9 ]
+"34
 } 0
