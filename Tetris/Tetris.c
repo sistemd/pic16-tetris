@@ -5,7 +5,7 @@
 
 enum
 {
-	TETRIS_NUM_UNITS = 3,
+	TETRIS_NUM_UNITS = 7,
 };
 
 static Position const Tetris_unitPivot = {
@@ -20,6 +20,7 @@ static Position const Tetris_playerStartingPosition = {
 
 static Tetris_Unit const Tetris_units[TETRIS_NUM_UNITS] = {
 	{
+		.designator = 'I',
 		.numRotations = 2,
 		.bits = {
 			{
@@ -37,6 +38,7 @@ static Tetris_Unit const Tetris_units[TETRIS_NUM_UNITS] = {
 		},
 	},
 	{
+		.designator = 'O',
 		.numRotations = 1,
 		.bits = {
 			{
@@ -48,6 +50,7 @@ static Tetris_Unit const Tetris_units[TETRIS_NUM_UNITS] = {
 		},
 	},
 	{
+		.designator = 'T',
 		.numRotations = 4,
 		.bits = {
 			{
@@ -72,6 +75,102 @@ static Tetris_Unit const Tetris_units[TETRIS_NUM_UNITS] = {
 				0b00000000,
 				0b00010000,
 				0b00110000,
+				0b00010000,
+			},
+		},
+	},
+	{
+		.designator = 'L',
+		.numRotations = 4,
+		.bits = {
+			{
+				0b00000000,
+				0b00010000,
+				0b00010000,
+				0b00011000,
+			},
+			{
+				0b00000000,
+				0b00001000,
+				0b00111000,
+				0b00000000,
+			},
+			{
+				0b00000000,
+				0b00110000,
+				0b00010000,
+				0b00010000,
+			},
+			{
+				0b00000000,
+				0b00000000,
+				0b00111000,
+				0b00100000,
+			},
+		},
+	},
+	{
+		.designator = 'J',
+		.numRotations = 4,
+		.bits = {
+			{
+				0b00000000,
+				0b00010000,
+				0b00010000,
+				0b00110000,
+			},
+			{
+				0b00000000,
+				0b00100000,
+				0b00111000,
+				0b00000000,
+			},
+			{
+				0b00000000,
+				0b00011000,
+				0b00010000,
+				0b00010000,
+			},
+			{
+				0b00000000,
+				0b00100000,
+				0b00111000,
+				0b00000000,
+			},
+		},
+	},
+	{
+		.designator = 'S',
+		.numRotations = 2,
+		.bits = {
+			{
+				0b00000000,
+				0b00011000,
+				0b00110000,
+				0b00000000,
+			},
+			{
+				0b00000000,
+				0b00010000,
+				0b00011000,
+				0b00001000,
+			},
+		},
+	},
+	{
+		.designator = 'Z',
+		.numRotations = 2,
+		.bits = {
+			{
+				0b00000000,
+				0b00110000,
+				0b00011000,
+				0b00000000,
+			},
+			{
+				0b00000000,
+				0b00001000,
+				0b00011000,
 				0b00010000,
 			},
 		},
@@ -151,7 +250,7 @@ static uint8_t Tetris_CountUnitBits(const uint16_t *unitBits)
 	for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
 	{
 		uint16_t mask = 1;
-		for (uint8_t j = 0; j < 16; ++j)
+		for (uint8_t j = 0; j < TETRIS_TABLE_WIDTH; ++j)
 		{
 			if (unitBits[i] & mask)
 				++result;
@@ -227,17 +326,15 @@ static uint8_t Tetris_ScoreForRowsCleared(uint8_t rowsCleared)
 
 const Tetris_Unit *Tetris_GetRandomUnit(void)
 {
-	// FIXME The rand is biased because I use %
 	return Tetris_units + (rand() % TETRIS_NUM_UNITS);
 }
 
 const Tetris_Unit *Tetris_GetUnit(char designator)
 {
-	switch (designator)
+	for (const Tetris_Unit *i = Tetris_units; i != Tetris_units + TETRIS_NUM_UNITS; ++i)
 	{
-	case 'I': return Tetris_units + 0;
-	case 'O': return Tetris_units + 1;
-	case 'T': return Tetris_units + 2;
+		if (i->designator == designator)
+			return i;
 	}
 
 	return NULL;

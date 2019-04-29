@@ -1,6 +1,7 @@
 #include "Tetris.h"
 #include "SDL.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef enum {
 	SQUARE_WIDTH = 20,
@@ -11,6 +12,11 @@ typedef enum {
 	SCREEN_WIDTH = SQUARE_WIDTH * TETRIS_TABLE_WIDTH,
 	SCREEN_HEIGHT = SQUARE_HEIGHT * TETRIS_TABLE_HEIGHT,
 } ScreenSize;
+
+typedef enum {
+	DEFAULT_UPDATE_PERIOD = 1000,
+	FAST_UPDATE_PERIOD = 50,
+} UpdatePeriod;
 
 void PrintBits(uint16_t *table)
 {
@@ -55,11 +61,18 @@ void Redraw(Tetris_Game *game, SDL_Renderer *renderer)
 	SDL_RenderPresent(renderer);
 }
 
+uint32_t GetUpdatePeriod(void)
+{
+	const uint8_t *keyboard = SDL_GetKeyboardState(NULL);
+	return (keyboard[SDL_SCANCODE_DOWN]) ? FAST_UPDATE_PERIOD : DEFAULT_UPDATE_PERIOD;
+}
+
 void MainLoop(Tetris_Game *game, SDL_Renderer *renderer)
 {
 	PrintBits(game->table);
 
 	SDL_Event ev;
+	uint32_t lastUpdate = SDL_GetTicks();
 
 	while (1)
 	{
@@ -82,18 +95,30 @@ void MainLoop(Tetris_Game *game, SDL_Renderer *renderer)
 					Tetris_MovePlayerRight(game);
 					PrintBits(game->table);
 					break;
-				case SDLK_DOWN:
-					if (Tetris_UpdateGame(game) == TETRIS_GAME_OVER)
-						return;
-					PrintBits(game->table);
-					break;
+				case SDLK_RETURN:
 				case SDLK_SPACE:
+				case SDLK_y:
+				case SDLK_z:
 					Tetris_RotatePlayer(game);
 					PrintBits(game->table);
 					break;
 				}
 			}
 		}
+
+		uint32_t now = SDL_GetTicks();
+
+		if (now - lastUpdate < GetUpdatePeriod())
+			continue;
+
+		lastUpdate = now;
+		if (Tetris_UpdateGame(game) == TETRIS_GAME_OVER)
+		{
+			printf("\n\n%d\n", game->currentScore);
+			return;
+		}
+		printf("\n\n%d\n", game->currentScore);
+		PrintBits(game->table);
 	}
 }
 
@@ -106,8 +131,6 @@ int main(int argc, char **argv)
 	
 	Tetris_Game tetrisGame;
 	Tetris_ResetGame(&tetrisGame, Tetris_GetUnit('T'));
-	tetrisGame.table[1] |= 0x0802;
-	tetrisGame.table[15] |= 0x0802;
 	MainLoop(&tetrisGame, renderer);
 
 	SDL_DestroyRenderer(renderer);

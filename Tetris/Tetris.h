@@ -9,7 +9,7 @@ enum
 
 typedef enum {
 	TETRIS_TABLE_WIDTH = 16,
-	TETRIS_TABLE_HEIGHT = 32,
+	TETRIS_TABLE_HEIGHT = 24,
 } Tetris_TableSize;
 
 typedef enum
@@ -23,6 +23,7 @@ typedef struct {
 } Position;
 
 typedef struct {
+	char designator;
 	uint8_t numRotations;
 	uint16_t bits[TETRIS_UNIT_HEIGHT][TETRIS_MAX_ROTATIONS];
 } Tetris_Unit;
