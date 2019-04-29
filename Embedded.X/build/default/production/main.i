@@ -7,7 +7,26 @@
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 1 "./../Tetris/Tetris.h" 1
+
+#pragma config "FOSC = INTRC_NOCLKOUT"
+#pragma config "WDTE = OFF"
+#pragma config "PWRTE = OFF"
+#pragma config "MCLRE = ON"
+#pragma config "CP = OFF"
+#pragma config "CPD = OFF"
+#pragma config "BOREN = OFF"
+#pragma config "IESO = OFF"
+#pragma config "FCMEN = OFF"
+#pragma config "LVP = OFF"
+
+
+#pragma config "BOR4V = BOR40V"
+#pragma config "WRT = OFF"
+
+
+
+
+# 1 "../Tetris\\Tetris.h" 1
 
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdint.h" 1 3
@@ -143,7 +162,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 3 "./../Tetris/Tetris.h" 2
+# 3 "../Tetris\\Tetris.h" 2
 
 
 enum
@@ -153,7 +172,7 @@ enum
 
 typedef enum {
  TETRIS_TABLE_WIDTH = 16,
- TETRIS_TABLE_HEIGHT = 32,
+ TETRIS_TABLE_HEIGHT = 24,
 } Tetris_TableSize;
 
 typedef enum
@@ -167,6 +186,7 @@ typedef struct {
 } Position;
 
 typedef struct {
+ char designator;
  uint8_t numRotations;
  uint16_t bits[TETRIS_UNIT_HEIGHT][TETRIS_MAX_ROTATIONS];
 } Tetris_Unit;
@@ -188,14 +208,24 @@ typedef struct {
  uint16_t currentScore;
 } Tetris_Game;
 
+typedef enum {
+ TETRIS_GAME_OVER,
+ TETRIS_GAME_CONTINUES,
+} Tetris_GameState;
+
 extern const Tetris_Unit *Tetris_GetRandomUnit(void);
 
 extern const Tetris_Unit *Tetris_GetUnit(char designator);
 
 extern void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit);
 
-extern void Tetris_Update(Tetris_Game *game);
+extern Tetris_GameState Tetris_UpdateGame(Tetris_Game *game);
 
+
+
+
+
+extern uint8_t Tetris_ClearFilledRows(uint16_t *gameTable);
 
 extern uint8_t Tetris_MovePlayerDown(Tetris_Game *game);
 
@@ -204,7 +234,9 @@ extern void Tetris_MovePlayerLeft(Tetris_Game *game);
 extern void Tetris_MovePlayerRight(Tetris_Game *game);
 
 extern void Tetris_RotatePlayer(Tetris_Game *game);
-# 1 "main.c" 2
+# 19 "main.c" 2
+
+# 1 "./Buttons.h" 1
 
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 1 3
@@ -2691,13 +2723,197 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
-# 3 "main.c" 2
+# 3 "./Buttons.h" 2
 
+
+typedef struct {
+    unsigned pressed : 1;
+    unsigned held : 1;
+} Button;
+
+typedef struct {
+    Button left;
+    Button right;
+    Button down;
+    Button rotate;
+} Buttons;
+
+extern void Buttons_SetupPortsAndInterrups(void);
+
+extern void Buttons_Clear(Buttons *buttons);
+
+extern void Buttons_Update(Buttons *buttons);
+# 20 "main.c" 2
+
+# 1 "./Drawing.h" 1
+
+
+
+
+extern void RedrawTetrisOnLCD(Tetris_Game *tetrisGame);
+# 21 "main.c" 2
+
+# 1 "./LCD.h" 1
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdint.h" 1 3
+# 4 "./LCD.h" 2
+
+
+typedef enum {
+    LCD_NO_SEGMENT = 0,
+    LCD_BOTTOM_SEGMENT = 1,
+    LCD_TOP_SEGMENT = 2,
+    LCD_BOTH_SEGMENTS = LCD_BOTTOM_SEGMENT | LCD_TOP_SEGMENT,
+} LCD_Segments;
+
+typedef enum {
+    LCD_WIDTH = 64,
+    LCD_HEIGHT = 128,
+    LCD_NUM_PAGES = 8,
+    LCD_SEGMENT_HEIGHT = 64,
+} LCD_Dimensions;
+
+extern void LCD_SetupPorts(void);
+
+extern void LCD_Reset(void);
+
+extern uint8_t LCD_ReadStatus(void);
+
+extern uint8_t LCD_ReadData(void);
+
+extern void LCD_WriteData(uint8_t data);
+
+extern void LCD_SegmentSelection(LCD_Segments segments);
+
+extern void LCD_TurnOn(void);
+
+extern void LCD_TurnOff(void);
+
+extern void LCD_SetY(uint8_t y);
+
+extern void LCD_SetX(uint8_t x);
+
+extern void LCD_SetZ(uint8_t z);
+
+extern void LCD_Clear(void);
+# 22 "main.c" 2
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdint.h" 1 3
+# 24 "main.c" 2
+
+
+enum
+{
+    TIMER_SKIP_LIMIT = (65535U),
+};
+
+typedef enum {
+    FAST_TIMER_PRESCALER = 1,
+    DEFAULT_TIMER_PRESCALER = 16,
+} TimerPrescaler;
+
+static uint8_t timerPrescaler = DEFAULT_TIMER_PRESCALER;
+
+static uint8_t updateReady = 0;
+
+static void SetupOscillator(void)
+{
+
+
+    IRCF0 = 1;
+    IRCF1 = 1;
+    IRCF2 = 1;
+}
+
+static void SetupTimer(void)
+{
+    TMR1IE = 1;
+    TMR1CS = 0;
+    PEIE = 1;
+    TMR1ON = 1;
+    T1CKPS0 = 1;
+    T1CKPS1 = 0;
+}
+
+static void ResetTimer(void)
+{
+    TMR1 = 0;
+}
+
+static void __attribute__((picinterrupt(("")))) InterruptHandler(void)
+{
+    static uint8_t timerInterruptCounter = 0;
+
+    if (INTE && INTF)
+    {
+        INTF = 0;
+
+    }
+
+    if (TMR1IE && TMR1IF)
+    {
+        TMR1IF = 0;
+        ++timerInterruptCounter;
+        if (timerInterruptCounter >= timerPrescaler)
+        {
+            updateReady = 1;
+            timerInterruptCounter = 0;
+        }
+    }
+}
 
 void main(void)
 {
-    Tetris_Game game;
-    Tetris_ResetGame(&game, Tetris_GetRandomUnit());
-    Tetris_MovePlayerLeft(&game);
-    Tetris_RotatePlayer(&game);
+
+
+    SetupOscillator();
+
+    Buttons_SetupPortsAndInterrups();
+
+    LCD_SetupPorts();
+    LCD_Reset();
+    LCD_SegmentSelection(LCD_BOTH_SEGMENTS);
+    LCD_Clear();
+    LCD_TurnOn();
+
+    Buttons buttons;
+    Tetris_Game tetrisGame;
+
+    SetupTimer();
+
+    while (1)
+    {
+        Tetris_ResetGame(&tetrisGame, Tetris_GetRandomUnit());
+        Buttons_Clear(&buttons);
+        ResetTimer();
+
+        while (1)
+        {
+            Buttons_Update(&buttons);
+
+            if (buttons.left.pressed)
+                Tetris_MovePlayerLeft(&tetrisGame);
+            if (buttons.right.pressed)
+                Tetris_MovePlayerRight(&tetrisGame);
+            if (buttons.rotate.pressed)
+                Tetris_RotatePlayer(&tetrisGame);
+
+            if (buttons.down.held)
+                timerPrescaler = FAST_TIMER_PRESCALER;
+            else
+                timerPrescaler = DEFAULT_TIMER_PRESCALER;
+
+            if (updateReady)
+            {
+                updateReady = 0;
+                if (Tetris_UpdateGame(&tetrisGame) == TETRIS_GAME_OVER)
+                    break;
+            }
+
+            RedrawTetrisOnLCD(&tetrisGame);
+        }
+    }
 }

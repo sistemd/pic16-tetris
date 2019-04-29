@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "buttons.h": "c",
+        "xc.h": "c",
+        "xc8debug.h": "c",
+        "pic.h": "c",
+        "language_support.h": "c",
+        "tetris.h": "c",
+        "drawing.h": "c"
+    },
+    "python.linting.pylintEnabled": false,
+    "python.linting.mypyEnabled": true,
+    "python.linting.enabled": true
+}

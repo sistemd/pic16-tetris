@@ -1,34 +1,152 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"36 main.c
+[; ;main.c: 36: static uint8_t timerPrescaler = DEFAULT_TIMER_PRESCALER;
+[c E1392 1 16 .. ]
+[n E1392 . FAST_TIMER_PRESCALER DEFAULT_TIMER_PRESCALER  ]
+"3956 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3956: extern volatile __bit IRCF0 __attribute__((address(0x47C)));
+[v _IRCF0 `Vb ~T0 @X0 0 e@1148 ]
+"3959
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3959: extern volatile __bit IRCF1 __attribute__((address(0x47D)));
+[v _IRCF1 `Vb ~T0 @X0 0 e@1149 ]
+"3962
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3962: extern volatile __bit IRCF2 __attribute__((address(0x47E)));
+[v _IRCF2 `Vb ~T0 @X0 0 e@1150 ]
+"4370
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 4370: extern volatile __bit TMR1IE __attribute__((address(0x460)));
+[v _TMR1IE `Vb ~T0 @X0 0 e@1120 ]
+"4364
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 4364: extern volatile __bit TMR1CS __attribute__((address(0x81)));
+[v _TMR1CS `Vb ~T0 @X0 0 e@129 ]
+"4040
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 4040: extern volatile __bit PEIE __attribute__((address(0x5E)));
+[v _PEIE `Vb ~T0 @X0 0 e@94 ]
+"4376
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 4376: extern volatile __bit TMR1ON __attribute__((address(0x80)));
+[v _TMR1ON `Vb ~T0 @X0 0 e@128 ]
+"4328
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 4328: extern volatile __bit T1CKPS0 __attribute__((address(0x84)));
+[v _T1CKPS0 `Vb ~T0 @X0 0 e@132 ]
+"4331
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 4331: extern volatile __bit T1CKPS1 __attribute__((address(0x85)));
+[v _T1CKPS1 `Vb ~T0 @X0 0 e@133 ]
+"650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 650: extern volatile unsigned short TMR1 __attribute__((address(0x00E)));
+[v _TMR1 `Vus ~T0 @X0 0 e@14 ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"3923
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3923: extern volatile __bit INTE __attribute__((address(0x5C)));
+[v _INTE `Vb ~T0 @X0 0 e@92 ]
+"3929
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3929: extern volatile __bit INTF __attribute__((address(0x59)));
+[v _INTF `Vb ~T0 @X0 0 e@89 ]
+"4373
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 4373: extern volatile __bit TMR1IF __attribute__((address(0x60)));
+[v _TMR1IF `Vb ~T0 @X0 0 e@96 ]
 [p mainexit ]
-"20 ./../Tetris/Tetris.h
-[; ;./../Tetris/Tetris.h: 20: typedef struct {
+"17 ./Buttons.h
+[; ;./Buttons.h: 17: extern void Buttons_SetupPortsAndInterrups(void);
+[v _Buttons_SetupPortsAndInterrups `(v ~T0 @X0 0 ef ]
+"20 ./LCD.h
+[; ;./LCD.h: 20: extern void LCD_SetupPorts(void);
+[v _LCD_SetupPorts `(v ~T0 @X0 0 ef ]
+"22
+[; ;./LCD.h: 22: extern void LCD_Reset(void);
+[v _LCD_Reset `(v ~T0 @X0 0 ef ]
+"96 main.c
+[; ;main.c: 96:     LCD_SegmentSelection(LCD_BOTH_SEGMENTS);
+[c E1361 0 1 2 3 .. ]
+[n E1361 . LCD_NO_SEGMENT LCD_BOTTOM_SEGMENT LCD_TOP_SEGMENT LCD_BOTH_SEGMENTS  ]
+"30 ./LCD.h
+[; ;./LCD.h: 30: extern void LCD_SegmentSelection(LCD_Segments segments);
+[v _LCD_SegmentSelection `(v ~T0 @X0 0 ef1`E1361 ]
+"42
+[; ;./LCD.h: 42: extern void LCD_Clear(void);
+[v _LCD_Clear `(v ~T0 @X0 0 ef ]
+"32
+[; ;./LCD.h: 32: extern void LCD_TurnOn(void);
+[v _LCD_TurnOn `(v ~T0 @X0 0 ef ]
+"5 ./Buttons.h
+[; ;./Buttons.h: 5: typedef struct {
+[s S142 :1 `uc 1 :1 `uc 1 ]
+[n S142 . pressed held ]
+"10
+[; ;./Buttons.h: 10: typedef struct {
+[s S143 `S142 1 `S142 1 `S142 1 `S142 1 ]
+[n S143 . left right down rotate ]
+"20 ../Tetris\Tetris.h
+[; ;../Tetris\Tetris.h: 20: typedef struct {
 [s S1 `uc 1 `uc 1 ]
 [n S1 . x y ]
-[v F46 `ui ~T0 @X0 -> 4 `i t ]
+[v F47 `ui ~T0 @X0 -> 4 `i t ]
 "25
-[; ;./../Tetris/Tetris.h: 25: typedef struct {
-[s S2 `uc 1 `F46 -> 4 `i ]
-[n S2 . numRotations bits ]
-"30
-[; ;./../Tetris/Tetris.h: 30: typedef struct {
+[; ;../Tetris\Tetris.h: 25: typedef struct {
+[s S2 `uc 1 `uc 1 `F47 -> 4 `i ]
+[n S2 . designator numRotations bits ]
+"31
+[; ;../Tetris\Tetris.h: 31: typedef struct {
 [s S3 `S1 1 `*CS2 1 `ui -> 4 `i `uc 1 ]
 [n S3 . position unit unitBits rotation ]
-"41
-[; ;./../Tetris/Tetris.h: 41: typedef struct {
-[s S4 `ui -> 32 `i `S3 1 `ui 1 ]
+"42
+[; ;../Tetris\Tetris.h: 42: typedef struct {
+[s S4 `ui -> 24 `i `S3 1 `ui 1 ]
 [n S4 . table player currentScore ]
-"51
-[; ;./../Tetris/Tetris.h: 51: extern void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit);
+"57
+[; ;../Tetris\Tetris.h: 57: extern void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit);
 [v _Tetris_ResetGame `(v ~T0 @X0 0 ef2`*S4`*CS2 ]
-"47
-[; ;./../Tetris/Tetris.h: 47: extern const Tetris_Unit *Tetris_GetRandomUnit(void);
+"53
+[; ;../Tetris\Tetris.h: 53: extern const Tetris_Unit *Tetris_GetRandomUnit(void);
 [v _Tetris_GetRandomUnit `(*CS2 ~T0 @X0 0 ef ]
-"58
-[; ;./../Tetris/Tetris.h: 58: extern void Tetris_MovePlayerLeft(Tetris_Game *game);
+"19 ./Buttons.h
+[; ;./Buttons.h: 19: extern void Buttons_Clear(Buttons *buttons);
+[v _Buttons_Clear `(v ~T0 @X0 0 ef1`*S143 ]
+"21
+[; ;./Buttons.h: 21: extern void Buttons_Update(Buttons *buttons);
+[v _Buttons_Update `(v ~T0 @X0 0 ef1`*S143 ]
+"69 ../Tetris\Tetris.h
+[; ;../Tetris\Tetris.h: 69: extern void Tetris_MovePlayerLeft(Tetris_Game *game);
 [v _Tetris_MovePlayerLeft `(v ~T0 @X0 0 ef1`*S4 ]
-"62
-[; ;./../Tetris/Tetris.h: 62: extern void Tetris_RotatePlayer(Tetris_Game *game);
+"71
+[; ;../Tetris\Tetris.h: 71: extern void Tetris_MovePlayerRight(Tetris_Game *game);
+[v _Tetris_MovePlayerRight `(v ~T0 @X0 0 ef1`*S4 ]
+"73
+[; ;../Tetris\Tetris.h: 73: extern void Tetris_RotatePlayer(Tetris_Game *game);
 [v _Tetris_RotatePlayer `(v ~T0 @X0 0 ef1`*S4 ]
+"130 main.c
+[; ;main.c: 130:                 if (Tetris_UpdateGame(&tetrisGame) == TETRIS_GAME_OVER)
+[c E60 0 1 .. ]
+[n E60 . TETRIS_GAME_OVER TETRIS_GAME_CONTINUES  ]
+"59 ../Tetris\Tetris.h
+[; ;../Tetris\Tetris.h: 59: extern Tetris_GameState Tetris_UpdateGame(Tetris_Game *game);
+[v _Tetris_UpdateGame `(E60 ~T0 @X0 0 ef1`*S4 ]
+"5 ./Drawing.h
+[; ;./Drawing.h: 5: extern void RedrawTetrisOnLCD(Tetris_Game *tetrisGame);
+[v _RedrawTetrisOnLCD `(v ~T0 @X0 0 ef1`*S4 ]
+"2 main.c
+[p x  FOSC = INTRC_NOCLKOUT  ]
+"3
+[p x  WDTE = OFF  ]
+"4
+[p x  PWRTE = OFF  ]
+"5
+[p x  MCLRE = ON  ]
+"6
+[p x  CP = OFF  ]
+"7
+[p x  CPD = OFF  ]
+"8
+[p x  BOREN = OFF  ]
+"9
+[p x  IESO = OFF  ]
+"10
+[p x  FCMEN = OFF  ]
+"11
+[p x  LVP = OFF  ]
+"14
+[p x  BOR4V = BOR40V  ]
+"15
+[p x  WRT = OFF  ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -263,28 +381,281 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
+"36 main.c
+[; ;main.c: 36: static uint8_t timerPrescaler = DEFAULT_TIMER_PRESCALER;
+[v _timerPrescaler `uc ~T0 @X0 1 s ]
+[i _timerPrescaler
+-> . `E1392 1 `uc
+]
+"38
+[; ;main.c: 38: static uint8_t updateReady = 0;
+[v _updateReady `uc ~T0 @X0 1 s ]
+[i _updateReady
+-> -> 0 `i `uc
+]
+"40
+[; ;main.c: 40: static void SetupOscillator(void)
+[v _SetupOscillator `(v ~T0 @X0 1 sf ]
+"41
+[; ;main.c: 41: {
+{
+[e :U _SetupOscillator ]
+[f ]
+"44
+[; ;main.c: 44:     IRCF0 = 1;
+[e = _IRCF0 -> -> 1 `i `b ]
+"45
+[; ;main.c: 45:     IRCF1 = 1;
+[e = _IRCF1 -> -> 1 `i `b ]
+"46
+[; ;main.c: 46:     IRCF2 = 1;
+[e = _IRCF2 -> -> 1 `i `b ]
+"47
+[; ;main.c: 47: }
+[e :UE 144 ]
+}
+"49
+[; ;main.c: 49: static void SetupTimer(void)
+[v _SetupTimer `(v ~T0 @X0 1 sf ]
+"50
+[; ;main.c: 50: {
+{
+[e :U _SetupTimer ]
+[f ]
+"51
+[; ;main.c: 51:     TMR1IE = 1;
+[e = _TMR1IE -> -> 1 `i `b ]
+"52
+[; ;main.c: 52:     TMR1CS = 0;
+[e = _TMR1CS -> -> 0 `i `b ]
+"53
+[; ;main.c: 53:     PEIE = 1;
+[e = _PEIE -> -> 1 `i `b ]
+"54
+[; ;main.c: 54:     TMR1ON = 1;
+[e = _TMR1ON -> -> 1 `i `b ]
+"55
+[; ;main.c: 55:     T1CKPS0 = 1;
+[e = _T1CKPS0 -> -> 1 `i `b ]
+"56
+[; ;main.c: 56:     T1CKPS1 = 0;
+[e = _T1CKPS1 -> -> 0 `i `b ]
+"57
+[; ;main.c: 57: }
+[e :UE 145 ]
+}
+"59
+[; ;main.c: 59: static void ResetTimer(void)
+[v _ResetTimer `(v ~T0 @X0 1 sf ]
+"60
+[; ;main.c: 60: {
+{
+[e :U _ResetTimer ]
+[f ]
+"61
+[; ;main.c: 61:     TMR1 = 0;
+[e = _TMR1 -> -> 0 `i `us ]
+"62
+[; ;main.c: 62: }
+[e :UE 146 ]
+}
+"64
+[; ;main.c: 64: static void __attribute__((picinterrupt(("")))) InterruptHandler(void)
+[v _InterruptHandler `(v ~T1 @X0 1 sf ]
+"65
+[; ;main.c: 65: {
+{
+[e :U _InterruptHandler ]
+[f ]
+"66
+[; ;main.c: 66:     static uint8_t timerInterruptCounter = 0;
+[v F1402 `uc ~T0 @X0 1 s timerInterruptCounter ]
+[i F1402
+-> -> 0 `i `uc
+]
+"68
+[; ;main.c: 68:     if (INTE && INTF)
+[e $ ! && _INTE _INTF 148  ]
+"69
+[; ;main.c: 69:     {
+{
+"70
+[; ;main.c: 70:         INTF = 0;
+[e = _INTF -> -> 0 `i `b ]
+"72
+[; ;main.c: 72:     }
+}
+[e :U 148 ]
+"74
+[; ;main.c: 74:     if (TMR1IE && TMR1IF)
+[e $ ! && _TMR1IE _TMR1IF 149  ]
+"75
+[; ;main.c: 75:     {
+{
+"76
+[; ;main.c: 76:         TMR1IF = 0;
+[e = _TMR1IF -> -> 0 `i `b ]
+"77
+[; ;main.c: 77:         ++timerInterruptCounter;
+[e =+ F1402 -> -> 1 `i `uc ]
+"78
+[; ;main.c: 78:         if (timerInterruptCounter >= timerPrescaler)
+[e $ ! >= -> F1402 `i -> _timerPrescaler `i 150  ]
+"79
+[; ;main.c: 79:         {
+{
+"80
+[; ;main.c: 80:             updateReady = 1;
+[e = _updateReady -> -> 1 `i `uc ]
+"81
+[; ;main.c: 81:             timerInterruptCounter = 0;
+[e = F1402 -> -> 0 `i `uc ]
+"82
+[; ;main.c: 82:         }
+}
+[e :U 150 ]
+"83
+[; ;main.c: 83:     }
+}
+[e :U 149 ]
+"84
+[; ;main.c: 84: }
+[e :UE 147 ]
+}
 [v $root$_main `(v ~T0 @X0 0 e ]
-"5 main.c
-[; ;main.c: 5: void main(void)
+"86
+[; ;main.c: 86: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"6
-[; ;main.c: 6: {
+"87
+[; ;main.c: 87: {
 {
 [e :U _main ]
 [f ]
-"7
-[; ;main.c: 7:     Tetris_Game game;
-[v _game `S4 ~T0 @X0 1 a ]
-"8
-[; ;main.c: 8:     Tetris_ResetGame(&game, Tetris_GetRandomUnit());
-[e ( _Tetris_ResetGame (2 , &U _game ( _Tetris_GetRandomUnit ..  ]
-"9
-[; ;main.c: 9:     Tetris_MovePlayerLeft(&game);
-[e ( _Tetris_MovePlayerLeft (1 &U _game ]
-"10
-[; ;main.c: 10:     Tetris_RotatePlayer(&game);
-[e ( _Tetris_RotatePlayer (1 &U _game ]
-"11
-[; ;main.c: 11: }
-[e :UE 142 ]
+"90
+[; ;main.c: 90:     SetupOscillator();
+[e ( _SetupOscillator ..  ]
+"92
+[; ;main.c: 92:     Buttons_SetupPortsAndInterrups();
+[e ( _Buttons_SetupPortsAndInterrups ..  ]
+"94
+[; ;main.c: 94:     LCD_SetupPorts();
+[e ( _LCD_SetupPorts ..  ]
+"95
+[; ;main.c: 95:     LCD_Reset();
+[e ( _LCD_Reset ..  ]
+"96
+[; ;main.c: 96:     LCD_SegmentSelection(LCD_BOTH_SEGMENTS);
+[e ( _LCD_SegmentSelection (1 . `E1361 3 ]
+"97
+[; ;main.c: 97:     LCD_Clear();
+[e ( _LCD_Clear ..  ]
+"98
+[; ;main.c: 98:     LCD_TurnOn();
+[e ( _LCD_TurnOn ..  ]
+"100
+[; ;main.c: 100:     Buttons buttons;
+[v _buttons `S143 ~T0 @X0 1 a ]
+"101
+[; ;main.c: 101:     Tetris_Game tetrisGame;
+[v _tetrisGame `S4 ~T0 @X0 1 a ]
+"103
+[; ;main.c: 103:     SetupTimer();
+[e ( _SetupTimer ..  ]
+"105
+[; ;main.c: 105:     while (1)
+[e :U 153 ]
+"106
+[; ;main.c: 106:     {
+{
+"107
+[; ;main.c: 107:         Tetris_ResetGame(&tetrisGame, Tetris_GetRandomUnit());
+[e ( _Tetris_ResetGame (2 , &U _tetrisGame ( _Tetris_GetRandomUnit ..  ]
+"108
+[; ;main.c: 108:         Buttons_Clear(&buttons);
+[e ( _Buttons_Clear (1 &U _buttons ]
+"109
+[; ;main.c: 109:         ResetTimer();
+[e ( _ResetTimer ..  ]
+"111
+[; ;main.c: 111:         while (1)
+[e :U 156 ]
+"112
+[; ;main.c: 112:         {
+{
+"113
+[; ;main.c: 113:             Buttons_Update(&buttons);
+[e ( _Buttons_Update (1 &U _buttons ]
+"115
+[; ;main.c: 115:             if (buttons.left.pressed)
+[e $ ! != -> . . _buttons 0 0 `i -> 0 `i 158  ]
+"116
+[; ;main.c: 116:                 Tetris_MovePlayerLeft(&tetrisGame);
+[e ( _Tetris_MovePlayerLeft (1 &U _tetrisGame ]
+[e :U 158 ]
+"117
+[; ;main.c: 117:             if (buttons.right.pressed)
+[e $ ! != -> . . _buttons 1 0 `i -> 0 `i 159  ]
+"118
+[; ;main.c: 118:                 Tetris_MovePlayerRight(&tetrisGame);
+[e ( _Tetris_MovePlayerRight (1 &U _tetrisGame ]
+[e :U 159 ]
+"119
+[; ;main.c: 119:             if (buttons.rotate.pressed)
+[e $ ! != -> . . _buttons 3 0 `i -> 0 `i 160  ]
+"120
+[; ;main.c: 120:                 Tetris_RotatePlayer(&tetrisGame);
+[e ( _Tetris_RotatePlayer (1 &U _tetrisGame ]
+[e :U 160 ]
+"122
+[; ;main.c: 122:             if (buttons.down.held)
+[e $ ! != -> . . _buttons 2 1 `i -> 0 `i 161  ]
+"123
+[; ;main.c: 123:                 timerPrescaler = FAST_TIMER_PRESCALER;
+[e = _timerPrescaler -> . `E1392 0 `uc ]
+[e $U 162  ]
+"124
+[; ;main.c: 124:             else
+[e :U 161 ]
+"125
+[; ;main.c: 125:                 timerPrescaler = DEFAULT_TIMER_PRESCALER;
+[e = _timerPrescaler -> . `E1392 1 `uc ]
+[e :U 162 ]
+"127
+[; ;main.c: 127:             if (updateReady)
+[e $ ! != -> _updateReady `i -> 0 `i 163  ]
+"128
+[; ;main.c: 128:             {
+{
+"129
+[; ;main.c: 129:                 updateReady = 0;
+[e = _updateReady -> -> 0 `i `uc ]
+"130
+[; ;main.c: 130:                 if (Tetris_UpdateGame(&tetrisGame) == TETRIS_GAME_OVER)
+[e $ ! == -> ( _Tetris_UpdateGame (1 &U _tetrisGame `ui -> . `E60 0 `ui 164  ]
+"131
+[; ;main.c: 131:                     break;
+[e $U 157  ]
+[e :U 164 ]
+"132
+[; ;main.c: 132:             }
+}
+[e :U 163 ]
+"134
+[; ;main.c: 134:             RedrawTetrisOnLCD(&tetrisGame);
+[e ( _RedrawTetrisOnLCD (1 &U _tetrisGame ]
+"135
+[; ;main.c: 135:         }
+}
+[e :U 155 ]
+[e $U 156  ]
+[e :U 157 ]
+"136
+[; ;main.c: 136:     }
+}
+[e :U 152 ]
+[e $U 153  ]
+[e :U 154 ]
+"137
+[; ;main.c: 137: }
+[e :UE 151 ]
 }

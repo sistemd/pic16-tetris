@@ -325,7 +325,8 @@ inline void TestMovementDown(void)
 	CU_ASSERT_EQUAL(game.player.position.x, 8);
 	CU_ASSERT_EQUAL(game.player.position.y, 3);
 
-	for (int i = 0; i < 27; ++i)
+	int drop = TETRIS_TABLE_HEIGHT - game.player.position.y - 2;
+	for (int i = 0; i < 20; ++i)
 		CU_ASSERT(Tetris_MovePlayerDown(&game));
 
 	memset(expectedTable, 0, TETRIS_TABLE_HEIGHT * sizeof *expectedTable);
@@ -337,17 +338,17 @@ inline void TestMovementDown(void)
 
 	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
 	CU_ASSERT_EQUAL(game.player.position.x, 8);
-	CU_ASSERT_EQUAL(game.player.position.y, 30);
+	CU_ASSERT_EQUAL(game.player.position.y, TETRIS_TABLE_HEIGHT - 2);
 
 	CU_ASSERT(!Tetris_MovePlayerDown(&game));
 
 	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
 	CU_ASSERT_EQUAL(game.player.position.x, 8);
-	CU_ASSERT_EQUAL(game.player.position.y, 30);
+	CU_ASSERT_EQUAL(game.player.position.y, TETRIS_TABLE_HEIGHT - 2);
 
 	CU_ASSERT(!Tetris_MovePlayerDown(&game));
 
 	ASSERT_TETRIS_TABLES_EQUAL(game.table, expectedTable);
 	CU_ASSERT_EQUAL(game.player.position.x, 8);
-	CU_ASSERT_EQUAL(game.player.position.y, 30);
+	CU_ASSERT_EQUAL(game.player.position.y, TETRIS_TABLE_HEIGHT - 2);
 }
