@@ -22,6 +22,13 @@
 #include "LCD.h"
 #include <xc.h>
 #include <stdint.h>
+#include <stdlib.h>
+
+#include "Compatibility.h"
+
+__eeprom uint8_t highscore = 0;
+
+__eeprom uint16_t uniqueSeed = 0;
 
 enum
 {
@@ -83,11 +90,18 @@ static void __interrupt() InterruptHandler(void)
     }
 }
 
+static void SetupRandomness(void)
+{
+    srand(uniqueSeed);
+    ++uniqueSeed;
+}
+
 void main(void)
 {
     /* Don't forget to turn on the WDT later. */
 
     SetupOscillator();
+    SetupRandomness();
 
     Buttons_SetupPortsAndInterrups();
 
@@ -131,7 +145,7 @@ void main(void)
                     break;
             }
 
-            RedrawTetrisOnLCD(&tetrisGame);
+            DrawTetris(&tetrisGame);
         }
     }
 }

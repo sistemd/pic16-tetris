@@ -6,7 +6,8 @@
         "pic.h": "c",
         "language_support.h": "c",
         "tetris.h": "c",
-        "drawing.h": "c"
+        "drawing.h": "c",
+        "pauseimage.h": "c"
     },
     "python.linting.pylintEnabled": false,
     "python.linting.mypyEnabled": true,

@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.05\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\Embedded.X.production.sym \
   --cmf=dist/default/production\Embedded.X.production.cmf -z -Q16F884 \
-  -oC:\Users\ALECEI~1\AppData\Local\Temp\s8ec.3 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\ALECEI~1\AppData\Local\Temp\s8us.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/Embedded.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0120h-016Fh -pstack=STACK -ACODE=00h-07FFhx2 \
   -ASTRCODE=00h-0FFFh -ASTRING=00h-0FFhx16 -ACONST=00h-0FFhx16 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=ENTRY -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k C:\Users\ALECEI~1\AppData\Local\Temp\s8ec.o \
+  -DENTRY=2 -k C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o \
   dist/default/production\Embedded.X.production.o 
 
 Object code version is 3.11
@@ -28,65 +28,72 @@ Machine type is 16F884
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\ALECEI~1\AppData\Local\Temp\s8ec.o
+C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o
                 end_init                              B        B        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             2007     2007        2     400E       0
 dist/default/production\Embedded.X.production.o
                 cinit                                 D        D       1E        8       0
                 intentry                              4        4        7        8       0
-                text51                              F55      F55       21     1EAA       0
-                text50                              EDE      EDE       1C     1DBC       0
-                text49                              E70      E70        E     1CE0       0
-                text48                              E06      E06        6     1C0C       0
-                text47                              E63      E63        D     1CC6       0
-                text46                              E0C      E0C        6     1C18       0
-                text45                              F76      F76       21     1EEC       0
-                text44                               2B       2B       2C        8       0
-                text43                              E8C      E8C       10     1D18       0
-                text42                              E7E      E7E        E     1CFC       0
-                text41                              E18      E18        7     1C30       0
-                text40                              EC3      EC3       1B     1D86       0
-                text39                              E3F      E3F        C     1C7E       0
-                text38                              E4B      E4B        C     1C96       0
-                text37                              E29      E29        B     1C52       0
-                text36                               82       82       25        8       0
-                text35                              E57      E57        C     1CAE       0
-                text34                              EAC      EAC       17     1D58       0
-                text33                              F97      F97       23     1F2E       0
-                text32                              E1F      E1F        A     1C3E       0
-                text31                              E9C      E9C       10     1D38       0
-                text30                              204      204       AE      408       0
-                text29                              E01      E01        5     1C02       0
-                text28                              E12      E12        6     1C24       0
-                text27                              E34      E34        B     1C68       0
-                text26                              7EB      7EB       12      408       0
-                text25                              425      425       64      408       0
-                text24                              6DC      6DC       41      408       0
-                text23                              EFA      EFA       1E     1DF4       0
-                text22                              754      754       36      408       0
-                text21                              4E2      4E2       57      408       0
-                text20                              F18      F18       1E     1E30       0
-                text19                              489      489       59      408       0
-                text18                              2B2      2B2       9B      408       0
-                text17                               ED       ED       10        8       0
-                text16                              FBA      FBA       23     1F74       0
-                text15                              F36      F36       1F     1E6C       0
-                text14                              69B      69B       41      408       0
-                text13                              71D      71D       37      408       0
-                text12                              FDD      FDD       23     1FBA       0
-                text11                              34D      34D       70      408       0
-                text10                              617      617       43      408       0
-                text9                               78A      78A       31      408       0
-                text8                               539      539       4D      408       0
-                text7                                CA       CA       23        8       0
-                text6                               65A      65A       41      408       0
-                text5                               5D2      5D2       45      408       0
-                text4                                57       57       2B        8       0
-                text3                               7BB      7BB       30      408       0
-                text2                                A7       A7       23        8       0
-                text1                               586      586       4C      408       0
-                maintext                            3BD      3BD       68      408       0
+                text58                              AE7      AE7       21     15CE       0
+                text57                              A51      A51       1C     14A2       0
+                text56                              99D      99D        E     133A       0
+                text55                              939      939        6     1272       0
+                text54                              990      990        D     1320       0
+                text53                              93F      93F        6     127E       0
+                text52                              B08      B08       21     1610       0
+                text51                              C28      C28       2C     1850       0
+                text50                              9C8      9C8       10     1390       0
+                text49                              9D8      9D8       10     13B0       0
+                text48                              9AB      9AB        E     1356       0
+                text47                              945      945        7     128A       0
+                text46                              A36      A36       1B     146C       0
+                text45                              96C      96C        C     12D8       0
+                text44                              978      978        C     12F0       0
+                text43                              956      956        B     12AC       0
+                text42                              69F      69F       8F      C08       0
+                text41                              CE2      CE2       35     19C4       0
+                text40                              BD8      BD8       25     17B0       0
+                text39                              984      984        C     1308       0
+                text38                              A1F      A1F       17     143E       0
+                text37                              B29      B29       23     1652       0
+                text36                              94C      94C        A     1298       0
+                text35                              934      934        5     1268       0
+                text34                               FA       FA        6        8       0
+                text33                              C54      C54       2D     18A8       0
+                text32                              A0A      A0A       15     1414       0
+                text31                              D84      D84       41     1B08       0
+                text30                              9B9      9B9        F     1372       0
+                text29                              7F7      7F7        9      C08       0
+                text28                              AA9      AA9       1F     1552       0
+                text27                              961      961        B     12C2       0
+                text26                              9F8      9F8       12     13F0       0
+                text25                               96       96       64        8       0
+                text24                              DC5      DC5       41     1B8A       0
+                text23                              A6D      A6D       1E     14DA       0
+                text22                              D17      D17       36     1A2E       0
+                text21                              FA9      FA9       57     1F52       0
+                text20                              A8B      A8B       1E     1516       0
+                text19                              79E      79E       59      C08       0
+                text18                              604      604       9B      C08       0
+                text17                              9E8      9E8       10     13D0       0
+                text16                              B4C      B4C       23     1698       0
+                text15                              AC8      AC8       1F     1590       0
+                text14                              E06      E06       41     1C0C       0
+                text13                              D4D      D4D       37     1A9A       0
+                text12                              B6F      B6F       23     16DE       0
+                text11                              72E      72E       70      C08       0
+                text10                              E88      E88       43     1D10       0
+                text9                               CB1      CB1       31     1962       0
+                text8                               F5C      F5C       4D     1EB8       0
+                text7                               B92      B92       23     1724       0
+                text6                               E47      E47       41     1C8E       0
+                text5                               ECB      ECB       45     1D96       0
+                text4                               BFD      BFD       2B     17FA       0
+                text3                               C81      C81       30     1902       0
+                text2                               BB5      BB5       23     176A       0
+                text1                               F10      F10       4C     1E20       0
+                maintext                             2B       2B       6B        8       0
                 cstackBANK0                          20       20       27       20       1
                 cstackCOMMON                         70       70        A       70       1
                 cstackBANK1                          A0       A0       43       A0       1
@@ -94,9 +101,10 @@ dist/default/production\Embedded.X.production.o
                 bssBANK1                             E3       E3        1       A0       1
                 dataBANK0                            47       47        4       20       1
                 bssCOMMON                            7A       7A        1       70       1
-                stringtext                          100      100      104        2       0
-                idataBANK1                          7FD      7FD        1      408       0
-                idataBANK0                          DFD      DFD        4     1BFA       0
+                bssEEDATA                             0     2100        3     4200       3
+                stringtext                          100      100      504        2       0
+                idataBANK1                            3        3        1        6       0
+                idataBANK0                          930      930        4     1260       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -106,63 +114,70 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cinit                                 D        D       1E         0
                 intentry                              4        4        7         0
                 reset_vec                             0        0        2         0
-                text51                              F55      F55       21         0
-                text50                              EDE      EDE       1C         0
-                text49                              E70      E70        E         0
-                text48                              E06      E06        6         0
-                text47                              E63      E63        D         0
-                text46                              E0C      E0C        6         0
-                text45                              F76      F76       21         0
-                text44                               2B       2B       2C         0
-                text43                              E8C      E8C       10         0
-                text42                              E7E      E7E        E         0
-                text41                              E18      E18        7         0
-                text40                              EC3      EC3       1B         0
-                text39                              E3F      E3F        C         0
-                text38                              E4B      E4B        C         0
-                text37                              E29      E29        B         0
-                text36                               82       82       25         0
-                text35                              E57      E57        C         0
-                text34                              EAC      EAC       17         0
-                text33                              F97      F97       23         0
-                text32                              E1F      E1F        A         0
-                text31                              E9C      E9C       10         0
-                text30                              204      204       AE         0
-                text29                              E01      E01        5         0
-                text28                              E12      E12        6         0
-                text27                              E34      E34        B         0
-                text26                              7EB      7EB       12         0
-                text25                              425      425       64         0
-                text24                              6DC      6DC       41         0
-                text23                              EFA      EFA       1E         0
-                text22                              754      754       36         0
-                text21                              4E2      4E2       57         0
-                text20                              F18      F18       1E         0
-                text19                              489      489       59         0
-                text18                              2B2      2B2       9B         0
-                text17                               ED       ED       10         0
-                text16                              FBA      FBA       23         0
-                text15                              F36      F36       1F         0
-                text14                              69B      69B       41         0
-                text13                              71D      71D       37         0
-                text12                              FDD      FDD       23         0
-                text11                              34D      34D       70         0
-                text10                              617      617       43         0
-                text9                               78A      78A       31         0
-                text8                               539      539       4D         0
-                text7                                CA       CA       23         0
-                text6                               65A      65A       41         0
-                text5                               5D2      5D2       45         0
-                text4                                57       57       2B         0
-                text3                               7BB      7BB       30         0
-                text2                                A7       A7       23         0
-                text1                               586      586       4C         0
-                maintext                            3BD      3BD       68         0
-                idataBANK1                          7FD      7FD        1         0
-                idataBANK0                          DFD      DFD        4         0
+                text58                              AE7      AE7       21         0
+                text57                              A51      A51       1C         0
+                text56                              99D      99D        E         0
+                text55                              939      939        6         0
+                text54                              990      990        D         0
+                text53                              93F      93F        6         0
+                text52                              B08      B08       21         0
+                text51                              C28      C28       2C         0
+                text50                              9C8      9C8       10         0
+                text49                              9D8      9D8       10         0
+                text48                              9AB      9AB        E         0
+                text47                              945      945        7         0
+                text46                              A36      A36       1B         0
+                text45                              96C      96C        C         0
+                text44                              978      978        C         0
+                text43                              956      956        B         0
+                text42                              69F      69F       8F         0
+                text41                              CE2      CE2       35         0
+                text40                              BD8      BD8       25         0
+                text39                              984      984        C         0
+                text38                              A1F      A1F       17         0
+                text37                              B29      B29       23         0
+                text36                              94C      94C        A         0
+                text35                              934      934        5         0
+                text34                               FA       FA        6         0
+                text33                              C54      C54       2D         0
+                text32                              A0A      A0A       15         0
+                text31                              D84      D84       41         0
+                text30                              9B9      9B9        F         0
+                text29                              7F7      7F7        9         0
+                text28                              AA9      AA9       1F         0
+                text27                              961      961        B         0
+                text26                              9F8      9F8       12         0
+                text25                               96       96       64         0
+                text24                              DC5      DC5       41         0
+                text23                              A6D      A6D       1E         0
+                text22                              D17      D17       36         0
+                text21                              FA9      FA9       57         0
+                text20                              A8B      A8B       1E         0
+                text19                              79E      79E       59         0
+                text18                              604      604       9B         0
+                text17                              9E8      9E8       10         0
+                text16                              B4C      B4C       23         0
+                text15                              AC8      AC8       1F         0
+                text14                              E06      E06       41         0
+                text13                              D4D      D4D       37         0
+                text12                              B6F      B6F       23         0
+                text11                              72E      72E       70         0
+                text10                              E88      E88       43         0
+                text9                               CB1      CB1       31         0
+                text8                               F5C      F5C       4D         0
+                text7                               B92      B92       23         0
+                text6                               E47      E47       41         0
+                text5                               ECB      ECB       45         0
+                text4                               BFD      BFD       2B         0
+                text3                               C81      C81       30         0
+                text2                               BB5      BB5       23         0
+                text1                               F10      F10       4C         0
+                maintext                             2B       2B       6B         0
+                idataBANK1                            3        3        1         0
+                idataBANK0                          930      930        4         0
 
         CLASS   STRCODE        
-                stringtext                          100      100      104         0
+                stringtext                          100      100      504         0
 
         CLASS   STRING         
 
@@ -204,6 +219,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   IDLOC          
 
         CLASS   EEDATA         
+                bssEEDATA                             0     2100        3         3
 
         CLASS   BANK3          
 
@@ -212,41 +228,67 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
-                intentry                       000004  0000F9  0000FD         8       0  CODE        2
+                idataBANK1                     000003  000001  000004         6       0  CODE        2
+                intentry                       000004  0000FC  000100         8       0  CODE        2
                 cstackBANK0                    000020  00002B  00004B        20       1  BANK0       1
                 cstackCOMMON                   000070  00000B  00007B        70       1  COMMON      1
                 cstackBANK1                    0000A0  000045  0000E5        A0       1  BANK1       1
-                stringtext                     000100  000104  000204         2       0  STRCODE     2
-                text30                         000204  0005FA  0007FE       408       0  CODE        2
-                idataBANK0                     000DFD  000004  000E01      1BFA       0  CODE        2
-                text29                         000E01  000005  000E06      1C02       0  CODE        2
-                text48                         000E06  000006  000E0C      1C0C       0  CODE        2
-                text46                         000E0C  000006  000E12      1C18       0  CODE        2
-                text28                         000E12  000006  000E18      1C24       0  CODE        2
-                text41                         000E18  000007  000E1F      1C30       0  CODE        2
-                text32                         000E1F  00000A  000E29      1C3E       0  CODE        2
-                text37                         000E29  00000B  000E34      1C52       0  CODE        2
-                text27                         000E34  00000B  000E3F      1C68       0  CODE        2
-                text39                         000E3F  00000C  000E4B      1C7E       0  CODE        2
-                text38                         000E4B  00000C  000E57      1C96       0  CODE        2
-                text35                         000E57  00000C  000E63      1CAE       0  CODE        2
-                text47                         000E63  00000D  000E70      1CC6       0  CODE        2
-                text49                         000E70  00000E  000E7E      1CE0       0  CODE        2
-                text42                         000E7E  00000E  000E8C      1CFC       0  CODE        2
-                text43                         000E8C  000010  000E9C      1D18       0  CODE        2
-                text31                         000E9C  000010  000EAC      1D38       0  CODE        2
-                text34                         000EAC  000017  000EC3      1D58       0  CODE        2
-                text40                         000EC3  00001B  000EDE      1D86       0  CODE        2
-                text50                         000EDE  00001C  000EFA      1DBC       0  CODE        2
-                text23                         000EFA  00001E  000F18      1DF4       0  CODE        2
-                text20                         000F18  00001E  000F36      1E30       0  CODE        2
-                text15                         000F36  00001F  000F55      1E6C       0  CODE        2
-                text51                         000F55  000021  000F76      1EAA       0  CODE        2
-                text45                         000F76  000021  000F97      1EEC       0  CODE        2
-                text33                         000F97  000023  000FBA      1F2E       0  CODE        2
-                text16                         000FBA  000023  000FDD      1F74       0  CODE        2
-                text12                         000FDD  000023  001000      1FBA       0  CODE        2
+                stringtext                     000100  000504  000604         2       0  STRCODE     2
+                text18                         000604  0001FC  000800       C08       0  CODE        2
+                idataBANK0                     000930  000004  000934      1260       0  CODE        2
+                text35                         000934  000005  000939      1268       0  CODE        2
+                text55                         000939  000006  00093F      1272       0  CODE        2
+                text53                         00093F  000006  000945      127E       0  CODE        2
+                text47                         000945  000007  00094C      128A       0  CODE        2
+                text36                         00094C  00000A  000956      1298       0  CODE        2
+                text43                         000956  00000B  000961      12AC       0  CODE        2
+                text27                         000961  00000B  00096C      12C2       0  CODE        2
+                text45                         00096C  00000C  000978      12D8       0  CODE        2
+                text44                         000978  00000C  000984      12F0       0  CODE        2
+                text39                         000984  00000C  000990      1308       0  CODE        2
+                text54                         000990  00000D  00099D      1320       0  CODE        2
+                text56                         00099D  00000E  0009AB      133A       0  CODE        2
+                text48                         0009AB  00000E  0009B9      1356       0  CODE        2
+                text30                         0009B9  00000F  0009C8      1372       0  CODE        2
+                text50                         0009C8  000010  0009D8      1390       0  CODE        2
+                text49                         0009D8  000010  0009E8      13B0       0  CODE        2
+                text17                         0009E8  000010  0009F8      13D0       0  CODE        2
+                text26                         0009F8  000012  000A0A      13F0       0  CODE        2
+                text32                         000A0A  000015  000A1F      1414       0  CODE        2
+                text38                         000A1F  000017  000A36      143E       0  CODE        2
+                text46                         000A36  00001B  000A51      146C       0  CODE        2
+                text57                         000A51  00001C  000A6D      14A2       0  CODE        2
+                text23                         000A6D  00001E  000A8B      14DA       0  CODE        2
+                text20                         000A8B  00001E  000AA9      1516       0  CODE        2
+                text28                         000AA9  00001F  000AC8      1552       0  CODE        2
+                text15                         000AC8  00001F  000AE7      1590       0  CODE        2
+                text58                         000AE7  000021  000B08      15CE       0  CODE        2
+                text52                         000B08  000021  000B29      1610       0  CODE        2
+                text37                         000B29  000023  000B4C      1652       0  CODE        2
+                text16                         000B4C  000023  000B6F      1698       0  CODE        2
+                text12                         000B6F  000023  000B92      16DE       0  CODE        2
+                text7                          000B92  000023  000BB5      1724       0  CODE        2
+                text2                          000BB5  000023  000BD8      176A       0  CODE        2
+                text40                         000BD8  000025  000BFD      17B0       0  CODE        2
+                text4                          000BFD  00002B  000C28      17FA       0  CODE        2
+                text51                         000C28  00002C  000C54      1850       0  CODE        2
+                text33                         000C54  00002D  000C81      18A8       0  CODE        2
+                text3                          000C81  000030  000CB1      1902       0  CODE        2
+                text9                          000CB1  000031  000CE2      1962       0  CODE        2
+                text41                         000CE2  000035  000D17      19C4       0  CODE        2
+                text22                         000D17  000036  000D4D      1A2E       0  CODE        2
+                text13                         000D4D  000037  000D84      1A9A       0  CODE        2
+                text31                         000D84  000041  000DC5      1B08       0  CODE        2
+                text24                         000DC5  000041  000E06      1B8A       0  CODE        2
+                text14                         000E06  000041  000E47      1C0C       0  CODE        2
+                text6                          000E47  000041  000E88      1C8E       0  CODE        2
+                text10                         000E88  000043  000ECB      1D10       0  CODE        2
+                text5                          000ECB  000045  000F10      1D96       0  CODE        2
+                text1                          000F10  00004C  000F5C      1E20       0  CODE        2
+                text8                          000F5C  00004D  000FA9      1EB8       0  CODE        2
+                text21                         000FA9  000057  001000      1F52       0  CODE        2
                 config                         002007  000002  002009      400E       0  CONFIG      2
+                bssEEDATA                      002100  000003  002103      4200       3  EEDATA      2
 
 
 UNUSED ADDRESS RANGES
@@ -255,17 +297,14 @@ UNUSED ADDRESS RANGES
         BANK0            004B-006F             25           1
         BANK1            00E5-00EF              B           1
         BANK2            0120-016F             50           1
-        CODE             0002-0003              2           2
-                         00FD-00FF              3
-                         07FE-0DFC              2
+        CODE             0002-0002              1           2
+                         0800-092F            130
         COMMON           007B-007D              3           1
-        CONST            0002-0003              2           2
-                         00FD-00FF              3
-                         07FE-0DFC            100
-        EEDATA           2100-21FF            100           2
-        ENTRY            0002-0003              2           2
-                         00FD-00FF              3
-                         07FE-0DFC            100
+        CONST            0002-0002              1           2
+                         0800-092F            100
+        EEDATA           2103-21FF             FD           2
+        ENTRY            0002-0002              1           2
+                         0800-092F            100
         IDLOC            2000-2003              4           2
         RAM              004B-006F             25           1
                          00E5-00EF              B
@@ -275,17 +314,16 @@ UNUSED ADDRESS RANGES
         SFR2             0100-011F             20           1
         SFR3             0180-01EF             70           1
         STACK            0120-016F             50           1
-        STRCODE          0002-0003              2           2
-                         00FD-00FF              3
-                         07FE-0DFC            5FF
-        STRING           0002-0003              2           2
-                         00FD-00FF              3
-                         07FE-0DFC            100
+        STRCODE          0002-0002              1           2
+                         0800-092F            130
+        STRING           0002-0002              1           2
+                         0800-092F            100
 
                                   Symbol Table
 
 ?_Tetris_GetRandomUnit                     cstackBANK0  002C
 ?___awmod                                  cstackBANK0  002F
+?___eetoi                                  cstackCOMMON 0078
 ?___lmul                                   cstackBANK0  0020
 ?___wmul                                   cstackBANK0  0035
 ?_rand                                     cstackBANK0  0028
@@ -293,6 +331,19 @@ Buttons_Clear@buttons                      cstackBANK0  0020
 Buttons_Update@buttons                     cstackCOMMON 0076
 Buttons_UpdateButton@button                cstackCOMMON 0075
 Buttons_UpdateButton@nHeld                 cstackCOMMON 0073
+DrawTetris@leftMask                        cstackBANK0  0032
+DrawTetris@rightMask                       cstackBANK0  0034
+DrawTetris@tetrisGame                      cstackBANK0  0031
+DrawTetris@x                               cstackBANK0  0036
+DrawTetrisGameColumn@gameRow               cstackBANK0  002B
+DrawTetrisGameColumn@i                     cstackBANK0  002D
+DrawTetrisGameColumn@lcdRow                cstackBANK0  002F
+DrawTetrisGameColumn@leftMask              cstackBANK0  0025
+DrawTetrisGameColumn@rightMask             cstackBANK0  0023
+DrawTetrisGameColumn@tableY                cstackBANK0  002A
+DrawTetrisGameColumn@tetrisGame            cstackBANK0  0029
+DrawTetrisGameColumn@x                     cstackBANK0  0022
+DrawTetrisGameColumn@y                     cstackBANK0  002E
 InterruptHandler@timerInterruptCounter     bssCOMMON    007A
 LCD_Clear@x                                cstackBANK0  0024
 LCD_Clear@y                                cstackBANK0  0023
@@ -305,18 +356,9 @@ LCD_SetZ@z                                 cstackBANK0  0021
 LCD_Write@data                             cstackCOMMON 0078
 LCD_Write@mode                             cstackCOMMON 0079
 LCD_WriteData@data                         cstackBANK0  0021
-RedrawTetrisOnLCD@gameRow                  cstackBANK0  002A
-RedrawTetrisOnLCD@i                        cstackBANK0  002C
-RedrawTetrisOnLCD@lcdRow                   cstackBANK0  002F
-RedrawTetrisOnLCD@leftMask                 cstackBANK0  0025
-RedrawTetrisOnLCD@rightMask                cstackBANK0  0027
-RedrawTetrisOnLCD@tableY                   cstackBANK0  0029
-RedrawTetrisOnLCD@tetrisGame               cstackBANK0  0024
-RedrawTetrisOnLCD@x                        cstackBANK0  002E
-RedrawTetrisOnLCD@y                        cstackBANK0  002D
 Tetris_ApplyPlayerToTable@game             cstackCOMMON 0079
 Tetris_ApplyPlayerToTable@i                cstackCOMMON 0077
-Tetris_ApplyPlayerToTable@i_303            cstackCOMMON 0078
+Tetris_ApplyPlayerToTable@i_312            cstackCOMMON 0078
 Tetris_ApplyPlayerToTable@start            cstackCOMMON 0076
 Tetris_ClearFilledRows@gameTable           cstackBANK0  0027
 Tetris_ClearFilledRows@i                   cstackBANK0  0028
@@ -329,10 +371,10 @@ Tetris_CountUnitBits@unitBits              cstackCOMMON 0073
 Tetris_MovePlayerDown@game                 cstackBANK0  002D
 Tetris_MovePlayerLeft@game                 cstackBANK0  0030
 Tetris_MovePlayerLeft@i                    cstackBANK0  002E
-Tetris_MovePlayerLeft@i_438                cstackBANK0  002F
+Tetris_MovePlayerLeft@i_447                cstackBANK0  002F
 Tetris_MovePlayerRight@game                cstackBANK0  0030
 Tetris_MovePlayerRight@i                   cstackBANK0  002E
-Tetris_MovePlayerRight@i_452               cstackBANK0  002F
+Tetris_MovePlayerRight@i_461               cstackBANK0  002F
 Tetris_PlayerOverlapsEnvironment@game      cstackCOMMON 0078
 Tetris_PlayerOverlapsEnvironment@i         cstackCOMMON 0077
 Tetris_PlayerOverlapsEnvironment@start     cstackCOMMON 0076
@@ -360,40 +402,48 @@ Tetris_ShiftTableDown@upto                 cstackCOMMON 0073
 Tetris_UpdateGame@game                     cstackBANK0  0045
 Tetris_UpdateGame@rowsCleared              cstackBANK0  0044
 Tetris_UpdatePlayerUnitBits@i              cstackCOMMON 0075
-Tetris_UpdatePlayerUnitBits@i_323          cstackCOMMON 0073
-Tetris_UpdatePlayerUnitBits@i_324          cstackCOMMON 0074
+Tetris_UpdatePlayerUnitBits@i_332          cstackCOMMON 0073
+Tetris_UpdatePlayerUnitBits@i_333          cstackCOMMON 0074
 Tetris_UpdatePlayerUnitBits@player         cstackCOMMON 0077
 Tetris_UpdatePlayerUnitBits@shift          cstackCOMMON 0076
 _ANSEL                                     (abs)        0188
 _ANSELH                                    (abs)        0189
-_Buttons_Clear                             text49       0E70
-_Buttons_SetupInterrupts                   text48       0E06
-_Buttons_SetupPortB                        text47       0E63
-_Buttons_SetupPortsAndInterrups            text46       0E0C
-_Buttons_Update                            text44       002B
-_Buttons_UpdateButton                      text45       0F76
+_Buttons_Clear                             text56       099D
+_Buttons_SetupInterrupts                   text55       0939
+_Buttons_SetupPortB                        text54       0990
+_Buttons_SetupPortsAndInterrups            text53       093F
+_Buttons_Update                            text51       0C28
+_Buttons_UpdateButton                      text52       0B08
+_DrawTetris                                text41       0CE2
+_DrawTetrisGameColumn                      text42       069F
+_EEADR                                     (abs)        010D
+_EECON1                                    (abs)        018C
+_EECON1bits                                (abs)        018C
+_EECON2                                    (abs)        018D
+_EEDATA                                    (abs)        010C
 _GIE                                       (abs)        005F
+_INTCONbits                                (abs)        000B
 _INTE                                      (abs)        005C
 _INTEDG                                    (abs)        040E
 _INTF                                      (abs)        0059
 _IRCF0                                     (abs)        047C
 _IRCF1                                     (abs)        047D
 _IRCF2                                     (abs)        047E
-_InterruptHandler                          text51       0F55
-_LCD_BlockWhileBusy                        text41       0E18
-_LCD_Clear                                 text36       0082
-_LCD_IsBusy                                text42       0E7E
-_LCD_IsBusy$575                            cstackCOMMON 0076
-_LCD_ReadStatus                            text43       0E8C
-_LCD_Reset                                 text34       0EAC
-_LCD_SegmentSelection                      text31       0E9C
-_LCD_SetX                                  text39       0E3F
-_LCD_SetY                                  text38       0E4B
-_LCD_SetZ                                  text35       0E57
-_LCD_SetupPorts                            text33       0F97
-_LCD_TurnOn                                text32       0E1F
-_LCD_Write                                 text40       0EC3
-_LCD_WriteData                             text37       0E29
+_InterruptHandler                          text58       0AE7
+_LCD_BlockWhileBusy                        text47       0945
+_LCD_Clear                                 text40       0BD8
+_LCD_IsBusy                                text48       09AB
+_LCD_IsBusy$584                            cstackCOMMON 0076
+_LCD_ReadStatus                            text49       09D8
+_LCD_Reset                                 text38       0A1F
+_LCD_SegmentSelection                      text50       09C8
+_LCD_SetX                                  text45       096C
+_LCD_SetY                                  text44       0978
+_LCD_SetZ                                  text39       0984
+_LCD_SetupPorts                            text37       0B29
+_LCD_TurnOn                                text36       094C
+_LCD_Write                                 text46       0A36
+_LCD_WriteData                             text43       0956
 _PEIE                                      (abs)        005E
 _PORTA                                     (abs)        0005
 _PORTB                                     (abs)        0006
@@ -409,10 +459,11 @@ _RC2                                       (abs)        003A
 _RC3                                       (abs)        003B
 _RD0                                       (abs)        0040
 _RD1                                       (abs)        0041
-_RedrawTetrisOnLCD                         text30       0204
-_ResetTimer                                text29       0E01
-_SetupOscillator                           text28       0E12
-_SetupTimer                                text27       0E34
+_ResetTimer                                text35       0934
+_STATUSbits                                (abs)        0003
+_SetupOscillator                           text34       00FA
+_SetupRandomness                           text28       0AA9
+_SetupTimer                                text27       0961
 _T1CKPS0                                   (abs)        0084
 _T1CKPS1                                   (abs)        0085
 _TMR1                                      (abs)        000E
@@ -424,30 +475,30 @@ _TRISA                                     (abs)        0085
 _TRISB                                     (abs)        0086
 _TRISC                                     (abs)        0087
 _TRISD                                     (abs)        0088
-_Tetris_ApplyPlayerToTable                 text25       0425
-_Tetris_ClearFilledRows                    text9        078A
-_Tetris_CountUnitBits                      text14       069B
-_Tetris_GetRandomUnit                      text4        0057
-_Tetris_MovePlayerDown                     text3        07BB
-_Tetris_MovePlayerLeft                     text21       04E2
-_Tetris_MovePlayerRight                    text19       0489
-_Tetris_PlayerOverlapsEnvironment          text24       06DC
-_Tetris_PlayerTopmostY                     text26       07EB
-_Tetris_PlayerTouchingLeftBound            text23       0EFA
-_Tetris_PlayerTouchingRightBound           text20       0F18
-_Tetris_PlayerUnitBitsAreValid             text13       071D
-_Tetris_RemovePlayerFromTable              text22       0754
-_Tetris_ResetGame                          text15       0F36
-_Tetris_ResetPlayer                        text16       0FBA
-_Tetris_RotatePlayer                       text11       034D
-_Tetris_ScoreForRowsCleared                text2        00A7
-_Tetris_SetPlayerUnit                      text17       00ED
-_Tetris_ShiftTableDown                     text10       0617
-_Tetris_UpdateGame                         text1        0586
-_Tetris_UpdatePlayerUnitBits               text18       02B2
-_Tetris_playerStartingPosition             stringtext   0112
-_Tetris_unitPivot                          stringtext   0114
-_Tetris_units                              stringtext   0116
+_Tetris_ApplyPlayerToTable                 text25       0096
+_Tetris_ClearFilledRows                    text9        0CB1
+_Tetris_CountUnitBits                      text14       0E06
+_Tetris_GetRandomUnit                      text4        0BFD
+_Tetris_MovePlayerDown                     text3        0C81
+_Tetris_MovePlayerLeft                     text21       0FA9
+_Tetris_MovePlayerRight                    text19       079E
+_Tetris_PlayerOverlapsEnvironment          text24       0DC5
+_Tetris_PlayerTopmostY                     text26       09F8
+_Tetris_PlayerTouchingLeftBound            text23       0A6D
+_Tetris_PlayerTouchingRightBound           text20       0A8B
+_Tetris_PlayerUnitBitsAreValid             text13       0D4D
+_Tetris_RemovePlayerFromTable              text22       0D17
+_Tetris_ResetGame                          text15       0AC8
+_Tetris_ResetPlayer                        text16       0B4C
+_Tetris_RotatePlayer                       text11       072E
+_Tetris_ScoreForRowsCleared                text2        0BB5
+_Tetris_SetPlayerUnit                      text17       09E8
+_Tetris_ShiftTableDown                     text10       0E88
+_Tetris_UpdateGame                         text1        0F10
+_Tetris_UpdatePlayerUnitBits               text18       0604
+_Tetris_playerStartingPosition             stringtext   0512
+_Tetris_unitPivot                          stringtext   0514
+_Tetris_units                              stringtext   0516
 _WPUB                                      (abs)        0095
 __CFG_BOR4V$BOR40V                         (abs)        0000
 __CFG_BOREN$OFF                            (abs)        0000
@@ -468,6 +519,7 @@ __Hbank2                                   bank2        0000
 __Hbank3                                   bank3        0000
 __HbssBANK1                                bssBANK1     0000
 __HbssCOMMON                               bssCOMMON    0000
+__HbssEEDATA                               bssEEDATA    0000
 __Hcinit                                   cinit        002B
 __Hclrtext                                 clrtext      0000
 __Hcode                                    code         0000
@@ -497,7 +549,7 @@ __Hsfr3                                    sfr3         0000
 __Hspace_0                                 (abs)        2009
 __Hspace_1                                 (abs)        00E5
 __Hspace_2                                 (abs)        0000
-__Hspace_3                                 (abs)        0000
+__Hspace_3                                 (abs)        0003
 __Hstack                                   stack        0000
 __Hstrings                                 strings      0000
 __Hstringtext                              stringtext   0000
@@ -509,6 +561,7 @@ __Lbank2                                   bank2        0000
 __Lbank3                                   bank3        0000
 __LbssBANK1                                bssBANK1     0000
 __LbssCOMMON                               bssCOMMON    0000
+__LbssEEDATA                               bssEEDATA    0000
 __Lcinit                                   cinit        000D
 __Lclrtext                                 clrtext      0000
 __Lcode                                    code         0000
@@ -546,157 +599,191 @@ __Ltext                                    text         0000
 __S0                                       (abs)        2009
 __S1                                       (abs)        00E5
 __S2                                       (abs)        0000
-__S3                                       (abs)        0000
-___awmod                                   text8        0539
+__S3                                       (abs)        2103
+___awmod                                   text8        0F5C
 ___awmod@counter                           cstackBANK0  0033
 ___awmod@dividend                          cstackBANK0  0031
 ___awmod@divisor                           cstackBANK0  002F
 ___awmod@sign                              cstackBANK0  0034
+___eecpymem                                text33       0C54
+___eecpymem@cp                             cstackCOMMON 0076
+___eecpymem@from                           cstackCOMMON 0073
+___eecpymem@size                           cstackCOMMON 0074
+___eecpymem@to                             cstackCOMMON 0077
+___eetoi                                   text32       0A0A
+___eetoi@addr                              cstackBANK0  0022
+___eetoi@data                              cstackBANK0  0023
 ___int_sp                                  stack        0000
+___itoee                                   text30       09B9
+___itoee@addr                              cstackBANK0  0029
+___itoee@data                              cstackBANK0  0025
 ___latbits                                 (abs)        0001
-___lbmod                                   text12       0FDD
+___lbmod                                   text12       0B6F
 ___lbmod@counter                           cstackCOMMON 0078
 ___lbmod@dividend                          cstackCOMMON 0077
 ___lbmod@divisor                           cstackCOMMON 0073
 ___lbmod@rem                               cstackCOMMON 0079
-___lmul                                    text6        065A
+___lmul                                    text6        0E47
 ___lmul@multiplicand                       cstackBANK0  0024
 ___lmul@multiplier                         cstackBANK0  0020
 ___lmul@product                            cstackCOMMON 0074
+___memcpyee                                text31       0D84
+___memcpyee@from                           cstackCOMMON 0073
+___memcpyee@ptr                            cstackCOMMON 0076
+___memcpyee@size                           cstackCOMMON 0074
+___memcpyee@to                             cstackCOMMON 0077
 ___sp                                      stack        0000
 ___stackhi                                 (abs)        0000
 ___stacklo                                 (abs)        0000
-___wmul                                    text7        00CA
+___wmul                                    text7        0B92
 ___wmul@multiplicand                       cstackBANK0  0037
 ___wmul@multiplier                         cstackBANK0  0035
 ___wmul@product                            cstackBANK0  0039
-__end_of_Buttons_Clear                     text49       0E7E
-__end_of_Buttons_SetupInterrupts           text48       0E0C
-__end_of_Buttons_SetupPortB                text47       0E70
-__end_of_Buttons_SetupPortsAndInterrups    text46       0E12
-__end_of_Buttons_Update                    text44       0057
-__end_of_Buttons_UpdateButton              text45       0F97
-__end_of_InterruptHandler                  text51       0F76
-__end_of_LCD_BlockWhileBusy                text41       0E1F
-__end_of_LCD_Clear                         text36       00A7
-__end_of_LCD_IsBusy                        text42       0E8C
-__end_of_LCD_ReadStatus                    text43       0E9C
-__end_of_LCD_Reset                         text34       0EC3
-__end_of_LCD_SegmentSelection              text31       0EAC
-__end_of_LCD_SetX                          text39       0E4B
-__end_of_LCD_SetY                          text38       0E57
-__end_of_LCD_SetZ                          text35       0E63
-__end_of_LCD_SetupPorts                    text33       0FBA
-__end_of_LCD_TurnOn                        text32       0E29
-__end_of_LCD_Write                         text40       0EDE
-__end_of_LCD_WriteData                     text37       0E34
-__end_of_RedrawTetrisOnLCD                 text30       02B2
-__end_of_ResetTimer                        text29       0E06
-__end_of_SetupOscillator                   text28       0E18
-__end_of_SetupTimer                        text27       0E3F
-__end_of_Tetris_ApplyPlayerToTable         text25       0489
-__end_of_Tetris_ClearFilledRows            text9        07BB
-__end_of_Tetris_CountUnitBits              text14       06DC
-__end_of_Tetris_GetRandomUnit              text4        0082
-__end_of_Tetris_MovePlayerDown             text3        07EB
-__end_of_Tetris_MovePlayerLeft             text21       0539
-__end_of_Tetris_MovePlayerRight            text19       04E2
-__end_of_Tetris_PlayerOverlapsEnvironment  text24       071D
-__end_of_Tetris_PlayerTopmostY             text26       07FD
-__end_of_Tetris_PlayerTouchingLeftBound    text23       0F18
-__end_of_Tetris_PlayerTouchingRightBound   text20       0F36
-__end_of_Tetris_PlayerUnitBitsAreValid     text13       0754
-__end_of_Tetris_RemovePlayerFromTable      text22       078A
-__end_of_Tetris_ResetGame                  text15       0F55
-__end_of_Tetris_ResetPlayer                text16       0FDD
-__end_of_Tetris_RotatePlayer               text11       03BD
-__end_of_Tetris_ScoreForRowsCleared        text2        00CA
-__end_of_Tetris_SetPlayerUnit              text17       00FD
-__end_of_Tetris_ShiftTableDown             text10       065A
-__end_of_Tetris_UpdateGame                 text1        05D2
-__end_of_Tetris_UpdatePlayerUnitBits       text18       034D
-__end_of_Tetris_playerStartingPosition     stringtext   0114
-__end_of_Tetris_unitPivot                  stringtext   0116
-__end_of_Tetris_units                      stringtext   0204
-__end_of___awmod                           text8        0586
-__end_of___lbmod                           text12       1000
-__end_of___lmul                            text6        069B
-__end_of___wmul                            text7        00ED
+__end_of_Buttons_Clear                     text56       09AB
+__end_of_Buttons_SetupInterrupts           text55       093F
+__end_of_Buttons_SetupPortB                text54       099D
+__end_of_Buttons_SetupPortsAndInterrups    text53       0945
+__end_of_Buttons_Update                    text51       0C54
+__end_of_Buttons_UpdateButton              text52       0B29
+__end_of_DrawTetris                        text41       0D17
+__end_of_DrawTetrisGameColumn              text42       072E
+__end_of_InterruptHandler                  text58       0B08
+__end_of_LCD_BlockWhileBusy                text47       094C
+__end_of_LCD_Clear                         text40       0BFD
+__end_of_LCD_IsBusy                        text48       09B9
+__end_of_LCD_ReadStatus                    text49       09E8
+__end_of_LCD_Reset                         text38       0A36
+__end_of_LCD_SegmentSelection              text50       09D8
+__end_of_LCD_SetX                          text45       0978
+__end_of_LCD_SetY                          text44       0984
+__end_of_LCD_SetZ                          text39       0990
+__end_of_LCD_SetupPorts                    text37       0B4C
+__end_of_LCD_TurnOn                        text36       0956
+__end_of_LCD_Write                         text46       0A51
+__end_of_LCD_WriteData                     text43       0961
+__end_of_ResetTimer                        text35       0939
+__end_of_SetupOscillator                   text34       0100
+__end_of_SetupRandomness                   text28       0AC8
+__end_of_SetupTimer                        text27       096C
+__end_of_Tetris_ApplyPlayerToTable         text25       00FA
+__end_of_Tetris_ClearFilledRows            text9        0CE2
+__end_of_Tetris_CountUnitBits              text14       0E47
+__end_of_Tetris_GetRandomUnit              text4        0C28
+__end_of_Tetris_MovePlayerDown             text3        0CB1
+__end_of_Tetris_MovePlayerLeft             text21       1000
+__end_of_Tetris_MovePlayerRight            text19       07F7
+__end_of_Tetris_PlayerOverlapsEnvironment  text24       0E06
+__end_of_Tetris_PlayerTopmostY             text26       0A0A
+__end_of_Tetris_PlayerTouchingLeftBound    text23       0A8B
+__end_of_Tetris_PlayerTouchingRightBound   text20       0AA9
+__end_of_Tetris_PlayerUnitBitsAreValid     text13       0D84
+__end_of_Tetris_RemovePlayerFromTable      text22       0D4D
+__end_of_Tetris_ResetGame                  text15       0AE7
+__end_of_Tetris_ResetPlayer                text16       0B6F
+__end_of_Tetris_RotatePlayer               text11       079E
+__end_of_Tetris_ScoreForRowsCleared        text2        0BD8
+__end_of_Tetris_SetPlayerUnit              text17       09F8
+__end_of_Tetris_ShiftTableDown             text10       0ECB
+__end_of_Tetris_UpdateGame                 text1        0F5C
+__end_of_Tetris_UpdatePlayerUnitBits       text18       069F
+__end_of_Tetris_playerStartingPosition     stringtext   0514
+__end_of_Tetris_unitPivot                  stringtext   0516
+__end_of_Tetris_units                      stringtext   0604
+__end_of___awmod                           text8        0FA9
+__end_of___eecpymem                        text33       0C81
+__end_of___eetoi                           text32       0A1F
+__end_of___itoee                           text30       09C8
+__end_of___lbmod                           text12       0B92
+__end_of___lmul                            text6        0E88
+__end_of___memcpyee                        text31       0DC5
+__end_of___wmul                            text7        0BB5
 __end_of__initialization                   cinit        0028
 __end_of__stringtab                        stringtext   0112
-__end_of_main                              maintext     0425
-__end_of_memset                            text50       0EFA
-__end_of_rand                              text5        0617
+__end_of_logoImage                         stringtext   0512
+__end_of_main                              maintext     0096
+__end_of_memset                            text57       0A6D
+__end_of_rand                              text5        0F10
+__end_of_srand                             text29       0800
 __initialization                           cinit        000D
 __pbssBANK1                                bssBANK1     00E3
 __pbssCOMMON                               bssCOMMON    007A
+__pbssEEDATA                               bssEEDATA    0000
 __pcstackBANK0                             cstackBANK0  0020
 __pcstackBANK1                             cstackBANK1  00A0
 __pcstackCOMMON                            cstackCOMMON 0070
 __pdataBANK0                               dataBANK0    0047
 __pdataBANK1                               dataBANK1    00E4
-__pidataBANK0                              idataBANK0   0DFD
-__pidataBANK1                              idataBANK1   07FD
+__pidataBANK0                              idataBANK0   0930
+__pidataBANK1                              idataBANK1   0003
 __pintentry                                intentry     0004
-__pmaintext                                maintext     03BD
+__pmaintext                                maintext     002B
 __pstringtext                              stringtext   0100
-__ptext1                                   text1        0586
-__ptext10                                  text10       0617
-__ptext11                                  text11       034D
-__ptext12                                  text12       0FDD
-__ptext13                                  text13       071D
-__ptext14                                  text14       069B
-__ptext15                                  text15       0F36
-__ptext16                                  text16       0FBA
-__ptext17                                  text17       00ED
-__ptext18                                  text18       02B2
-__ptext19                                  text19       0489
-__ptext2                                   text2        00A7
-__ptext20                                  text20       0F18
-__ptext21                                  text21       04E2
-__ptext22                                  text22       0754
-__ptext23                                  text23       0EFA
-__ptext24                                  text24       06DC
-__ptext25                                  text25       0425
-__ptext26                                  text26       07EB
-__ptext27                                  text27       0E34
-__ptext28                                  text28       0E12
-__ptext29                                  text29       0E01
-__ptext3                                   text3        07BB
-__ptext30                                  text30       0204
-__ptext31                                  text31       0E9C
-__ptext32                                  text32       0E1F
-__ptext33                                  text33       0F97
-__ptext34                                  text34       0EAC
-__ptext35                                  text35       0E57
-__ptext36                                  text36       0082
-__ptext37                                  text37       0E29
-__ptext38                                  text38       0E4B
-__ptext39                                  text39       0E3F
-__ptext4                                   text4        0057
-__ptext40                                  text40       0EC3
-__ptext41                                  text41       0E18
-__ptext42                                  text42       0E7E
-__ptext43                                  text43       0E8C
-__ptext44                                  text44       002B
-__ptext45                                  text45       0F76
-__ptext46                                  text46       0E0C
-__ptext47                                  text47       0E63
-__ptext48                                  text48       0E06
-__ptext49                                  text49       0E70
-__ptext5                                   text5        05D2
-__ptext50                                  text50       0EDE
-__ptext51                                  text51       0F55
-__ptext6                                   text6        065A
-__ptext7                                   text7        00CA
-__ptext8                                   text8        0539
-__ptext9                                   text9        078A
+__ptext1                                   text1        0F10
+__ptext10                                  text10       0E88
+__ptext11                                  text11       072E
+__ptext12                                  text12       0B6F
+__ptext13                                  text13       0D4D
+__ptext14                                  text14       0E06
+__ptext15                                  text15       0AC8
+__ptext16                                  text16       0B4C
+__ptext17                                  text17       09E8
+__ptext18                                  text18       0604
+__ptext19                                  text19       079E
+__ptext2                                   text2        0BB5
+__ptext20                                  text20       0A8B
+__ptext21                                  text21       0FA9
+__ptext22                                  text22       0D17
+__ptext23                                  text23       0A6D
+__ptext24                                  text24       0DC5
+__ptext25                                  text25       0096
+__ptext26                                  text26       09F8
+__ptext27                                  text27       0961
+__ptext28                                  text28       0AA9
+__ptext29                                  text29       07F7
+__ptext3                                   text3        0C81
+__ptext30                                  text30       09B9
+__ptext31                                  text31       0D84
+__ptext32                                  text32       0A0A
+__ptext33                                  text33       0C54
+__ptext34                                  text34       00FA
+__ptext35                                  text35       0934
+__ptext36                                  text36       094C
+__ptext37                                  text37       0B29
+__ptext38                                  text38       0A1F
+__ptext39                                  text39       0984
+__ptext4                                   text4        0BFD
+__ptext40                                  text40       0BD8
+__ptext41                                  text41       0CE2
+__ptext42                                  text42       069F
+__ptext43                                  text43       0956
+__ptext44                                  text44       0978
+__ptext45                                  text45       096C
+__ptext46                                  text46       0A36
+__ptext47                                  text47       0945
+__ptext48                                  text48       09AB
+__ptext49                                  text49       09D8
+__ptext5                                   text5        0ECB
+__ptext50                                  text50       09C8
+__ptext51                                  text51       0C28
+__ptext52                                  text52       0B08
+__ptext53                                  text53       093F
+__ptext54                                  text54       0990
+__ptext55                                  text55       0939
+__ptext56                                  text56       099D
+__ptext57                                  text57       0A51
+__ptext58                                  text58       0AE7
+__ptext6                                   text6        0E47
+__ptext7                                   text7        0B92
+__ptext8                                   text8        0F5C
+__ptext9                                   text9        0CB1
 __size_of_Buttons_Clear                    (abs)        0000
 __size_of_Buttons_SetupInterrupts          (abs)        0000
 __size_of_Buttons_SetupPortB               (abs)        0000
 __size_of_Buttons_SetupPortsAndInterrups   (abs)        0000
 __size_of_Buttons_Update                   (abs)        0000
 __size_of_Buttons_UpdateButton             (abs)        0000
+__size_of_DrawTetris                       (abs)        0000
+__size_of_DrawTetrisGameColumn             (abs)        0000
 __size_of_InterruptHandler                 (abs)        0000
 __size_of_LCD_BlockWhileBusy               (abs)        0000
 __size_of_LCD_Clear                        (abs)        0000
@@ -711,9 +798,9 @@ __size_of_LCD_SetupPorts                   (abs)        0000
 __size_of_LCD_TurnOn                       (abs)        0000
 __size_of_LCD_Write                        (abs)        0000
 __size_of_LCD_WriteData                    (abs)        0000
-__size_of_RedrawTetrisOnLCD                (abs)        0000
 __size_of_ResetTimer                       (abs)        0000
 __size_of_SetupOscillator                  (abs)        0000
+__size_of_SetupRandomness                  (abs)        0000
 __size_of_SetupTimer                       (abs)        0000
 __size_of_Tetris_ApplyPlayerToTable        (abs)        0000
 __size_of_Tetris_ClearFilledRows           (abs)        0000
@@ -737,20 +824,29 @@ __size_of_Tetris_ShiftTableDown            (abs)        0000
 __size_of_Tetris_UpdateGame                (abs)        0000
 __size_of_Tetris_UpdatePlayerUnitBits      (abs)        0000
 __size_of___awmod                          (abs)        0000
+__size_of___eecpymem                       (abs)        0000
+__size_of___eetoi                          (abs)        0000
+__size_of___itoee                          (abs)        0000
 __size_of___lbmod                          (abs)        0000
 __size_of___lmul                           (abs)        0000
+__size_of___memcpyee                       (abs)        0000
 __size_of___wmul                           (abs)        0000
 __size_of_main                             (abs)        0000
 __size_of_memset                           (abs)        0000
 __size_of_rand                             (abs)        0000
+__size_of_srand                            (abs)        0000
 __stringbase                               stringtext   0112
 __stringtab                                stringtext   0100
-_main                                      maintext     03BD
-_memset                                    text50       0EDE
+_highscore                                 bssEEDATA    0000
+_logoImage                                 stringtext   0112
+_main                                      maintext     002B
+_memset                                    text57       0A51
 _nRBPU                                     (abs)        040F
-_rand                                      text5        05D2
+_rand                                      text5        0ECB
 _randx                                     dataBANK0    0047
+_srand                                     text29       07F7
 _timerPrescaler                            dataBANK1    00E4
+_uniqueSeed                                bssEEDATA    0001
 _updateReady                               bssBANK1     00E3
 btemp                                      (abs)        007E
 end_of_initialization                      cinit        0028
@@ -769,6 +865,7 @@ memset@p                                   cstackCOMMON 0078
 memset@p1                                  cstackCOMMON 0079
 reset_vec                                  reset_vec    0000
 saved_w                                    (abs)        007E
+srand@x                                    cstackBANK0  0025
 start                                      init         000B
 start_initialization                       cinit        000D
 wtemp0                                     (abs)        007E
@@ -778,7 +875,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 86 in file "main.c"
+		line 99 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -798,19 +895,20 @@ FUNCTION INFORMATION:
       Temps:          0       1       0       0
       Totals:         0       1      67       0
 Total ram usage:       68 bytes
- Hardware stack levels required when called:    7
+ Hardware stack levels required when called:    8
  This function calls:
 		_Buttons_Clear
 		_Buttons_SetupPortsAndInterrups
 		_Buttons_Update
+		_DrawTetris
 		_LCD_Clear
 		_LCD_Reset
 		_LCD_SegmentSelection
 		_LCD_SetupPorts
 		_LCD_TurnOn
-		_RedrawTetrisOnLCD
 		_ResetTimer
 		_SetupOscillator
+		_SetupRandomness
 		_SetupTimer
 		_Tetris_GetRandomUnit
 		_Tetris_MovePlayerLeft
@@ -1721,7 +1819,7 @@ Total ram usage:        3 bytes
 
  *************** function _SetupTimer *****************
  Defined at:
-		line 49 in file "main.c"
+		line 56 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1749,9 +1847,216 @@ Total ram usage:        0 bytes
  This function uses a non-reentrant model
 
 
+ *************** function _SetupRandomness *****************
+ Defined at:
+		line 93 in file "main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		___eetoi
+		___itoee
+		_srand
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _srand *****************
+ Defined at:
+		line 6 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c"
+ Parameters:    Size  Location     Type
+  x               2    5[BANK0 ] unsigned int 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       2       0       0
+      Locals:         0       0       0       0
+      Temps:          0       0       0       0
+      Totals:         0       2       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_SetupRandomness
+ This function uses a non-reentrant model
+
+
+ *************** function ___itoee *****************
+ Defined at:
+		line 157 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c"
+ Parameters:    Size  Location     Type
+  addr            1    wreg     PTR eeprom void 
+		 -> uniqueSeed(2), 
+  data            2    5[BANK0 ] unsigned int 
+ Auto vars:     Size  Location     Type
+  addr            1    9[BANK0 ] PTR eeprom void 
+		 -> uniqueSeed(2), 
+ Return value:  Size  Location     Type
+                  2    5[BANK0 ] unsigned int 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       2       0       0
+      Locals:         0       1       0       0
+      Temps:          0       2       0       0
+      Totals:         0       5       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		___memcpyee
+ This function is called by:
+		_SetupRandomness
+ This function uses a non-reentrant model
+
+
+ *************** function ___memcpyee *****************
+ Defined at:
+		line 39 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c"
+ Parameters:    Size  Location     Type
+  to              1    wreg     PTR eeprom unsigned char
+		 -> uniqueSeed(2), 
+  from            1    3[COMMON] PTR const unsigned char 
+		 -> __fltoee@data(4), __fttoee@data(4), __otoee@data(4), __ltoee@data(4), 
+		 -> __mtoee@data(3), __itoee@data(2), __ctoee@data(1), 
+  size            1    4[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  to              1    7[COMMON] PTR eeprom unsigned char
+		 -> uniqueSeed(2), 
+  ptr             1    6[COMMON] PTR const unsigned char 
+		 -> __fltoee@data(4), __fttoee@data(4), __otoee@data(4), __ltoee@data(4), 
+		 -> __mtoee@data(3), __itoee@data(2), __ctoee@data(1), 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         2       0       0       0
+      Locals:         2       0       0       0
+      Temps:          1       0       0       0
+      Totals:         5       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		___itoee
+ This function uses a non-reentrant model
+
+
+ *************** function ___eetoi *****************
+ Defined at:
+		line 112 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c"
+ Parameters:    Size  Location     Type
+  addr            1    wreg     PTR eeprom void 
+		 -> uniqueSeed(2), 
+ Auto vars:     Size  Location     Type
+  addr            1    2[BANK0 ] PTR eeprom void 
+		 -> uniqueSeed(2), 
+  data            2    3[BANK0 ] unsigned int 
+ Return value:  Size  Location     Type
+                  2    8[COMMON] unsigned int 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         2       0       0       0
+      Locals:         0       3       0       0
+      Temps:          0       2       0       0
+      Totals:         2       5       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		___eecpymem
+ This function is called by:
+		_SetupRandomness
+ This function uses a non-reentrant model
+
+
+ *************** function ___eecpymem *****************
+ Defined at:
+		line 6 in file "C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c"
+ Parameters:    Size  Location     Type
+  to              1    wreg     PTR volatile unsigned ch
+		 -> __eetofl@data(4), __eetoft@data(4), __eetoo@data(4), __eetol@data(4), 
+		 -> __eetom@data(3), __eetoi@data(2), __eetoc@data(1), 
+  from            1    3[COMMON] PTR eeprom unsigned char
+		 -> uniqueSeed(2), 
+  size            1    4[COMMON] unsigned char 
+ Auto vars:     Size  Location     Type
+  to              1    7[COMMON] PTR volatile unsigned ch
+		 -> __eetofl@data(4), __eetoft@data(4), __eetoo@data(4), __eetol@data(4), 
+		 -> __eetom@data(3), __eetoi@data(2), __eetoc@data(1), 
+  cp              1    6[COMMON] PTR volatile unsigned ch
+		 -> __eetofl@data(4), __eetoft@data(4), __eetoo@data(4), __eetol@data(4), 
+		 -> __eetom@data(3), __eetoi@data(2), __eetoc@data(1), 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         2       0       0       0
+      Locals:         2       0       0       0
+      Temps:          1       0       0       0
+      Totals:         5       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		___eetoi
+ This function uses a non-reentrant model
+
+
  *************** function _SetupOscillator *****************
  Defined at:
-		line 40 in file "main.c"
+		line 47 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1781,7 +2086,7 @@ Total ram usage:        0 bytes
 
  *************** function _ResetTimer *****************
  Defined at:
-		line 59 in file "main.c"
+		line 66 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1806,80 +2111,6 @@ Total ram usage:        0 bytes
 		Nothing
  This function is called by:
 		_main
- This function uses a non-reentrant model
-
-
- *************** function _RedrawTetrisOnLCD *****************
- Defined at:
-		line 18 in file "Drawing.c"
- Parameters:    Size  Location     Type
-  tetrisGame      1    wreg     PTR struct .
-		 -> main@tetrisGame(63), 
- Auto vars:     Size  Location     Type
-  tetrisGame      1    4[BANK0 ] PTR struct .
-		 -> main@tetrisGame(63), 
-  i               1   12[BANK0 ] unsigned char 
-  gameRow         2   10[BANK0 ] unsigned int 
-  lcdRow          1   15[BANK0 ] unsigned char 
-  y               1   13[BANK0 ] unsigned char 
-  tableY          1    9[BANK0 ] unsigned char 
-  x               1   14[BANK0 ] unsigned char 
-  rightMask       2    7[BANK0 ] unsigned int 
-  leftMask        2    5[BANK0 ] unsigned int 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2
-      Params:         0       0       0       0
-      Locals:         0      12       0       0
-      Temps:          0       2       0       0
-      Totals:         0      14       0       0
-Total ram usage:       14 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    6
- This function calls:
-		_LCD_SegmentSelection
-		_LCD_SetX
-		_LCD_SetY
-		_LCD_WriteData
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _LCD_SegmentSelection *****************
- Defined at:
-		line 107 in file "LCD.c"
- Parameters:    Size  Location     Type
-  segments        1    wreg     enum E1292
- Auto vars:     Size  Location     Type
-  segments        1    3[COMMON] enum E1292
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK2
-      Params:         0       0       0       0
-      Locals:         1       0       0       0
-      Temps:          0       0       0       0
-      Totals:         1       0       0       0
-Total ram usage:        1 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    1
- This function calls:
-		Nothing
- This function is called by:
-		_main
-		_RedrawTetrisOnLCD
  This function uses a non-reentrant model
 
 
@@ -2038,6 +2269,84 @@ Total ram usage:        3 bytes
  This function uses a non-reentrant model
 
 
+ *************** function _DrawTetris *****************
+ Defined at:
+		line 53 in file "Drawing.c"
+ Parameters:    Size  Location     Type
+  tetrisGame      1    wreg     PTR struct .
+		 -> main@tetrisGame(63), 
+ Auto vars:     Size  Location     Type
+  tetrisGame      1   17[BANK0 ] PTR struct .
+		 -> main@tetrisGame(63), 
+  x               1   22[BANK0 ] unsigned char 
+  rightMask       2   20[BANK0 ] unsigned int 
+  leftMask        2   18[BANK0 ] unsigned int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         0       6       0       0
+      Temps:          0       1       0       0
+      Totals:         0       7       0       0
+Total ram usage:        7 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_DrawTetrisGameColumn
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _DrawTetrisGameColumn *****************
+ Defined at:
+		line 15 in file "Drawing.c"
+ Parameters:    Size  Location     Type
+  tetrisGame      1    wreg     PTR struct .
+		 -> main@tetrisGame(63), 
+  x               1    2[BANK0 ] unsigned char 
+  rightMask       2    3[BANK0 ] unsigned int 
+  leftMask        2    5[BANK0 ] unsigned int 
+ Auto vars:     Size  Location     Type
+  tetrisGame      1    9[BANK0 ] PTR struct .
+		 -> main@tetrisGame(63), 
+  i               1   13[BANK0 ] unsigned char 
+  gameRow         2   11[BANK0 ] unsigned int 
+  lcdRow          1   15[BANK0 ] unsigned char 
+  y               1   14[BANK0 ] unsigned char 
+  tableY          1   10[BANK0 ] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       5       0       0
+      Locals:         0       7       0       0
+      Temps:          0       2       0       0
+      Totals:         0      14       0       0
+Total ram usage:       14 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_LCD_SegmentSelection
+		_LCD_SetX
+		_LCD_SetY
+		_LCD_WriteData
+ This function is called by:
+		_DrawTetris
+ This function uses a non-reentrant model
+
+
  *************** function _LCD_WriteData *****************
  Defined at:
 		line 102 in file "LCD.c"
@@ -2065,7 +2374,8 @@ Total ram usage:        2 bytes
 		_LCD_Write
  This function is called by:
 		_LCD_Clear
-		_RedrawTetrisOnLCD
+		_DrawTetrisGameColumn
+		_DrawLogo
  This function uses a non-reentrant model
 
 
@@ -2097,7 +2407,7 @@ Total ram usage:        2 bytes
  This function is called by:
 		_LCD_Reset
 		_LCD_Clear
-		_RedrawTetrisOnLCD
+		_DrawTetrisGameColumn
  This function uses a non-reentrant model
 
 
@@ -2129,7 +2439,7 @@ Total ram usage:        2 bytes
  This function is called by:
 		_LCD_Reset
 		_LCD_Clear
-		_RedrawTetrisOnLCD
+		_DrawTetrisGameColumn
  This function uses a non-reentrant model
 
 
@@ -2257,6 +2567,38 @@ Total ram usage:        2 bytes
 		Nothing
  This function is called by:
 		_LCD_IsBusy
+ This function uses a non-reentrant model
+
+
+ *************** function _LCD_SegmentSelection *****************
+ Defined at:
+		line 107 in file "LCD.c"
+ Parameters:    Size  Location     Type
+  segments        1    wreg     enum E1292
+ Auto vars:     Size  Location     Type
+  segments        1    3[COMMON] enum E1292
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2
+      Params:         0       0       0       0
+      Locals:         1       0       0       0
+      Temps:          0       0       0       0
+      Totals:         1       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+		_DrawTetrisGameColumn
+		_DrawLogo
  This function uses a non-reentrant model
 
 
@@ -2487,7 +2829,7 @@ Total ram usage:        7 bytes
 
  *************** function _InterruptHandler *****************
  Defined at:
-		line 64 in file "main.c"
+		line 71 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -2519,107 +2861,119 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 ../Tetris/Tetris.c
-		_Tetris_ApplyPlayerToTable		CODE           	0425	0000	101
-		_Tetris_UpdateGame		CODE           	0586	0000	77
-		_Tetris_PlayerTouchingRightBound		CODE           	0F18	0000	31
-		_Tetris_MovePlayerRight		CODE           	0489	0000	90
-		_Tetris_RemovePlayerFromTable		CODE           	0754	0000	55
-		_Tetris_RotatePlayer		CODE           	034D	0000	113
-		_Tetris_ClearFilledRows		CODE           	078A	0000	50
-		_Tetris_ScoreForRowsCleared		CODE           	00A7	0000	36
-		_Tetris_ShiftTableDown		CODE           	0617	0000	68
-		_Tetris_UpdatePlayerUnitBits		CODE           	02B2	0000	156
-		_Tetris_ResetPlayer		CODE           	0FBA	0000	36
-		_Tetris_MovePlayerDown		CODE           	07BB	0000	49
-		_Tetris_PlayerOverlapsEnvironment		CODE           	06DC	0000	66
-		_Tetris_GetRandomUnit		CODE           	0057	0000	44
-		_Tetris_PlayerTopmostY		CODE           	07EB	0000	19
-		_Tetris_SetPlayerUnit		CODE           	00ED	0000	17
-		_Tetris_PlayerUnitBitsAreValid		CODE           	071D	0000	56
-		_Tetris_CountUnitBits		CODE           	069B	0000	66
-		_Tetris_MovePlayerLeft		CODE           	04E2	0000	88
-		_Tetris_PlayerTouchingLeftBound		CODE           	0EFA	0000	31
-		_Tetris_ResetGame		CODE           	0F36	0000	32
+		_Tetris_ApplyPlayerToTable		CODE           	0096	0000	101
+		_Tetris_UpdateGame		CODE           	0F10	0000	77
+		_Tetris_PlayerTouchingRightBound		CODE           	0A8B	0000	31
+		_Tetris_MovePlayerRight		CODE           	079E	0000	90
+		_Tetris_RemovePlayerFromTable		CODE           	0D17	0000	55
+		_Tetris_RotatePlayer		CODE           	072E	0000	113
+		_Tetris_ClearFilledRows		CODE           	0CB1	0000	50
+		_Tetris_ScoreForRowsCleared		CODE           	0BB5	0000	36
+		_Tetris_ShiftTableDown		CODE           	0E88	0000	68
+		_Tetris_UpdatePlayerUnitBits		CODE           	0604	0000	156
+		_Tetris_ResetPlayer		CODE           	0B4C	0000	36
+		_Tetris_MovePlayerDown		CODE           	0C81	0000	49
+		_Tetris_PlayerOverlapsEnvironment		CODE           	0DC5	0000	66
+		_Tetris_GetRandomUnit		CODE           	0BFD	0000	44
+		_Tetris_PlayerTopmostY		CODE           	09F8	0000	19
+		_Tetris_SetPlayerUnit		CODE           	09E8	0000	17
+		_Tetris_PlayerUnitBitsAreValid		CODE           	0D4D	0000	56
+		_Tetris_CountUnitBits		CODE           	0E06	0000	66
+		_Tetris_MovePlayerLeft		CODE           	0FA9	0000	88
+		_Tetris_PlayerTouchingLeftBound		CODE           	0A6D	0000	31
+		_Tetris_ResetGame		CODE           	0AC8	0000	32
 
 ../Tetris/Tetris.c estimated size: 1281
 
 Drawing.c
-		_RedrawTetrisOnLCD		CODE           	0204	0000	175
+		_DrawTetrisGameColumn		CODE           	069F	0000	144
+		_DrawTetris    		CODE           	0CE2	0000	54
 
-Drawing.c estimated size: 175
+Drawing.c estimated size: 198
 
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-		___awmod       		CODE           	0539	0000	78
+		___awmod       		CODE           	0F5C	0000	78
 
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c estimated size: 78
 
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-		___wmul        		CODE           	00CA	0000	36
+		___wmul        		CODE           	0B92	0000	36
 
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c estimated size: 36
 
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
-		___lbmod       		CODE           	0FDD	0000	36
+		___lbmod       		CODE           	0B6F	0000	36
 
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c estimated size: 36
 
 Buttons.c
-		_Buttons_SetupPortB		CODE           	0E63	0000	14
-		_Buttons_SetupInterrupts		CODE           	0E06	0000	7
-		_Buttons_UpdateButton		CODE           	0F76	0000	34
-		_Buttons_Clear 		CODE           	0E70	0000	15
-		_Buttons_Update		CODE           	002B	0000	45
-		_Buttons_SetupPortsAndInterrups		CODE           	0E0C	0000	7
+		_Buttons_SetupPortB		CODE           	0990	0000	14
+		_Buttons_SetupInterrupts		CODE           	0939	0000	7
+		_Buttons_UpdateButton		CODE           	0B08	0000	34
+		_Buttons_Clear 		CODE           	099D	0000	15
+		_Buttons_Update		CODE           	0C28	0000	45
+		_Buttons_SetupPortsAndInterrups		CODE           	093F	0000	7
 
 Buttons.c estimated size: 122
 
-shared
-		_Tetris_unitPivot		STRCODE        	0114	0000	3
-		__stringtab    		STRCODE        	0100	0000	19
-		_Tetris_playerStartingPosition		STRCODE        	0112	0000	3
-		__initialization		CODE           	000D	0000	28
-		_Tetris_units  		STRCODE        	0116	0000	239
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+		___memcpyee    		CODE           	0D84	0000	66
+		___eetoi       		CODE           	0A0A	0000	22
+		___itoee       		CODE           	09B9	0000	16
+		___eecpymem    		CODE           	0C54	0000	46
 
-shared estimated size: 292
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c estimated size: 150
+
+shared
+		_Tetris_unitPivot		STRCODE        	0514	0000	3
+		__stringtab    		STRCODE        	0100	0000	19
+		_logoImage     		STRCODE        	0112	0000	1025
+		_Tetris_playerStartingPosition		STRCODE        	0512	0000	3
+		__initialization		CODE           	000D	0000	28
+		_Tetris_units  		STRCODE        	0516	0000	239
+
+shared estimated size: 1317
 
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
-		___lmul        		CODE           	065A	0000	66
+		___lmul        		CODE           	0E47	0000	66
 
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c estimated size: 66
 
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
-		_rand          		CODE           	05D2	0000	70
+		_srand         		CODE           	07F7	0000	10
+		_rand          		CODE           	0ECB	0000	70
 
-C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c estimated size: 70
+C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c estimated size: 80
 
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
-		_memset        		CODE           	0EDE	0000	29
+		_memset        		CODE           	0A51	0000	29
 
 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c estimated size: 29
 
 main.c
-		_main          		CODE           	03BD	0000	105
-		_SetupOscillator		CODE           	0E12	0000	7
-		_InterruptHandler		CODE           	0F55	0000	34
-		_SetupTimer    		CODE           	0E34	0000	12
-		_ResetTimer    		CODE           	0E01	0000	6
+		_main          		CODE           	002B	0000	108
+		_SetupOscillator		CODE           	00FA	0000	7
+		_InterruptHandler		CODE           	0AE7	0000	34
+		_SetupTimer    		CODE           	0961	0000	12
+		_ResetTimer    		CODE           	0934	0000	6
+		_SetupRandomness		CODE           	0AA9	0000	32
 
-main.c estimated size: 164
+main.c estimated size: 199
 
 LCD.c
-		_LCD_SegmentSelection		CODE           	0E9C	0000	17
-		_LCD_BlockWhileBusy		CODE           	0E18	0000	8
-		_LCD_SetX      		CODE           	0E3F	0000	13
-		_LCD_SetY      		CODE           	0E4B	0000	13
-		_LCD_SetZ      		CODE           	0E57	0000	13
-		_LCD_ReadStatus		CODE           	0E8C	0000	17
-		_LCD_Reset     		CODE           	0EAC	0000	24
-		_LCD_SetupPorts		CODE           	0F97	0000	36
-		_LCD_TurnOn    		CODE           	0E1F	0000	11
-		_LCD_Clear     		CODE           	0082	0000	38
-		_LCD_Write     		CODE           	0EC3	0000	28
-		_LCD_IsBusy    		CODE           	0E7E	0000	15
-		_LCD_WriteData 		CODE           	0E29	0000	12
+		_LCD_SegmentSelection		CODE           	09C8	0000	17
+		_LCD_BlockWhileBusy		CODE           	0945	0000	8
+		_LCD_SetX      		CODE           	096C	0000	13
+		_LCD_SetY      		CODE           	0978	0000	13
+		_LCD_SetZ      		CODE           	0984	0000	13
+		_LCD_ReadStatus		CODE           	09D8	0000	17
+		_LCD_Reset     		CODE           	0A1F	0000	24
+		_LCD_SetupPorts		CODE           	0B29	0000	36
+		_LCD_TurnOn    		CODE           	094C	0000	11
+		_LCD_Clear     		CODE           	0BD8	0000	38
+		_LCD_Write     		CODE           	0A36	0000	28
+		_LCD_IsBusy    		CODE           	09AB	0000	15
+		_LCD_WriteData 		CODE           	0956	0000	12
 
 LCD.c estimated size: 245
 

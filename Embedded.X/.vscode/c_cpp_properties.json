@@ -26,7 +26,7 @@
                 "__16F884__",
                 "_MPC_",
                 "_PIC14",
-                "__attribute__()="
+                "DO_MAKE_COMPATIBLE"
             ],
             "windowsSdkVersion": "10.0.17763.0",
             "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.20.27508/bin/Hostx64/x64/cl.exe",

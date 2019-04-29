@@ -2750,7 +2750,15 @@ extern void Buttons_Update(Buttons *buttons);
 
 
 
-extern void RedrawTetrisOnLCD(Tetris_Game *tetrisGame);
+extern void DrawTetris(Tetris_Game *tetrisGame);
+
+extern void DrawScore(uint16_t score);
+
+extern void DrawHighscore(uint16_t highscore);
+
+extern void DrawPause(void);
+
+extern void DrawLogo(void);
 # 21 "main.c" 2
 
 # 1 "./LCD.h" 1
@@ -2804,6 +2812,107 @@ extern void LCD_Clear(void);
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdint.h" 1 3
 # 24 "main.c" 2
 
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdlib.h" 1 3
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\__size_t.h" 1 3
+
+
+
+typedef unsigned size_t;
+# 5 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdlib.h" 2 3
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\__null.h" 1 3
+# 6 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdlib.h" 2 3
+
+typedef unsigned short wchar_t;
+
+
+
+
+
+
+
+typedef struct {
+ int rem;
+ int quot;
+} div_t;
+typedef struct {
+ unsigned rem;
+ unsigned quot;
+} udiv_t;
+typedef struct {
+ long quot;
+ long rem;
+} ldiv_t;
+typedef struct {
+ unsigned long quot;
+ unsigned long rem;
+} uldiv_t;
+# 65 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdlib.h" 3
+extern double atof(const char *);
+extern double strtod(const char *, const char **);
+extern int atoi(const char *);
+extern unsigned xtoi(const char *);
+extern long atol(const char *);
+
+
+
+extern long strtol(const char *, char **, int);
+
+extern int rand(void);
+extern void srand(unsigned int);
+extern void * calloc(size_t, size_t);
+extern div_t div(int numer, int denom);
+extern udiv_t udiv(unsigned numer, unsigned denom);
+extern ldiv_t ldiv(long numer, long denom);
+extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
+
+
+
+extern unsigned long _lrotl(unsigned long value, unsigned int shift);
+extern unsigned long _lrotr(unsigned long value, unsigned int shift);
+extern unsigned int _rotl(unsigned int value, unsigned int shift);
+extern unsigned int _rotr(unsigned int value, unsigned int shift);
+
+
+
+
+extern void * malloc(size_t);
+extern void free(void *);
+extern void * realloc(void *, size_t);
+# 104 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdlib.h" 3
+extern int atexit(void (*)(void));
+extern char * getenv(const char *);
+extern char ** environ;
+extern int system(char *);
+extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
+extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
+extern int abs(int);
+extern long labs(long);
+
+extern char * itoa(char * buf, int val, int base);
+extern char * utoa(char * buf, unsigned val, int base);
+
+
+
+
+extern char * ltoa(char * buf, long val, int base);
+extern char * ultoa(char * buf, unsigned long val, int base);
+
+extern char * ftoa(float f, int * status);
+# 25 "main.c" 2
+
+
+# 1 "./Compatibility.h" 1
+# 27 "main.c" 2
+
+
+__eeprom uint8_t highscore = 0;
+
+__eeprom uint16_t uniqueSeed = 0;
 
 enum
 {
@@ -2865,11 +2974,18 @@ static void __attribute__((picinterrupt(("")))) InterruptHandler(void)
     }
 }
 
+static void SetupRandomness(void)
+{
+    srand(uniqueSeed);
+    ++uniqueSeed;
+}
+
 void main(void)
 {
 
 
     SetupOscillator();
+    SetupRandomness();
 
     Buttons_SetupPortsAndInterrups();
 
@@ -2913,7 +3029,7 @@ void main(void)
                     break;
             }
 
-            RedrawTetrisOnLCD(&tetrisGame);
+            DrawTetris(&tetrisGame);
         }
     }
 }
