@@ -3,5 +3,6 @@ main.c  \
 ../Tetris/Tetris.h  \
 Buttons.h  \
 Drawing.h  \
-LCD.h  \
-Compatibility.h 
+Frequency.h  \
+Compatibility.h  \
+LCD.h 

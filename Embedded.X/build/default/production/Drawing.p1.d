@@ -3,6 +3,7 @@ Drawing.c  \
 Drawing.h  \
 ../Tetris/Tetris.h  \
 LCD.h  \
-LogoImage.h  \
+Font.h  \
 Digits.h  \
-Compatibility.h 
+Compatibility.h  \
+Frequency.h 

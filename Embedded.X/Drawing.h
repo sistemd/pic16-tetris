@@ -4,10 +4,8 @@
 
 extern void DrawTetris(Tetris_Game *tetrisGame);
 
-extern void DrawScore(uint16_t score);
+extern void DrawCurrentScore(Tetris_Game *tetrisGame);
 
 extern void DrawHighscore(uint16_t highscore);
 
-extern void DrawPause(void);
-
-extern void DrawLogo(void);
+extern void FlashVictoriously(void);

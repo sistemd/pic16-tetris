@@ -1,25 +1,22 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"1478 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
-[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
-"3449
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3449: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
-[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
-"2346
+"2346 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 2346: extern volatile unsigned char WPUB __attribute__((address(0x095)));
 [v _WPUB `Vuc ~T0 @X0 0 e@149 ]
 "4664
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 4664: extern volatile __bit nRBPU __attribute__((address(0x40F)));
 [v _nRBPU `Vb ~T0 @X0 0 e@1039 ]
-"3896
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3896: extern volatile __bit GIE __attribute__((address(0x5F)));
-[v _GIE `Vb ~T0 @X0 0 e@95 ]
-"3923
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3923: extern volatile __bit INTE __attribute__((address(0x5C)));
-[v _INTE `Vb ~T0 @X0 0 e@92 ]
+"3449
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3449: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
+[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"1478
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
 "3926
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3926: extern volatile __bit INTEDG __attribute__((address(0x40E)));
 [v _INTEDG `Vb ~T0 @X0 0 e@1038 ]
+"3923
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3923: extern volatile __bit INTE __attribute__((address(0x5C)));
+[v _INTE `Vb ~T0 @X0 0 e@92 ]
 "5 ./Buttons.h
 [; ;./Buttons.h: 5: typedef struct {
 [s S138 :1 `uc 1 :1 `uc 1 ]
@@ -286,17 +283,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _Buttons_SetupPortB ]
 [f ]
 "13
-[; ;Buttons.c: 13:     TRISB = 0xFF;
-[e = _TRISB -> -> 255 `i `uc ]
-"14
-[; ;Buttons.c: 14:     ANSELH = 0;
-[e = _ANSELH -> -> 0 `i `uc ]
-"15
-[; ;Buttons.c: 15:     WPUB = 0b00011111;
+[; ;Buttons.c: 13:     WPUB = 0b00011111;
 [e = _WPUB -> -> 31 `i `uc ]
-"16
-[; ;Buttons.c: 16:     nRBPU = 0;
+"14
+[; ;Buttons.c: 14:     nRBPU = 0;
 [e = _nRBPU -> -> 0 `i `b ]
+"15
+[; ;Buttons.c: 15:     ANSELH = 0;
+[e = _ANSELH -> -> 0 `i `uc ]
+"16
+[; ;Buttons.c: 16:     TRISB = 0xFF;
+[e = _TRISB -> -> 255 `i `uc ]
 "17
 [; ;Buttons.c: 17: }
 [e :UE 140 ]
@@ -310,132 +307,129 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _Buttons_SetupInterrupts ]
 [f ]
 "21
-[; ;Buttons.c: 21:     GIE = 1;
-[e = _GIE -> -> 1 `i `b ]
+[; ;Buttons.c: 21:     INTEDG = 0;
+[e = _INTEDG -> -> 0 `i `b ]
 "22
 [; ;Buttons.c: 22:     INTE = 1;
 [e = _INTE -> -> 1 `i `b ]
 "23
-[; ;Buttons.c: 23:     INTEDG = 0;
-[e = _INTEDG -> -> 0 `i `b ]
-"24
-[; ;Buttons.c: 24: }
+[; ;Buttons.c: 23: }
 [e :UE 141 ]
 }
-"26
-[; ;Buttons.c: 26: static void Buttons_UpdateButton(Button *button, uint8_t nHeld)
+"25
+[; ;Buttons.c: 25: static void Buttons_UpdateButton(Button *button, uint8_t nHeld)
 [v _Buttons_UpdateButton `(v ~T0 @X0 1 sf2`*S138`uc ]
-"27
-[; ;Buttons.c: 27: {
+"26
+[; ;Buttons.c: 26: {
 {
 [e :U _Buttons_UpdateButton ]
-"26
-[; ;Buttons.c: 26: static void Buttons_UpdateButton(Button *button, uint8_t nHeld)
+"25
+[; ;Buttons.c: 25: static void Buttons_UpdateButton(Button *button, uint8_t nHeld)
 [v _button `*S138 ~T0 @X0 1 r1 ]
 [v _nHeld `uc ~T0 @X0 1 r2 ]
-"27
-[; ;Buttons.c: 27: {
+"26
+[; ;Buttons.c: 26: {
 [f ]
-"28
-[; ;Buttons.c: 28:     if (!nHeld)
+"27
+[; ;Buttons.c: 27:     if (!nHeld)
 [e $ ! ! != -> _nHeld `i -> 0 `i 143  ]
-"29
-[; ;Buttons.c: 29:     {
+"28
+[; ;Buttons.c: 28:     {
 {
-"30
-[; ;Buttons.c: 30:         button->pressed = !button->held;
+"29
+[; ;Buttons.c: 29:         button->pressed = !button->held;
 [e = . *U _button 0 -> -> ! != -> . *U _button 1 `i -> 0 `i `i `uc ]
-"31
-[; ;Buttons.c: 31:         button->held = 1;
+"30
+[; ;Buttons.c: 30:         button->held = 1;
 [e = . *U _button 1 -> -> 1 `i `uc ]
-"32
-[; ;Buttons.c: 32:     }
+"31
+[; ;Buttons.c: 31:     }
 }
 [e $U 144  ]
-"33
-[; ;Buttons.c: 33:     else
+"32
+[; ;Buttons.c: 32:     else
 [e :U 143 ]
-"34
-[; ;Buttons.c: 34:     {
+"33
+[; ;Buttons.c: 33:     {
 {
-"35
-[; ;Buttons.c: 35:         button->pressed = 0;
+"34
+[; ;Buttons.c: 34:         button->pressed = 0;
 [e = . *U _button 0 -> -> 0 `i `uc ]
-"36
-[; ;Buttons.c: 36:         button->held = 0;
+"35
+[; ;Buttons.c: 35:         button->held = 0;
 [e = . *U _button 1 -> -> 0 `i `uc ]
-"37
-[; ;Buttons.c: 37:     }
+"36
+[; ;Buttons.c: 36:     }
 }
 [e :U 144 ]
-"38
-[; ;Buttons.c: 38: }
+"37
+[; ;Buttons.c: 37: }
 [e :UE 142 ]
 }
+"39
+[; ;Buttons.c: 39: void Buttons_Setup(void)
+[v _Buttons_Setup `(v ~T0 @X0 1 ef ]
 "40
-[; ;Buttons.c: 40: void Buttons_SetupPortsAndInterrups(void)
-[v _Buttons_SetupPortsAndInterrups `(v ~T0 @X0 1 ef ]
-"41
-[; ;Buttons.c: 41: {
+[; ;Buttons.c: 40: {
 {
-[e :U _Buttons_SetupPortsAndInterrups ]
+[e :U _Buttons_Setup ]
 [f ]
-"42
-[; ;Buttons.c: 42:     Buttons_SetupPortB();
+"41
+[; ;Buttons.c: 41:     Buttons_SetupPortB();
 [e ( _Buttons_SetupPortB ..  ]
-"43
-[; ;Buttons.c: 43:     Buttons_SetupInterrupts();
+"42
+[; ;Buttons.c: 42:     Buttons_SetupInterrupts();
 [e ( _Buttons_SetupInterrupts ..  ]
-"44
-[; ;Buttons.c: 44: }
+"43
+[; ;Buttons.c: 43: }
 [e :UE 145 ]
 }
-"46
-[; ;Buttons.c: 46: void Buttons_Clear(Buttons *buttons)
+"45
+[; ;Buttons.c: 45: void Buttons_Clear(Buttons *buttons)
 [v _Buttons_Clear `(v ~T0 @X0 1 ef1`*S139 ]
-"47
-[; ;Buttons.c: 47: {
+"46
+[; ;Buttons.c: 46: {
 {
 [e :U _Buttons_Clear ]
-"46
-[; ;Buttons.c: 46: void Buttons_Clear(Buttons *buttons)
+"45
+[; ;Buttons.c: 45: void Buttons_Clear(Buttons *buttons)
 [v _buttons `*S139 ~T0 @X0 1 r1 ]
-"47
-[; ;Buttons.c: 47: {
+"46
+[; ;Buttons.c: 46: {
 [f ]
-"48
-[; ;Buttons.c: 48:     memset(buttons, 0, sizeof *buttons);
+"47
+[; ;Buttons.c: 47:     memset(buttons, 0, sizeof *buttons);
 [e ( _memset (3 , , -> _buttons `*v -> 0 `i -> # *U _buttons `ui ]
-"49
-[; ;Buttons.c: 49: }
+"48
+[; ;Buttons.c: 48: }
 [e :UE 146 ]
 }
-"51
-[; ;Buttons.c: 51: void Buttons_Update(Buttons *buttons)
+"50
+[; ;Buttons.c: 50: void Buttons_Update(Buttons *buttons)
 [v _Buttons_Update `(v ~T0 @X0 1 ef1`*S139 ]
-"52
-[; ;Buttons.c: 52: {
+"51
+[; ;Buttons.c: 51: {
 {
 [e :U _Buttons_Update ]
-"51
-[; ;Buttons.c: 51: void Buttons_Update(Buttons *buttons)
+"50
+[; ;Buttons.c: 50: void Buttons_Update(Buttons *buttons)
 [v _buttons `*S139 ~T0 @X0 1 r1 ]
-"52
-[; ;Buttons.c: 52: {
+"51
+[; ;Buttons.c: 51: {
 [f ]
-"53
-[; ;Buttons.c: 53:     Buttons_UpdateButton(&buttons->left, RB2);
+"52
+[; ;Buttons.c: 52:     Buttons_UpdateButton(&buttons->left, RB2);
 [e ( _Buttons_UpdateButton (2 , &U . *U _buttons 0 -> _RB2 `uc ]
-"54
-[; ;Buttons.c: 54:     Buttons_UpdateButton(&buttons->right, RB3);
+"53
+[; ;Buttons.c: 53:     Buttons_UpdateButton(&buttons->right, RB3);
 [e ( _Buttons_UpdateButton (2 , &U . *U _buttons 1 -> _RB3 `uc ]
-"55
-[; ;Buttons.c: 55:     Buttons_UpdateButton(&buttons->down, RB4);
+"54
+[; ;Buttons.c: 54:     Buttons_UpdateButton(&buttons->down, RB4);
 [e ( _Buttons_UpdateButton (2 , &U . *U _buttons 2 -> _RB4 `uc ]
-"56
-[; ;Buttons.c: 56:     Buttons_UpdateButton(&buttons->rotate, RB1);
+"55
+[; ;Buttons.c: 55:     Buttons_UpdateButton(&buttons->rotate, RB1);
 [e ( _Buttons_UpdateButton (2 , &U . *U _buttons 3 -> _RB1 `uc ]
-"57
-[; ;Buttons.c: 57: }
+"56
+[; ;Buttons.c: 56: }
 [e :UE 147 ]
 }

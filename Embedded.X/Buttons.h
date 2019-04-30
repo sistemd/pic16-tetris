@@ -14,7 +14,7 @@ typedef struct {
     Button rotate;
 } Buttons;
 
-extern void Buttons_SetupPortsAndInterrups(void);
+extern void Buttons_Setup(void);
 
 extern void Buttons_Clear(Buttons *buttons);
 

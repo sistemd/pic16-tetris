@@ -4,35 +4,35 @@
 
 enum
 {
-	TETRIS_MAX_ROTATIONS = 4,
+    TETRIS_MAX_ROTATIONS = 4,
 };
 
 typedef enum {
-	TETRIS_TABLE_WIDTH = 16,
-	TETRIS_TABLE_HEIGHT = 24,
+    TETRIS_TABLE_WIDTH = 16,
+    TETRIS_TABLE_HEIGHT = 24,
 } Tetris_TableSize;
 
 typedef enum
 {
-	TETRIS_UNIT_HEIGHT = 4,
+    TETRIS_UNIT_HEIGHT = 4,
 } Tetris_UnitSize;
 
 typedef struct {
-	uint8_t x;
-	uint8_t y;
+    uint8_t x;
+    uint8_t y;
 } Position;
 
 typedef struct {
-	char designator;
-	uint8_t numRotations;
-	uint16_t bits[TETRIS_UNIT_HEIGHT][TETRIS_MAX_ROTATIONS];
+    char designator;
+    uint8_t numRotations;
+    uint16_t bits[TETRIS_UNIT_HEIGHT][TETRIS_MAX_ROTATIONS];
 } Tetris_Unit;
 
 typedef struct {
-	Position position;
-	const Tetris_Unit *unit;
-	uint16_t unitBits[TETRIS_UNIT_HEIGHT];
-	uint8_t rotation;
+    Position position;
+    const Tetris_Unit *unit;
+    uint16_t unitBits[TETRIS_UNIT_HEIGHT];
+    uint8_t rotation;
 } Tetris_Player;
 /*
   unitBits is kept in sync with position.x and allows for
@@ -40,14 +40,15 @@ typedef struct {
 */
 
 typedef struct {
-	uint16_t table[TETRIS_TABLE_HEIGHT];
-	Tetris_Player player;
-	uint16_t currentScore;
+    uint16_t table[TETRIS_TABLE_HEIGHT];
+    Tetris_Player player;
+    uint16_t currentScore;
 } Tetris_Game;
 
 typedef enum {
-	TETRIS_GAME_OVER,
-	TETRIS_GAME_CONTINUES,
+    TETRIS_GAME_OVER,
+    TETRIS_GAME_CONTINUES,
+    TETRIS_PLAYER_SCORED,
 } Tetris_GameState;
 
 extern const Tetris_Unit *Tetris_GetRandomUnit(void);

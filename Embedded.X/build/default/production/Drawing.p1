@@ -1,8 +1,17 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "13 ./Digits.h
 [; ;./Digits.h: 13:     uint8_t i = NUM_DIGITS - 1;
-[c E1383 5 .. ]
-[n E1383 . NUM_DIGITS  ]
+[c E1390 5 .. ]
+[n E1390 . NUM_DIGITS  ]
+"3956 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3956: extern volatile __bit IRCF0 __attribute__((address(0x47C)));
+[v _IRCF0 `Vb ~T0 @X0 0 e@1148 ]
+"3959
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3959: extern volatile __bit IRCF1 __attribute__((address(0x47D)));
+[v _IRCF1 `Vb ~T0 @X0 0 e@1149 ]
+"3962
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3962: extern volatile __bit IRCF2 __attribute__((address(0x47E)));
+[v _IRCF2 `Vb ~T0 @X0 0 e@1150 ]
 "20 ../Tetris\Tetris.h
 [; ;../Tetris\Tetris.h: 20: typedef struct {
 [s S1 `uc 1 `uc 1 ]
@@ -20,8 +29,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../Tetris\Tetris.h: 42: typedef struct {
 [s S4 `ui -> 24 `i `S3 1 `ui 1 ]
 [n S4 . table player currentScore ]
-"21 Drawing.c
-[; ;Drawing.c: 21:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
+"19 Drawing.c
+[; ;Drawing.c: 19:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
 [c E1352 0 1 2 3 .. ]
 [n E1352 . LCD_NO_SEGMENT LCD_BOTTOM_SEGMENT LCD_TOP_SEGMENT LCD_BOTH_SEGMENTS  ]
 "30 ./LCD.h
@@ -30,24 +39,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36
 [; ;./LCD.h: 36: extern void LCD_SetY(uint8_t y);
 [v _LCD_SetY `(v ~T0 @X0 0 ef1`uc ]
-"22 Drawing.c
-[; ;Drawing.c: 22:     LCD_SetY(SCORE_SPACE);
-[c E1392 8 .. ]
-[n E1392 . SCORE_SPACE  ]
+"20 Drawing.c
+[; ;Drawing.c: 20:     LCD_SetY(FONT_HEIGHT);
+[c E1381 4 8 .. ]
+[n E1381 . FONT_WIDTH FONT_HEIGHT  ]
 "38 ./LCD.h
 [; ;./LCD.h: 38: extern void LCD_SetX(uint8_t x);
 [v _LCD_SetX `(v ~T0 @X0 0 ef1`uc ]
-"25 Drawing.c
-[; ;Drawing.c: 25:     for (uint8_t y = SCORE_SPACE; y < LCD_HEIGHT; y += GAME_PIXEL_HEIGHT)
+"23 Drawing.c
+[; ;Drawing.c: 23:     for (uint8_t y = FONT_HEIGHT; y < LCD_HEIGHT; y += GAME_PIXEL_HEIGHT)
 [c E1358 64 128 8 64 .. ]
 [n E1358 . LCD_WIDTH LCD_HEIGHT LCD_NUM_PAGES LCD_SEGMENT_HEIGHT  ]
 "28 ./LCD.h
 [; ;./LCD.h: 28: extern void LCD_WriteData(uint8_t data);
 [v _LCD_WriteData `(v ~T0 @X0 0 ef1`uc ]
-"47 Drawing.c
-[; ;Drawing.c: 47:             for (uint8_t i = 0; i < GAME_PIXEL_HEIGHT; ++i)
-[c E1394 4 5 .. ]
-[n E1394 . GAME_PIXEL_WIDTH GAME_PIXEL_HEIGHT  ]
+"45 Drawing.c
+[; ;Drawing.c: 45:             for (uint8_t i = 0; i < GAME_PIXEL_HEIGHT; ++i)
+[c E1401 4 5 .. ]
+[n E1401 . GAME_PIXEL_WIDTH GAME_PIXEL_HEIGHT  ]
+"42 ./LCD.h
+[; ;./LCD.h: 42: extern void LCD_Clear(void);
+[v _LCD_Clear `(v ~T0 @X0 0 ef ]
+"173 Drawing.c
+[; ;Drawing.c: 173:     for (uint8_t i = 0; i < NUM_FLASHES; ++i)
+[c E1457 6 600 .. ]
+[n E1457 . NUM_FLASHES FLASH_DELAY  ]
+[v F1344 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
+[v __delay `JF1344 ~T0 @X0 0 e ]
+[p i __delay ]
+"34 ./LCD.h
+[; ;./LCD.h: 34: extern void LCD_TurnOff(void);
+[v _LCD_TurnOff `(v ~T0 @X0 0 ef ]
+"32
+[; ;./LCD.h: 32: extern void LCD_TurnOn(void);
+[v _LCD_TurnOn `(v ~T0 @X0 0 ef ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -282,546 +308,171 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-[v F1382 `Cuc ~T0 @X0 -> 64 `i t ]
-"5 ./LogoImage.h
-[; ;./LogoImage.h: 5: static const uint8_t logoImage[8][64] = {
-[v _logoImage `F1382 ~T0 @X0 -> 8 `i s ]
-[i _logoImage
+[v F1386 `Cuc ~T0 @X0 -> 8 `i t ]
+"8 ./Font.h
+[; ;./Font.h: 8: static const uint8_t Font_digits[10][FONT_HEIGHT] = {
+[v _Font_digits `F1386 ~T0 @X0 -> 10 `i s ]
+[i _Font_digits
 :U ..
 :U ..
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
+-> -> 112 `i `uc
+-> -> 80 `i `uc
+-> -> 80 `i `uc
+-> -> 80 `i `uc
+-> -> 80 `i `uc
+-> -> 112 `i `uc
 -> -> 0 `i `uc
 ..
 :U ..
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
+-> -> 32 `i `uc
+-> -> 96 `i `uc
+-> -> 32 `i `uc
+-> -> 32 `i `uc
+-> -> 32 `i `uc
+-> -> 32 `i `uc
 -> -> 0 `i `uc
 ..
 :U ..
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 4 `i `uc
--> -> 24 `i `uc
--> -> 224 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 56 `i `uc
--> -> 248 `i `uc
--> -> 240 `i `uc
--> -> 192 `i `uc
--> -> 0 `i `uc
--> -> 224 `i `uc
--> -> 224 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 254 `i `uc
--> -> 254 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 255 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
+-> -> 32 `i `uc
+-> -> 80 `i `uc
+-> -> 16 `i `uc
+-> -> 32 `i `uc
+-> -> 64 `i `uc
+-> -> 112 `i `uc
 -> -> 0 `i `uc
 ..
 :U ..
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 30 `i `uc
--> -> 224 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 243 `i `uc
--> -> 243 `i `uc
--> -> 131 `i `uc
--> -> 131 `i `uc
--> -> 131 `i `uc
--> -> 195 `i `uc
--> -> 251 `i `uc
--> -> 123 `i `uc
--> -> 3 `i `uc
--> -> 3 `i `uc
--> -> 3 `i `uc
--> -> 224 `i `uc
--> -> 248 `i `uc
--> -> 0 `i `uc
--> -> 3 `i `uc
--> -> 252 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
-..
-:U ..
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 7 `i `uc
--> -> 248 `i `uc
--> -> 124 `i `uc
--> -> 60 `i `uc
--> -> 57 `i `uc
--> -> 57 `i `uc
--> -> 57 `i `uc
--> -> 57 `i `uc
--> -> 57 `i `uc
--> -> 57 `i `uc
--> -> 56 `i `uc
--> -> 56 `i `uc
--> -> 124 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 7 `i `uc
--> -> 31 `i `uc
--> -> 0 `i `uc
--> -> 192 `i `uc
--> -> 63 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
-..
-:U ..
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 7 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 113 `i `uc
--> -> 113 `i `uc
--> -> 105 `i `uc
--> -> 109 `i `uc
--> -> 101 `i `uc
--> -> 103 `i `uc
--> -> 99 `i `uc
--> -> 99 `i `uc
+-> -> 112 `i `uc
+-> -> 16 `i `uc
+-> -> 96 `i `uc
+-> -> 16 `i `uc
+-> -> 16 `i `uc
 -> -> 96 `i `uc
 -> -> 0 `i `uc
+..
+:U ..
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 15 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
+-> -> 80 `i `uc
+-> -> 80 `i `uc
+-> -> 80 `i `uc
+-> -> 112 `i `uc
+-> -> 16 `i `uc
+-> -> 16 `i `uc
 -> -> 0 `i `uc
 ..
 :U ..
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
+-> -> 112 `i `uc
+-> -> 64 `i `uc
+-> -> 112 `i `uc
+-> -> 16 `i `uc
+-> -> 16 `i `uc
+-> -> 96 `i `uc
 -> -> 0 `i `uc
 ..
 :U ..
 -> -> 0 `i `uc
+-> -> 112 `i `uc
+-> -> 64 `i `uc
+-> -> 112 `i `uc
+-> -> 80 `i `uc
+-> -> 80 `i `uc
+-> -> 112 `i `uc
 -> -> 0 `i `uc
+..
+:U ..
 -> -> 0 `i `uc
+-> -> 112 `i `uc
+-> -> 16 `i `uc
+-> -> 16 `i `uc
+-> -> 32 `i `uc
+-> -> 32 `i `uc
+-> -> 32 `i `uc
 -> -> 0 `i `uc
+..
+:U ..
 -> -> 0 `i `uc
+-> -> 112 `i `uc
+-> -> 80 `i `uc
+-> -> 112 `i `uc
+-> -> 80 `i `uc
+-> -> 80 `i `uc
+-> -> 112 `i `uc
 -> -> 0 `i `uc
+..
+:U ..
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
+-> -> 112 `i `uc
+-> -> 80 `i `uc
+-> -> 80 `i `uc
+-> -> 112 `i `uc
+-> -> 16 `i `uc
+-> -> 16 `i `uc
 -> -> 0 `i `uc
 ..
 ..
 ]
-[v F1387 `(v ~T0 @X0 1 tf2`ui`*uc ]
+"111
+[; ;./Font.h: 111: static const uint8_t Font_hi[FONT_HEIGHT] = {
+[v _Font_hi `Cuc ~T0 @X0 -> 8 `i s ]
+[i _Font_hi
+:U ..
+-> -> 0 `i `uc
+-> -> 164 `i `uc
+-> -> 164 `i `uc
+-> -> 164 `i `uc
+-> -> 228 `i `uc
+-> -> 164 `i `uc
+-> -> 164 `i `uc
+-> -> 0 `i `uc
+..
+]
+[v F1389 `Cuc ~T0 @X0 -> 8 `i t ]
+"122
+[; ;./Font.h: 122: static const uint8_t Font_score[3][FONT_HEIGHT] = {
+[v _Font_score `F1389 ~T0 @X0 -> 3 `i s ]
+[i _Font_score
+:U ..
+:U ..
+-> -> 0 `i `uc
+-> -> 238 `i `uc
+-> -> 136 `i `uc
+-> -> 232 `i `uc
+-> -> 40 `i `uc
+-> -> 40 `i `uc
+-> -> 238 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 238 `i `uc
+-> -> 170 `i `uc
+-> -> 174 `i `uc
+-> -> 172 `i `uc
+-> -> 170 `i `uc
+-> -> 234 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 224 `i `uc
+-> -> 128 `i `uc
+-> -> 224 `i `uc
+-> -> 128 `i `uc
+-> -> 128 `i `uc
+-> -> 224 `i `uc
+-> -> 0 `i `uc
+..
+..
+]
+[v F1394 `(v ~T0 @X0 1 tf2`ui`*uc ]
 "11 ./Digits.h
 [; ;./Digits.h: 11: __attribute__((inline)) void GetDigits(uint16_t n, uint8_t *digits)
-[v _GetDigits `TF1387 ~T0 @X0 1 e ]
+[v _GetDigits `TF1394 ~T0 @X0 1 e ]
 "12
 [; ;./Digits.h: 12: {
 {
@@ -836,7 +487,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "13
 [; ;./Digits.h: 13:     uint8_t i = NUM_DIGITS - 1;
 [v _i `uc ~T0 @X0 1 a ]
-[e = _i -> - -> . `E1383 0 `i -> 1 `i `uc ]
+[e = _i -> - -> . `E1390 0 `i -> 1 `i `uc ]
 "15
 [; ;./Digits.h: 15:     while (1)
 [e :U 144 ]
@@ -873,86 +524,114 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./Digits.h: 26: }
 [e :UE 142 ]
 }
-"17 Drawing.c
-[; ;Drawing.c: 17: static void DrawTetrisGameColumn(Tetris_Game *tetrisGame, uint8_t x, uint16_t rightMask, uint16_t leftMask)
+[v F1400 `(v ~T0 @X0 1 tf ]
+"7 ./Frequency.h
+[; ;./Frequency.h: 7: static __attribute__((inline)) void SetupOscillator(void)
+[v _SetupOscillator `TF1400 ~T0 @X0 1 s ]
+"8
+[; ;./Frequency.h: 8: {
+{
+[e :U _SetupOscillator ]
+[f ]
+"11
+[; ;./Frequency.h: 11:     IRCF0 = 1;
+[e = _IRCF0 -> -> 1 `i `b ]
+"12
+[; ;./Frequency.h: 12:     IRCF1 = 1;
+[e = _IRCF1 -> -> 1 `i `b ]
+"13
+[; ;./Frequency.h: 13:     IRCF2 = 1;
+[e = _IRCF2 -> -> 1 `i `b ]
+"14
+[; ;./Frequency.h: 14: }
+[e :UE 147 ]
+}
+"15 Drawing.c
+[; ;Drawing.c: 15: static void DrawTetrisGameColumn(Tetris_Game *tetrisGame, uint8_t x, uint16_t rightMask, uint16_t leftMask)
 [v _DrawTetrisGameColumn `(v ~T0 @X0 1 sf4`*S4`uc`ui`ui ]
-"18
-[; ;Drawing.c: 18: {
+"16
+[; ;Drawing.c: 16: {
 {
 [e :U _DrawTetrisGameColumn ]
-"17
-[; ;Drawing.c: 17: static void DrawTetrisGameColumn(Tetris_Game *tetrisGame, uint8_t x, uint16_t rightMask, uint16_t leftMask)
+"15
+[; ;Drawing.c: 15: static void DrawTetrisGameColumn(Tetris_Game *tetrisGame, uint8_t x, uint16_t rightMask, uint16_t leftMask)
 [v _tetrisGame `*S4 ~T0 @X0 1 r1 ]
 [v _x `uc ~T0 @X0 1 r2 ]
 [v _rightMask `ui ~T0 @X0 1 r3 ]
 [v _leftMask `ui ~T0 @X0 1 r4 ]
-"18
-[; ;Drawing.c: 18: {
+"16
+[; ;Drawing.c: 16: {
 [f ]
-"19
-[; ;Drawing.c: 19:     uint8_t tableY = 0;
+"17
+[; ;Drawing.c: 17:     uint8_t tableY = 0;
 [v _tableY `uc ~T0 @X0 1 a ]
 [e = _tableY -> -> 0 `i `uc ]
-"21
-[; ;Drawing.c: 21:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
+"19
+[; ;Drawing.c: 19:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
 [e ( _LCD_SegmentSelection (1 . `E1352 2 ]
-"22
-[; ;Drawing.c: 22:     LCD_SetY(SCORE_SPACE);
-[e ( _LCD_SetY (1 -> . `E1392 0 `uc ]
-"23
-[; ;Drawing.c: 23:     LCD_SetX(x);
+"20
+[; ;Drawing.c: 20:     LCD_SetY(FONT_HEIGHT);
+[e ( _LCD_SetY (1 -> . `E1381 1 `uc ]
+"21
+[; ;Drawing.c: 21:     LCD_SetX(x);
 [e ( _LCD_SetX (1 _x ]
-"25
-[; ;Drawing.c: 25:     for (uint8_t y = SCORE_SPACE; y < LCD_HEIGHT; y += GAME_PIXEL_HEIGHT)
+"23
+[; ;Drawing.c: 23:     for (uint8_t y = FONT_HEIGHT; y < LCD_HEIGHT; y += GAME_PIXEL_HEIGHT)
 {
 [v _y `uc ~T0 @X0 1 a ]
-[e = _y -> . `E1392 0 `uc ]
-[e $ < -> _y `i -> . `E1358 1 `i 148  ]
-[e $U 149  ]
-[e :U 148 ]
-"26
-[; ;Drawing.c: 26:     {
+[e = _y -> . `E1381 1 `uc ]
+[e $ < -> _y `i -> . `E1358 1 `i 149  ]
+[e $U 150  ]
+[e :U 149 ]
+"24
+[; ;Drawing.c: 24:     {
 {
-"27
-[; ;Drawing.c: 27:         uint16_t gameRow = tetrisGame->table[tableY];
+"25
+[; ;Drawing.c: 25:         uint16_t gameRow = tetrisGame->table[tableY];
 [v _gameRow `ui ~T0 @X0 1 a ]
 [e = _gameRow *U + &U . *U _tetrisGame 0 * -> _tableY `ux -> -> # *U &U . *U _tetrisGame 0 `ui `ux ]
-"28
-[; ;Drawing.c: 28:         uint8_t lcdRow = 0;
+"26
+[; ;Drawing.c: 26:         uint8_t lcdRow = 0;
 [v _lcdRow `uc ~T0 @X0 1 a ]
 [e = _lcdRow -> -> 0 `i `uc ]
-"29
-[; ;Drawing.c: 29:         if (gameRow & rightMask)
-[e $ ! != & _gameRow _rightMask -> -> 0 `i `ui 151  ]
-"30
-[; ;Drawing.c: 30:             lcdRow = 0x0F;
+"27
+[; ;Drawing.c: 27:         if (gameRow & rightMask)
+[e $ ! != & _gameRow _rightMask -> -> 0 `i `ui 152  ]
+"28
+[; ;Drawing.c: 28:             lcdRow = 0x0F;
 [e = _lcdRow -> -> 15 `i `uc ]
-[e :U 151 ]
-"31
-[; ;Drawing.c: 31:         if (gameRow & leftMask)
-[e $ ! != & _gameRow _leftMask -> -> 0 `i `ui 152  ]
-"32
-[; ;Drawing.c: 32:             lcdRow |= 0xF0;
-[e =| _lcdRow -> -> 240 `i `uc ]
 [e :U 152 ]
-"34
-[; ;Drawing.c: 34:         if (y == 63)
-[e $ ! == -> _y `i -> 63 `i 153  ]
-"35
-[; ;Drawing.c: 35:         {
+"29
+[; ;Drawing.c: 29:         if (gameRow & leftMask)
+[e $ ! != & _gameRow _leftMask -> -> 0 `i `ui 153  ]
+"30
+[; ;Drawing.c: 30:             lcdRow |= 0xF0;
+[e =| _lcdRow -> -> 240 `i `uc ]
+[e :U 153 ]
+"32
+[; ;Drawing.c: 32:         if (y == 63)
+[e $ ! == -> _y `i -> 63 `i 154  ]
+"33
+[; ;Drawing.c: 33:         {
 {
-"36
-[; ;Drawing.c: 36:             LCD_WriteData(lcdRow);
+"34
+[; ;Drawing.c: 34:             LCD_WriteData(lcdRow);
 [e ( _LCD_WriteData (1 _lcdRow ]
-"37
-[; ;Drawing.c: 37:             LCD_SegmentSelection(LCD_BOTTOM_SEGMENT);
+"35
+[; ;Drawing.c: 35:             LCD_SegmentSelection(LCD_BOTTOM_SEGMENT);
 [e ( _LCD_SegmentSelection (1 . `E1352 1 ]
-"38
-[; ;Drawing.c: 38:             LCD_SetX(x);
+"36
+[; ;Drawing.c: 36:             LCD_SetX(x);
 [e ( _LCD_SetX (1 _x ]
-"39
-[; ;Drawing.c: 39:             LCD_SetY(0);
+"37
+[; ;Drawing.c: 37:             LCD_SetY(0);
 [e ( _LCD_SetY (1 -> -> 0 `i `uc ]
+"38
+[; ;Drawing.c: 38:             LCD_WriteData(lcdRow);
+[e ( _LCD_WriteData (1 _lcdRow ]
+"39
+[; ;Drawing.c: 39:             LCD_WriteData(lcdRow);
+[e ( _LCD_WriteData (1 _lcdRow ]
 "40
 [; ;Drawing.c: 40:             LCD_WriteData(lcdRow);
 [e ( _LCD_WriteData (1 _lcdRow ]
@@ -960,272 +639,512 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Drawing.c: 41:             LCD_WriteData(lcdRow);
 [e ( _LCD_WriteData (1 _lcdRow ]
 "42
-[; ;Drawing.c: 42:             LCD_WriteData(lcdRow);
-[e ( _LCD_WriteData (1 _lcdRow ]
-"43
-[; ;Drawing.c: 43:             LCD_WriteData(lcdRow);
-[e ( _LCD_WriteData (1 _lcdRow ]
-"44
-[; ;Drawing.c: 44:         }
+[; ;Drawing.c: 42:         }
 }
-[e $U 154  ]
-"45
-[; ;Drawing.c: 45:         else
-[e :U 153 ]
-"46
-[; ;Drawing.c: 46:         {
+[e $U 155  ]
+"43
+[; ;Drawing.c: 43:         else
+[e :U 154 ]
+"44
+[; ;Drawing.c: 44:         {
 {
-"47
-[; ;Drawing.c: 47:             for (uint8_t i = 0; i < GAME_PIXEL_HEIGHT; ++i)
+"45
+[; ;Drawing.c: 45:             for (uint8_t i = 0; i < GAME_PIXEL_HEIGHT; ++i)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> . `E1394 1 `i 155  ]
-[e $U 156  ]
-[e :U 155 ]
-"48
-[; ;Drawing.c: 48:                 LCD_WriteData(lcdRow);
+[e $ < -> _i `i -> . `E1401 1 `i 156  ]
+[e $U 157  ]
+[e :U 156 ]
+"46
+[; ;Drawing.c: 46:                 LCD_WriteData(lcdRow);
 [e ( _LCD_WriteData (1 _lcdRow ]
 [e =+ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> . `E1394 1 `i 155  ]
-[e :U 156 ]
+[e $ < -> _i `i -> . `E1401 1 `i 156  ]
+[e :U 157 ]
 }
+"47
+[; ;Drawing.c: 47:         }
+}
+[e :U 155 ]
 "49
-[; ;Drawing.c: 49:         }
-}
-[e :U 154 ]
-"51
-[; ;Drawing.c: 51:         ++tableY;
+[; ;Drawing.c: 49:         ++tableY;
 [e =+ _tableY -> -> 1 `i `uc ]
-"52
-[; ;Drawing.c: 52:     }
+"50
+[; ;Drawing.c: 50:     }
 }
-[e =+ _y -> -> . `E1394 1 `i `uc ]
-[e $ < -> _y `i -> . `E1358 1 `i 148  ]
-[e :U 149 ]
+[e =+ _y -> -> . `E1401 1 `i `uc ]
+[e $ < -> _y `i -> . `E1358 1 `i 149  ]
+[e :U 150 ]
+}
+"51
+[; ;Drawing.c: 51: }
+[e :UE 148 ]
 }
 "53
-[; ;Drawing.c: 53: }
-[e :UE 147 ]
-}
-"55
-[; ;Drawing.c: 55: void DrawTetris(Tetris_Game *tetrisGame)
-[v _DrawTetris `(v ~T0 @X0 1 ef1`*S4 ]
-"56
-[; ;Drawing.c: 56: {
+[; ;Drawing.c: 53: static void DrawHiMarker(void)
+[v _DrawHiMarker `(v ~T0 @X0 1 sf ]
+"54
+[; ;Drawing.c: 54: {
 {
-[e :U _DrawTetris ]
-"55
-[; ;Drawing.c: 55: void DrawTetris(Tetris_Game *tetrisGame)
-[v _tetrisGame `*S4 ~T0 @X0 1 r1 ]
-"56
-[; ;Drawing.c: 56: {
+[e :U _DrawHiMarker ]
 [f ]
+"55
+[; ;Drawing.c: 55:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
+[e ( _LCD_SegmentSelection (1 . `E1352 2 ]
+"56
+[; ;Drawing.c: 56:     LCD_SetX(3);
+[e ( _LCD_SetX (1 -> -> 3 `i `uc ]
 "57
-[; ;Drawing.c: 57:     uint16_t leftMask = 0b0000000000000010;
-[v _leftMask `ui ~T0 @X0 1 a ]
-[e = _leftMask -> -> 2 `i `ui ]
+[; ;Drawing.c: 57:     LCD_SetY(0);
+[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
 "58
-[; ;Drawing.c: 58:     uint16_t rightMask = 0b0000000000000001;
-[v _rightMask `ui ~T0 @X0 1 a ]
-[e = _rightMask -> -> 1 `i `ui ]
-"60
-[; ;Drawing.c: 60:     for (uint8_t x = 0; x < LCD_NUM_PAGES; ++x)
-{
-[v _x `uc ~T0 @X0 1 a ]
-[e = _x -> -> 0 `i `uc ]
-[e $ < -> _x `i -> . `E1358 2 `i 159  ]
-[e $U 160  ]
-[e :U 159 ]
-"61
-[; ;Drawing.c: 61:     {
-{
-"62
-[; ;Drawing.c: 62:         DrawTetrisGameColumn(tetrisGame, x, rightMask, leftMask);
-[e ( _DrawTetrisGameColumn (4 , , , _tetrisGame _x _rightMask _leftMask ]
-"63
-[; ;Drawing.c: 63:         leftMask <<= 2;
-[e =<< _leftMask -> -> 2 `i `ui ]
-"64
-[; ;Drawing.c: 64:         rightMask <<= 2;
-[e =<< _rightMask -> -> 2 `i `ui ]
-"65
-[; ;Drawing.c: 65:     }
-}
-[e =+ _x -> -> 1 `i `uc ]
-[e $ < -> _x `i -> . `E1358 2 `i 159  ]
-[e :U 160 ]
-}
-"66
-[; ;Drawing.c: 66: }
-[e :UE 158 ]
-}
-"68
-[; ;Drawing.c: 68: void DrawScore(uint16_t score)
-[v _DrawScore `(v ~T0 @X0 1 ef1`ui ]
-"69
-[; ;Drawing.c: 69: {
-{
-[e :U _DrawScore ]
-"68
-[; ;Drawing.c: 68: void DrawScore(uint16_t score)
-[v _score `ui ~T0 @X0 1 r1 ]
-"69
-[; ;Drawing.c: 69: {
-[f ]
-"70
-[; ;Drawing.c: 70:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
-[e ( _LCD_SegmentSelection (1 . `E1352 2 ]
-"71
-[; ;Drawing.c: 71:     LCD_SetX(LCD_NUM_PAGES - 1 - NUM_DIGITS);
-[e ( _LCD_SetX (1 -> - - -> . `E1358 2 `i -> 1 `i -> . `E1383 0 `i `uc ]
-"72
-[; ;Drawing.c: 72:     LCD_SetY(0);
-[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
-"73
-[; ;Drawing.c: 73: }
-[e :UE 162 ]
-}
-"75
-[; ;Drawing.c: 75: void DrawHighscore(uint16_t highscore)
-[v _DrawHighscore `(v ~T0 @X0 1 ef1`ui ]
-"76
-[; ;Drawing.c: 76: {
-{
-[e :U _DrawHighscore ]
-"75
-[; ;Drawing.c: 75: void DrawHighscore(uint16_t highscore)
-[v _highscore `ui ~T0 @X0 1 r1 ]
-"76
-[; ;Drawing.c: 76: {
-[f ]
-"78
-[; ;Drawing.c: 78: }
-[e :UE 163 ]
-}
-"80
-[; ;Drawing.c: 80: void DrawPause(void)
-[v _DrawPause `(v ~T0 @X0 1 ef ]
-"81
-[; ;Drawing.c: 81: {
-{
-[e :U _DrawPause ]
-[f ]
-"83
-[; ;Drawing.c: 83: }
-[e :UE 164 ]
-}
-"85
-[; ;Drawing.c: 85: void DrawLogo(void)
-[v _DrawLogo `(v ~T0 @X0 1 ef ]
-"86
-[; ;Drawing.c: 86: {
-{
-[e :U _DrawLogo ]
-[f ]
-"87
-[; ;Drawing.c: 87:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
-[e ( _LCD_SegmentSelection (1 . `E1352 2 ]
-"88
-[; ;Drawing.c: 88:     LCD_SetY(0);
-[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
-"89
-[; ;Drawing.c: 89:     for (uint8_t x = 0; x < LCD_NUM_PAGES; ++x)
-{
-[v _x `uc ~T0 @X0 1 a ]
-[e = _x -> -> 0 `i `uc ]
-[e $ < -> _x `i -> . `E1358 2 `i 166  ]
-[e $U 167  ]
-[e :U 166 ]
-"90
-[; ;Drawing.c: 90:     {
-{
-"91
-[; ;Drawing.c: 91:         LCD_SetX(x);
-[e ( _LCD_SetX (1 _x ]
-"92
-[; ;Drawing.c: 92:         for (uint8_t y = 0; y < LCD_SEGMENT_HEIGHT / 2; ++y)
+[; ;Drawing.c: 58:     for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
 {
 [v _y `uc ~T0 @X0 1 a ]
 [e = _y -> -> 0 `i `uc ]
-[e $ < -> _y `i / -> . `E1358 3 `i -> 2 `i 169  ]
-[e $U 170  ]
-[e :U 169 ]
-"93
-[; ;Drawing.c: 93:         {
-{
-"94
-[; ;Drawing.c: 94:             LCD_WriteData(logoImage[x][y]);
-[e ( _LCD_WriteData (1 *U + &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux `ui `ux ]
-"95
-[; ;Drawing.c: 95:             LCD_WriteData(logoImage[x][y]);
-[e ( _LCD_WriteData (1 *U + &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux `ui `ux ]
-"96
-[; ;Drawing.c: 96:         }
-}
+[e $ < -> _y `i -> . `E1381 1 `i 160  ]
+[e $U 161  ]
+[e :U 160 ]
+"59
+[; ;Drawing.c: 59:         LCD_WriteData(Font_hi[y] >> 2);
+[e ( _LCD_WriteData (1 -> >> -> *U + &U _Font_hi * -> _y `ux -> -> # *U &U _Font_hi `ui `ux `i -> 2 `i `uc ]
 [e =+ _y -> -> 1 `i `uc ]
-[e $ < -> _y `i / -> . `E1358 3 `i -> 2 `i 169  ]
-[e :U 170 ]
+[e $ < -> _y `i -> . `E1381 1 `i 160  ]
+[e :U 161 ]
 }
-"97
-[; ;Drawing.c: 97:     }
+"60
+[; ;Drawing.c: 60: }
+[e :UE 159 ]
 }
-[e =+ _x -> -> 1 `i `uc ]
-[e $ < -> _x `i -> . `E1358 2 `i 166  ]
-[e :U 167 ]
-}
-"99
-[; ;Drawing.c: 99:     LCD_SegmentSelection(LCD_BOTTOM_SEGMENT);
-[e ( _LCD_SegmentSelection (1 . `E1352 1 ]
-"100
-[; ;Drawing.c: 100:     LCD_SetY(0);
-[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
-"101
-[; ;Drawing.c: 101:     for (uint8_t x = 0; x < LCD_NUM_PAGES; ++x)
+"62
+[; ;Drawing.c: 62: void DrawTetris(Tetris_Game *tetrisGame)
+[v _DrawTetris `(v ~T0 @X0 1 ef1`*S4 ]
+"63
+[; ;Drawing.c: 63: {
+{
+[e :U _DrawTetris ]
+"62
+[; ;Drawing.c: 62: void DrawTetris(Tetris_Game *tetrisGame)
+[v _tetrisGame `*S4 ~T0 @X0 1 r1 ]
+"63
+[; ;Drawing.c: 63: {
+[f ]
+"64
+[; ;Drawing.c: 64:     uint16_t leftMask = 0b0000000000000010;
+[v _leftMask `ui ~T0 @X0 1 a ]
+[e = _leftMask -> -> 2 `i `ui ]
+"65
+[; ;Drawing.c: 65:     uint16_t rightMask = 0b0000000000000001;
+[v _rightMask `ui ~T0 @X0 1 a ]
+[e = _rightMask -> -> 1 `i `ui ]
+"67
+[; ;Drawing.c: 67:     for (uint8_t x = 0; x < LCD_NUM_PAGES; ++x)
 {
 [v _x `uc ~T0 @X0 1 a ]
 [e = _x -> -> 0 `i `uc ]
-[e $ < -> _x `i -> . `E1358 2 `i 172  ]
-[e $U 173  ]
-[e :U 172 ]
-"102
-[; ;Drawing.c: 102:     {
+[e $ < -> _x `i -> . `E1358 2 `i 164  ]
+[e $U 165  ]
+[e :U 164 ]
+"68
+[; ;Drawing.c: 68:     {
 {
-"103
-[; ;Drawing.c: 103:         LCD_SetX(x);
-[e ( _LCD_SetX (1 _x ]
-"104
-[; ;Drawing.c: 104:         for (uint8_t y = LCD_SEGMENT_HEIGHT / 2; y < LCD_SEGMENT_HEIGHT; ++y)
-{
-[v _y `uc ~T0 @X0 1 a ]
-[e = _y -> / -> . `E1358 3 `i -> 2 `i `uc ]
-[e $ < -> _y `i -> . `E1358 3 `i 175  ]
-[e $U 176  ]
-[e :U 175 ]
-"105
-[; ;Drawing.c: 105:         {
-{
-"106
-[; ;Drawing.c: 106:             LCD_WriteData(logoImage[x][y]);
-[e ( _LCD_WriteData (1 *U + &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux `ui `ux ]
-"107
-[; ;Drawing.c: 107:             LCD_WriteData(logoImage[x][y]);
-[e ( _LCD_WriteData (1 *U + &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux `ui `ux ]
-"108
-[; ;Drawing.c: 108:         }
-}
-[e =+ _y -> -> 1 `i `uc ]
-[e $ < -> _y `i -> . `E1358 3 `i 175  ]
-[e :U 176 ]
-}
-"109
-[; ;Drawing.c: 109:     }
+"69
+[; ;Drawing.c: 69:         DrawTetrisGameColumn(tetrisGame, x, rightMask, leftMask);
+[e ( _DrawTetrisGameColumn (4 , , , _tetrisGame _x _rightMask _leftMask ]
+"70
+[; ;Drawing.c: 70:         leftMask <<= 2;
+[e =<< _leftMask -> -> 2 `i `ui ]
+"71
+[; ;Drawing.c: 71:         rightMask <<= 2;
+[e =<< _rightMask -> -> 2 `i `ui ]
+"72
+[; ;Drawing.c: 72:     }
 }
 [e =+ _x -> -> 1 `i `uc ]
-[e $ < -> _x `i -> . `E1358 2 `i 172  ]
-[e :U 173 ]
+[e $ < -> _x `i -> . `E1358 2 `i 164  ]
+[e :U 165 ]
 }
+"73
+[; ;Drawing.c: 73: }
+[e :UE 163 ]
+}
+"75
+[; ;Drawing.c: 75: void DrawCurrentScore(Tetris_Game *tetrisGame)
+[v _DrawCurrentScore `(v ~T0 @X0 1 ef1`*S4 ]
+"76
+[; ;Drawing.c: 76: {
+{
+[e :U _DrawCurrentScore ]
+"75
+[; ;Drawing.c: 75: void DrawCurrentScore(Tetris_Game *tetrisGame)
+[v _tetrisGame `*S4 ~T0 @X0 1 r1 ]
+"76
+[; ;Drawing.c: 76: {
+[f ]
+"77
+[; ;Drawing.c: 77:     uint8_t scoreDigits[NUM_DIGITS];
+[v _scoreDigits `uc ~T0 @X0 -> 5 `i a ]
+"78
+[; ;Drawing.c: 78:     GetDigits(tetrisGame->currentScore, scoreDigits);
+[e ( _GetDigits (2 , . *U _tetrisGame 2 &U _scoreDigits ]
+"80
+[; ;Drawing.c: 80:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
+[e ( _LCD_SegmentSelection (1 . `E1352 2 ]
+"81
+[; ;Drawing.c: 81:     LCD_SetX(7);
+[e ( _LCD_SetX (1 -> -> 7 `i `uc ]
+"82
+[; ;Drawing.c: 82:     LCD_SetY(0);
+[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
+"83
+[; ;Drawing.c: 83:     for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+{
+[v _y `uc ~T0 @X0 1 a ]
+[e = _y -> -> 0 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 168  ]
+[e $U 169  ]
+[e :U 168 ]
+"84
+[; ;Drawing.c: 84:     {
+{
+"85
+[; ;Drawing.c: 85:         uint8_t lcdData = Font_digits[scoreDigits[0]][y] | (Font_digits[scoreDigits[1]][y] >> 4);
+[v _lcdData `uc ~T0 @X0 1 a ]
+[e = _lcdData -> | -> *U + &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 0 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 0 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux `ui `ux `i >> -> *U + &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 1 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 1 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux `ui `ux `i -> 4 `i `uc ]
+"86
+[; ;Drawing.c: 86:         LCD_WriteData(lcdData);
+[e ( _LCD_WriteData (1 _lcdData ]
+"87
+[; ;Drawing.c: 87:     }
+}
+[e =+ _y -> -> 1 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 168  ]
+[e :U 169 ]
+}
+"89
+[; ;Drawing.c: 89:     LCD_SetX(6);
+[e ( _LCD_SetX (1 -> -> 6 `i `uc ]
+"90
+[; ;Drawing.c: 90:     LCD_SetY(0);
+[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
+"91
+[; ;Drawing.c: 91:     for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+{
+[v _y `uc ~T0 @X0 1 a ]
+[e = _y -> -> 0 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 171  ]
+[e $U 172  ]
+[e :U 171 ]
+"92
+[; ;Drawing.c: 92:     {
+{
+"93
+[; ;Drawing.c: 93:         uint8_t lcdData = Font_digits[scoreDigits[2]][y] | (Font_digits[scoreDigits[3]][y] >> 4);
+[v _lcdData `uc ~T0 @X0 1 a ]
+[e = _lcdData -> | -> *U + &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 2 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 2 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux `ui `ux `i >> -> *U + &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 3 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 3 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux `ui `ux `i -> 4 `i `uc ]
+"94
+[; ;Drawing.c: 94:         LCD_WriteData(lcdData);
+[e ( _LCD_WriteData (1 _lcdData ]
+"95
+[; ;Drawing.c: 95:     }
+}
+[e =+ _y -> -> 1 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 171  ]
+[e :U 172 ]
+}
+"97
+[; ;Drawing.c: 97:     LCD_SetX(5);
+[e ( _LCD_SetX (1 -> -> 5 `i `uc ]
+"98
+[; ;Drawing.c: 98:     LCD_SetY(0);
+[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
+"99
+[; ;Drawing.c: 99:     for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+{
+[v _y `uc ~T0 @X0 1 a ]
+[e = _y -> -> 0 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 174  ]
+[e $U 175  ]
+[e :U 174 ]
+"100
+[; ;Drawing.c: 100:     {
+{
+"101
+[; ;Drawing.c: 101:         uint8_t lcdData = Font_digits[scoreDigits[4]][y];
+[v _lcdData `uc ~T0 @X0 1 a ]
+[e = _lcdData *U + &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 4 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 4 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux `ui `ux ]
+"102
+[; ;Drawing.c: 102:         LCD_WriteData(lcdData);
+[e ( _LCD_WriteData (1 _lcdData ]
+"103
+[; ;Drawing.c: 103:     }
+}
+[e =+ _y -> -> 1 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 174  ]
+[e :U 175 ]
+}
+"104
+[; ;Drawing.c: 104: }
+[e :UE 167 ]
+}
+"106
+[; ;Drawing.c: 106: void DrawHighscore(uint16_t highscore)
+[v _DrawHighscore `(v ~T0 @X0 1 ef1`ui ]
+"107
+[; ;Drawing.c: 107: {
+{
+[e :U _DrawHighscore ]
+"106
+[; ;Drawing.c: 106: void DrawHighscore(uint16_t highscore)
+[v _highscore `ui ~T0 @X0 1 r1 ]
+"107
+[; ;Drawing.c: 107: {
+[f ]
+"108
+[; ;Drawing.c: 108:     DrawHiMarker();
+[e ( _DrawHiMarker ..  ]
 "110
-[; ;Drawing.c: 110: }
-[e :UE 165 ]
+[; ;Drawing.c: 110:     uint8_t scoreDigits[NUM_DIGITS];
+[v _scoreDigits `uc ~T0 @X0 -> 5 `i a ]
+"111
+[; ;Drawing.c: 111:     GetDigits(highscore, scoreDigits);
+[e ( _GetDigits (2 , _highscore &U _scoreDigits ]
+"113
+[; ;Drawing.c: 113:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
+[e ( _LCD_SegmentSelection (1 . `E1352 2 ]
+"114
+[; ;Drawing.c: 114:     LCD_SetX(2);
+[e ( _LCD_SetX (1 -> -> 2 `i `uc ]
+"115
+[; ;Drawing.c: 115:     LCD_SetY(0);
+[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
+"116
+[; ;Drawing.c: 116:     for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+{
+[v _y `uc ~T0 @X0 1 a ]
+[e = _y -> -> 0 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 178  ]
+[e $U 179  ]
+[e :U 178 ]
+"117
+[; ;Drawing.c: 117:     {
+{
+"118
+[; ;Drawing.c: 118:         uint8_t lcdData = Font_digits[scoreDigits[0]][y] >> 4;
+[v _lcdData `uc ~T0 @X0 1 a ]
+[e = _lcdData -> >> -> *U + &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 0 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 0 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux `ui `ux `i -> 4 `i `uc ]
+"119
+[; ;Drawing.c: 119:         LCD_WriteData(lcdData << 1);
+[e ( _LCD_WriteData (1 -> << -> _lcdData `i -> 1 `i `uc ]
+"120
+[; ;Drawing.c: 120:     }
+}
+[e =+ _y -> -> 1 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 178  ]
+[e :U 179 ]
+}
+"122
+[; ;Drawing.c: 122:     LCD_SetX(1);
+[e ( _LCD_SetX (1 -> -> 1 `i `uc ]
+"123
+[; ;Drawing.c: 123:     LCD_SetY(0);
+[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
+"124
+[; ;Drawing.c: 124:     for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+{
+[v _y `uc ~T0 @X0 1 a ]
+[e = _y -> -> 0 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 181  ]
+[e $U 182  ]
+[e :U 181 ]
+"125
+[; ;Drawing.c: 125:     {
+{
+"126
+[; ;Drawing.c: 126:         uint8_t lcdData = Font_digits[scoreDigits[1]][y] | (Font_digits[scoreDigits[2]][y] >> 4);
+[v _lcdData `uc ~T0 @X0 1 a ]
+[e = _lcdData -> | -> *U + &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 1 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 1 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux `ui `ux `i >> -> *U + &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 2 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 2 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux `ui `ux `i -> 4 `i `uc ]
+"127
+[; ;Drawing.c: 127:         LCD_WriteData(lcdData << 1);
+[e ( _LCD_WriteData (1 -> << -> _lcdData `i -> 1 `i `uc ]
+"128
+[; ;Drawing.c: 128:     }
+}
+[e =+ _y -> -> 1 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 181  ]
+[e :U 182 ]
+}
+"130
+[; ;Drawing.c: 130:     LCD_SetX(0);
+[e ( _LCD_SetX (1 -> -> 0 `i `uc ]
+"131
+[; ;Drawing.c: 131:     LCD_SetY(0);
+[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
+"132
+[; ;Drawing.c: 132:     for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+{
+[v _y `uc ~T0 @X0 1 a ]
+[e = _y -> -> 0 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 184  ]
+[e $U 185  ]
+[e :U 184 ]
+"133
+[; ;Drawing.c: 133:     {
+{
+"134
+[; ;Drawing.c: 134:         uint8_t lcdData = Font_digits[scoreDigits[3]][y] | (Font_digits[scoreDigits[4]][y] >> 4);
+[v _lcdData `uc ~T0 @X0 1 a ]
+[e = _lcdData -> | -> *U + &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 3 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 3 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux `ui `ux `i >> -> *U + &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 4 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _Font_digits * -> *U + &U _scoreDigits * -> -> -> 4 `i `ui `ux -> -> # *U &U _scoreDigits `ui `ux `ux -> * -> # *U &U *U &U _Font_digits `ui -> -> 8 `i `ui `ux `ui `ux `i -> 4 `i `uc ]
+"135
+[; ;Drawing.c: 135:         LCD_WriteData(lcdData << 1);
+[e ( _LCD_WriteData (1 -> << -> _lcdData `i -> 1 `i `uc ]
+"136
+[; ;Drawing.c: 136:     }
+}
+[e =+ _y -> -> 1 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 184  ]
+[e :U 185 ]
+}
+"137
+[; ;Drawing.c: 137: }
+[e :UE 177 ]
+}
+"139
+[; ;Drawing.c: 139: static void DrawHighscoreText(void)
+[v _DrawHighscoreText `(v ~T0 @X0 1 sf ]
+"140
+[; ;Drawing.c: 140: {
+{
+[e :U _DrawHighscoreText ]
+[f ]
+"141
+[; ;Drawing.c: 141:     uint8_t const baseX = 5;
+[v F1451 `Cuc ~T0 @X0 1 s baseX ]
+[i F1451
+-> -> 5 `i `uc
+]
+"142
+[; ;Drawing.c: 142:     uint8_t const baseY = 56;
+[v F1452 `Cuc ~T0 @X0 1 s baseY ]
+[i F1452
+-> -> 56 `i `uc
+]
+"144
+[; ;Drawing.c: 144:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
+[e ( _LCD_SegmentSelection (1 . `E1352 2 ]
+"145
+[; ;Drawing.c: 145:     LCD_SetX(baseX);
+[e ( _LCD_SetX (1 F1451 ]
+"146
+[; ;Drawing.c: 146:     LCD_SetY(baseY);
+[e ( _LCD_SetY (1 F1452 ]
+"148
+[; ;Drawing.c: 148:     for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+{
+[v _y `uc ~T0 @X0 1 a ]
+[e = _y -> -> 0 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 188  ]
+[e $U 189  ]
+[e :U 188 ]
+"149
+[; ;Drawing.c: 149:         LCD_WriteData(Font_hi[y]);
+[e ( _LCD_WriteData (1 *U + &U _Font_hi * -> _y `ux -> -> # *U &U _Font_hi `ui `ux ]
+[e =+ _y -> -> 1 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 188  ]
+[e :U 189 ]
+}
+"152
+[; ;Drawing.c: 152:     for (uint8_t x = 0; x < 3; ++x)
+{
+[v _x `uc ~T0 @X0 1 a ]
+[e = _x -> -> 0 `i `uc ]
+[e $ < -> _x `i -> 3 `i 191  ]
+[e $U 192  ]
+[e :U 191 ]
+"153
+[; ;Drawing.c: 153:     {
+{
+"154
+[; ;Drawing.c: 154:         LCD_SetY(baseY);
+[e ( _LCD_SetY (1 F1452 ]
+"155
+[; ;Drawing.c: 155:         LCD_SetX(baseX - x - 1);
+[e ( _LCD_SetX (1 -> - - -> F1451 `i -> _x `i -> 1 `i `uc ]
+"156
+[; ;Drawing.c: 156:         for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+{
+[v _y `uc ~T0 @X0 1 a ]
+[e = _y -> -> 0 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 194  ]
+[e $U 195  ]
+[e :U 194 ]
+"157
+[; ;Drawing.c: 157:             LCD_WriteData(Font_score[x][y]);
+[e ( _LCD_WriteData (1 *U + &U *U + &U _Font_score * -> _x `ux -> * -> # *U &U *U &U _Font_score `ui -> -> 8 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _Font_score * -> _x `ux -> * -> # *U &U *U &U _Font_score `ui -> -> 8 `i `ui `ux `ui `ux ]
+[e =+ _y -> -> 1 `i `uc ]
+[e $ < -> _y `i -> . `E1381 1 `i 194  ]
+[e :U 195 ]
+}
+"158
+[; ;Drawing.c: 158:     }
+}
+[e =+ _x -> -> 1 `i `uc ]
+[e $ < -> _x `i -> 3 `i 191  ]
+[e :U 192 ]
+}
+"159
+[; ;Drawing.c: 159: }
+[e :UE 187 ]
+}
+"167
+[; ;Drawing.c: 167: void FlashVictoriously(void)
+[v _FlashVictoriously `(v ~T0 @X0 1 ef ]
+"168
+[; ;Drawing.c: 168: {
+{
+[e :U _FlashVictoriously ]
+[f ]
+"169
+[; ;Drawing.c: 169:     LCD_SegmentSelection(LCD_BOTH_SEGMENTS);
+[e ( _LCD_SegmentSelection (1 . `E1352 3 ]
+"170
+[; ;Drawing.c: 170:     LCD_Clear();
+[e ( _LCD_Clear ..  ]
+"171
+[; ;Drawing.c: 171:     DrawHighscoreText();
+[e ( _DrawHighscoreText ..  ]
+"173
+[; ;Drawing.c: 173:     for (uint8_t i = 0; i < NUM_FLASHES; ++i)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> . `E1457 0 `i 198  ]
+[e $U 199  ]
+[e :U 198 ]
+"174
+[; ;Drawing.c: 174:     {
+{
+"175
+[; ;Drawing.c: 175:         _delay((unsigned long)((FLASH_DELAY)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> . `E1457 1 `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"176
+[; ;Drawing.c: 176:         LCD_TurnOff();
+[e ( _LCD_TurnOff ..  ]
+"177
+[; ;Drawing.c: 177:         _delay((unsigned long)((FLASH_DELAY)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> . `E1457 1 `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"178
+[; ;Drawing.c: 178:         LCD_TurnOn();
+[e ( _LCD_TurnOn ..  ]
+"179
+[; ;Drawing.c: 179:     }
+}
+[e =+ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> . `E1457 0 `i 198  ]
+[e :U 199 ]
+}
+"180
+[; ;Drawing.c: 180: }
+[e :UE 197 ]
 }

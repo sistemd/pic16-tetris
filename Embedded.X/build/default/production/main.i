@@ -24,8 +24,6 @@
 #pragma config "WRT = OFF"
 
 
-
-
 # 1 "../Tetris\\Tetris.h" 1
 
 
@@ -167,35 +165,35 @@ typedef uint16_t uintptr_t;
 
 enum
 {
- TETRIS_MAX_ROTATIONS = 4,
+    TETRIS_MAX_ROTATIONS = 4,
 };
 
 typedef enum {
- TETRIS_TABLE_WIDTH = 16,
- TETRIS_TABLE_HEIGHT = 24,
+    TETRIS_TABLE_WIDTH = 16,
+    TETRIS_TABLE_HEIGHT = 24,
 } Tetris_TableSize;
 
 typedef enum
 {
- TETRIS_UNIT_HEIGHT = 4,
+    TETRIS_UNIT_HEIGHT = 4,
 } Tetris_UnitSize;
 
 typedef struct {
- uint8_t x;
- uint8_t y;
+    uint8_t x;
+    uint8_t y;
 } Position;
 
 typedef struct {
- char designator;
- uint8_t numRotations;
- uint16_t bits[TETRIS_UNIT_HEIGHT][TETRIS_MAX_ROTATIONS];
+    char designator;
+    uint8_t numRotations;
+    uint16_t bits[TETRIS_UNIT_HEIGHT][TETRIS_MAX_ROTATIONS];
 } Tetris_Unit;
 
 typedef struct {
- Position position;
- const Tetris_Unit *unit;
- uint16_t unitBits[TETRIS_UNIT_HEIGHT];
- uint8_t rotation;
+    Position position;
+    const Tetris_Unit *unit;
+    uint16_t unitBits[TETRIS_UNIT_HEIGHT];
+    uint8_t rotation;
 } Tetris_Player;
 
 
@@ -203,14 +201,15 @@ typedef struct {
 
 
 typedef struct {
- uint16_t table[TETRIS_TABLE_HEIGHT];
- Tetris_Player player;
- uint16_t currentScore;
+    uint16_t table[TETRIS_TABLE_HEIGHT];
+    Tetris_Player player;
+    uint16_t currentScore;
 } Tetris_Game;
 
 typedef enum {
- TETRIS_GAME_OVER,
- TETRIS_GAME_CONTINUES,
+    TETRIS_GAME_OVER,
+    TETRIS_GAME_CONTINUES,
+    TETRIS_PLAYER_SCORED,
 } Tetris_GameState;
 
 extern const Tetris_Unit *Tetris_GetRandomUnit(void);
@@ -234,7 +233,7 @@ extern void Tetris_MovePlayerLeft(Tetris_Game *game);
 extern void Tetris_MovePlayerRight(Tetris_Game *game);
 
 extern void Tetris_RotatePlayer(Tetris_Game *game);
-# 19 "main.c" 2
+# 17 "main.c" 2
 
 # 1 "./Buttons.h" 1
 
@@ -2738,12 +2737,12 @@ typedef struct {
     Button rotate;
 } Buttons;
 
-extern void Buttons_SetupPortsAndInterrups(void);
+extern void Buttons_Setup(void);
 
 extern void Buttons_Clear(Buttons *buttons);
 
 extern void Buttons_Update(Buttons *buttons);
-# 20 "main.c" 2
+# 18 "main.c" 2
 
 # 1 "./Drawing.h" 1
 
@@ -2752,14 +2751,31 @@ extern void Buttons_Update(Buttons *buttons);
 
 extern void DrawTetris(Tetris_Game *tetrisGame);
 
-extern void DrawScore(uint16_t score);
+extern void DrawCurrentScore(Tetris_Game *tetrisGame);
 
 extern void DrawHighscore(uint16_t highscore);
 
-extern void DrawPause(void);
+extern void FlashVictoriously(void);
+# 19 "main.c" 2
 
-extern void DrawLogo(void);
-# 21 "main.c" 2
+# 1 "./Frequency.h" 1
+
+
+# 1 "./Compatibility.h" 1
+# 3 "./Frequency.h" 2
+
+
+
+
+static __attribute__((inline)) void SetupOscillator(void)
+{
+
+
+    IRCF0 = 1;
+    IRCF1 = 1;
+    IRCF2 = 1;
+}
+# 20 "main.c" 2
 
 # 1 "./LCD.h" 1
 
@@ -2806,11 +2822,11 @@ extern void LCD_SetX(uint8_t x);
 extern void LCD_SetZ(uint8_t z);
 
 extern void LCD_Clear(void);
-# 22 "main.c" 2
+# 21 "main.c" 2
 
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdint.h" 1 3
-# 24 "main.c" 2
+# 23 "main.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdlib.h" 1 3
 
@@ -2903,14 +2919,14 @@ extern char * ltoa(char * buf, long val, int base);
 extern char * ultoa(char * buf, unsigned long val, int base);
 
 extern char * ftoa(float f, int * status);
-# 25 "main.c" 2
+# 24 "main.c" 2
 
 
 # 1 "./Compatibility.h" 1
-# 27 "main.c" 2
+# 26 "main.c" 2
 
 
-__eeprom uint8_t highscore = 0;
+__eeprom uint16_t highscore = 0;
 
 __eeprom uint16_t uniqueSeed = 0;
 
@@ -2921,24 +2937,34 @@ enum
 
 typedef enum {
     FAST_TIMER_PRESCALER = 1,
-    DEFAULT_TIMER_PRESCALER = 12,
+    EASY_TIMER_PRESCALER = 12,
+    MEDIUM_TIMER_PRESCALER = 9,
+    HARD_TIMER_PRESCALER = 6,
+    ULTIMATE_TIMER_PRESCALER = 3,
 } TimerPrescaler;
 
-static uint8_t timerPrescaler = DEFAULT_TIMER_PRESCALER;
+typedef enum {
+    EASY_SCORE_LIMIT = 3,
+    MEDIUM_SCORE_LIMIT = 7,
+    HARD_SCORE_LIMIT = 10,
+    ULTIMATE_SCORE_LIMIT = 20,
+} ScoreLimit;
+
+static uint8_t timerPrescaler = EASY_TIMER_PRESCALER;
+
+static uint8_t defaultTimerPrescaler = EASY_TIMER_PRESCALER;
 
 static uint8_t updateReady = 0;
 
-static void SetupOscillator(void)
-{
 
 
-    IRCF0 = 1;
-    IRCF1 = 1;
-    IRCF2 = 1;
-}
+
+
+static uint8_t paused = 1;
 
 static void SetupTimer(void)
 {
+    GIE = 1;
     TMR1IE = 1;
     TMR1CS = 0;
     PEIE = 1;
@@ -2958,8 +2984,18 @@ static void __attribute__((picinterrupt(("")))) InterruptHandler(void)
 
     if (INTE && INTF)
     {
+        _delay((unsigned long)((25)*(8000000/4000000.0)));
         INTF = 0;
 
+        if (!paused)
+        {
+            paused = 1;
+            __asm("sleep");
+        }
+        else
+        {
+            paused = 0;
+        }
     }
 
     if (TMR1IE && TMR1IF)
@@ -2986,19 +3022,33 @@ static void Setup(void)
     SetupRandomness();
     SetupTimer();
 
-    Buttons_SetupPortsAndInterrups();
-
     LCD_SetupPorts();
     LCD_Reset();
     LCD_SegmentSelection(LCD_BOTH_SEGMENTS);
     LCD_Clear();
     LCD_TurnOn();
+
+    Buttons_Setup();
+    GIE = 1;
 }
 
-static void ShowLogo(void)
+static void UpdateDifficulty(Tetris_Game *tetrisGame)
 {
-    DrawLogo();
-    _delay((unsigned long)((2800)*(8000000/4000.0)));
+    switch (defaultTimerPrescaler)
+    {
+    case EASY_TIMER_PRESCALER:
+        if (tetrisGame->currentScore > EASY_SCORE_LIMIT)
+            defaultTimerPrescaler = MEDIUM_TIMER_PRESCALER;
+        break;
+    case MEDIUM_TIMER_PRESCALER:
+        if (tetrisGame->currentScore > MEDIUM_SCORE_LIMIT)
+            defaultTimerPrescaler = HARD_TIMER_PRESCALER;
+        break;
+    case HARD_TIMER_PRESCALER:
+        if (tetrisGame->currentScore > HARD_SCORE_LIMIT)
+            defaultTimerPrescaler = ULTIMATE_TIMER_PRESCALER;
+        break;
+    }
 }
 
 void main(void)
@@ -3006,16 +3056,18 @@ void main(void)
 
     Setup();
 
-    Buttons buttons;
     Tetris_Game tetrisGame;
-
-    ShowLogo();
+    Buttons buttons;
 
     while (1)
     {
         Tetris_ResetGame(&tetrisGame, Tetris_GetRandomUnit());
+        defaultTimerPrescaler = EASY_TIMER_PRESCALER;
         Buttons_Clear(&buttons);
         ResetTimer();
+
+        DrawCurrentScore(&tetrisGame);
+        DrawHighscore(highscore);
 
         while (1)
         {
@@ -3031,16 +3083,30 @@ void main(void)
             if (buttons.down.held)
                 timerPrescaler = FAST_TIMER_PRESCALER;
             else
-                timerPrescaler = DEFAULT_TIMER_PRESCALER;
+                timerPrescaler = defaultTimerPrescaler;
 
             if (updateReady)
             {
                 updateReady = 0;
-                if (Tetris_UpdateGame(&tetrisGame) == TETRIS_GAME_OVER)
+                uint8_t status = Tetris_UpdateGame(&tetrisGame);
+                if (status == TETRIS_PLAYER_SCORED)
+                {
+                    DrawCurrentScore(&tetrisGame);
+                    UpdateDifficulty(&tetrisGame);
+                }
+                else if (status == TETRIS_GAME_OVER)
+                {
                     break;
+                }
             }
 
             DrawTetris(&tetrisGame);
+        }
+
+        if (tetrisGame.currentScore > highscore)
+        {
+            highscore = tetrisGame.currentScore;
+            FlashVictoriously();
         }
     }
 }

@@ -10,17 +10,16 @@
 
 static void Buttons_SetupPortB(void)
 {
-    TRISB = 0xFF;
-    ANSELH = 0;
     WPUB = 0b00011111;
     nRBPU = 0;
+    ANSELH = 0;
+    TRISB = 0xFF;
 }
 
 static void Buttons_SetupInterrupts(void)
 {
-    GIE = 1;
-    INTE = 1;
     INTEDG = 0;
+    INTE = 1;
 }
 
 static void Buttons_UpdateButton(Button *button, uint8_t nHeld)
@@ -37,7 +36,7 @@ static void Buttons_UpdateButton(Button *button, uint8_t nHeld)
     }
 }
 
-void Buttons_SetupPortsAndInterrups(void)
+void Buttons_Setup(void)
 {
     Buttons_SetupPortB();
     Buttons_SetupInterrupts();

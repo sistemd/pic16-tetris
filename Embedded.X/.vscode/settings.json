@@ -11,7 +11,9 @@
         "logoimage.h": "c",
         "stdlib.h": "c",
         "digits.h": "c",
-        "fontdigits.h": "c"
+        "fontdigits.h": "c",
+        "frequency.h": "c",
+        "compatibility.h": "c"
     },
     "python.linting.pylintEnabled": false,
     "python.linting.mypyEnabled": true,

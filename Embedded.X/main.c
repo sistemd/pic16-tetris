@@ -14,11 +14,10 @@
 #pragma config "BOR4V = BOR40V"   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
 #pragma config "WRT = OFF"        // Flash Program Memory Self Write Enable bits (Write protection off)
 
-#define _XTAL_FREQ 8000000
-
 #include "Tetris.h"
 #include "Buttons.h"
 #include "Drawing.h"
+#include "Frequency.h"
 #include "LCD.h"
 #include <xc.h>
 #include <stdint.h>
@@ -26,7 +25,7 @@
 
 #include "Compatibility.h"
 
-__eeprom uint8_t highscore = 0;
+__eeprom uint16_t highscore = 0;
 
 __eeprom uint16_t uniqueSeed = 0;
 
@@ -37,24 +36,34 @@ enum
 
 typedef enum {
     FAST_TIMER_PRESCALER = 1,
-    DEFAULT_TIMER_PRESCALER = 12,
+    EASY_TIMER_PRESCALER = 12,
+    MEDIUM_TIMER_PRESCALER = 9,
+    HARD_TIMER_PRESCALER = 6,
+    ULTIMATE_TIMER_PRESCALER = 3,
 } TimerPrescaler;
 
-static uint8_t timerPrescaler = DEFAULT_TIMER_PRESCALER;
+typedef enum {
+    EASY_SCORE_LIMIT = 3,
+    MEDIUM_SCORE_LIMIT = 7,
+    HARD_SCORE_LIMIT = 10,
+    ULTIMATE_SCORE_LIMIT = 20,
+} ScoreLimit;
+
+static uint8_t timerPrescaler = EASY_TIMER_PRESCALER;
+
+static uint8_t defaultTimerPrescaler = EASY_TIMER_PRESCALER;
 
 static uint8_t updateReady = 0;
 
-static void SetupOscillator(void)
-{
-    /* Make sure _XTAL_FREQ matches this configuration. */
-
-    IRCF0 = 1;
-    IRCF1 = 1;
-    IRCF2 = 1;
-}
+/*
+  This should be set to 0 initially. However, for some reason I break into the interrupt handler
+  due to some external interrupt during startup. I don't know why that happens. I should fix this.
+*/
+static uint8_t paused = 1;
 
 static void SetupTimer(void)
 {
+    GIE = 1;
     TMR1IE = 1;
     TMR1CS = 0;
     PEIE = 1;
@@ -74,8 +83,18 @@ static void __interrupt() InterruptHandler(void)
 
     if (INTE && INTF)
     {
+        __delay_us(25); /* A poor man's attempt to debounce his switch */
         INTF = 0;
-        /* Should toggle sleep here (how?). Only put into sleep if wakeup didn't just happen. Do I need to disable the WDT? */
+
+        if (!paused)
+        {
+            paused = 1;
+            SLEEP();
+        }
+        else
+        {
+            paused = 0;
+        }
     }
 
     if (TMR1IE && TMR1IF)
@@ -102,19 +121,33 @@ static void Setup(void)
     SetupRandomness();
     SetupTimer();
 
-    Buttons_SetupPortsAndInterrups();
-
     LCD_SetupPorts();
     LCD_Reset();
     LCD_SegmentSelection(LCD_BOTH_SEGMENTS);
     LCD_Clear();
     LCD_TurnOn();
+
+    Buttons_Setup();
+    GIE = 1;
 }
 
-static void ShowLogo(void)
+static void UpdateDifficulty(Tetris_Game *tetrisGame)
 {
-    DrawLogo();
-    __delay_ms(2800);
+    switch (defaultTimerPrescaler)
+    {
+    case EASY_TIMER_PRESCALER:
+        if (tetrisGame->currentScore > EASY_SCORE_LIMIT)
+            defaultTimerPrescaler = MEDIUM_TIMER_PRESCALER;
+        break;
+    case MEDIUM_TIMER_PRESCALER:
+        if (tetrisGame->currentScore > MEDIUM_SCORE_LIMIT)
+            defaultTimerPrescaler = HARD_TIMER_PRESCALER;
+        break;
+    case HARD_TIMER_PRESCALER:
+        if (tetrisGame->currentScore > HARD_SCORE_LIMIT)
+            defaultTimerPrescaler = ULTIMATE_TIMER_PRESCALER;
+        break;
+    }
 }
 
 void main(void)
@@ -122,16 +155,18 @@ void main(void)
     /* Don't forget to turn on the WDT later. */
     Setup();
 
-    Buttons buttons;
     Tetris_Game tetrisGame;
-
-    ShowLogo();
+    Buttons buttons;
 
     while (1)
     {
         Tetris_ResetGame(&tetrisGame, Tetris_GetRandomUnit());
+        defaultTimerPrescaler = EASY_TIMER_PRESCALER;
         Buttons_Clear(&buttons);
         ResetTimer();
+
+        DrawCurrentScore(&tetrisGame);
+        DrawHighscore(highscore);
 
         while (1)
         {
@@ -147,16 +182,30 @@ void main(void)
             if (buttons.down.held)
                 timerPrescaler = FAST_TIMER_PRESCALER;
             else
-                timerPrescaler = DEFAULT_TIMER_PRESCALER;
-
+                timerPrescaler = defaultTimerPrescaler;
+            
             if (updateReady)
             {
                 updateReady = 0;
-                if (Tetris_UpdateGame(&tetrisGame) == TETRIS_GAME_OVER)
+                uint8_t status = Tetris_UpdateGame(&tetrisGame);
+                if (status == TETRIS_PLAYER_SCORED)
+                {
+                    DrawCurrentScore(&tetrisGame);
+                    UpdateDifficulty(&tetrisGame);
+                }
+                else if (status == TETRIS_GAME_OVER)
+                {
                     break;
+                }
             }
 
             DrawTetris(&tetrisGame);
+        }
+
+        if (tetrisGame.currentScore > highscore)
+        {
+            highscore = tetrisGame.currentScore;
+            FlashVictoriously();
         }
     }
 }

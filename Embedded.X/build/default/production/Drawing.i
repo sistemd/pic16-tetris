@@ -151,35 +151,35 @@ typedef uint16_t uintptr_t;
 
 enum
 {
- TETRIS_MAX_ROTATIONS = 4,
+    TETRIS_MAX_ROTATIONS = 4,
 };
 
 typedef enum {
- TETRIS_TABLE_WIDTH = 16,
- TETRIS_TABLE_HEIGHT = 24,
+    TETRIS_TABLE_WIDTH = 16,
+    TETRIS_TABLE_HEIGHT = 24,
 } Tetris_TableSize;
 
 typedef enum
 {
- TETRIS_UNIT_HEIGHT = 4,
+    TETRIS_UNIT_HEIGHT = 4,
 } Tetris_UnitSize;
 
 typedef struct {
- uint8_t x;
- uint8_t y;
+    uint8_t x;
+    uint8_t y;
 } Position;
 
 typedef struct {
- char designator;
- uint8_t numRotations;
- uint16_t bits[TETRIS_UNIT_HEIGHT][TETRIS_MAX_ROTATIONS];
+    char designator;
+    uint8_t numRotations;
+    uint16_t bits[TETRIS_UNIT_HEIGHT][TETRIS_MAX_ROTATIONS];
 } Tetris_Unit;
 
 typedef struct {
- Position position;
- const Tetris_Unit *unit;
- uint16_t unitBits[TETRIS_UNIT_HEIGHT];
- uint8_t rotation;
+    Position position;
+    const Tetris_Unit *unit;
+    uint16_t unitBits[TETRIS_UNIT_HEIGHT];
+    uint8_t rotation;
 } Tetris_Player;
 
 
@@ -187,14 +187,15 @@ typedef struct {
 
 
 typedef struct {
- uint16_t table[TETRIS_TABLE_HEIGHT];
- Tetris_Player player;
- uint16_t currentScore;
+    uint16_t table[TETRIS_TABLE_HEIGHT];
+    Tetris_Player player;
+    uint16_t currentScore;
 } Tetris_Game;
 
 typedef enum {
- TETRIS_GAME_OVER,
- TETRIS_GAME_CONTINUES,
+    TETRIS_GAME_OVER,
+    TETRIS_GAME_CONTINUES,
+    TETRIS_PLAYER_SCORED,
 } Tetris_GameState;
 
 extern const Tetris_Unit *Tetris_GetRandomUnit(void);
@@ -223,13 +224,11 @@ extern void Tetris_RotatePlayer(Tetris_Game *game);
 
 extern void DrawTetris(Tetris_Game *tetrisGame);
 
-extern void DrawScore(uint16_t score);
+extern void DrawCurrentScore(Tetris_Game *tetrisGame);
 
 extern void DrawHighscore(uint16_t highscore);
 
-extern void DrawPause(void);
-
-extern void DrawLogo(void);
+extern void FlashVictoriously(void);
 # 1 "Drawing.c" 2
 
 # 1 "./LCD.h" 1
@@ -2764,545 +2763,163 @@ extern void LCD_SetZ(uint8_t z);
 extern void LCD_Clear(void);
 # 2 "Drawing.c" 2
 
-# 1 "./LogoImage.h" 1
+# 1 "./Font.h" 1
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdint.h" 1 3
-# 1 "./LogoImage.h" 2
+# 1 "./Font.h" 2
 
 
+typedef enum {
+    FONT_WIDTH = 4,
+    FONT_HEIGHT = 8,
+} Font_Size;
 
-
-static const uint8_t logoImage[8][64] = {
+static const uint8_t Font_digits[10][FONT_HEIGHT] = {
     {
         0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
+        0b01110000,
+        0b01010000,
+        0b01010000,
+        0b01010000,
+        0b01010000,
+        0b01110000,
         0b00000000,
     },
     {
         0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
+        0b00100000,
+        0b01100000,
+        0b00100000,
+        0b00100000,
+        0b00100000,
+        0b00100000,
         0b00000000,
     },
     {
         0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000100,
-        0b00011000,
-        0b11100000,
-        0b00000000,
-        0b00000000,
-        0b00111000,
-        0b11111000,
-        0b11110000,
-        0b11000000,
-        0b00000000,
-        0b11100000,
-        0b11100000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b11111110,
-        0b11111110,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b11111111,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
+        0b00100000,
+        0b01010000,
+        0b00010000,
+        0b00100000,
+        0b01000000,
+        0b01110000,
         0b00000000,
     },
     {
         0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000001,
-        0b00011110,
-        0b11100000,
-        0b00000000,
-        0b00000000,
-        0b00000001,
-        0b11110011,
-        0b11110011,
-        0b10000011,
-        0b10000011,
-        0b10000011,
-        0b11000011,
-        0b11111011,
-        0b01111011,
-        0b00000011,
-        0b00000011,
-        0b00000011,
-        0b11100000,
-        0b11111000,
-        0b00000000,
-        0b00000011,
-        0b11111100,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-    },
-    {
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000111,
-        0b11111000,
-        0b01111100,
-        0b00111100,
-        0b00111001,
-        0b00111001,
-        0b00111001,
-        0b00111001,
-        0b00111001,
-        0b00111001,
-        0b00111000,
-        0b00111000,
-        0b01111100,
-        0b00000000,
-        0b00000000,
-        0b00000111,
-        0b00011111,
-        0b00000000,
-        0b11000000,
-        0b00111111,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-    },
-    {
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000111,
-        0b00000000,
-        0b00000000,
-        0b01110001,
-        0b01110001,
-        0b01101001,
-        0b01101101,
-        0b01100101,
-        0b01100111,
-        0b01100011,
-        0b01100011,
+        0b01110000,
+        0b00010000,
+        0b01100000,
+        0b00010000,
+        0b00010000,
         0b01100000,
         0b00000000,
+    },
+    {
         0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00001111,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
+        0b01010000,
+        0b01010000,
+        0b01010000,
+        0b01110000,
+        0b00010000,
+        0b00010000,
         0b00000000,
     },
     {
         0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
+        0b01110000,
+        0b01000000,
+        0b01110000,
+        0b00010000,
+        0b00010000,
+        0b01100000,
         0b00000000,
     },
     {
         0b00000000,
+        0b01110000,
+        0b01000000,
+        0b01110000,
+        0b01010000,
+        0b01010000,
+        0b01110000,
         0b00000000,
+    },
+    {
         0b00000000,
+        0b01110000,
+        0b00010000,
+        0b00010000,
+        0b00100000,
+        0b00100000,
+        0b00100000,
         0b00000000,
+    },
+    {
         0b00000000,
+        0b01110000,
+        0b01010000,
+        0b01110000,
+        0b01010000,
+        0b01010000,
+        0b01110000,
         0b00000000,
+    },
+    {
         0b00000000,
+        0b01110000,
+        0b01010000,
+        0b01010000,
+        0b01110000,
+        0b00010000,
+        0b00010000,
         0b00000000,
+    },
+};
+
+static const uint8_t Font_hi[FONT_HEIGHT] = {
+    0b00000000,
+    0b10100100,
+    0b10100100,
+    0b10100100,
+    0b11100100,
+    0b10100100,
+    0b10100100,
+    0b00000000,
+};
+
+static const uint8_t Font_score[3][FONT_HEIGHT] = {
+    {
         0b00000000,
+        0b11101110,
+        0b10001000,
+        0b11101000,
+        0b00101000,
+        0b00101000,
+        0b11101110,
         0b00000000,
+    },
+    {
         0b00000000,
+        0b11101110,
+        0b10101010,
+        0b10101110,
+        0b10101100,
+        0b10101010,
+        0b11101010,
         0b00000000,
+    },
+    {
         0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
-        0b00000000,
+        0b11100000,
+        0b10000000,
+        0b11100000,
+        0b10000000,
+        0b10000000,
+        0b11100000,
         0b00000000,
     },
 };
 # 3 "Drawing.c" 2
-
 
 # 1 "./Digits.h" 1
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c90\\stdint.h" 1 3
@@ -3335,17 +2952,36 @@ __attribute__((inline)) void GetDigits(uint16_t n, uint8_t *digits)
         --i;
     }
 }
+# 4 "Drawing.c" 2
+
+# 1 "./Frequency.h" 1
+
+
+# 1 "./Compatibility.h" 1
+# 3 "./Frequency.h" 2
+
+
+
+
+static __attribute__((inline)) void SetupOscillator(void)
+{
+
+
+    IRCF0 = 1;
+    IRCF1 = 1;
+    IRCF2 = 1;
+}
 # 5 "Drawing.c" 2
 
 
-enum
-{
-    SCORE_SPACE = 8,
-};
+
+# 1 "./Compatibility.h" 1
+# 8 "Drawing.c" 2
+
 
 typedef enum {
     GAME_PIXEL_WIDTH = LCD_WIDTH / TETRIS_TABLE_WIDTH,
-    GAME_PIXEL_HEIGHT = (LCD_HEIGHT - SCORE_SPACE) / TETRIS_TABLE_HEIGHT,
+    GAME_PIXEL_HEIGHT = (LCD_HEIGHT - FONT_HEIGHT) / TETRIS_TABLE_HEIGHT,
 } GamePixelSize;
 
 static void DrawTetrisGameColumn(Tetris_Game *tetrisGame, uint8_t x, uint16_t rightMask, uint16_t leftMask)
@@ -3353,10 +2989,10 @@ static void DrawTetrisGameColumn(Tetris_Game *tetrisGame, uint8_t x, uint16_t ri
     uint8_t tableY = 0;
 
     LCD_SegmentSelection(LCD_TOP_SEGMENT);
-    LCD_SetY(SCORE_SPACE);
+    LCD_SetY(FONT_HEIGHT);
     LCD_SetX(x);
 
-    for (uint8_t y = SCORE_SPACE; y < LCD_HEIGHT; y += GAME_PIXEL_HEIGHT)
+    for (uint8_t y = FONT_HEIGHT; y < LCD_HEIGHT; y += GAME_PIXEL_HEIGHT)
     {
         uint16_t gameRow = tetrisGame->table[tableY];
         uint8_t lcdRow = 0;
@@ -3386,6 +3022,15 @@ static void DrawTetrisGameColumn(Tetris_Game *tetrisGame, uint8_t x, uint16_t ri
     }
 }
 
+static void DrawHiMarker(void)
+{
+    LCD_SegmentSelection(LCD_TOP_SEGMENT);
+    LCD_SetX(3);
+    LCD_SetY(0);
+    for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+        LCD_WriteData(Font_hi[y] >> 2);
+}
+
 void DrawTetris(Tetris_Game *tetrisGame)
 {
     uint16_t leftMask = 0b0000000000000010;
@@ -3399,46 +3044,109 @@ void DrawTetris(Tetris_Game *tetrisGame)
     }
 }
 
-void DrawScore(uint16_t score)
+void DrawCurrentScore(Tetris_Game *tetrisGame)
 {
+    uint8_t scoreDigits[NUM_DIGITS];
+    GetDigits(tetrisGame->currentScore, scoreDigits);
+
     LCD_SegmentSelection(LCD_TOP_SEGMENT);
-    LCD_SetX(LCD_NUM_PAGES - 1 - NUM_DIGITS);
+    LCD_SetX(7);
     LCD_SetY(0);
+    for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+    {
+        uint8_t lcdData = Font_digits[scoreDigits[0]][y] | (Font_digits[scoreDigits[1]][y] >> 4);
+        LCD_WriteData(lcdData);
+    }
+
+    LCD_SetX(6);
+    LCD_SetY(0);
+    for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+    {
+        uint8_t lcdData = Font_digits[scoreDigits[2]][y] | (Font_digits[scoreDigits[3]][y] >> 4);
+        LCD_WriteData(lcdData);
+    }
+
+    LCD_SetX(5);
+    LCD_SetY(0);
+    for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+    {
+        uint8_t lcdData = Font_digits[scoreDigits[4]][y];
+        LCD_WriteData(lcdData);
+    }
 }
 
 void DrawHighscore(uint16_t highscore)
 {
+    DrawHiMarker();
 
-}
+    uint8_t scoreDigits[NUM_DIGITS];
+    GetDigits(highscore, scoreDigits);
 
-void DrawPause(void)
-{
-
-}
-
-void DrawLogo(void)
-{
     LCD_SegmentSelection(LCD_TOP_SEGMENT);
+    LCD_SetX(2);
     LCD_SetY(0);
-    for (uint8_t x = 0; x < LCD_NUM_PAGES; ++x)
+    for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
     {
-        LCD_SetX(x);
-        for (uint8_t y = 0; y < LCD_SEGMENT_HEIGHT / 2; ++y)
-        {
-            LCD_WriteData(logoImage[x][y]);
-            LCD_WriteData(logoImage[x][y]);
-        }
+        uint8_t lcdData = Font_digits[scoreDigits[0]][y] >> 4;
+        LCD_WriteData(lcdData << 1);
     }
 
-    LCD_SegmentSelection(LCD_BOTTOM_SEGMENT);
+    LCD_SetX(1);
     LCD_SetY(0);
-    for (uint8_t x = 0; x < LCD_NUM_PAGES; ++x)
+    for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
     {
-        LCD_SetX(x);
-        for (uint8_t y = LCD_SEGMENT_HEIGHT / 2; y < LCD_SEGMENT_HEIGHT; ++y)
-        {
-            LCD_WriteData(logoImage[x][y]);
-            LCD_WriteData(logoImage[x][y]);
-        }
+        uint8_t lcdData = Font_digits[scoreDigits[1]][y] | (Font_digits[scoreDigits[2]][y] >> 4);
+        LCD_WriteData(lcdData << 1);
+    }
+
+    LCD_SetX(0);
+    LCD_SetY(0);
+    for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+    {
+        uint8_t lcdData = Font_digits[scoreDigits[3]][y] | (Font_digits[scoreDigits[4]][y] >> 4);
+        LCD_WriteData(lcdData << 1);
+    }
+}
+
+static void DrawHighscoreText(void)
+{
+    uint8_t const baseX = 5;
+    uint8_t const baseY = 56;
+
+    LCD_SegmentSelection(LCD_TOP_SEGMENT);
+    LCD_SetX(baseX);
+    LCD_SetY(baseY);
+
+    for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+        LCD_WriteData(Font_hi[y]);
+
+
+    for (uint8_t x = 0; x < 3; ++x)
+    {
+        LCD_SetY(baseY);
+        LCD_SetX(baseX - x - 1);
+        for (uint8_t y = 0; y < FONT_HEIGHT; ++y)
+            LCD_WriteData(Font_score[x][y]);
+    }
+}
+
+typedef enum
+{
+    NUM_FLASHES = 6,
+    FLASH_DELAY = 600,
+} Flashing;
+
+void FlashVictoriously(void)
+{
+    LCD_SegmentSelection(LCD_BOTH_SEGMENTS);
+    LCD_Clear();
+    DrawHighscoreText();
+
+    for (uint8_t i = 0; i < NUM_FLASHES; ++i)
+    {
+        _delay((unsigned long)((FLASH_DELAY)*(8000000/4000.0)));
+        LCD_TurnOff();
+        _delay((unsigned long)((FLASH_DELAY)*(8000000/4000.0)));
+        LCD_TurnOn();
     }
 }

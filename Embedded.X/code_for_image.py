@@ -2,6 +2,7 @@
 
 from argparse import ArgumentParser, Namespace
 from typing import Iterable
+from sys import stdout
 
 from PIL import Image
 
@@ -13,14 +14,13 @@ def parse_args() -> Namespace:
     parser = ArgumentParser()
     parser.add_argument('image_name', type=str, help='The graphic image')
     parser.add_argument('variable_name', type=str, help='The name of variable in code')
-    parser.add_argument('output_file', type=str)
+    parser.add_argument('--output_file', type=str)
     parser.add_argument('--font_mode', action='store_true', help='Working with a font file (4 bits per character)')
     return parser.parse_args()
 
 
 def generate_prelude_code(filename: str) -> Iterable[str]:
     yield f'#include <stdint.h>\n\n'
-    yield f'/* Code generated using code_for_image.py on "{filename}". */\n\n'
 
 
 def generate_code_for_font(variable_name: str, image: Image) -> Iterable[str]:
@@ -87,11 +87,11 @@ def generate_code_for_image(variable_name: str, image: Image) -> Iterable[str]:
 def main():
     args = parse_args()
     image = Image.open(args.image_name)
-    with open(args.output_file, mode='w', encoding='utf8') as f:
-        if args.font_mode:
-            f.write(''.join(generate_code_for_font(args.variable_name, image)))
-        else:
-            f.write(''.join(generate_code_for_image(args.variable_name, image)))
+    f = open(args.output_file, mode='w', encoding='utf8') if args.output_file else stdout
+    if args.font_mode:
+        f.write(''.join(generate_code_for_font(args.variable_name, image)))
+    else:
+        f.write(''.join(generate_code_for_image(args.variable_name, image)))
 
 
 main()
