@@ -651,7 +651,8 @@ static void Tetris_UpdatePlayerUnitBits(Tetris_Player *player)
 
 static uint8_t Tetris_PlayerUnitBitsAreValid(const Tetris_Player *player)
 {
- return Tetris_CountUnitBits(player->unit->bits[player->rotation]) == Tetris_CountUnitBits(player->unitBits);
+ return Tetris_CountUnitBits(player->unit->bits[player->rotation])
+  == Tetris_CountUnitBits(player->unitBits);
 }
 
 static void Tetris_SetPlayerUnit(Tetris_Player *player, const Tetris_Unit *unit)

@@ -7,7 +7,11 @@
         "language_support.h": "c",
         "tetris.h": "c",
         "drawing.h": "c",
-        "pauseimage.h": "c"
+        "pauseimage.h": "c",
+        "logoimage.h": "c",
+        "stdlib.h": "c",
+        "digits.h": "c",
+        "fontdigits.h": "c"
     },
     "python.linting.pylintEnabled": false,
     "python.linting.mypyEnabled": true,

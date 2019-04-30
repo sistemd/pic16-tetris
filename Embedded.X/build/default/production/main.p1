@@ -1,7 +1,7 @@
 Version 4.0 HI-TECH Software Intermediate Code
 "43 main.c
 [; ;main.c: 43: static uint8_t timerPrescaler = DEFAULT_TIMER_PRESCALER;
-[c E1525 1 16 .. ]
+[c E1525 1 12 .. ]
 [n E1525 . FAST_TIMER_PRESCALER DEFAULT_TIMER_PRESCALER  ]
 "3956 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3956: extern volatile __bit IRCF0 __attribute__((address(0x47C)));
@@ -47,7 +47,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "76 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdlib.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdlib.h: 76: extern void srand(unsigned int);
 [v _srand `(v ~T0 @X0 0 ef1`ui ]
-[p mainexit ]
 "17 ./Buttons.h
 [; ;./Buttons.h: 17: extern void Buttons_SetupPortsAndInterrups(void);
 [v _Buttons_SetupPortsAndInterrups `(v ~T0 @X0 0 ef ]
@@ -57,8 +56,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "22
 [; ;./LCD.h: 22: extern void LCD_Reset(void);
 [v _LCD_Reset `(v ~T0 @X0 0 ef ]
-"110 main.c
-[; ;main.c: 110:     LCD_SegmentSelection(LCD_BOTH_SEGMENTS);
+"109 main.c
+[; ;main.c: 109:     LCD_SegmentSelection(LCD_BOTH_SEGMENTS);
 [c E1367 0 1 2 3 .. ]
 [n E1367 . LCD_NO_SEGMENT LCD_BOTTOM_SEGMENT LCD_TOP_SEGMENT LCD_BOTH_SEGMENTS  ]
 "30 ./LCD.h
@@ -70,6 +69,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "32
 [; ;./LCD.h: 32: extern void LCD_TurnOn(void);
 [v _LCD_TurnOn `(v ~T0 @X0 0 ef ]
+"13 ./Drawing.h
+[; ;./Drawing.h: 13: extern void DrawLogo(void);
+[v _DrawLogo `(v ~T0 @X0 0 ef ]
+[v F1336 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
+[v __delay `JF1336 ~T0 @X0 0 e ]
+[p i __delay ]
+[p mainexit ]
 "5 ./Buttons.h
 [; ;./Buttons.h: 5: typedef struct {
 [s S142 :1 `uc 1 :1 `uc 1 ]
@@ -116,8 +123,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "73
 [; ;../Tetris\Tetris.h: 73: extern void Tetris_RotatePlayer(Tetris_Game *game);
 [v _Tetris_RotatePlayer `(v ~T0 @X0 0 ef1`*S4 ]
-"144 main.c
-[; ;main.c: 144:                 if (Tetris_UpdateGame(&tetrisGame) == TETRIS_GAME_OVER)
+"155 main.c
+[; ;main.c: 155:                 if (Tetris_UpdateGame(&tetrisGame) == TETRIS_GAME_OVER)
 [c E60 0 1 .. ]
 [n E60 . TETRIS_GAME_OVER TETRIS_GAME_CONTINUES  ]
 "59 ../Tetris\Tetris.h
@@ -555,143 +562,179 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 97: }
 [e :UE 155 ]
 }
-[v $root$_main `(v ~T0 @X0 0 e ]
 "99
-[; ;main.c: 99: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
+[; ;main.c: 99: static void Setup(void)
+[v _Setup `(v ~T0 @X0 1 sf ]
 "100
 [; ;main.c: 100: {
 {
+[e :U _Setup ]
+[f ]
+"101
+[; ;main.c: 101:     SetupOscillator();
+[e ( _SetupOscillator ..  ]
+"102
+[; ;main.c: 102:     SetupRandomness();
+[e ( _SetupRandomness ..  ]
+"103
+[; ;main.c: 103:     SetupTimer();
+[e ( _SetupTimer ..  ]
+"105
+[; ;main.c: 105:     Buttons_SetupPortsAndInterrups();
+[e ( _Buttons_SetupPortsAndInterrups ..  ]
+"107
+[; ;main.c: 107:     LCD_SetupPorts();
+[e ( _LCD_SetupPorts ..  ]
+"108
+[; ;main.c: 108:     LCD_Reset();
+[e ( _LCD_Reset ..  ]
+"109
+[; ;main.c: 109:     LCD_SegmentSelection(LCD_BOTH_SEGMENTS);
+[e ( _LCD_SegmentSelection (1 . `E1367 3 ]
+"110
+[; ;main.c: 110:     LCD_Clear();
+[e ( _LCD_Clear ..  ]
+"111
+[; ;main.c: 111:     LCD_TurnOn();
+[e ( _LCD_TurnOn ..  ]
+"112
+[; ;main.c: 112: }
+[e :UE 156 ]
+}
+"114
+[; ;main.c: 114: static void ShowLogo(void)
+[v _ShowLogo `(v ~T0 @X0 1 sf ]
+"115
+[; ;main.c: 115: {
+{
+[e :U _ShowLogo ]
+[f ]
+"116
+[; ;main.c: 116:     DrawLogo();
+[e ( _DrawLogo ..  ]
+"117
+[; ;main.c: 117:     _delay((unsigned long)((2800)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2800 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"118
+[; ;main.c: 118: }
+[e :UE 157 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"120
+[; ;main.c: 120: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"121
+[; ;main.c: 121: {
+{
 [e :U _main ]
 [f ]
-"103
-[; ;main.c: 103:     SetupOscillator();
-[e ( _SetupOscillator ..  ]
-"104
-[; ;main.c: 104:     SetupRandomness();
-[e ( _SetupRandomness ..  ]
-"106
-[; ;main.c: 106:     Buttons_SetupPortsAndInterrups();
-[e ( _Buttons_SetupPortsAndInterrups ..  ]
-"108
-[; ;main.c: 108:     LCD_SetupPorts();
-[e ( _LCD_SetupPorts ..  ]
-"109
-[; ;main.c: 109:     LCD_Reset();
-[e ( _LCD_Reset ..  ]
-"110
-[; ;main.c: 110:     LCD_SegmentSelection(LCD_BOTH_SEGMENTS);
-[e ( _LCD_SegmentSelection (1 . `E1367 3 ]
-"111
-[; ;main.c: 111:     LCD_Clear();
-[e ( _LCD_Clear ..  ]
-"112
-[; ;main.c: 112:     LCD_TurnOn();
-[e ( _LCD_TurnOn ..  ]
-"114
-[; ;main.c: 114:     Buttons buttons;
-[v _buttons `S143 ~T0 @X0 1 a ]
-"115
-[; ;main.c: 115:     Tetris_Game tetrisGame;
-[v _tetrisGame `S4 ~T0 @X0 1 a ]
-"117
-[; ;main.c: 117:     SetupTimer();
-[e ( _SetupTimer ..  ]
-"119
-[; ;main.c: 119:     while (1)
-[e :U 158 ]
-"120
-[; ;main.c: 120:     {
-{
-"121
-[; ;main.c: 121:         Tetris_ResetGame(&tetrisGame, Tetris_GetRandomUnit());
-[e ( _Tetris_ResetGame (2 , &U _tetrisGame ( _Tetris_GetRandomUnit ..  ]
-"122
-[; ;main.c: 122:         Buttons_Clear(&buttons);
-[e ( _Buttons_Clear (1 &U _buttons ]
 "123
-[; ;main.c: 123:         ResetTimer();
-[e ( _ResetTimer ..  ]
+[; ;main.c: 123:     Setup();
+[e ( _Setup ..  ]
 "125
-[; ;main.c: 125:         while (1)
-[e :U 161 ]
+[; ;main.c: 125:     Buttons buttons;
+[v _buttons `S143 ~T0 @X0 1 a ]
 "126
-[; ;main.c: 126:         {
-{
-"127
-[; ;main.c: 127:             Buttons_Update(&buttons);
-[e ( _Buttons_Update (1 &U _buttons ]
-"129
-[; ;main.c: 129:             if (buttons.left.pressed)
-[e $ ! != -> . . _buttons 0 0 `i -> 0 `i 163  ]
+[; ;main.c: 126:     Tetris_Game tetrisGame;
+[v _tetrisGame `S4 ~T0 @X0 1 a ]
+"128
+[; ;main.c: 128:     ShowLogo();
+[e ( _ShowLogo ..  ]
 "130
-[; ;main.c: 130:                 Tetris_MovePlayerLeft(&tetrisGame);
-[e ( _Tetris_MovePlayerLeft (1 &U _tetrisGame ]
-[e :U 163 ]
-"131
-[; ;main.c: 131:             if (buttons.right.pressed)
-[e $ ! != -> . . _buttons 1 0 `i -> 0 `i 164  ]
-"132
-[; ;main.c: 132:                 Tetris_MovePlayerRight(&tetrisGame);
-[e ( _Tetris_MovePlayerRight (1 &U _tetrisGame ]
-[e :U 164 ]
-"133
-[; ;main.c: 133:             if (buttons.rotate.pressed)
-[e $ ! != -> . . _buttons 3 0 `i -> 0 `i 165  ]
-"134
-[; ;main.c: 134:                 Tetris_RotatePlayer(&tetrisGame);
-[e ( _Tetris_RotatePlayer (1 &U _tetrisGame ]
-[e :U 165 ]
-"136
-[; ;main.c: 136:             if (buttons.down.held)
-[e $ ! != -> . . _buttons 2 1 `i -> 0 `i 166  ]
-"137
-[; ;main.c: 137:                 timerPrescaler = FAST_TIMER_PRESCALER;
-[e = _timerPrescaler -> . `E1525 0 `uc ]
-[e $U 167  ]
-"138
-[; ;main.c: 138:             else
-[e :U 166 ]
-"139
-[; ;main.c: 139:                 timerPrescaler = DEFAULT_TIMER_PRESCALER;
-[e = _timerPrescaler -> . `E1525 1 `uc ]
-[e :U 167 ]
-"141
-[; ;main.c: 141:             if (updateReady)
-[e $ ! != -> _updateReady `i -> 0 `i 168  ]
-"142
-[; ;main.c: 142:             {
-{
-"143
-[; ;main.c: 143:                 updateReady = 0;
-[e = _updateReady -> -> 0 `i `uc ]
-"144
-[; ;main.c: 144:                 if (Tetris_UpdateGame(&tetrisGame) == TETRIS_GAME_OVER)
-[e $ ! == -> ( _Tetris_UpdateGame (1 &U _tetrisGame `ui -> . `E60 0 `ui 169  ]
-"145
-[; ;main.c: 145:                     break;
-[e $U 162  ]
-[e :U 169 ]
-"146
-[; ;main.c: 146:             }
-}
-[e :U 168 ]
-"148
-[; ;main.c: 148:             DrawTetris(&tetrisGame);
-[e ( _DrawTetris (1 &U _tetrisGame ]
-"149
-[; ;main.c: 149:         }
-}
+[; ;main.c: 130:     while (1)
 [e :U 160 ]
-[e $U 161  ]
-[e :U 162 ]
+"131
+[; ;main.c: 131:     {
+{
+"132
+[; ;main.c: 132:         Tetris_ResetGame(&tetrisGame, Tetris_GetRandomUnit());
+[e ( _Tetris_ResetGame (2 , &U _tetrisGame ( _Tetris_GetRandomUnit ..  ]
+"133
+[; ;main.c: 133:         Buttons_Clear(&buttons);
+[e ( _Buttons_Clear (1 &U _buttons ]
+"134
+[; ;main.c: 134:         ResetTimer();
+[e ( _ResetTimer ..  ]
+"136
+[; ;main.c: 136:         while (1)
+[e :U 163 ]
+"137
+[; ;main.c: 137:         {
+{
+"138
+[; ;main.c: 138:             Buttons_Update(&buttons);
+[e ( _Buttons_Update (1 &U _buttons ]
+"140
+[; ;main.c: 140:             if (buttons.left.pressed)
+[e $ ! != -> . . _buttons 0 0 `i -> 0 `i 165  ]
+"141
+[; ;main.c: 141:                 Tetris_MovePlayerLeft(&tetrisGame);
+[e ( _Tetris_MovePlayerLeft (1 &U _tetrisGame ]
+[e :U 165 ]
+"142
+[; ;main.c: 142:             if (buttons.right.pressed)
+[e $ ! != -> . . _buttons 1 0 `i -> 0 `i 166  ]
+"143
+[; ;main.c: 143:                 Tetris_MovePlayerRight(&tetrisGame);
+[e ( _Tetris_MovePlayerRight (1 &U _tetrisGame ]
+[e :U 166 ]
+"144
+[; ;main.c: 144:             if (buttons.rotate.pressed)
+[e $ ! != -> . . _buttons 3 0 `i -> 0 `i 167  ]
+"145
+[; ;main.c: 145:                 Tetris_RotatePlayer(&tetrisGame);
+[e ( _Tetris_RotatePlayer (1 &U _tetrisGame ]
+[e :U 167 ]
+"147
+[; ;main.c: 147:             if (buttons.down.held)
+[e $ ! != -> . . _buttons 2 1 `i -> 0 `i 168  ]
+"148
+[; ;main.c: 148:                 timerPrescaler = FAST_TIMER_PRESCALER;
+[e = _timerPrescaler -> . `E1525 0 `uc ]
+[e $U 169  ]
+"149
+[; ;main.c: 149:             else
+[e :U 168 ]
 "150
-[; ;main.c: 150:     }
+[; ;main.c: 150:                 timerPrescaler = DEFAULT_TIMER_PRESCALER;
+[e = _timerPrescaler -> . `E1525 1 `uc ]
+[e :U 169 ]
+"152
+[; ;main.c: 152:             if (updateReady)
+[e $ ! != -> _updateReady `i -> 0 `i 170  ]
+"153
+[; ;main.c: 153:             {
+{
+"154
+[; ;main.c: 154:                 updateReady = 0;
+[e = _updateReady -> -> 0 `i `uc ]
+"155
+[; ;main.c: 155:                 if (Tetris_UpdateGame(&tetrisGame) == TETRIS_GAME_OVER)
+[e $ ! == -> ( _Tetris_UpdateGame (1 &U _tetrisGame `ui -> . `E60 0 `ui 171  ]
+"156
+[; ;main.c: 156:                     break;
+[e $U 164  ]
+[e :U 171 ]
+"157
+[; ;main.c: 157:             }
 }
-[e :U 157 ]
-[e $U 158  ]
+[e :U 170 ]
+"159
+[; ;main.c: 159:             DrawTetris(&tetrisGame);
+[e ( _DrawTetris (1 &U _tetrisGame ]
+"160
+[; ;main.c: 160:         }
+}
+[e :U 162 ]
+[e $U 163  ]
+[e :U 164 ]
+"161
+[; ;main.c: 161:     }
+}
 [e :U 159 ]
-"151
-[; ;main.c: 151: }
-[e :UE 156 ]
+[e $U 160  ]
+[e :U 161 ]
+"162
+[; ;main.c: 162: }
+[e :UE 158 ]
 }

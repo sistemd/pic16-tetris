@@ -11,78 +11,81 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o
+$C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 B B 2 2
 config CONFIG 0 2007 2007 2 2
 $dist/default/production\Embedded.X.production.o
 cinit CODE 0 D D 1E 2
-text1 CODE 0 F10 F10 4C 2
-text2 CODE 0 BB5 BB5 23 2
-text3 CODE 0 C81 C81 30 2
-text4 CODE 0 BFD BFD 2B 2
-text5 CODE 0 ECB ECB 45 2
-text6 CODE 0 E47 E47 41 2
-text7 CODE 0 B92 B92 23 2
-text8 CODE 0 F5C F5C 4D 2
-text9 CODE 0 CB1 CB1 31 2
-text10 CODE 0 E88 E88 43 2
-text11 CODE 0 72E 72E 70 2
-text12 CODE 0 B6F B6F 23 2
-text13 CODE 0 D4D D4D 37 2
-text14 CODE 0 E06 E06 41 2
-text15 CODE 0 AC8 AC8 1F 2
-text16 CODE 0 B4C B4C 23 2
-text17 CODE 0 9E8 9E8 10 2
-text18 CODE 0 604 604 9B 2
-text19 CODE 0 79E 79E 59 2
-text20 CODE 0 A8B A8B 1E 2
-text21 CODE 0 FA9 FA9 57 2
-text22 CODE 0 D17 D17 36 2
-text23 CODE 0 A6D A6D 1E 2
-text24 CODE 0 DC5 DC5 41 2
-text25 CODE 0 96 96 64 2
-text26 CODE 0 9F8 9F8 12 2
-text27 CODE 0 961 961 B 2
-text28 CODE 0 AA9 AA9 1F 2
-text29 CODE 0 7F7 7F7 9 2
-text30 CODE 0 9B9 9B9 F 2
-text31 CODE 0 D84 D84 41 2
-text32 CODE 0 A0A A0A 15 2
-text33 CODE 0 C54 C54 2D 2
-text34 CODE 0 FA FA 6 2
-text35 CODE 0 934 934 5 2
-text36 CODE 0 94C 94C A 2
-text37 CODE 0 B29 B29 23 2
-text38 CODE 0 A1F A1F 17 2
-text39 CODE 0 984 984 C 2
-text40 CODE 0 BD8 BD8 25 2
-text41 CODE 0 CE2 CE2 35 2
-text42 CODE 0 69F 69F 8F 2
-text43 CODE 0 956 956 B 2
-text44 CODE 0 978 978 C 2
-text45 CODE 0 96C 96C C 2
-text46 CODE 0 A36 A36 1B 2
-text47 CODE 0 945 945 7 2
-text48 CODE 0 9AB 9AB E 2
-text49 CODE 0 9D8 9D8 10 2
-text50 CODE 0 9C8 9C8 10 2
-text51 CODE 0 C28 C28 2C 2
-text52 CODE 0 B08 B08 21 2
-text53 CODE 0 93F 93F 6 2
-text54 CODE 0 990 990 D 2
-text55 CODE 0 939 939 6 2
-text56 CODE 0 99D 99D E 2
-text57 CODE 0 A51 A51 1C 2
-text58 CODE 0 AE7 AE7 21 2
-maintext CODE 0 2B 2B 6B 2
+text1 CODE 0 78 78 4C 2
+text2 CODE 0 CDC CDC 23 2
+text3 CODE 0 DA8 DA8 30 2
+text4 CODE 0 D24 D24 2B 2
+text5 CODE 0 FBB FBB 45 2
+text6 CODE 0 F37 F37 41 2
+text7 CODE 0 CB9 CB9 23 2
+text8 CODE 0 2B 2B 4D 2
+text9 CODE 0 DD8 DD8 31 2
+text10 CODE 0 F78 F78 43 2
+text11 CODE 0 61A 61A 70 2
+text12 CODE 0 C96 C96 23 2
+text13 CODE 0 C4 C4 37 2
+text14 CODE 0 EF6 EF6 41 2
+text15 CODE 0 BEF BEF 1F 2
+text16 CODE 0 C73 C73 23 2
+text17 CODE 0 AE0 AE0 10 2
+text18 CODE 0 4F0 4F0 9B 2
+text19 CODE 0 6EE 6EE 59 2
+text20 CODE 0 BB2 BB2 1E 2
+text21 CODE 0 747 747 57 2
+text22 CODE 0 E3E E3E 36 2
+text23 CODE 0 B94 B94 1E 2
+text24 CODE 0 EB5 EB5 41 2
+text25 CODE 0 68A 68A 64 2
+text26 CODE 0 AF0 AF0 12 2
+text27 CODE 0 B02 B02 13 2
+text28 CODE 0 404 404 EC 2
+text29 CODE 0 B78 B78 1C 2
+text30 CODE 0 A66 A66 B 2
+text31 CODE 0 BD0 BD0 1F 2
+text32 CODE 0 A48 A48 9 2
+text33 CODE 0 AB1 AB1 F 2
+text34 CODE 0 E74 E74 41 2
+text35 CODE 0 B15 B15 15 2
+text36 CODE 0 D7B D7B 2D 2
+text37 CODE 0 A3B A3B 6 2
+text38 CODE 0 A51 A51 A 2
+text39 CODE 0 C50 C50 23 2
+text40 CODE 0 B2A B2A 17 2
+text41 CODE 0 A89 A89 C 2
+text42 CODE 0 CFF CFF 25 2
+text43 CODE 0 A35 A35 6 2
+text44 CODE 0 7F3 7F3 D 2
+text45 CODE 0 A2F A2F 6 2
+text46 CODE 0 FB FB 5 2
+text47 CODE 0 E09 E09 35 2
+text48 CODE 0 58B 58B 8F 2
+text49 CODE 0 A5B A5B B 2
+text50 CODE 0 A7D A7D C 2
+text51 CODE 0 A71 A71 C 2
+text52 CODE 0 B41 B41 1B 2
+text53 CODE 0 A41 A41 7 2
+text54 CODE 0 AA3 AA3 E 2
+text55 CODE 0 AD0 AD0 10 2
+text56 CODE 0 AC0 AC0 10 2
+text57 CODE 0 D4F D4F 2C 2
+text58 CODE 0 C2F C2F 21 2
+text59 CODE 0 A95 A95 E 2
+text60 CODE 0 B5C B5C 1C 2
+text61 CODE 0 C0E C0E 21 2
+maintext CODE 0 79E 79E 55 2
 cstackCOMMON COMMON 1 70 70 A 1
 cstackBANK0 BANK0 1 20 20 27 1
 cstackBANK1 BANK1 1 A0 A0 43 1
 intentry CODE 0 4 4 7 2
 bssBANK1 BANK1 1 E3 E3 1 1
-stringtext STRCODE 0 100 100 504 2
-idataBANK0 CODE 0 930 930 4 2
+stringtext STRCODE 0 100 100 304 2
+idataBANK0 CODE 0 A2B A2B 4 2
 idataBANK1 CODE 0 3 3 1 2
 dataBANK0 BANK0 1 47 47 4 1
 dataBANK1 BANK1 1 E4 E4 1 1
@@ -101,13 +104,13 @@ BANK0 4B-6F 1
 BANK1 E5-EF 1
 BANK2 120-16F 1
 CONST 2-2 2
-CONST 800-92F 2
+CONST 800-A2A 2
 ENTRY 2-2 2
-ENTRY 800-92F 2
+ENTRY 800-A2A 2
 IDLOC 2000-2003 2
 STACK 120-16F 1
 CODE 2-2 2
-CODE 800-92F 2
+CODE 800-A2A 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -115,9 +118,9 @@ SFR3 180-1EF 1
 COMMON 7B-7D 1
 EEDATA 2103-21FF 2
 STRCODE 2-2 2
-STRCODE 800-92F 2
+STRCODE 800-A2A 2
 STRING 2-2 2
-STRING 800-92F 2
+STRING 800-A2A 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -132,501 +135,528 @@ STRING 800-92F 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Embedded.X.production.o
-D cinit CODE >2503:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-D cinit CODE >2506:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-D cinit CODE >2550:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-E cinit CODE >2551:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-F cinit CODE >2552:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-12 cinit CODE >2553:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-13 cinit CODE >2557:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-14 cinit CODE >2558:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-15 cinit CODE >2559:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-18 cinit CODE >2560:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-19 cinit CODE >2561:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-1C cinit CODE >2562:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-1D cinit CODE >2563:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-20 cinit CODE >2564:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-21 cinit CODE >2565:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-23 cinit CODE >2566:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-24 cinit CODE >2570:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-25 cinit CODE >2571:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-26 cinit CODE >2572:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-27 cinit CODE >2575:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-28 cinit CODE >2581:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-28 cinit CODE >2583:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
-29 cinit CODE >2584:C:\Users\ALECEI~1\AppData\Local\Temp\s8us.
+D cinit CODE >1998:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+D cinit CODE >2001:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+D cinit CODE >2045:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+E cinit CODE >2046:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+F cinit CODE >2047:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+12 cinit CODE >2048:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+13 cinit CODE >2052:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+14 cinit CODE >2053:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+15 cinit CODE >2054:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+18 cinit CODE >2055:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+19 cinit CODE >2056:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+1C cinit CODE >2057:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+1D cinit CODE >2058:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+20 cinit CODE >2059:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+21 cinit CODE >2060:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+23 cinit CODE >2061:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+24 cinit CODE >2065:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+25 cinit CODE >2066:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+26 cinit CODE >2067:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+27 cinit CODE >2070:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+28 cinit CODE >2076:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+28 cinit CODE >2078:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
+29 cinit CODE >2079:C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.
 4 intentry CODE >71:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-AE7 text58 CODE >71:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-AE7 text58 CODE >75:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-AEA text58 CODE >77:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-AEB text58 CODE >79:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-AEB text58 CODE >81:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-AF3 text58 CODE >83:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-AF4 text58 CODE >84:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-AF8 text58 CODE >85:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-AFE text58 CODE >87:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-B00 text58 CODE >88:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-B01 text58 CODE >91:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-A51 text57 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
-A52 text57 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
-A56 text57 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
-A61 text57 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
-A6C text57 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
-99D text56 CODE >46:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-9A0 text56 CODE >48:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-9AA text56 CODE >49:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-939 text55 CODE >19:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-939 text55 CODE >21:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-93A text55 CODE >22:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-93B text55 CODE >23:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-93E text55 CODE >24:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-990 text54 CODE >11:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-990 text54 CODE >13:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-994 text54 CODE >14:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-997 text54 CODE >15:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-99B text54 CODE >16:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-99C text54 CODE >17:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-93F text53 CODE >40:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-93F text53 CODE >42:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-942 text53 CODE >43:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-944 text53 CODE >44:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-B08 text52 CODE >26:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-B09 text52 CODE >28:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-B0C text52 CODE >30:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-B1D text52 CODE >31:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-B20 text52 CODE >32:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-B21 text52 CODE >35:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-B25 text52 CODE >36:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-B28 text52 CODE >38:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-C28 text51 CODE >51:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-C29 text51 CODE >53:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-C33 text51 CODE >54:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-C3E text51 CODE >55:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-C49 text51 CODE >56:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-C53 text51 CODE >57:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
-9C8 text50 CODE >107:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9C9 text50 CODE >109:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9CB text50 CODE >110:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9CF text50 CODE >111:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9CF text50 CODE >112:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9D2 text50 CODE >114:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9D4 text50 CODE >115:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9D6 text50 CODE >116:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9D6 text50 CODE >117:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9D7 text50 CODE >118:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9D8 text49 CODE >80:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9D8 text49 CODE >82:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9DC text49 CODE >83:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9DF text49 CODE >84:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9E0 text49 CODE >85:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9E1 text49 CODE >86:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9E5 text49 CODE >87:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9E6 text49 CODE >88:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9E7 text49 CODE >89:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9AB text48 CODE >22:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9AB text48 CODE >24:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9B1 text48 CODE >25:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-9B8 text48 CODE >26:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-945 text47 CODE >28:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-945 text47 CODE >30:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A36 text46 CODE >35:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A37 text46 CODE >37:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A3A text46 CODE >39:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A3D text46 CODE >40:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A40 text46 CODE >41:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A49 text46 CODE >42:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A4B text46 CODE >43:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A4C text46 CODE >44:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A4D text46 CODE >45:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A50 text46 CODE >46:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-96C text45 CODE >135:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-96F text45 CODE >137:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-977 text45 CODE >138:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-978 text44 CODE >130:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-97B text44 CODE >132:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-983 text44 CODE >133:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-956 text43 CODE >102:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-959 text43 CODE >104:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-960 text43 CODE >105:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-69F text42 CODE >15:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6A2 text42 CODE >17:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6A3 text42 CODE >19:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6A7 text42 CODE >20:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6AB text42 CODE >21:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6B1 text42 CODE >23:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6B7 text42 CODE >25:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6C4 text42 CODE >26:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6C5 text42 CODE >27:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6CF text42 CODE >28:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6D3 text42 CODE >29:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6DD text42 CODE >30:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6E1 text42 CODE >32:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6E5 text42 CODE >34:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6E9 text42 CODE >35:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6ED text42 CODE >36:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6F3 text42 CODE >37:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6F7 text42 CODE >38:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-6FD text42 CODE >39:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-703 text42 CODE >40:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-709 text42 CODE >41:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-70F text42 CODE >42:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-710 text42 CODE >45:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-711 text42 CODE >46:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-71F text42 CODE >49:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-725 text42 CODE >50:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-CE2 text41 CODE >53:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-CE5 text41 CODE >55:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-CE9 text41 CODE >56:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-CED text41 CODE >58:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-CEE text41 CODE >60:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-CFE text41 CODE >61:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-D07 text41 CODE >62:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-D0E text41 CODE >63:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
-BD8 text40 CODE >145:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-BD8 text40 CODE >147:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-BDB text40 CODE >149:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-BDF text40 CODE >150:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-BE3 text40 CODE >151:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-BE6 text40 CODE >152:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-BF4 text40 CODE >153:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-984 text39 CODE >140:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-987 text39 CODE >142:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-98F text39 CODE >143:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A1F text38 CODE >66:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A1F text38 CODE >68:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A22 text38 CODE >69:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A23 text38 CODE >70:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A24 text38 CODE >71:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A25 text38 CODE >72:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A26 text38 CODE >73:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A29 text38 CODE >74:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A2A text38 CODE >75:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A2E text38 CODE >76:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A32 text38 CODE >77:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-A35 text38 CODE >78:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-B29 text37 CODE >48:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-B29 text37 CODE >50:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-B2C text37 CODE >51:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-B30 text37 CODE >52:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-B32 text37 CODE >53:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-B33 text37 CODE >54:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-B36 text37 CODE >56:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-B39 text37 CODE >57:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-B3C text37 CODE >58:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-B3F text37 CODE >59:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-B42 text37 CODE >61:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-B45 text37 CODE >62:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-B48 text37 CODE >63:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-B4B text37 CODE >64:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-94C text36 CODE >120:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-94C text36 CODE >122:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-955 text36 CODE >123:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
-934 text35 CODE >66:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-934 text35 CODE >68:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-938 text35 CODE >69:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-FA text34 CODE >47:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-FA text34 CODE >51:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-FD text34 CODE >52:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-FE text34 CODE >53:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-FF text34 CODE >54:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-C54 text33 CODE >6:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-C55 text33 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-C59 text33 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-C5D text33 CODE >11:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-C61 text33 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-C66 text33 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-C6A text33 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-C6E text33 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-C6F text33 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-C7C text33 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-C80 text33 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-A0A text32 CODE >112:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-A0D text32 CODE >115:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-A18 text32 CODE >116:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-A1E text32 CODE >117:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-D84 text31 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-D85 text31 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-D89 text31 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-D8D text31 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-D92 text31 CODE >46:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-D98 text31 CODE >48:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-D9D text31 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-D9D text31 CODE >51:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-DA1 text31 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-DAC text31 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-DB0 text31 CODE >54:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-DB3 text31 CODE >55:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-DB4 text31 CODE >56:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-DB5 text31 CODE >58:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-DB6 text31 CODE >59:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-DB9 text31 CODE >60:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-DBB text31 CODE >61:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-DBD text31 CODE >62:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-DBE text31 CODE >63:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-DBF text31 CODE >64:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-DC3 text31 CODE >65:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-DC4 text31 CODE >48:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-9B9 text30 CODE >157:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-9BC text30 CODE >159:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-9C7 text30 CODE >161:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
-7F7 text29 CODE >6:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
-7F7 text29 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
-7FF text29 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
-AA9 text28 CODE >93:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-AA9 text28 CODE >95:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-AB6 text28 CODE >96:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-AC7 text28 CODE >97:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-961 text27 CODE >56:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-961 text27 CODE >58:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-964 text27 CODE >59:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-967 text27 CODE >60:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-968 text27 CODE >61:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-969 text27 CODE >62:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-96A text27 CODE >63:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-96B text27 CODE >64:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-9F8 text26 CODE >180:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-9F9 text26 CODE >182:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A09 text26 CODE >183:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-96 text25 CODE >228:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-97 text25 CODE >230:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A1 text25 CODE >232:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A2 text25 CODE >234:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-B4 text25 CODE >237:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-C4 text25 CODE >238:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-C6 text25 CODE >239:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-D0 text25 CODE >241:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-D1 text25 CODE >242:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-F8 text25 CODE >244:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-F9 text25 CODE >245:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-DC5 text24 CODE >185:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-DC6 text24 CODE >187:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-DD0 text24 CODE >188:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-DD1 text24 CODE >190:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-DFA text24 CODE >191:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-DFC text24 CODE >192:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E04 text24 CODE >194:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E05 text24 CODE >195:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A6D text23 CODE >197:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A6E text23 CODE >199:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A6F text23 CODE >201:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A7F text23 CODE >202:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A81 text23 CODE >203:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A89 text23 CODE >205:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A8A text23 CODE >206:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-D17 text22 CODE >219:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-D18 text22 CODE >221:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-D22 text22 CODE >222:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-D23 text22 CODE >224:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-D44 text22 CODE >225:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-FA9 text21 CODE >401:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-FAC text21 CODE >403:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-FB4 text21 CODE >406:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-FBA text21 CODE >408:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-FBD text21 CODE >409:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-FD3 text21 CODE >411:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-FDA text21 CODE >413:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-FDD text21 CODE >414:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-FF4 text21 CODE >418:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-FFC text21 CODE >421:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-FFF text21 CODE >422:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A8B text20 CODE >208:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A8C text20 CODE >210:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A8D text20 CODE >212:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A9D text20 CODE >213:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-A9F text20 CODE >214:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-AA7 text20 CODE >216:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-AA8 text20 CODE >217:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-79E text19 CODE >424:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-7A1 text19 CODE >426:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-7A9 text19 CODE >429:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-7AF text19 CODE >431:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-7B2 text19 CODE >432:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-7C8 text19 CODE >434:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-7CF text19 CODE >436:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-7D2 text19 CODE >437:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-7E9 text19 CODE >441:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-7F3 text19 CODE >444:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-7F6 text19 CODE >445:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-604 text18 CODE >263:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-605 text18 CODE >265:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-606 text18 CODE >266:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-64C text18 CODE >268:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-65E text18 CODE >270:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-663 text18 CODE >272:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-664 text18 CODE >273:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-680 text18 CODE >277:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-682 text18 CODE >278:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-683 text18 CODE >279:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-9E8 text17 CODE >288:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-9EB text17 CODE >290:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-9F4 text17 CODE >291:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-9F7 text17 CODE >292:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-B4C text16 CODE >294:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-B4F text16 CODE >296:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-B63 text16 CODE >297:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-B67 text16 CODE >298:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-B6E text16 CODE >299:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-AC8 text15 CODE >343:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-ACB text15 CODE >345:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-AD6 text15 CODE >346:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-AE1 text15 CODE >347:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-AE6 text15 CODE >348:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E06 text14 CODE >247:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E06 text14 CODE >249:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E09 text14 CODE >250:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E0A text14 CODE >252:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E0E text14 CODE >253:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E0F text14 CODE >255:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E2A text14 CODE >256:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E2E text14 CODE >257:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E35 text14 CODE >258:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E3D text14 CODE >259:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E45 text14 CODE >260:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E46 text14 CODE >261:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-D4D text13 CODE >283:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-D50 text13 CODE >285:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-D83 text13 CODE >286:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-B6F text12 CODE >4:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
-B70 text12 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
-B74 text12 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
-B75 text12 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
-B84 text12 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
-B86 text12 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
-B8A text12 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
-B8C text12 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
-B90 text12 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
-B91 text12 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
-72E text11 CODE >447:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-731 text11 CODE >449:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-735 text11 CODE >451:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-73F text11 CODE >452:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-746 text11 CODE >453:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-771 text11 CODE >454:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-776 text11 CODE >455:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-789 text11 CODE >457:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-793 text11 CODE >458:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-798 text11 CODE >461:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-79D text11 CODE >462:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E88 text10 CODE >301:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E8B text10 CODE >305:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-E92 text10 CODE >307:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-EA3 text10 CODE >309:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-EBC text10 CODE >310:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-EBF text10 CODE >312:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-ECA text10 CODE >313:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CB1 text9 CODE >366:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CB4 text9 CODE >368:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CB5 text9 CODE >370:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CB6 text9 CODE >372:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CC9 text9 CODE >374:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CD1 text9 CODE >375:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CD7 text9 CODE >376:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CD8 text9 CODE >379:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CDC text9 CODE >381:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CE0 text9 CODE >383:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CE1 text9 CODE >384:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-F5C text8 CODE >5:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F5C text8 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F5F text8 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F61 text8 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F66 text8 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F68 text8 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F6A text8 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F6F text8 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F73 text8 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F75 text8 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F77 text8 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F7E text8 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F82 text8 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F83 text8 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F8B text8 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F91 text8 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F98 text8 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F9C text8 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-F9F text8 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-FA4 text8 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-FA8 text8 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
-B92 text7 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-B92 text7 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-B96 text7 CODE >45:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-B98 text7 CODE >46:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-B9E text7 CODE >47:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-BA5 text7 CODE >48:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-BAC text7 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-BB0 text7 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-BB4 text7 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
-E47 text6 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
-E47 text6 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
-E4F text6 CODE >121:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
-E53 text6 CODE >122:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
-E67 text6 CODE >123:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
-E70 text6 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
-E79 text6 CODE >125:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
-E7F text6 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
-E87 text6 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
-ECB text5 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
-ECB text5 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
-EEA text5 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
-EF8 text5 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
-F0F text5 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
-BFD text4 CODE >327:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-BFD text4 CODE >329:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-C27 text4 CODE >330:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-C81 text3 CODE >386:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-C84 text3 CODE >388:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-C88 text3 CODE >389:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-C92 text3 CODE >391:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CA2 text3 CODE >393:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CAA text3 CODE >394:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CAD text3 CODE >395:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CAF text3 CODE >398:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-CB0 text3 CODE >399:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-BB5 text2 CODE >315:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-BB6 text2 CODE >317:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-BB7 text2 CODE >319:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-BB9 text2 CODE >320:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-BBB text2 CODE >321:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-BBD text2 CODE >322:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-BBF text2 CODE >323:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-BC1 text2 CODE >324:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-BD7 text2 CODE >325:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-F10 text1 CODE >350:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-F13 text1 CODE >352:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-F1A text1 CODE >354:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-F25 text1 CODE >355:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-F3C text1 CODE >357:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-F4A text1 CODE >358:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-F53 text1 CODE >359:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-F55 text1 CODE >360:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-F5A text1 CODE >363:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-F5B text1 CODE >364:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
-2B maintext CODE >99:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-2B maintext CODE >103:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-2E maintext CODE >104:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-31 maintext CODE >106:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-34 maintext CODE >108:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-37 maintext CODE >109:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-3A maintext CODE >110:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-3E maintext CODE >111:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-41 maintext CODE >112:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-44 maintext CODE >117:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-47 maintext CODE >121:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-54 maintext CODE >122:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-58 maintext CODE >123:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-5B maintext CODE >127:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-5F maintext CODE >129:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-63 maintext CODE >130:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-67 maintext CODE >131:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-6B maintext CODE >132:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-6F maintext CODE >133:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-73 maintext CODE >134:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-77 maintext CODE >136:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-7B maintext CODE >137:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-7E maintext CODE >139:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-86 maintext CODE >141:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-89 maintext CODE >143:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-8A maintext CODE >144:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
-91 maintext CODE >148:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+C0E text61 CODE >71:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+C0E text61 CODE >75:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+C11 text61 CODE >77:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+C12 text61 CODE >79:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+C12 text61 CODE >81:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+C1A text61 CODE >83:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+C1B text61 CODE >84:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+C1F text61 CODE >85:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+C25 text61 CODE >87:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+C27 text61 CODE >88:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+C28 text61 CODE >91:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B5C text60 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
+B5D text60 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
+B61 text60 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
+B6C text60 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
+B77 text60 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\memset.c
+A95 text59 CODE >46:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+A98 text59 CODE >48:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+AA2 text59 CODE >49:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+C2F text58 CODE >26:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+C30 text58 CODE >28:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+C33 text58 CODE >30:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+C44 text58 CODE >31:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+C47 text58 CODE >32:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+C48 text58 CODE >35:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+C4C text58 CODE >36:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+C4F text58 CODE >38:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+D4F text57 CODE >51:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+D50 text57 CODE >53:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+D5A text57 CODE >54:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+D65 text57 CODE >55:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+D70 text57 CODE >56:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+D7A text57 CODE >57:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+AC0 text56 CODE >107:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+AC1 text56 CODE >109:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+AC3 text56 CODE >110:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+AC7 text56 CODE >111:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+AC7 text56 CODE >112:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+ACA text56 CODE >114:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+ACC text56 CODE >115:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+ACE text56 CODE >116:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+ACE text56 CODE >117:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+ACF text56 CODE >118:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+AD0 text55 CODE >80:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+AD0 text55 CODE >82:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+AD4 text55 CODE >83:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+AD7 text55 CODE >84:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+AD8 text55 CODE >85:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+AD9 text55 CODE >86:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+ADD text55 CODE >87:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+ADE text55 CODE >88:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+ADF text55 CODE >89:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+AA3 text54 CODE >22:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+AA3 text54 CODE >24:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+AA9 text54 CODE >25:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+AB0 text54 CODE >26:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A41 text53 CODE >28:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A41 text53 CODE >30:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B41 text52 CODE >35:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B42 text52 CODE >37:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B45 text52 CODE >39:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B48 text52 CODE >40:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B4B text52 CODE >41:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B54 text52 CODE >42:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B56 text52 CODE >43:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B57 text52 CODE >44:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B58 text52 CODE >45:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B5B text52 CODE >46:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A71 text51 CODE >135:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A74 text51 CODE >137:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A7C text51 CODE >138:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A7D text50 CODE >130:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A80 text50 CODE >132:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A88 text50 CODE >133:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A5B text49 CODE >102:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A5E text49 CODE >104:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A65 text49 CODE >105:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+58B text48 CODE >17:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+58E text48 CODE >19:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+58F text48 CODE >21:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+593 text48 CODE >22:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+597 text48 CODE >23:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+59D text48 CODE >25:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5A3 text48 CODE >27:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5B0 text48 CODE >28:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5B1 text48 CODE >29:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5BB text48 CODE >30:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5BF text48 CODE >31:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5C9 text48 CODE >32:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5CD text48 CODE >34:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5D1 text48 CODE >36:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5D5 text48 CODE >37:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5D9 text48 CODE >38:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5DF text48 CODE >39:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5E3 text48 CODE >40:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5E9 text48 CODE >41:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5EF text48 CODE >42:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5F5 text48 CODE >43:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5FB text48 CODE >44:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5FC text48 CODE >47:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+5FD text48 CODE >48:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+60B text48 CODE >51:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+611 text48 CODE >52:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+E09 text47 CODE >55:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+E0C text47 CODE >57:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+E10 text47 CODE >58:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+E14 text47 CODE >60:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+E15 text47 CODE >62:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+E25 text47 CODE >63:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+E2E text47 CODE >64:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+E35 text47 CODE >65:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+FB text46 CODE >66:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+FB text46 CODE >68:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+FF text46 CODE >69:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+A2F text45 CODE >19:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+A2F text45 CODE >21:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+A30 text45 CODE >22:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+A31 text45 CODE >23:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+A34 text45 CODE >24:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+7F3 text44 CODE >11:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+7F3 text44 CODE >13:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+7F7 text44 CODE >14:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+7FA text44 CODE >15:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+7FE text44 CODE >16:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+7FF text44 CODE >17:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+A35 text43 CODE >40:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+A35 text43 CODE >42:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+A38 text43 CODE >43:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+A3A text43 CODE >44:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Buttons.c
+CFF text42 CODE >145:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+CFF text42 CODE >147:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+D02 text42 CODE >149:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+D06 text42 CODE >150:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+D0A text42 CODE >151:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+D0D text42 CODE >152:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+D1B text42 CODE >153:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A89 text41 CODE >140:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A8C text41 CODE >142:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A94 text41 CODE >143:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B2A text40 CODE >66:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B2A text40 CODE >68:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B2D text40 CODE >69:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B2E text40 CODE >70:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B2F text40 CODE >71:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B30 text40 CODE >72:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B31 text40 CODE >73:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B34 text40 CODE >74:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B35 text40 CODE >75:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B39 text40 CODE >76:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B3D text40 CODE >77:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+B40 text40 CODE >78:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+C50 text39 CODE >48:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+C50 text39 CODE >50:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+C53 text39 CODE >51:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+C57 text39 CODE >52:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+C59 text39 CODE >53:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+C5A text39 CODE >54:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+C5D text39 CODE >56:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+C60 text39 CODE >57:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+C63 text39 CODE >58:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+C66 text39 CODE >59:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+C69 text39 CODE >61:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+C6C text39 CODE >62:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+C6F text39 CODE >63:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+C72 text39 CODE >64:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A51 text38 CODE >120:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A51 text38 CODE >122:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A5A text38 CODE >123:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\LCD.c
+A3B text37 CODE >47:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+A3B text37 CODE >51:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+A3E text37 CODE >52:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+A3F text37 CODE >53:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+A40 text37 CODE >54:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+D7B text36 CODE >6:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+D7C text36 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+D80 text36 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+D84 text36 CODE >11:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+D88 text36 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+D8D text36 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+D91 text36 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+D95 text36 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+D96 text36 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+DA3 text36 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+DA7 text36 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+B15 text35 CODE >112:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+B18 text35 CODE >115:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+B23 text35 CODE >116:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+B29 text35 CODE >117:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+E74 text34 CODE >39:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+E75 text34 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+E79 text34 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+E7D text34 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+E82 text34 CODE >46:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+E88 text34 CODE >48:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+E8D text34 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+E8D text34 CODE >51:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+E91 text34 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+E9C text34 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+EA0 text34 CODE >54:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+EA3 text34 CODE >55:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+EA4 text34 CODE >56:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+EA5 text34 CODE >58:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+EA6 text34 CODE >59:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+EA9 text34 CODE >60:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+EAB text34 CODE >61:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+EAD text34 CODE >62:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+EAE text34 CODE >63:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+EAF text34 CODE >64:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+EB3 text34 CODE >65:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+EB4 text34 CODE >48:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+AB1 text33 CODE >157:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+AB4 text33 CODE >159:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+ABF text33 CODE >161:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\pic\__eeprom.c
+A48 text32 CODE >6:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+A48 text32 CODE >8:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+A50 text32 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+BD0 text31 CODE >93:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+BD0 text31 CODE >95:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+BDD text31 CODE >96:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+BEE text31 CODE >97:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+A66 text30 CODE >56:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+A66 text30 CODE >58:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+A69 text30 CODE >59:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+A6C text30 CODE >60:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+A6D text30 CODE >61:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+A6E text30 CODE >62:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+A6F text30 CODE >63:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+A70 text30 CODE >64:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B78 text29 CODE >99:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B78 text29 CODE >101:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B7B text29 CODE >102:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B7E text29 CODE >103:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B81 text29 CODE >105:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B84 text29 CODE >107:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B87 text29 CODE >108:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B8A text29 CODE >109:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B8E text29 CODE >110:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B91 text29 CODE >111:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B93 text29 CODE >112:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+404 text28 CODE >85:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+404 text28 CODE >87:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+408 text28 CODE >88:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+40C text28 CODE >89:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+40F text28 CODE >91:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+413 text28 CODE >92:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+416 text28 CODE >94:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+43D text28 CODE >95:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+466 text28 CODE >96:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+470 text28 CODE >97:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+478 text28 CODE >99:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+47C text28 CODE >100:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+480 text28 CODE >101:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+483 text28 CODE >103:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+487 text28 CODE >104:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+48D text28 CODE >106:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+4B4 text28 CODE >107:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+4DD text28 CODE >108:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+4E7 text28 CODE >109:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\Drawing.c
+B02 text27 CODE >114:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B02 text27 CODE >116:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B05 text27 CODE >117:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+B14 text27 CODE >118:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+AF0 text26 CODE >180:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+AF1 text26 CODE >182:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+B01 text26 CODE >183:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+68A text25 CODE >228:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+68B text25 CODE >230:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+695 text25 CODE >232:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+696 text25 CODE >234:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+6A8 text25 CODE >237:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+6B8 text25 CODE >238:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+6BA text25 CODE >239:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+6C4 text25 CODE >241:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+6C5 text25 CODE >242:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+6EC text25 CODE >244:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+6ED text25 CODE >245:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+EB5 text24 CODE >185:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+EB6 text24 CODE >187:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+EC0 text24 CODE >188:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+EC1 text24 CODE >190:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+EEA text24 CODE >191:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+EEC text24 CODE >192:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+EF4 text24 CODE >194:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+EF5 text24 CODE >195:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+B94 text23 CODE >197:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+B95 text23 CODE >199:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+B96 text23 CODE >201:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BA6 text23 CODE >202:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BA8 text23 CODE >203:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BB0 text23 CODE >205:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BB1 text23 CODE >206:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+E3E text22 CODE >219:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+E3F text22 CODE >221:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+E49 text22 CODE >222:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+E4A text22 CODE >224:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+E6B text22 CODE >225:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+747 text21 CODE >402:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+74A text21 CODE >404:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+752 text21 CODE >407:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+758 text21 CODE >409:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+75B text21 CODE >410:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+771 text21 CODE >412:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+778 text21 CODE >414:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+77B text21 CODE >415:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+792 text21 CODE >419:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+79A text21 CODE >422:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+79D text21 CODE >423:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BB2 text20 CODE >208:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BB3 text20 CODE >210:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BB4 text20 CODE >212:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BC4 text20 CODE >213:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BC6 text20 CODE >214:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BCE text20 CODE >216:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BCF text20 CODE >217:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+6EE text19 CODE >425:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+6F1 text19 CODE >427:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+6F9 text19 CODE >430:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+6FF text19 CODE >432:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+702 text19 CODE >433:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+718 text19 CODE >435:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+71F text19 CODE >437:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+722 text19 CODE >438:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+739 text19 CODE >442:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+743 text19 CODE >445:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+746 text19 CODE >446:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+4F0 text18 CODE >263:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+4F1 text18 CODE >265:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+4F2 text18 CODE >266:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+538 text18 CODE >268:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+54A text18 CODE >270:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+54F text18 CODE >272:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+550 text18 CODE >273:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+56C text18 CODE >277:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+56E text18 CODE >278:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+56F text18 CODE >279:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+AE0 text17 CODE >289:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+AE3 text17 CODE >291:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+AEC text17 CODE >292:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+AEF text17 CODE >293:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+C73 text16 CODE >295:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+C76 text16 CODE >297:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+C8A text16 CODE >298:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+C8E text16 CODE >299:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+C95 text16 CODE >300:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BEF text15 CODE >344:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BF2 text15 CODE >346:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BFD text15 CODE >347:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+C08 text15 CODE >348:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+C0D text15 CODE >349:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+EF6 text14 CODE >247:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+EF6 text14 CODE >249:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+EF9 text14 CODE >250:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+EFA text14 CODE >252:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+EFE text14 CODE >253:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+EFF text14 CODE >255:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+F1A text14 CODE >256:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+F1E text14 CODE >257:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+F25 text14 CODE >258:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+F2D text14 CODE >259:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+F35 text14 CODE >260:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+F36 text14 CODE >261:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+C4 text13 CODE >283:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+C7 text13 CODE >285:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+FA text13 CODE >287:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+C96 text12 CODE >4:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
+C97 text12 CODE >9:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
+C9B text12 CODE >10:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
+C9C text12 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
+CAB text12 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
+CAD text12 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
+CB1 text12 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
+CB3 text12 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
+CB7 text12 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
+CB8 text12 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\lbmod.c
+61A text11 CODE >448:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+61D text11 CODE >450:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+621 text11 CODE >452:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+62B text11 CODE >453:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+632 text11 CODE >454:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+65D text11 CODE >455:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+662 text11 CODE >456:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+675 text11 CODE >458:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+67F text11 CODE >459:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+684 text11 CODE >462:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+689 text11 CODE >463:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+F78 text10 CODE >302:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+F7B text10 CODE >306:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+F82 text10 CODE >308:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+F93 text10 CODE >310:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+FAC text10 CODE >311:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+FAF text10 CODE >313:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+FBA text10 CODE >314:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DD8 text9 CODE >367:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DDB text9 CODE >369:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DDC text9 CODE >371:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DDD text9 CODE >373:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DF0 text9 CODE >375:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DF8 text9 CODE >376:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DFE text9 CODE >377:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DFF text9 CODE >380:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+E03 text9 CODE >382:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+E07 text9 CODE >384:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+E08 text9 CODE >385:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+2B text8 CODE >5:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+2B text8 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+2E text8 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+30 text8 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+35 text8 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+37 text8 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+39 text8 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+3E text8 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+42 text8 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+44 text8 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+46 text8 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+4D text8 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+51 text8 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+52 text8 CODE >26:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+5A text8 CODE >27:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+60 text8 CODE >28:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+67 text8 CODE >29:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6B text8 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+6E text8 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+73 text8 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+77 text8 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\awmod.c
+CB9 text7 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+CB9 text7 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+CBD text7 CODE >45:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+CBF text7 CODE >46:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+CC5 text7 CODE >47:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+CCC text7 CODE >48:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+CD3 text7 CODE >49:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+CD7 text7 CODE >52:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+CDB text7 CODE >53:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul16.c
+F37 text6 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+F37 text6 CODE >119:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+F3F text6 CODE >121:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+F43 text6 CODE >122:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+F57 text6 CODE >123:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+F60 text6 CODE >124:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+F69 text6 CODE >125:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+F6F text6 CODE >128:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+F77 text6 CODE >129:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\Umul32.c
+FBB text5 CODE >12:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+FBB text5 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+FDA text5 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+FE8 text5 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+FFF text5 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c90\common\rand.c
+D24 text4 CODE >328:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+D24 text4 CODE >330:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+D4E text4 CODE >331:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DA8 text3 CODE >387:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DAB text3 CODE >389:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DAF text3 CODE >390:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DB9 text3 CODE >392:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DC9 text3 CODE >394:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DD1 text3 CODE >395:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DD4 text3 CODE >396:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DD6 text3 CODE >399:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+DD7 text3 CODE >400:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+CDC text2 CODE >316:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+CDD text2 CODE >318:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+CDE text2 CODE >320:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+CE0 text2 CODE >321:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+CE2 text2 CODE >322:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+CE4 text2 CODE >323:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+CE6 text2 CODE >324:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+CE8 text2 CODE >325:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+CFE text2 CODE >326:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+78 text1 CODE >351:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+7B text1 CODE >353:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+82 text1 CODE >355:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+8D text1 CODE >356:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+A4 text1 CODE >358:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+B2 text1 CODE >359:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BB text1 CODE >360:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+BD text1 CODE >361:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+C2 text1 CODE >364:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+C3 text1 CODE >365:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
+79E maintext CODE >120:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+79E maintext CODE >123:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7A1 maintext CODE >128:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7A4 maintext CODE >132:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7B1 maintext CODE >133:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7B5 maintext CODE >134:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7B8 maintext CODE >138:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7BC maintext CODE >140:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7C0 maintext CODE >141:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7C4 maintext CODE >142:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7C8 maintext CODE >143:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7CC maintext CODE >144:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7D0 maintext CODE >145:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7D4 maintext CODE >147:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7D8 maintext CODE >148:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7DB maintext CODE >150:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7E3 maintext CODE >152:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7E6 maintext CODE >154:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7E7 maintext CODE >155:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
+7EE maintext CODE >159:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -640,6 +670,7 @@ F5B text1 CODE >364:C:\Users\Alec Eiffel\source\repos\Tetris/Tetris/Tetris.c
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 1 0 ABS 0 - dist/default/production\Embedded.X.production.o
+__size_of_DrawLogo 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 LCD_SetX@x 21 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 LCD_SetY@y 21 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 LCD_SetZ@z 21 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
@@ -653,13 +684,13 @@ __Hspace_3 3 0 ABS 0 - -
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __HidataBANK0 0 0 ABS 0 idataBANK0 -
 __HidataBANK1 0 0 ABS 0 idataBANK1 -
-_Tetris_PlayerTouchingRightBound 1516 0 CODE 0 text20 dist/default/production\Embedded.X.production.o
+_Tetris_PlayerTouchingRightBound 1764 0 CODE 0 text20 dist/default/production\Embedded.X.production.o
 __size_of_Buttons_SetupPortB 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 LCD_ReadStatus@status 74 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-_Tetris_PlayerUnitBitsAreValid 1A9A 0 CODE 0 text13 dist/default/production\Embedded.X.production.o
-_Tetris_RotatePlayer E5C 0 CODE 0 text11 dist/default/production\Embedded.X.production.o
+_Tetris_PlayerUnitBitsAreValid 188 0 CODE 0 text13 dist/default/production\Embedded.X.production.o
+_Tetris_RotatePlayer C34 0 CODE 0 text11 dist/default/production\Embedded.X.production.o
 __Lstringtext 0 0 ABS 0 stringtext -
 Tetris_ScoreForRowsCleared@rowsCleared 75 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __Hstrings 0 0 ABS 0 strings -
@@ -668,143 +699,150 @@ _INTF 59 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _PEIE 5E 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _TMR1 E 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _WPUB 95 0 ABS 0 - dist/default/production\Embedded.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o
-_main 56 0 CODE 0 maintext dist/default/production\Embedded.X.production.o
-_rand 1D96 0 CODE 0 text5 dist/default/production\Embedded.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.o
+_main F3C 0 CODE 0 maintext dist/default/production\Embedded.X.production.o
+_rand 1F76 0 CODE 0 text5 dist/default/production\Embedded.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Embedded.X.production.o
 main@buttons A0 0 BANK1 1 cstackBANK1 dist/default/production\Embedded.X.production.o
-start 16 0 CODE 0 init C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o
-__end_of_LCD_WriteData 12C2 0 CODE 0 text43 dist/default/production\Embedded.X.production.o
+start 16 0 CODE 0 init C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.o
+__end_of_LCD_WriteData 14CC 0 CODE 0 text49 dist/default/production\Embedded.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of___eetoi 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __CFG_BOREN$OFF 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of___itoee 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_rand 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-_Tetris_UpdatePlayerUnitBits C08 0 CODE 0 text18 dist/default/production\Embedded.X.production.o
+_Tetris_UpdatePlayerUnitBits 9E0 0 CODE 0 text18 dist/default/production\Embedded.X.production.o
 __size_of___lbmod 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 Tetris_RotatePlayer@oldRotation 32 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-__end_of_Tetris_PlayerOverlapsEnvironment 1C0C 0 CODE 0 text24 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_PlayerOverlapsEnvironment 1DEC 0 CODE 0 text24 dist/default/production\Embedded.X.production.o
 __size_of_Buttons_SetupInterrupts 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-__end_of_Tetris_playerStartingPosition A28 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
+__end_of_Tetris_playerStartingPosition 628 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
-Tetris_UpdatePlayerUnitBits@i_332 73 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
-Tetris_UpdatePlayerUnitBits@i_333 74 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
+Tetris_UpdatePlayerUnitBits@i_346 73 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
+Tetris_UpdatePlayerUnitBits@i_347 74 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 InterruptHandler@timerInterruptCounter 7A 0 COMMON 1 bssCOMMON dist/default/production\Embedded.X.production.o
 _updateReady E3 0 BANK1 1 bssBANK1 dist/default/production\Embedded.X.production.o
 Tetris_UpdatePlayerUnitBits@shift 76 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
-Tetris_MovePlayerLeft@i_447 2F 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
+Tetris_MovePlayerLeft@i_461 2F 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 ?___lmul 20 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 ?___wmul 35 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __size_of_Tetris_ClearFilledRows 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_Tetris_PlayerOverlapsEnvironment 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
+_ShowLogo 1604 0 CODE 0 text27 dist/default/production\Embedded.X.production.o
 __HbssEEDATA 0 0 ABS 0 bssEEDATA -
-__end_of_SetupTimer 12D8 0 CODE 0 text27 dist/default/production\Embedded.X.production.o
-__end_of_Tetris_MovePlayerDown 1962 0 CODE 0 text3 dist/default/production\Embedded.X.production.o
-__end_of_Tetris_MovePlayerLeft 2000 0 CODE 0 text21 dist/default/production\Embedded.X.production.o
-__end_of_LCD_BlockWhileBusy 1298 0 CODE 0 text47 dist/default/production\Embedded.X.production.o
+__end_of_SetupTimer 14E2 0 CODE 0 text30 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_MovePlayerDown 1BB0 0 CODE 0 text3 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_MovePlayerLeft F3C 0 CODE 0 text21 dist/default/production\Embedded.X.production.o
+__end_of_LCD_BlockWhileBusy 1490 0 CODE 0 text53 dist/default/production\Embedded.X.production.o
 __size_of___eecpymem 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_Tetris_SetPlayerUnit 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __LidataBANK1 0 0 ABS 0 idataBANK1 -
-_LCD_SetX 12D8 0 CODE 0 text45 dist/default/production\Embedded.X.production.o
-_LCD_SetY 12F0 0 CODE 0 text44 dist/default/production\Embedded.X.production.o
-_LCD_SetZ 1308 0 CODE 0 text39 dist/default/production\Embedded.X.production.o
+_LCD_SetX 14E2 0 CODE 0 text51 dist/default/production\Embedded.X.production.o
+_LCD_SetY 14FA 0 CODE 0 text50 dist/default/production\Embedded.X.production.o
+_LCD_SetZ 1512 0 CODE 0 text41 dist/default/production\Embedded.X.production.o
 __size_of_Tetris_ResetPlayer 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 Tetris_ClearFilledRows@gameTable 27 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 ___awmod@sign 34 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-_LCD_IsBusy 1356 0 CODE 0 text48 dist/default/production\Embedded.X.production.o
+_LCD_IsBusy 1546 0 CODE 0 text54 dist/default/production\Embedded.X.production.o
 Tetris_CountUnitBits@unitBits 73 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
-_Tetris_ResetGame 1590 0 CODE 0 text15 dist/default/production\Embedded.X.production.o
-___memcpyee 1B08 0 CODE 0 text31 dist/default/production\Embedded.X.production.o
-__end_of_Tetris_MovePlayerRight FEE 0 CODE 0 text19 dist/default/production\Embedded.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o
-__end_of_LCD_SetX 12F0 0 CODE 0 text45 dist/default/production\Embedded.X.production.o
-__end_of_LCD_SetY 1308 0 CODE 0 text44 dist/default/production\Embedded.X.production.o
-__end_of_LCD_SetZ 1320 0 CODE 0 text39 dist/default/production\Embedded.X.production.o
+__end_of_ShowLogo 162A 0 CODE 0 text27 dist/default/production\Embedded.X.production.o
+_Tetris_ResetGame 17DE 0 CODE 0 text15 dist/default/production\Embedded.X.production.o
+___memcpyee 1CE8 0 CODE 0 text34 dist/default/production\Embedded.X.production.o
+_DrawLogo 808 0 CODE 0 text28 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_MovePlayerRight E8E 0 CODE 0 text19 dist/default/production\Embedded.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.o
+__end_of_LCD_SetX 14FA 0 CODE 0 text51 dist/default/production\Embedded.X.production.o
+__end_of_LCD_SetY 1512 0 CODE 0 text50 dist/default/production\Embedded.X.production.o
+__end_of_LCD_SetZ 152A 0 CODE 0 text41 dist/default/production\Embedded.X.production.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
-__end_of_Tetris_ShiftTableDown 1D96 0 CODE 0 text10 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_ShiftTableDown 1F76 0 CODE 0 text10 dist/default/production\Embedded.X.production.o
 __size_of_LCD_SetupPorts 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-__end_of_Tetris_SetPlayerUnit 13F0 0 CODE 0 text17 dist/default/production\Embedded.X.production.o
-_Tetris_MovePlayerDown 1902 0 CODE 0 text3 dist/default/production\Embedded.X.production.o
-_Tetris_MovePlayerLeft 1F52 0 CODE 0 text21 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_SetPlayerUnit 15E0 0 CODE 0 text17 dist/default/production\Embedded.X.production.o
+_Tetris_MovePlayerDown 1B50 0 CODE 0 text3 dist/default/production\Embedded.X.production.o
+_Tetris_MovePlayerLeft E8E 0 CODE 0 text21 dist/default/production\Embedded.X.production.o
 LCD_WriteData@data 21 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __LbssEEDATA 0 0 ABS 0 bssEEDATA -
+__end_of_DrawLogo 9E0 0 CODE 0 text28 dist/default/production\Embedded.X.production.o
 DrawTetrisGameColumn@tetrisGame 29 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 Tetris_PlayerTouchingRightBound@i 78 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
 __size_of_Tetris_GetRandomUnit 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-_LCD_BlockWhileBusy 128A 0 CODE 0 text47 dist/default/production\Embedded.X.production.o
+_LCD_BlockWhileBusy 1482 0 CODE 0 text53 dist/default/production\Embedded.X.production.o
 Tetris_SetPlayerUnit@player 2A 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-__end_of_Tetris_ApplyPlayerToTable 1F4 0 CODE 0 text25 dist/default/production\Embedded.X.production.o
+DrawLogo@x 2C 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
+DrawLogo@y 2A 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_ApplyPlayerToTable DDC 0 CODE 0 text25 dist/default/production\Embedded.X.production.o
 Tetris_PlayerOverlapsEnvironment@start 76 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 ___wmul@multiplicand 37 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-_Tetris_ShiftTableDown 1D10 0 CODE 0 text10 dist/default/production\Embedded.X.production.o
+_Tetris_ShiftTableDown 1EF0 0 CODE 0 text10 dist/default/production\Embedded.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_Tetris_PlayerTouchingLeftBound 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 Tetris_MovePlayerLeft@i 2E 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 _EECON1bits 18C 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_Tetris_ScoreForRowsCleared 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_Buttons_Update 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-__end_of_SetupRandomness 1590 0 CODE 0 text28 dist/default/production\Embedded.X.production.o
-_LCD_TurnOn 1298 0 CODE 0 text36 dist/default/production\Embedded.X.production.o
+__end_of_SetupRandomness 17DE 0 CODE 0 text31 dist/default/production\Embedded.X.production.o
+_LCD_TurnOn 14A2 0 CODE 0 text38 dist/default/production\Embedded.X.production.o
 Tetris_ResetPlayer@playerUnit 3D 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-__end_of___lmul 1D10 0 CODE 0 text6 dist/default/production\Embedded.X.production.o
-__end_of___wmul 176A 0 CODE 0 text7 dist/default/production\Embedded.X.production.o
-__end_of_Tetris_GetRandomUnit 1850 0 CODE 0 text4 dist/default/production\Embedded.X.production.o
+__end_of___lmul 1EF0 0 CODE 0 text6 dist/default/production\Embedded.X.production.o
+__end_of___wmul 19B8 0 CODE 0 text7 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_GetRandomUnit 1A9E 0 CODE 0 text4 dist/default/production\Embedded.X.production.o
 __size_of_LCD_ReadStatus 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _EECON1 18C 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _EECON2 18D 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _EEDATA 10C 0 ABS 0 - dist/default/production\Embedded.X.production.o
 Tetris_ShiftTableDown@upto 73 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
-_Buttons_UpdateButton 1610 0 CODE 0 text52 dist/default/production\Embedded.X.production.o
+_Buttons_UpdateButton 185E 0 CODE 0 text58 dist/default/production\Embedded.X.production.o
 ___lbmod@divisor 73 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
-__end_of_logoImage A24 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
+__end_of_logoImage 624 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 __size_of_Tetris_PlayerTouchingRightBound 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-_ResetTimer 1268 0 CODE 0 text35 dist/default/production\Embedded.X.production.o
+_ResetTimer 1F6 0 CODE 0 text46 dist/default/production\Embedded.X.production.o
 ___memcpyee@from 73 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 ___memcpyee@size 74 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
-__end_of_Tetris_RotatePlayer F3C 0 CODE 0 text11 dist/default/production\Embedded.X.production.o
-__end_of_LCD_IsBusy 1372 0 CODE 0 text48 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_RotatePlayer D14 0 CODE 0 text11 dist/default/production\Embedded.X.production.o
+__end_of_LCD_IsBusy 1562 0 CODE 0 text54 dist/default/production\Embedded.X.production.o
 Tetris_ResetGame@game 44 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-__end_of___awmod 1F52 0 CODE 0 text8 dist/default/production\Embedded.X.production.o
-__end_of___eetoi 143E 0 CODE 0 text32 dist/default/production\Embedded.X.production.o
-__end_of___memcpyee 1B8A 0 CODE 0 text31 dist/default/production\Embedded.X.production.o
-__end_of___itoee 1390 0 CODE 0 text30 dist/default/production\Embedded.X.production.o
-__end_of___lbmod 1724 0 CODE 0 text12 dist/default/production\Embedded.X.production.o
+__end_of___awmod F0 0 CODE 0 text8 dist/default/production\Embedded.X.production.o
+__end_of___eetoi 1654 0 CODE 0 text35 dist/default/production\Embedded.X.production.o
+__end_of___memcpyee 1D6A 0 CODE 0 text34 dist/default/production\Embedded.X.production.o
+__end_of___itoee 1580 0 CODE 0 text33 dist/default/production\Embedded.X.production.o
+__end_of___lbmod 1972 0 CODE 0 text12 dist/default/production\Embedded.X.production.o
 _INTEDG 40E 0 ABS 0 - dist/default/production\Embedded.X.production.o
 DrawTetrisGameColumn@leftMask 25 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o
-___stacklo 0 0 ABS 0 - C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o
+___stackhi 0 0 ABS 0 - C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.o
+___stacklo 0 0 ABS 0 - C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.o
 _uniqueSeed 2 4200 EEDATA 3 bssEEDATA dist/default/production\Embedded.X.production.o
+__size_of_Setup 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 Tetris_UpdatePlayerUnitBits@i 75 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 _logoImage 224 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
 __size_of_srand 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-__end_of_Tetris_ResetGame 15CE 0 CODE 0 text15 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_ResetGame 181C 0 CODE 0 text15 dist/default/production\Embedded.X.production.o
 Tetris_CountUnitBits@i 24 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 Tetris_CountUnitBits@j 23 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_Buttons_SetupPortsAndInterrups 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-_Tetris_ScoreForRowsCleared 176A 0 CODE 0 text2 dist/default/production\Embedded.X.production.o
+_Tetris_ScoreForRowsCleared 19B8 0 CODE 0 text2 dist/default/production\Embedded.X.production.o
 start_initialization 1A 0 CODE 0 cinit dist/default/production\Embedded.X.production.o
 __size_of_Tetris_ResetGame 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-_SetupRandomness 1552 0 CODE 0 text28 dist/default/production\Embedded.X.production.o
+_SetupRandomness 17A0 0 CODE 0 text31 dist/default/production\Embedded.X.production.o
 __size_of_Tetris_CountUnitBits 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_Tetris_ApplyPlayerToTable 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 LCD_Clear@x 24 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 LCD_Clear@y 23 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 DrawTetrisGameColumn@gameRow 2B 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-__end_of_memset 14DA 0 CODE 0 text57 dist/default/production\Embedded.X.production.o
-__end_of_LCD_TurnOn 12AC 0 CODE 0 text36 dist/default/production\Embedded.X.production.o
+__end_of_memset 16F0 0 CODE 0 text60 dist/default/production\Embedded.X.production.o
+__end_of_LCD_TurnOn 14B6 0 CODE 0 text38 dist/default/production\Embedded.X.production.o
 Tetris_ShiftTableDown@gameTable 20 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __pcstackBANK1 A0 0 BANK1 1 cstackBANK1 dist/default/production\Embedded.X.production.o
@@ -813,19 +851,19 @@ _TMR1IE 460 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _TMR1IF 60 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _TMR1ON 80 0 ABS 0 - dist/default/production\Embedded.X.production.o
 Tetris_PlayerTouchingLeftBound@player 77 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
-_DrawTetrisGameColumn D3E 0 CODE 0 text42 dist/default/production\Embedded.X.production.o
-__end_of_ResetTimer 1272 0 CODE 0 text35 dist/default/production\Embedded.X.production.o
-_InterruptHandler 15CE 0 CODE 0 text58 dist/default/production\Embedded.X.production.o
-__end_of_Tetris_CountUnitBits 1C8E 0 CODE 0 text14 dist/default/production\Embedded.X.production.o
+_DrawTetrisGameColumn B16 0 CODE 0 text48 dist/default/production\Embedded.X.production.o
+__end_of_ResetTimer 200 0 CODE 0 text46 dist/default/production\Embedded.X.production.o
+_InterruptHandler 181C 0 CODE 0 text61 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_CountUnitBits 1E6E 0 CODE 0 text14 dist/default/production\Embedded.X.production.o
 Tetris_SetPlayerUnit@unit 78 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 Tetris_CountUnitBits@result 22 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 DrawTetris@x 36 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-__end_of_Tetris_PlayerUnitBitsAreValid 1B08 0 CODE 0 text13 dist/default/production\Embedded.X.production.o
-__end_of_LCD_Clear 17FA 0 CODE 0 text40 dist/default/production\Embedded.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o
+__end_of_Tetris_PlayerUnitBitsAreValid 1F6 0 CODE 0 text13 dist/default/production\Embedded.X.production.o
+__end_of_LCD_Clear 1A48 0 CODE 0 text42 dist/default/production\Embedded.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.o
 __size_of_SetupTimer 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-__end_of_LCD_Reset 146C 0 CODE 0 text38 dist/default/production\Embedded.X.production.o
-__end_of_LCD_Write 14A2 0 CODE 0 text46 dist/default/production\Embedded.X.production.o
+__end_of_LCD_Reset 1682 0 CODE 0 text40 dist/default/production\Embedded.X.production.o
+__end_of_LCD_Write 16B8 0 CODE 0 text52 dist/default/production\Embedded.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -838,14 +876,16 @@ __Hstack 0 0 STACK 2 stack -
 __stringbase 224 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
 __size_of_LCD_Reset 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_LCD_Write 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-__end_of_Tetris_PlayerTopmostY 1414 0 CODE 0 text26 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_PlayerTopmostY 1604 0 CODE 0 text26 dist/default/production\Embedded.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
-__end_of_Tetris_PlayerTouchingLeftBound 1516 0 CODE 0 text23 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_PlayerTouchingLeftBound 1764 0 CODE 0 text23 dist/default/production\Embedded.X.production.o
 Tetris_RemovePlayerFromTable@start 76 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 Tetris_PlayerTopmostY@player 75 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 Buttons_UpdateButton@button 75 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 0 config -
+DrawLogo@x_707 2D 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
+DrawLogo@y_708 2B 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 Buttons_Update@buttons 76 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 LCD_SegmentSelection@segments 73 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __Lbank0 0 0 ABS 0 bank0 -
@@ -857,14 +897,14 @@ __Lidloc 0 0 IDLOC 0 idloc -
 __size_of_Tetris_MovePlayerRight 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 DrawTetris@rightMask 34 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __Lstack 0 0 STACK 2 stack -
-_DrawTetris 19C4 0 CODE 0 text41 dist/default/production\Embedded.X.production.o
-Tetris_MovePlayerRight@i_461 2F 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-_LCD_Clear 17B0 0 CODE 0 text40 dist/default/production\Embedded.X.production.o
-_LCD_Reset 143E 0 CODE 0 text38 dist/default/production\Embedded.X.production.o
-_LCD_Write 146C 0 CODE 0 text46 dist/default/production\Embedded.X.production.o
-_Tetris_ClearFilledRows 1962 0 CODE 0 text9 dist/default/production\Embedded.X.production.o
+_DrawTetris 1C12 0 CODE 0 text47 dist/default/production\Embedded.X.production.o
+Tetris_MovePlayerRight@i_475 2F 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
+_LCD_Clear 19FE 0 CODE 0 text42 dist/default/production\Embedded.X.production.o
+_LCD_Reset 1654 0 CODE 0 text40 dist/default/production\Embedded.X.production.o
+_LCD_Write 1682 0 CODE 0 text52 dist/default/production\Embedded.X.production.o
+_Tetris_ClearFilledRows 1BB0 0 CODE 0 text9 dist/default/production\Embedded.X.production.o
 _INTCONbits B 0 ABS 0 - dist/default/production\Embedded.X.production.o
-Tetris_ApplyPlayerToTable@i_312 78 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
+Tetris_ApplyPlayerToTable@i_326 78 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hinit 16 0 CODE 0 init -
@@ -883,13 +923,13 @@ __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
 __size_of_LCD_SegmentSelection 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-_Tetris_PlayerTopmostY 13F0 0 CODE 0 text26 dist/default/production\Embedded.X.production.o
-_Tetris_unitPivot A28 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
+_Tetris_PlayerTopmostY 15E0 0 CODE 0 text26 dist/default/production\Embedded.X.production.o
+_Tetris_unitPivot 628 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
 memset@c 73 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 memset@n 75 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 memset@p 78 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
-___lmul 1C8E 0 CODE 0 text6 dist/default/production\Embedded.X.production.o
-___wmul 1724 0 CODE 0 text7 dist/default/production\Embedded.X.production.o
+___lmul 1E6E 0 CODE 0 text6 dist/default/production\Embedded.X.production.o
+___wmul 1972 0 CODE 0 text7 dist/default/production\Embedded.X.production.o
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __LcstackBANK1 0 0 ABS 0 cstackBANK1 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
@@ -913,29 +953,29 @@ ___eetoi@addr 22 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.produc
 ___eetoi@data 23 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __CFG_BOR4V$BOR40V 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\Embedded.X.production.o
-__end_of_LCD_SegmentSelection 13B0 0 CODE 0 text50 dist/default/production\Embedded.X.production.o
+__end_of_LCD_SegmentSelection 15A0 0 CODE 0 text56 dist/default/production\Embedded.X.production.o
 __size_of_SetupRandomness 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __CFG_FOSC$INTRC_NOCLKOUT 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-__end_of_Buttons_SetupPortsAndInterrups 128A 0 CODE 0 text53 dist/default/production\Embedded.X.production.o
+__end_of_Buttons_SetupPortsAndInterrups 1476 0 CODE 0 text43 dist/default/production\Embedded.X.production.o
 __size_of_LCD_BlockWhileBusy 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 Tetris_ResetPlayer@player 41 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 ___memcpyee@ptr 76 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
-__end_of_InterruptHandler 1610 0 CODE 0 text58 dist/default/production\Embedded.X.production.o
+__end_of_InterruptHandler 185E 0 CODE 0 text61 dist/default/production\Embedded.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
 Tetris_MovePlayerDown@game 2D 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __stringtab 200 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
-_Tetris_ApplyPlayerToTable 12C 0 CODE 0 text25 dist/default/production\Embedded.X.production.o
+_Tetris_ApplyPlayerToTable D14 0 CODE 0 text25 dist/default/production\Embedded.X.production.o
 __size_of_Tetris_MovePlayerDown 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_Tetris_MovePlayerLeft 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_LCD_IsBusy 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 Tetris_ApplyPlayerToTable@game 79 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __size_of_Tetris_UpdateGame 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\ALECEI~1\AppData\Local\Temp\s8us.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\ALECEI~1\AppData\Local\Temp\sb9c.o
 __size_of_Tetris_UpdatePlayerUnitBits 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 Tetris_PlayerUnitBitsAreValid@player 29 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __size_of___memcpyee 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-_Tetris_SetPlayerUnit 13D0 0 CODE 0 text17 dist/default/production\Embedded.X.production.o
-_Tetris_RemovePlayerFromTable 1A2E 0 CODE 0 text22 dist/default/production\Embedded.X.production.o
+_Tetris_SetPlayerUnit 15C0 0 CODE 0 text17 dist/default/production\Embedded.X.production.o
+_Tetris_RemovePlayerFromTable 1C7C 0 CODE 0 text22 dist/default/production\Embedded.X.production.o
 __pdataBANK0 47 0 BANK0 1 dataBANK0 dist/default/production\Embedded.X.production.o
 __pdataBANK1 E4 0 BANK1 1 dataBANK1 dist/default/production\Embedded.X.production.o
 Tetris_UpdatePlayerUnitBits@player 77 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
@@ -944,99 +984,102 @@ __size_of___wmul 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_InterruptHandler 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 Tetris_UpdateGame@game 45 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
-_Buttons_SetupInterrupts 1272 0 CODE 0 text55 dist/default/production\Embedded.X.production.o
-__end_of_Buttons_SetupPortB 133A 0 CODE 0 text54 dist/default/production\Embedded.X.production.o
-__end_of_DrawTetris 1A2E 0 CODE 0 text41 dist/default/production\Embedded.X.production.o
-_LCD_SetupPorts 1652 0 CODE 0 text37 dist/default/production\Embedded.X.production.o
-__end_of_Buttons_SetupInterrupts 127E 0 CODE 0 text55 dist/default/production\Embedded.X.production.o
+_Buttons_SetupInterrupts 145E 0 CODE 0 text45 dist/default/production\Embedded.X.production.o
+__end_of_Buttons_SetupPortB 1000 0 CODE 0 text44 dist/default/production\Embedded.X.production.o
+__end_of_DrawTetris 1C7C 0 CODE 0 text47 dist/default/production\Embedded.X.production.o
+_LCD_SetupPorts 18A0 0 CODE 0 text39 dist/default/production\Embedded.X.production.o
+__end_of_Buttons_SetupInterrupts 146A 0 CODE 0 text45 dist/default/production\Embedded.X.production.o
 ___awmod@counter 33 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-_memset 14A2 0 CODE 0 text57 dist/default/production\Embedded.X.production.o
+_memset 16B8 0 CODE 0 text60 dist/default/production\Embedded.X.production.o
 __size_of_Tetris_ShiftTableDown 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 Tetris_CountUnitBits@mask 20 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 memset@p1 79 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 main@tetrisGame A4 0 BANK1 1 cstackBANK1 dist/default/production\Embedded.X.production.o
-__ptext10 1D10 0 CODE 0 text10 dist/default/production\Embedded.X.production.o
-__ptext11 E5C 0 CODE 0 text11 dist/default/production\Embedded.X.production.o
-__ptext12 16DE 0 CODE 0 text12 dist/default/production\Embedded.X.production.o
-__ptext13 1A9A 0 CODE 0 text13 dist/default/production\Embedded.X.production.o
-__ptext14 1C0C 0 CODE 0 text14 dist/default/production\Embedded.X.production.o
-__ptext15 1590 0 CODE 0 text15 dist/default/production\Embedded.X.production.o
-__ptext16 1698 0 CODE 0 text16 dist/default/production\Embedded.X.production.o
-__ptext17 13D0 0 CODE 0 text17 dist/default/production\Embedded.X.production.o
-__ptext18 C08 0 CODE 0 text18 dist/default/production\Embedded.X.production.o
-__ptext19 F3C 0 CODE 0 text19 dist/default/production\Embedded.X.production.o
-__ptext20 1516 0 CODE 0 text20 dist/default/production\Embedded.X.production.o
-__ptext21 1F52 0 CODE 0 text21 dist/default/production\Embedded.X.production.o
-__ptext22 1A2E 0 CODE 0 text22 dist/default/production\Embedded.X.production.o
-__ptext23 14DA 0 CODE 0 text23 dist/default/production\Embedded.X.production.o
-__ptext24 1B8A 0 CODE 0 text24 dist/default/production\Embedded.X.production.o
-__ptext25 12C 0 CODE 0 text25 dist/default/production\Embedded.X.production.o
-__ptext26 13F0 0 CODE 0 text26 dist/default/production\Embedded.X.production.o
-__ptext27 12C2 0 CODE 0 text27 dist/default/production\Embedded.X.production.o
-__ptext28 1552 0 CODE 0 text28 dist/default/production\Embedded.X.production.o
-__ptext29 FEE 0 CODE 0 text29 dist/default/production\Embedded.X.production.o
-__ptext30 1372 0 CODE 0 text30 dist/default/production\Embedded.X.production.o
-__ptext31 1B08 0 CODE 0 text31 dist/default/production\Embedded.X.production.o
-__ptext32 1414 0 CODE 0 text32 dist/default/production\Embedded.X.production.o
-__ptext33 18A8 0 CODE 0 text33 dist/default/production\Embedded.X.production.o
-__ptext34 1F4 0 CODE 0 text34 dist/default/production\Embedded.X.production.o
-__ptext35 1268 0 CODE 0 text35 dist/default/production\Embedded.X.production.o
-__ptext36 1298 0 CODE 0 text36 dist/default/production\Embedded.X.production.o
-__ptext37 1652 0 CODE 0 text37 dist/default/production\Embedded.X.production.o
-__ptext38 143E 0 CODE 0 text38 dist/default/production\Embedded.X.production.o
-__ptext39 1308 0 CODE 0 text39 dist/default/production\Embedded.X.production.o
-__ptext40 17B0 0 CODE 0 text40 dist/default/production\Embedded.X.production.o
-__ptext41 19C4 0 CODE 0 text41 dist/default/production\Embedded.X.production.o
-__ptext42 D3E 0 CODE 0 text42 dist/default/production\Embedded.X.production.o
-__ptext43 12AC 0 CODE 0 text43 dist/default/production\Embedded.X.production.o
-__ptext44 12F0 0 CODE 0 text44 dist/default/production\Embedded.X.production.o
-__ptext45 12D8 0 CODE 0 text45 dist/default/production\Embedded.X.production.o
-__ptext46 146C 0 CODE 0 text46 dist/default/production\Embedded.X.production.o
-__ptext47 128A 0 CODE 0 text47 dist/default/production\Embedded.X.production.o
-__ptext48 1356 0 CODE 0 text48 dist/default/production\Embedded.X.production.o
-__ptext49 13B0 0 CODE 0 text49 dist/default/production\Embedded.X.production.o
-__ptext50 1390 0 CODE 0 text50 dist/default/production\Embedded.X.production.o
-__ptext51 1850 0 CODE 0 text51 dist/default/production\Embedded.X.production.o
-__ptext52 1610 0 CODE 0 text52 dist/default/production\Embedded.X.production.o
-__ptext53 127E 0 CODE 0 text53 dist/default/production\Embedded.X.production.o
-__ptext54 1320 0 CODE 0 text54 dist/default/production\Embedded.X.production.o
-__ptext55 1272 0 CODE 0 text55 dist/default/production\Embedded.X.production.o
-__ptext56 133A 0 CODE 0 text56 dist/default/production\Embedded.X.production.o
-__ptext57 14A2 0 CODE 0 text57 dist/default/production\Embedded.X.production.o
-__ptext58 15CE 0 CODE 0 text58 dist/default/production\Embedded.X.production.o
-_Tetris_PlayerOverlapsEnvironment 1B8A 0 CODE 0 text24 dist/default/production\Embedded.X.production.o
+__ptext10 1EF0 0 CODE 0 text10 dist/default/production\Embedded.X.production.o
+__ptext11 C34 0 CODE 0 text11 dist/default/production\Embedded.X.production.o
+__ptext12 192C 0 CODE 0 text12 dist/default/production\Embedded.X.production.o
+__ptext13 188 0 CODE 0 text13 dist/default/production\Embedded.X.production.o
+__ptext14 1DEC 0 CODE 0 text14 dist/default/production\Embedded.X.production.o
+__ptext15 17DE 0 CODE 0 text15 dist/default/production\Embedded.X.production.o
+__ptext16 18E6 0 CODE 0 text16 dist/default/production\Embedded.X.production.o
+__ptext17 15C0 0 CODE 0 text17 dist/default/production\Embedded.X.production.o
+__ptext18 9E0 0 CODE 0 text18 dist/default/production\Embedded.X.production.o
+__ptext19 DDC 0 CODE 0 text19 dist/default/production\Embedded.X.production.o
+__ptext20 1764 0 CODE 0 text20 dist/default/production\Embedded.X.production.o
+__ptext21 E8E 0 CODE 0 text21 dist/default/production\Embedded.X.production.o
+__ptext22 1C7C 0 CODE 0 text22 dist/default/production\Embedded.X.production.o
+__ptext23 1728 0 CODE 0 text23 dist/default/production\Embedded.X.production.o
+__ptext24 1D6A 0 CODE 0 text24 dist/default/production\Embedded.X.production.o
+__ptext25 D14 0 CODE 0 text25 dist/default/production\Embedded.X.production.o
+__ptext26 15E0 0 CODE 0 text26 dist/default/production\Embedded.X.production.o
+__ptext27 1604 0 CODE 0 text27 dist/default/production\Embedded.X.production.o
+__ptext28 808 0 CODE 0 text28 dist/default/production\Embedded.X.production.o
+__ptext29 16F0 0 CODE 0 text29 dist/default/production\Embedded.X.production.o
+__ptext30 14CC 0 CODE 0 text30 dist/default/production\Embedded.X.production.o
+__ptext31 17A0 0 CODE 0 text31 dist/default/production\Embedded.X.production.o
+__ptext32 1490 0 CODE 0 text32 dist/default/production\Embedded.X.production.o
+__ptext33 1562 0 CODE 0 text33 dist/default/production\Embedded.X.production.o
+__ptext34 1CE8 0 CODE 0 text34 dist/default/production\Embedded.X.production.o
+__ptext35 162A 0 CODE 0 text35 dist/default/production\Embedded.X.production.o
+__ptext36 1AF6 0 CODE 0 text36 dist/default/production\Embedded.X.production.o
+__ptext37 1476 0 CODE 0 text37 dist/default/production\Embedded.X.production.o
+__ptext38 14A2 0 CODE 0 text38 dist/default/production\Embedded.X.production.o
+__ptext39 18A0 0 CODE 0 text39 dist/default/production\Embedded.X.production.o
+__ptext40 1654 0 CODE 0 text40 dist/default/production\Embedded.X.production.o
+__ptext41 1512 0 CODE 0 text41 dist/default/production\Embedded.X.production.o
+__ptext42 19FE 0 CODE 0 text42 dist/default/production\Embedded.X.production.o
+__ptext43 146A 0 CODE 0 text43 dist/default/production\Embedded.X.production.o
+__ptext44 FE6 0 CODE 0 text44 dist/default/production\Embedded.X.production.o
+__ptext45 145E 0 CODE 0 text45 dist/default/production\Embedded.X.production.o
+__ptext46 1F6 0 CODE 0 text46 dist/default/production\Embedded.X.production.o
+__ptext47 1C12 0 CODE 0 text47 dist/default/production\Embedded.X.production.o
+__ptext48 B16 0 CODE 0 text48 dist/default/production\Embedded.X.production.o
+__ptext49 14B6 0 CODE 0 text49 dist/default/production\Embedded.X.production.o
+__ptext50 14FA 0 CODE 0 text50 dist/default/production\Embedded.X.production.o
+__ptext51 14E2 0 CODE 0 text51 dist/default/production\Embedded.X.production.o
+__ptext52 1682 0 CODE 0 text52 dist/default/production\Embedded.X.production.o
+__ptext53 1482 0 CODE 0 text53 dist/default/production\Embedded.X.production.o
+__ptext54 1546 0 CODE 0 text54 dist/default/production\Embedded.X.production.o
+__ptext55 15A0 0 CODE 0 text55 dist/default/production\Embedded.X.production.o
+__ptext56 1580 0 CODE 0 text56 dist/default/production\Embedded.X.production.o
+__ptext57 1A9E 0 CODE 0 text57 dist/default/production\Embedded.X.production.o
+__ptext58 185E 0 CODE 0 text58 dist/default/production\Embedded.X.production.o
+__ptext59 152A 0 CODE 0 text59 dist/default/production\Embedded.X.production.o
+__ptext60 16B8 0 CODE 0 text60 dist/default/production\Embedded.X.production.o
+__ptext61 181C 0 CODE 0 text61 dist/default/production\Embedded.X.production.o
+_Tetris_PlayerOverlapsEnvironment 1D6A 0 CODE 0 text24 dist/default/production\Embedded.X.production.o
 Tetris_ClearFilledRows@i 28 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-___awmod 1EB8 0 CODE 0 text8 dist/default/production\Embedded.X.production.o
-___eetoi 1414 0 CODE 0 text32 dist/default/production\Embedded.X.production.o
-___itoee 1372 0 CODE 0 text30 dist/default/production\Embedded.X.production.o
-___lbmod 16DE 0 CODE 0 text12 dist/default/production\Embedded.X.production.o
-__pmaintext 56 0 CODE 0 maintext dist/default/production\Embedded.X.production.o
-_Buttons_Clear 133A 0 CODE 0 text56 dist/default/production\Embedded.X.production.o
+___awmod 56 0 CODE 0 text8 dist/default/production\Embedded.X.production.o
+___eetoi 162A 0 CODE 0 text35 dist/default/production\Embedded.X.production.o
+___itoee 1562 0 CODE 0 text33 dist/default/production\Embedded.X.production.o
+___lbmod 192C 0 CODE 0 text12 dist/default/production\Embedded.X.production.o
+__pmaintext F3C 0 CODE 0 maintext dist/default/production\Embedded.X.production.o
+_Buttons_Clear 152A 0 CODE 0 text59 dist/default/production\Embedded.X.production.o
 ___lmul@multiplier 20 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-__end_of_Tetris_UpdatePlayerUnitBits D3E 0 CODE 0 text18 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_UpdatePlayerUnitBits B16 0 CODE 0 text18 dist/default/production\Embedded.X.production.o
 Tetris_MovePlayerRight@i 2E 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 ?_rand 28 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 400E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-__end_of_Tetris_PlayerTouchingRightBound 1552 0 CODE 0 text20 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_PlayerTouchingRightBound 17A0 0 CODE 0 text20 dist/default/production\Embedded.X.production.o
 DrawTetrisGameColumn@rightMask 23 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 ___wmul@multiplier 35 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-_Tetris_units A2C 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
-_Tetris_PlayerTouchingLeftBound 14DA 0 CODE 0 text23 dist/default/production\Embedded.X.production.o
-_Tetris_GetRandomUnit 17FA 0 CODE 0 text4 dist/default/production\Embedded.X.production.o
-__end_of_Tetris_unitPivot A2C 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
-___eecpymem 18A8 0 CODE 0 text33 dist/default/production\Embedded.X.production.o
-_Buttons_Update 1850 0 CODE 0 text51 dist/default/production\Embedded.X.production.o
-__end_of_Tetris_ResetPlayer 16DE 0 CODE 0 text16 dist/default/production\Embedded.X.production.o
+_Tetris_units 62C 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
+_Tetris_PlayerTouchingLeftBound 1728 0 CODE 0 text23 dist/default/production\Embedded.X.production.o
+_Tetris_GetRandomUnit 1A48 0 CODE 0 text4 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_unitPivot 62C 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
+___eecpymem 1AF6 0 CODE 0 text36 dist/default/production\Embedded.X.production.o
+_Buttons_Update 1A9E 0 CODE 0 text57 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_ResetPlayer 192C 0 CODE 0 text16 dist/default/production\Embedded.X.production.o
 Tetris_ClearFilledRows@rowsCleared 26 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __size_of_LCD_TurnOn 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 srand@x 25 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __size_of_Tetris_PlayerUnitBitsAreValid 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-_Buttons_SetupPortB 1320 0 CODE 0 text54 dist/default/production\Embedded.X.production.o
-_LCD_ReadStatus 13B0 0 CODE 0 text49 dist/default/production\Embedded.X.production.o
-__end_of_SetupOscillator 200 0 CODE 0 text34 dist/default/production\Embedded.X.production.o
+_Buttons_SetupPortB FE6 0 CODE 0 text44 dist/default/production\Embedded.X.production.o
+_LCD_ReadStatus 15A0 0 CODE 0 text55 dist/default/production\Embedded.X.production.o
+__end_of_SetupOscillator 1482 0 CODE 0 text37 dist/default/production\Embedded.X.production.o
 ___eecpymem@cp 76 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 ___eecpymem@to 77 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __size_of_ResetTimer 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
@@ -1046,7 +1089,7 @@ DrawTetrisGameColumn@lcdRow 2F 0 BANK0 1 cstackBANK0 dist/default/production\Emb
 DrawTetrisGameColumn@i 2D 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 DrawTetrisGameColumn@x 22 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 DrawTetrisGameColumn@y 2E 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-_LCD_IsBusy$584 76 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
+_LCD_IsBusy$598 76 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 Tetris_ResetGame@playerUnit 42 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
@@ -1054,12 +1097,12 @@ __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __pbssCOMMON 7A 0 COMMON 1 bssCOMMON dist/default/production\Embedded.X.production.o
 __size_of_memset 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-__end_of_LCD_SetupPorts 1698 0 CODE 0 text37 dist/default/production\Embedded.X.production.o
+__end_of_LCD_SetupPorts 18E6 0 CODE 0 text39 dist/default/production\Embedded.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackBANK1 0 0 ABS 0 cstackBANK1 -
 Tetris_RemovePlayerFromTable@i 78 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __Lend_init 16 0 CODE 0 end_init -
-_Tetris_playerStartingPosition A24 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
+_Tetris_playerStartingPosition 624 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __pbssEEDATA 0 4200 EEDATA 3 bssEEDATA dist/default/production\Embedded.X.production.o
 ___itoee@addr 29 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
@@ -1070,53 +1113,53 @@ Tetris_UpdateGame@rowsCleared 44 0 BANK0 1 cstackBANK0 dist/default/production\E
 __Hintentry 16 0 CODE 0 intentry -
 Tetris_ApplyPlayerToTable@i 77 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __Lstrings 0 0 ABS 0 strings -
-_Tetris_ResetPlayer 1698 0 CODE 0 text16 dist/default/production\Embedded.X.production.o
+_Tetris_ResetPlayer 18E6 0 CODE 0 text16 dist/default/production\Embedded.X.production.o
 ?___awmod 2F 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 ?___eetoi 78 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
 __HbssBANK1 0 0 ABS 0 bssBANK1 -
 __size_of_Buttons_UpdateButton 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 ___awmod@dividend 31 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-_Buttons_SetupPortsAndInterrups 127E 0 CODE 0 text53 dist/default/production\Embedded.X.production.o
+_Buttons_SetupPortsAndInterrups 146A 0 CODE 0 text43 dist/default/production\Embedded.X.production.o
 DrawTetrisGameColumn@tableY 2A 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-__end_of_Tetris_ClearFilledRows 19C4 0 CODE 0 text9 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_ClearFilledRows 1C12 0 CODE 0 text9 dist/default/production\Embedded.X.production.o
 Tetris_RemovePlayerFromTable@game 77 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 Tetris_MovePlayerRight@game 30 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-__ptext1 1E20 0 CODE 0 text1 dist/default/production\Embedded.X.production.o
-__ptext2 176A 0 CODE 0 text2 dist/default/production\Embedded.X.production.o
-__ptext3 1902 0 CODE 0 text3 dist/default/production\Embedded.X.production.o
-__ptext4 17FA 0 CODE 0 text4 dist/default/production\Embedded.X.production.o
-__ptext5 1D96 0 CODE 0 text5 dist/default/production\Embedded.X.production.o
-__ptext6 1C8E 0 CODE 0 text6 dist/default/production\Embedded.X.production.o
-__ptext7 1724 0 CODE 0 text7 dist/default/production\Embedded.X.production.o
-__ptext8 1EB8 0 CODE 0 text8 dist/default/production\Embedded.X.production.o
-__ptext9 1962 0 CODE 0 text9 dist/default/production\Embedded.X.production.o
-__end_of_Buttons_Update 18A8 0 CODE 0 text51 dist/default/production\Embedded.X.production.o
-__end_of___eecpymem 1902 0 CODE 0 text33 dist/default/production\Embedded.X.production.o
-_LCD_WriteData 12AC 0 CODE 0 text43 dist/default/production\Embedded.X.production.o
+__ptext1 F0 0 CODE 0 text1 dist/default/production\Embedded.X.production.o
+__ptext2 19B8 0 CODE 0 text2 dist/default/production\Embedded.X.production.o
+__ptext3 1B50 0 CODE 0 text3 dist/default/production\Embedded.X.production.o
+__ptext4 1A48 0 CODE 0 text4 dist/default/production\Embedded.X.production.o
+__ptext5 1F76 0 CODE 0 text5 dist/default/production\Embedded.X.production.o
+__ptext6 1E6E 0 CODE 0 text6 dist/default/production\Embedded.X.production.o
+__ptext7 1972 0 CODE 0 text7 dist/default/production\Embedded.X.production.o
+__ptext8 56 0 CODE 0 text8 dist/default/production\Embedded.X.production.o
+__ptext9 1BB0 0 CODE 0 text9 dist/default/production\Embedded.X.production.o
+__end_of_Buttons_Update 1AF6 0 CODE 0 text57 dist/default/production\Embedded.X.production.o
+__end_of___eecpymem 1B50 0 CODE 0 text36 dist/default/production\Embedded.X.production.o
+_LCD_WriteData 14B6 0 CODE 0 text49 dist/default/production\Embedded.X.production.o
 LCD_IsBusy@status 77 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
-__end_of_Tetris_UpdateGame 1EB8 0 CODE 0 text1 dist/default/production\Embedded.X.production.o
-__end_of_LCD_ReadStatus 13D0 0 CODE 0 text49 dist/default/production\Embedded.X.production.o
-_SetupOscillator 1F4 0 CODE 0 text34 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_UpdateGame 188 0 CODE 0 text1 dist/default/production\Embedded.X.production.o
+__end_of_LCD_ReadStatus 15C0 0 CODE 0 text55 dist/default/production\Embedded.X.production.o
+_SetupOscillator 1476 0 CODE 0 text37 dist/default/production\Embedded.X.production.o
 ___lbmod@dividend 77 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __pstringtext 200 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
-__end_of_Tetris_units C08 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
+__end_of_Tetris_units 808 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
 ?_Tetris_GetRandomUnit 2C 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 ___memcpyee@to 77 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
-__end_of_Buttons_UpdateButton 1652 0 CODE 0 text52 dist/default/production\Embedded.X.production.o
-_Tetris_CountUnitBits 1C0C 0 CODE 0 text14 dist/default/production\Embedded.X.production.o
+__end_of_Buttons_UpdateButton 18A0 0 CODE 0 text58 dist/default/production\Embedded.X.production.o
+_Tetris_CountUnitBits 1DEC 0 CODE 0 text14 dist/default/production\Embedded.X.production.o
 Tetris_PlayerTouchingLeftBound@i 78 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
 __size_of_Buttons_Clear 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-_Tetris_MovePlayerRight F3C 0 CODE 0 text19 dist/default/production\Embedded.X.production.o
+_Tetris_MovePlayerRight DDC 0 CODE 0 text19 dist/default/production\Embedded.X.production.o
 __end_of__initialization 50 0 CODE 0 cinit dist/default/production\Embedded.X.production.o
 ___awmod@divisor 2F 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 ___eecpymem@from 73 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 ___eecpymem@size 74 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
-__pidataBANK0 1260 0 CODE 0 idataBANK0 dist/default/production\Embedded.X.production.o
+__pidataBANK0 1456 0 CODE 0 idataBANK0 dist/default/production\Embedded.X.production.o
 __pidataBANK1 6 0 CODE 0 idataBANK1 dist/default/production\Embedded.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 __size_of_Tetris_RemovePlayerFromTable 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
@@ -1132,17 +1175,18 @@ __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.pr
 __size_of_Tetris_PlayerTopmostY 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 Tetris_PlayerOverlapsEnvironment@game 78 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 _highscore 0 4200 EEDATA 3 bssEEDATA dist/default/production\Embedded.X.production.o
-__end_of_Tetris_RemovePlayerFromTable 1A9A 0 CODE 0 text22 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_RemovePlayerFromTable 1CE8 0 CODE 0 text22 dist/default/production\Embedded.X.production.o
 Buttons_UpdateButton@nHeld 73 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __size_of_DrawTetris 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __Hend_init 1A 0 CODE 0 end_init -
-__end_of_Buttons_Clear 1356 0 CODE 0 text56 dist/default/production\Embedded.X.production.o
+__end_of_Buttons_Clear 1546 0 CODE 0 text59 dist/default/production\Embedded.X.production.o
 ___lbmod@rem 79 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.production.o
 __size_of_DrawTetrisGameColumn 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _timerPrescaler E4 0 BANK1 1 dataBANK1 dist/default/production\Embedded.X.production.o
-__end_of_main 12C 0 CODE 0 maintext dist/default/production\Embedded.X.production.o
-__end_of_rand 1E20 0 CODE 0 text5 dist/default/production\Embedded.X.production.o
+__end_of_main FE6 0 CODE 0 maintext dist/default/production\Embedded.X.production.o
+__end_of_rand 2000 0 CODE 0 text5 dist/default/production\Embedded.X.production.o
 Tetris_MovePlayerLeft@game 30 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
+__end_of_Setup 1728 0 CODE 0 text29 dist/default/production\Embedded.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _EEADR 10D 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _IRCF0 47C 0 ABS 0 - dist/default/production\Embedded.X.production.o
@@ -1152,11 +1196,12 @@ _PORTA 5 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _PORTC 7 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\Embedded.X.production.o
+_Setup 16F0 0 CODE 0 text29 dist/default/production\Embedded.X.production.o
 _TRISA 85 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _TRISC 87 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\Embedded.X.production.o
-__end_of_srand 1000 0 CODE 0 text29 dist/default/production\Embedded.X.production.o
+__end_of_srand 14A2 0 CODE 0 text32 dist/default/production\Embedded.X.production.o
 Buttons_Clear@buttons 20 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
@@ -1164,22 +1209,23 @@ interrupt_function 8 0 CODE 0 intentry dist/default/production\Embedded.X.produc
 _nRBPU 40F 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _randx 47 0 BANK0 1 dataBANK0 dist/default/production\Embedded.X.production.o
-_srand FEE 0 CODE 0 text29 dist/default/production\Embedded.X.production.o
+_srand 1490 0 CODE 0 text32 dist/default/production\Embedded.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\Embedded.X.production.o
-__end_of_Tetris_ScoreForRowsCleared 17B0 0 CODE 0 text2 dist/default/production\Embedded.X.production.o
+__end_of_Tetris_ScoreForRowsCleared 19FE 0 CODE 0 text2 dist/default/production\Embedded.X.production.o
 __size_of_Tetris_RotatePlayer 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-_LCD_SegmentSelection 1390 0 CODE 0 text50 dist/default/production\Embedded.X.production.o
+_LCD_SegmentSelection 1580 0 CODE 0 text56 dist/default/production\Embedded.X.production.o
 __HdataBANK0 0 0 ABS 0 dataBANK0 -
 __HdataBANK1 0 0 ABS 0 dataBANK1 -
-__end_of_DrawTetrisGameColumn E5C 0 CODE 0 text42 dist/default/production\Embedded.X.production.o
+__end_of_DrawTetrisGameColumn C34 0 CODE 0 text48 dist/default/production\Embedded.X.production.o
 __initialization 1A 0 CODE 0 cinit dist/default/production\Embedded.X.production.o
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-_SetupTimer 12C2 0 CODE 0 text27 dist/default/production\Embedded.X.production.o
+_SetupTimer 14CC 0 CODE 0 text30 dist/default/production\Embedded.X.production.o
 __pbssBANK1 E3 0 BANK1 1 bssBANK1 dist/default/production\Embedded.X.production.o
 __Hstringtext 0 0 ABS 0 stringtext -
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
+__size_of_ShowLogo 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 ___wmul@product 39 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-_Tetris_UpdateGame 1E20 0 CODE 0 text1 dist/default/production\Embedded.X.production.o
+_Tetris_UpdateGame F0 0 CODE 0 text1 dist/default/production\Embedded.X.production.o
 __size_of_LCD_SetX 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_LCD_SetY 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of_LCD_SetZ 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
@@ -1212,65 +1258,63 @@ ___lbmod@counter 78 0 COMMON 1 cstackCOMMON dist/default/production\Embedded.X.p
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text1 0 F10 1E20 4C 2
-text2 0 BB5 176A 23 2
-text3 0 C81 1902 30 2
-text4 0 BFD 17FA 2B 2
-text5 0 ECB 1D96 45 2
-text6 0 E47 1C8E 41 2
-text7 0 B92 1724 23 2
-text8 0 F5C 1EB8 4D 2
-text9 0 CB1 1962 31 2
-text10 0 E88 1D10 43 2
-text12 0 B6F 16DE 23 2
-text13 0 D4D 1A9A 37 2
-text14 0 E06 1C0C 41 2
-text15 0 AC8 1590 1F 2
-text16 0 B4C 1698 23 2
-text17 0 9E8 13D0 10 2
-text18 0 604 C08 1FC 2
-text20 0 A8B 1516 1E 2
-text21 0 FA9 1F52 57 2
-text22 0 D17 1A2E 36 2
-text23 0 A6D 14DA 1E 2
-text24 0 DC5 1B8A 41 2
-text26 0 9F8 13F0 12 2
-text27 0 961 12C2 B 2
-text28 0 AA9 1552 1F 2
-text30 0 9B9 1372 F 2
-text31 0 D84 1B08 41 2
-text32 0 A0A 1414 15 2
-text33 0 C54 18A8 2D 2
-text35 0 934 1268 5 2
-text36 0 94C 1298 A 2
-text37 0 B29 1652 23 2
-text38 0 A1F 143E 17 2
-text39 0 984 1308 C 2
-text40 0 BD8 17B0 25 2
-text41 0 CE2 19C4 35 2
-text43 0 956 12AC B 2
-text44 0 978 12F0 C 2
-text45 0 96C 12D8 C 2
-text46 0 A36 146C 1B 2
-text47 0 945 128A 7 2
-text48 0 9AB 1356 E 2
-text49 0 9D8 13B0 10 2
-text50 0 9C8 1390 10 2
-text51 0 C28 1850 2C 2
-text52 0 B08 1610 21 2
-text53 0 93F 127E 6 2
-text54 0 990 1320 D 2
-text55 0 939 1272 6 2
-text56 0 99D 133A E 2
-text57 0 A51 14A2 1C 2
-text58 0 AE7 15CE 21 2
+text2 0 CDC 19B8 23 2
+text3 0 DA8 1B50 30 2
+text4 0 D24 1A48 2B 2
+text5 0 FBB 1F76 45 2
+text6 0 F37 1E6E 41 2
+text7 0 CB9 1972 23 2
+text9 0 DD8 1BB0 31 2
+text10 0 F78 1EF0 43 2
+text12 0 C96 192C 23 2
+text14 0 EF6 1DEC 41 2
+text15 0 BEF 17DE 1F 2
+text16 0 C73 18E6 23 2
+text17 0 AE0 15C0 10 2
+text20 0 BB2 1764 1E 2
+text22 0 E3E 1C7C 36 2
+text23 0 B94 1728 1E 2
+text24 0 EB5 1D6A 41 2
+text26 0 AF0 15E0 12 2
+text27 0 B02 1604 13 2
+text28 0 404 808 3FC 2
+text29 0 B78 16F0 1C 2
+text30 0 A66 14CC B 2
+text31 0 BD0 17A0 1F 2
+text32 0 A48 1490 9 2
+text33 0 AB1 1562 F 2
+text34 0 E74 1CE8 41 2
+text35 0 B15 162A 15 2
+text36 0 D7B 1AF6 2D 2
+text37 0 A3B 1476 6 2
+text38 0 A51 14A2 A 2
+text39 0 C50 18A0 23 2
+text40 0 B2A 1654 17 2
+text41 0 A89 1512 C 2
+text42 0 CFF 19FE 25 2
+text43 0 A35 146A 6 2
+text45 0 A2F 145E 6 2
+text47 0 E09 1C12 35 2
+text49 0 A5B 14B6 B 2
+text50 0 A7D 14FA C 2
+text51 0 A71 14E2 C 2
+text52 0 B41 1682 1B 2
+text53 0 A41 1482 7 2
+text54 0 AA3 1546 E 2
+text55 0 AD0 15A0 10 2
+text56 0 AC0 1580 10 2
+text57 0 D4F 1A9E 2C 2
+text58 0 C2F 185E 21 2
+text59 0 A95 152A E 2
+text60 0 B5C 16B8 1C 2
+text61 0 C0E 181C 21 2
 cstackCOMMON 1 70 70 B 1
 cstackBANK0 1 20 20 2B 1
 cstackBANK1 1 A0 A0 45 1
 intentry 0 4 8 FC 2
 reset_vec 0 0 0 2 2
-stringtext 0 100 200 504 2
-idataBANK0 0 930 1260 4 2
+stringtext 0 100 200 304 2
+idataBANK0 0 A2B 1456 4 2
 idataBANK1 0 3 6 1 2
 bssEEDATA 3 0 4200 3 2
 config 0 2007 400E 2 2

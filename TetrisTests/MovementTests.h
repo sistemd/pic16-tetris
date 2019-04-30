@@ -326,7 +326,7 @@ inline void TestMovementDown(void)
 	CU_ASSERT_EQUAL(game.player.position.y, 3);
 
 	int drop = TETRIS_TABLE_HEIGHT - game.player.position.y - 2;
-	for (int i = 0; i < 20; ++i)
+	for (int i = 0; i < drop; ++i)
 		CU_ASSERT(Tetris_MovePlayerDown(&game));
 
 	memset(expectedTable, 0, TETRIS_TABLE_HEIGHT * sizeof *expectedTable);

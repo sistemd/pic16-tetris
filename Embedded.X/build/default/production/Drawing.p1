@@ -1,4 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"13 ./Digits.h
+[; ;./Digits.h: 13:     uint8_t i = NUM_DIGITS - 1;
+[c E1383 5 .. ]
+[n E1383 . NUM_DIGITS  ]
 "20 ../Tetris\Tetris.h
 [; ;../Tetris\Tetris.h: 20: typedef struct {
 [s S1 `uc 1 `uc 1 ]
@@ -16,8 +20,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../Tetris\Tetris.h: 42: typedef struct {
 [s S4 `ui -> 24 `i `S3 1 `ui 1 ]
 [n S4 . table player currentScore ]
-"19 Drawing.c
-[; ;Drawing.c: 19:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
+"21 Drawing.c
+[; ;Drawing.c: 21:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
 [c E1352 0 1 2 3 .. ]
 [n E1352 . LCD_NO_SEGMENT LCD_BOTTOM_SEGMENT LCD_TOP_SEGMENT LCD_BOTH_SEGMENTS  ]
 "30 ./LCD.h
@@ -26,24 +30,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36
 [; ;./LCD.h: 36: extern void LCD_SetY(uint8_t y);
 [v _LCD_SetY `(v ~T0 @X0 0 ef1`uc ]
-"20 Drawing.c
-[; ;Drawing.c: 20:     LCD_SetY(SCORE_SPACE);
-[c E1383 8 .. ]
-[n E1383 . SCORE_SPACE  ]
+"22 Drawing.c
+[; ;Drawing.c: 22:     LCD_SetY(SCORE_SPACE);
+[c E1392 8 .. ]
+[n E1392 . SCORE_SPACE  ]
 "38 ./LCD.h
 [; ;./LCD.h: 38: extern void LCD_SetX(uint8_t x);
 [v _LCD_SetX `(v ~T0 @X0 0 ef1`uc ]
-"23 Drawing.c
-[; ;Drawing.c: 23:     for (uint8_t y = SCORE_SPACE; y < LCD_HEIGHT; y += PIXEL_HEIGHT)
+"25 Drawing.c
+[; ;Drawing.c: 25:     for (uint8_t y = SCORE_SPACE; y < LCD_HEIGHT; y += GAME_PIXEL_HEIGHT)
 [c E1358 64 128 8 64 .. ]
 [n E1358 . LCD_WIDTH LCD_HEIGHT LCD_NUM_PAGES LCD_SEGMENT_HEIGHT  ]
 "28 ./LCD.h
 [; ;./LCD.h: 28: extern void LCD_WriteData(uint8_t data);
 [v _LCD_WriteData `(v ~T0 @X0 0 ef1`uc ]
-"45 Drawing.c
-[; ;Drawing.c: 45:             for (uint8_t i = 0; i < PIXEL_HEIGHT; ++i)
-[c E1385 4 5 .. ]
-[n E1385 . PIXEL_WIDTH PIXEL_HEIGHT  ]
+"47 Drawing.c
+[; ;Drawing.c: 47:             for (uint8_t i = 0; i < GAME_PIXEL_HEIGHT; ++i)
+[c E1394 4 5 .. ]
+[n E1394 . GAME_PIXEL_WIDTH GAME_PIXEL_HEIGHT  ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -278,9 +282,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-[v F1382 `Cuc ~T0 @X0 -> 128 `i t ]
+[v F1382 `Cuc ~T0 @X0 -> 64 `i t ]
 "5 ./LogoImage.h
-[; ;./LogoImage.h: 5: static const uint8_t logoImage[8][128] = {
+[; ;./LogoImage.h: 5: static const uint8_t logoImage[8][64] = {
 [v _logoImage `F1382 ~T0 @X0 -> 8 `i s ]
 [i _logoImage
 :U ..
@@ -315,18 +319,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 192 `i `uc
--> -> 32 `i `uc
--> -> 32 `i `uc
--> -> 32 `i `uc
--> -> 32 `i `uc
--> -> 32 `i `uc
--> -> 96 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 192 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -336,12 +328,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -350,182 +336,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 192 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 192 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
-..
-:U ..
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 2 `i `uc
--> -> 2 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 5 `i `uc
--> -> 126 `i `uc
--> -> 132 `i `uc
--> -> 132 `i `uc
--> -> 134 `i `uc
--> -> 130 `i `uc
--> -> 130 `i `uc
--> -> 66 `i `uc
--> -> 49 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 31 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 32 `i `uc
--> -> 32 `i `uc
--> -> 16 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 12 `i `uc
--> -> 2 `i `uc
--> -> 2 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 3 `i `uc
--> -> 12 `i `uc
--> -> 240 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -609,70 +419,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 64 `i `uc
--> -> 32 `i `uc
--> -> 16 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 2 `i `uc
--> -> 2 `i `uc
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 63 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 128 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
 ..
 :U ..
 -> -> 0 `i `uc
@@ -690,109 +436,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 4 `i `uc
+-> -> 24 `i `uc
+-> -> 224 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 56 `i `uc
 -> -> 248 `i `uc
--> -> 8 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 136 `i `uc
--> -> 136 `i `uc
--> -> 136 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 16 `i `uc
--> -> 16 `i `uc
--> -> 16 `i `uc
--> -> 16 `i `uc
--> -> 32 `i `uc
--> -> 32 `i `uc
--> -> 32 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 64 `i `uc
--> -> 48 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 4 `i `uc
--> -> 2 `i `uc
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 96 `i `uc
--> -> 48 `i `uc
--> -> 12 `i `uc
--> -> 6 `i `uc
--> -> 2 `i `uc
--> -> 62 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 128 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 3 `i `uc
--> -> 60 `i `uc
+-> -> 240 `i `uc
 -> -> 192 `i `uc
 -> -> 0 `i `uc
+-> -> 224 `i `uc
+-> -> 224 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 254 `i `uc
+-> -> 254 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 255 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -820,86 +502,35 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 255 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 60 `i `uc
--> -> 36 `i `uc
--> -> 36 `i `uc
--> -> 36 `i `uc
--> -> 36 `i `uc
--> -> 36 `i `uc
--> -> 36 `i `uc
--> -> 36 `i `uc
--> -> 36 `i `uc
--> -> 40 `i `uc
--> -> 40 `i `uc
--> -> 56 `i `uc
--> -> 24 `i `uc
--> -> 24 `i `uc
--> -> 28 `i `uc
--> -> 36 `i `uc
--> -> 38 `i `uc
--> -> 49 `i `uc
--> -> 25 `i `uc
--> -> 12 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 30 `i `uc
+-> -> 224 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 243 `i `uc
+-> -> 243 `i `uc
+-> -> 131 `i `uc
+-> -> 131 `i `uc
+-> -> 131 `i `uc
+-> -> 195 `i `uc
+-> -> 251 `i `uc
+-> -> 123 `i `uc
 -> -> 3 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 32 `i `uc
--> -> 48 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 6 `i `uc
--> -> 1 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 2 `i `uc
--> -> 4 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 16 `i `uc
--> -> 32 `i `uc
--> -> 64 `i `uc
--> -> 128 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 48 `i `uc
--> -> 56 `i `uc
--> -> 40 `i `uc
--> -> 36 `i `uc
--> -> 36 `i `uc
--> -> 20 `i `uc
--> -> 20 `i `uc
--> -> 12 `i `uc
--> -> 12 `i `uc
--> -> 6 `i `uc
--> -> 6 `i `uc
--> -> 5 `i `uc
--> -> 5 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 2 `i `uc
--> -> 2 `i `uc
 -> -> 3 `i `uc
--> -> 1 `i `uc
+-> -> 3 `i `uc
+-> -> 224 `i `uc
+-> -> 248 `i `uc
+-> -> 0 `i `uc
+-> -> 3 `i `uc
+-> -> 252 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -909,19 +540,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 255 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -935,6 +553,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 :U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -951,232 +578,95 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 7 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 16 `i `uc
--> -> 16 `i `uc
--> -> 48 `i `uc
--> -> 32 `i `uc
--> -> 32 `i `uc
--> -> 32 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 64 `i `uc
--> -> 32 `i `uc
--> -> 32 `i `uc
--> -> 16 `i `uc
--> -> 16 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 4 `i `uc
--> -> 2 `i `uc
--> -> 2 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
+-> -> 248 `i `uc
+-> -> 124 `i `uc
+-> -> 60 `i `uc
+-> -> 57 `i `uc
+-> -> 57 `i `uc
+-> -> 57 `i `uc
+-> -> 57 `i `uc
+-> -> 57 `i `uc
+-> -> 57 `i `uc
+-> -> 56 `i `uc
+-> -> 56 `i `uc
+-> -> 124 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 128 `i `uc
--> -> 224 `i `uc
--> -> 24 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 4 `i `uc
--> -> 252 `i `uc
--> -> 1 `i `uc
--> -> 2 `i `uc
--> -> 12 `i `uc
--> -> 8 `i `uc
--> -> 48 `i `uc
--> -> 192 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 128 `i `uc
--> -> 128 `i `uc
--> -> 96 `i `uc
--> -> 48 `i `uc
+-> -> 7 `i `uc
 -> -> 31 `i `uc
 -> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
-..
-:U ..
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 240 `i `uc
--> -> 24 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 24 `i `uc
--> -> 16 `i `uc
--> -> 48 `i `uc
--> -> 224 `i `uc
 -> -> 192 `i `uc
--> -> 64 `i `uc
--> -> 112 `i `uc
--> -> 80 `i `uc
--> -> 72 `i `uc
--> -> 70 `i `uc
--> -> 65 `i `uc
--> -> 32 `i `uc
--> -> 28 `i `uc
--> -> 12 `i `uc
--> -> 0 `i `uc
--> -> 0 `i `uc
--> -> 1 `i `uc
+-> -> 63 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 3 `i `uc
--> -> 2 `i `uc
--> -> 4 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 8 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 4 `i `uc
--> -> 2 `i `uc
--> -> 2 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 7 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 113 `i `uc
+-> -> 113 `i `uc
+-> -> 105 `i `uc
+-> -> 109 `i `uc
+-> -> 101 `i `uc
+-> -> 103 `i `uc
+-> -> 99 `i `uc
+-> -> 99 `i `uc
+-> -> 96 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 15 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -1236,17 +726,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
--> -> 1 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -1259,6 +738,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+..
+:U ..
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -1326,92 +818,141 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ..
 ]
-"15 Drawing.c
-[; ;Drawing.c: 15: static void DrawTetrisGameColumn(Tetris_Game *tetrisGame, uint8_t x, uint16_t rightMask, uint16_t leftMask)
-[v _DrawTetrisGameColumn `(v ~T0 @X0 1 sf4`*S4`uc`ui`ui ]
+[v F1387 `(v ~T0 @X0 1 tf2`ui`*uc ]
+"11 ./Digits.h
+[; ;./Digits.h: 11: __attribute__((inline)) void GetDigits(uint16_t n, uint8_t *digits)
+[v _GetDigits `TF1387 ~T0 @X0 1 e ]
+"12
+[; ;./Digits.h: 12: {
+{
+[e :U _GetDigits ]
+"11
+[; ;./Digits.h: 11: __attribute__((inline)) void GetDigits(uint16_t n, uint8_t *digits)
+[v _n `ui ~T0 @X0 1 r1 ]
+[v _digits `*uc ~T0 @X0 1 r2 ]
+"12
+[; ;./Digits.h: 12: {
+[f ]
+"13
+[; ;./Digits.h: 13:     uint8_t i = NUM_DIGITS - 1;
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> - -> . `E1383 0 `i -> 1 `i `uc ]
+"15
+[; ;./Digits.h: 15:     while (1)
+[e :U 144 ]
 "16
-[; ;Drawing.c: 16: {
+[; ;./Digits.h: 16:     {
+{
+"17
+[; ;./Digits.h: 17:         uint16_t newN = n / 10;
+[v _newN `ui ~T0 @X0 1 a ]
+[e = _newN / _n -> -> 10 `i `ui ]
+"18
+[; ;./Digits.h: 18:         digits[i] = n - newN * 10;
+[e = *U + _digits * -> _i `ux -> -> # *U _digits `ui `ux -> - _n * _newN -> -> 10 `i `ui `uc ]
+"19
+[; ;./Digits.h: 19:         n = newN;
+[e = _n _newN ]
+"21
+[; ;./Digits.h: 21:         if (i == 0)
+[e $ ! == -> _i `i -> 0 `i 146  ]
+"22
+[; ;./Digits.h: 22:             break;
+[e $U 145  ]
+[e :U 146 ]
+"24
+[; ;./Digits.h: 24:         --i;
+[e =- _i -> -> 1 `i `uc ]
+"25
+[; ;./Digits.h: 25:     }
+}
+[e :U 143 ]
+[e $U 144  ]
+[e :U 145 ]
+"26
+[; ;./Digits.h: 26: }
+[e :UE 142 ]
+}
+"17 Drawing.c
+[; ;Drawing.c: 17: static void DrawTetrisGameColumn(Tetris_Game *tetrisGame, uint8_t x, uint16_t rightMask, uint16_t leftMask)
+[v _DrawTetrisGameColumn `(v ~T0 @X0 1 sf4`*S4`uc`ui`ui ]
+"18
+[; ;Drawing.c: 18: {
 {
 [e :U _DrawTetrisGameColumn ]
-"15
-[; ;Drawing.c: 15: static void DrawTetrisGameColumn(Tetris_Game *tetrisGame, uint8_t x, uint16_t rightMask, uint16_t leftMask)
+"17
+[; ;Drawing.c: 17: static void DrawTetrisGameColumn(Tetris_Game *tetrisGame, uint8_t x, uint16_t rightMask, uint16_t leftMask)
 [v _tetrisGame `*S4 ~T0 @X0 1 r1 ]
 [v _x `uc ~T0 @X0 1 r2 ]
 [v _rightMask `ui ~T0 @X0 1 r3 ]
 [v _leftMask `ui ~T0 @X0 1 r4 ]
-"16
-[; ;Drawing.c: 16: {
+"18
+[; ;Drawing.c: 18: {
 [f ]
-"17
-[; ;Drawing.c: 17:     uint8_t tableY = 0;
+"19
+[; ;Drawing.c: 19:     uint8_t tableY = 0;
 [v _tableY `uc ~T0 @X0 1 a ]
 [e = _tableY -> -> 0 `i `uc ]
-"19
-[; ;Drawing.c: 19:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
-[e ( _LCD_SegmentSelection (1 . `E1352 2 ]
-"20
-[; ;Drawing.c: 20:     LCD_SetY(SCORE_SPACE);
-[e ( _LCD_SetY (1 -> . `E1383 0 `uc ]
 "21
-[; ;Drawing.c: 21:     LCD_SetX(x);
-[e ( _LCD_SetX (1 _x ]
+[; ;Drawing.c: 21:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
+[e ( _LCD_SegmentSelection (1 . `E1352 2 ]
+"22
+[; ;Drawing.c: 22:     LCD_SetY(SCORE_SPACE);
+[e ( _LCD_SetY (1 -> . `E1392 0 `uc ]
 "23
-[; ;Drawing.c: 23:     for (uint8_t y = SCORE_SPACE; y < LCD_HEIGHT; y += PIXEL_HEIGHT)
+[; ;Drawing.c: 23:     LCD_SetX(x);
+[e ( _LCD_SetX (1 _x ]
+"25
+[; ;Drawing.c: 25:     for (uint8_t y = SCORE_SPACE; y < LCD_HEIGHT; y += GAME_PIXEL_HEIGHT)
 {
 [v _y `uc ~T0 @X0 1 a ]
-[e = _y -> . `E1383 0 `uc ]
-[e $ < -> _y `i -> . `E1358 1 `i 143  ]
-[e $U 144  ]
-[e :U 143 ]
-"24
-[; ;Drawing.c: 24:     {
+[e = _y -> . `E1392 0 `uc ]
+[e $ < -> _y `i -> . `E1358 1 `i 148  ]
+[e $U 149  ]
+[e :U 148 ]
+"26
+[; ;Drawing.c: 26:     {
 {
-"25
-[; ;Drawing.c: 25:         uint16_t gameRow = tetrisGame->table[tableY];
+"27
+[; ;Drawing.c: 27:         uint16_t gameRow = tetrisGame->table[tableY];
 [v _gameRow `ui ~T0 @X0 1 a ]
 [e = _gameRow *U + &U . *U _tetrisGame 0 * -> _tableY `ux -> -> # *U &U . *U _tetrisGame 0 `ui `ux ]
-"26
-[; ;Drawing.c: 26:         uint8_t lcdRow = 0;
+"28
+[; ;Drawing.c: 28:         uint8_t lcdRow = 0;
 [v _lcdRow `uc ~T0 @X0 1 a ]
 [e = _lcdRow -> -> 0 `i `uc ]
-"27
-[; ;Drawing.c: 27:         if (gameRow & rightMask)
-[e $ ! != & _gameRow _rightMask -> -> 0 `i `ui 146  ]
-"28
-[; ;Drawing.c: 28:             lcdRow = 0x0F;
-[e = _lcdRow -> -> 15 `i `uc ]
-[e :U 146 ]
 "29
-[; ;Drawing.c: 29:         if (gameRow & leftMask)
-[e $ ! != & _gameRow _leftMask -> -> 0 `i `ui 147  ]
+[; ;Drawing.c: 29:         if (gameRow & rightMask)
+[e $ ! != & _gameRow _rightMask -> -> 0 `i `ui 151  ]
 "30
-[; ;Drawing.c: 30:             lcdRow |= 0xF0;
-[e =| _lcdRow -> -> 240 `i `uc ]
-[e :U 147 ]
+[; ;Drawing.c: 30:             lcdRow = 0x0F;
+[e = _lcdRow -> -> 15 `i `uc ]
+[e :U 151 ]
+"31
+[; ;Drawing.c: 31:         if (gameRow & leftMask)
+[e $ ! != & _gameRow _leftMask -> -> 0 `i `ui 152  ]
 "32
-[; ;Drawing.c: 32:         if (y == 63)
-[e $ ! == -> _y `i -> 63 `i 148  ]
-"33
-[; ;Drawing.c: 33:         {
-{
+[; ;Drawing.c: 32:             lcdRow |= 0xF0;
+[e =| _lcdRow -> -> 240 `i `uc ]
+[e :U 152 ]
 "34
-[; ;Drawing.c: 34:             LCD_WriteData(lcdRow);
-[e ( _LCD_WriteData (1 _lcdRow ]
+[; ;Drawing.c: 34:         if (y == 63)
+[e $ ! == -> _y `i -> 63 `i 153  ]
 "35
-[; ;Drawing.c: 35:             LCD_SegmentSelection(LCD_BOTTOM_SEGMENT);
-[e ( _LCD_SegmentSelection (1 . `E1352 1 ]
+[; ;Drawing.c: 35:         {
+{
 "36
-[; ;Drawing.c: 36:             LCD_SetX(x);
-[e ( _LCD_SetX (1 _x ]
+[; ;Drawing.c: 36:             LCD_WriteData(lcdRow);
+[e ( _LCD_WriteData (1 _lcdRow ]
 "37
-[; ;Drawing.c: 37:             LCD_SetY(0);
-[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
+[; ;Drawing.c: 37:             LCD_SegmentSelection(LCD_BOTTOM_SEGMENT);
+[e ( _LCD_SegmentSelection (1 . `E1352 1 ]
 "38
-[; ;Drawing.c: 38:             LCD_WriteData(lcdRow);
-[e ( _LCD_WriteData (1 _lcdRow ]
+[; ;Drawing.c: 38:             LCD_SetX(x);
+[e ( _LCD_SetX (1 _x ]
 "39
-[; ;Drawing.c: 39:             LCD_WriteData(lcdRow);
-[e ( _LCD_WriteData (1 _lcdRow ]
+[; ;Drawing.c: 39:             LCD_SetY(0);
+[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
 "40
 [; ;Drawing.c: 40:             LCD_WriteData(lcdRow);
 [e ( _LCD_WriteData (1 _lcdRow ]
@@ -1419,209 +960,272 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Drawing.c: 41:             LCD_WriteData(lcdRow);
 [e ( _LCD_WriteData (1 _lcdRow ]
 "42
-[; ;Drawing.c: 42:         }
-}
-[e $U 149  ]
+[; ;Drawing.c: 42:             LCD_WriteData(lcdRow);
+[e ( _LCD_WriteData (1 _lcdRow ]
 "43
-[; ;Drawing.c: 43:         else
-[e :U 148 ]
+[; ;Drawing.c: 43:             LCD_WriteData(lcdRow);
+[e ( _LCD_WriteData (1 _lcdRow ]
 "44
-[; ;Drawing.c: 44:         {
-{
+[; ;Drawing.c: 44:         }
+}
+[e $U 154  ]
 "45
-[; ;Drawing.c: 45:             for (uint8_t i = 0; i < PIXEL_HEIGHT; ++i)
+[; ;Drawing.c: 45:         else
+[e :U 153 ]
+"46
+[; ;Drawing.c: 46:         {
+{
+"47
+[; ;Drawing.c: 47:             for (uint8_t i = 0; i < GAME_PIXEL_HEIGHT; ++i)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> . `E1385 1 `i 150  ]
-[e $U 151  ]
-[e :U 150 ]
-"46
-[; ;Drawing.c: 46:                 LCD_WriteData(lcdRow);
+[e $ < -> _i `i -> . `E1394 1 `i 155  ]
+[e $U 156  ]
+[e :U 155 ]
+"48
+[; ;Drawing.c: 48:                 LCD_WriteData(lcdRow);
 [e ( _LCD_WriteData (1 _lcdRow ]
 [e =+ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> . `E1385 1 `i 150  ]
-[e :U 151 ]
+[e $ < -> _i `i -> . `E1394 1 `i 155  ]
+[e :U 156 ]
 }
-"47
-[; ;Drawing.c: 47:         }
-}
-[e :U 149 ]
 "49
-[; ;Drawing.c: 49:         ++tableY;
-[e =+ _tableY -> -> 1 `i `uc ]
-"50
-[; ;Drawing.c: 50:     }
+[; ;Drawing.c: 49:         }
 }
-[e =+ _y -> -> . `E1385 1 `i `uc ]
-[e $ < -> _y `i -> . `E1358 1 `i 143  ]
-[e :U 144 ]
-}
+[e :U 154 ]
 "51
-[; ;Drawing.c: 51: }
-[e :UE 142 ]
+[; ;Drawing.c: 51:         ++tableY;
+[e =+ _tableY -> -> 1 `i `uc ]
+"52
+[; ;Drawing.c: 52:     }
+}
+[e =+ _y -> -> . `E1394 1 `i `uc ]
+[e $ < -> _y `i -> . `E1358 1 `i 148  ]
+[e :U 149 ]
 }
 "53
-[; ;Drawing.c: 53: void DrawTetris(Tetris_Game *tetrisGame)
+[; ;Drawing.c: 53: }
+[e :UE 147 ]
+}
+"55
+[; ;Drawing.c: 55: void DrawTetris(Tetris_Game *tetrisGame)
 [v _DrawTetris `(v ~T0 @X0 1 ef1`*S4 ]
-"54
-[; ;Drawing.c: 54: {
+"56
+[; ;Drawing.c: 56: {
 {
 [e :U _DrawTetris ]
-"53
-[; ;Drawing.c: 53: void DrawTetris(Tetris_Game *tetrisGame)
-[v _tetrisGame `*S4 ~T0 @X0 1 r1 ]
-"54
-[; ;Drawing.c: 54: {
-[f ]
 "55
-[; ;Drawing.c: 55:     uint16_t leftMask = 0b0000000000000010;
+[; ;Drawing.c: 55: void DrawTetris(Tetris_Game *tetrisGame)
+[v _tetrisGame `*S4 ~T0 @X0 1 r1 ]
+"56
+[; ;Drawing.c: 56: {
+[f ]
+"57
+[; ;Drawing.c: 57:     uint16_t leftMask = 0b0000000000000010;
 [v _leftMask `ui ~T0 @X0 1 a ]
 [e = _leftMask -> -> 2 `i `ui ]
-"56
-[; ;Drawing.c: 56:     uint16_t rightMask = 0b0000000000000001;
+"58
+[; ;Drawing.c: 58:     uint16_t rightMask = 0b0000000000000001;
 [v _rightMask `ui ~T0 @X0 1 a ]
 [e = _rightMask -> -> 1 `i `ui ]
-"58
-[; ;Drawing.c: 58:     for (uint8_t x = 0; x < LCD_NUM_PAGES; ++x)
+"60
+[; ;Drawing.c: 60:     for (uint8_t x = 0; x < LCD_NUM_PAGES; ++x)
 {
 [v _x `uc ~T0 @X0 1 a ]
 [e = _x -> -> 0 `i `uc ]
-[e $ < -> _x `i -> . `E1358 2 `i 154  ]
-[e $U 155  ]
-[e :U 154 ]
-"59
-[; ;Drawing.c: 59:     {
-{
-"60
-[; ;Drawing.c: 60:         DrawTetrisGameColumn(tetrisGame, x, rightMask, leftMask);
-[e ( _DrawTetrisGameColumn (4 , , , _tetrisGame _x _rightMask _leftMask ]
+[e $ < -> _x `i -> . `E1358 2 `i 159  ]
+[e $U 160  ]
+[e :U 159 ]
 "61
-[; ;Drawing.c: 61:         leftMask <<= 2;
-[e =<< _leftMask -> -> 2 `i `ui ]
+[; ;Drawing.c: 61:     {
+{
 "62
-[; ;Drawing.c: 62:         rightMask <<= 2;
-[e =<< _rightMask -> -> 2 `i `ui ]
+[; ;Drawing.c: 62:         DrawTetrisGameColumn(tetrisGame, x, rightMask, leftMask);
+[e ( _DrawTetrisGameColumn (4 , , , _tetrisGame _x _rightMask _leftMask ]
 "63
-[; ;Drawing.c: 63:     }
+[; ;Drawing.c: 63:         leftMask <<= 2;
+[e =<< _leftMask -> -> 2 `i `ui ]
+"64
+[; ;Drawing.c: 64:         rightMask <<= 2;
+[e =<< _rightMask -> -> 2 `i `ui ]
+"65
+[; ;Drawing.c: 65:     }
 }
 [e =+ _x -> -> 1 `i `uc ]
-[e $ < -> _x `i -> . `E1358 2 `i 154  ]
-[e :U 155 ]
-}
-"64
-[; ;Drawing.c: 64: }
-[e :UE 153 ]
+[e $ < -> _x `i -> . `E1358 2 `i 159  ]
+[e :U 160 ]
 }
 "66
-[; ;Drawing.c: 66: void DrawScore(uint16_t score)
-[v _DrawScore `(v ~T0 @X0 1 ef1`ui ]
-"67
-[; ;Drawing.c: 67: {
-{
-[e :U _DrawScore ]
-"66
-[; ;Drawing.c: 66: void DrawScore(uint16_t score)
-[v _score `ui ~T0 @X0 1 r1 ]
-"67
-[; ;Drawing.c: 67: {
-[f ]
-"69
-[; ;Drawing.c: 69: }
-[e :UE 157 ]
-}
-"71
-[; ;Drawing.c: 71: void DrawHighscore(uint16_t highscore)
-[v _DrawHighscore `(v ~T0 @X0 1 ef1`ui ]
-"72
-[; ;Drawing.c: 72: {
-{
-[e :U _DrawHighscore ]
-"71
-[; ;Drawing.c: 71: void DrawHighscore(uint16_t highscore)
-[v _highscore `ui ~T0 @X0 1 r1 ]
-"72
-[; ;Drawing.c: 72: {
-[f ]
-"74
-[; ;Drawing.c: 74: }
+[; ;Drawing.c: 66: }
 [e :UE 158 ]
 }
+"68
+[; ;Drawing.c: 68: void DrawScore(uint16_t score)
+[v _DrawScore `(v ~T0 @X0 1 ef1`ui ]
+"69
+[; ;Drawing.c: 69: {
+{
+[e :U _DrawScore ]
+"68
+[; ;Drawing.c: 68: void DrawScore(uint16_t score)
+[v _score `ui ~T0 @X0 1 r1 ]
+"69
+[; ;Drawing.c: 69: {
+[f ]
+"70
+[; ;Drawing.c: 70:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
+[e ( _LCD_SegmentSelection (1 . `E1352 2 ]
+"71
+[; ;Drawing.c: 71:     LCD_SetX(LCD_NUM_PAGES - 1 - NUM_DIGITS);
+[e ( _LCD_SetX (1 -> - - -> . `E1358 2 `i -> 1 `i -> . `E1383 0 `i `uc ]
+"72
+[; ;Drawing.c: 72:     LCD_SetY(0);
+[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
+"73
+[; ;Drawing.c: 73: }
+[e :UE 162 ]
+}
+"75
+[; ;Drawing.c: 75: void DrawHighscore(uint16_t highscore)
+[v _DrawHighscore `(v ~T0 @X0 1 ef1`ui ]
 "76
-[; ;Drawing.c: 76: void DrawPause(void)
+[; ;Drawing.c: 76: {
+{
+[e :U _DrawHighscore ]
+"75
+[; ;Drawing.c: 75: void DrawHighscore(uint16_t highscore)
+[v _highscore `ui ~T0 @X0 1 r1 ]
+"76
+[; ;Drawing.c: 76: {
+[f ]
+"78
+[; ;Drawing.c: 78: }
+[e :UE 163 ]
+}
+"80
+[; ;Drawing.c: 80: void DrawPause(void)
 [v _DrawPause `(v ~T0 @X0 1 ef ]
-"77
-[; ;Drawing.c: 77: {
+"81
+[; ;Drawing.c: 81: {
 {
 [e :U _DrawPause ]
 [f ]
-"79
-[; ;Drawing.c: 79: }
-[e :UE 159 ]
+"83
+[; ;Drawing.c: 83: }
+[e :UE 164 ]
 }
-"81
-[; ;Drawing.c: 81: void DrawLogo(void)
+"85
+[; ;Drawing.c: 85: void DrawLogo(void)
 [v _DrawLogo `(v ~T0 @X0 1 ef ]
-"82
-[; ;Drawing.c: 82: {
+"86
+[; ;Drawing.c: 86: {
 {
 [e :U _DrawLogo ]
 [f ]
-"83
-[; ;Drawing.c: 83:     for (uint8_t x = 0; x < LCD_NUM_PAGES; ++x)
+"87
+[; ;Drawing.c: 87:     LCD_SegmentSelection(LCD_TOP_SEGMENT);
+[e ( _LCD_SegmentSelection (1 . `E1352 2 ]
+"88
+[; ;Drawing.c: 88:     LCD_SetY(0);
+[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
+"89
+[; ;Drawing.c: 89:     for (uint8_t x = 0; x < LCD_NUM_PAGES; ++x)
 {
 [v _x `uc ~T0 @X0 1 a ]
 [e = _x -> -> 0 `i `uc ]
-[e $ < -> _x `i -> . `E1358 2 `i 161  ]
-[e $U 162  ]
-[e :U 161 ]
-"84
-[; ;Drawing.c: 84:     {
+[e $ < -> _x `i -> . `E1358 2 `i 166  ]
+[e $U 167  ]
+[e :U 166 ]
+"90
+[; ;Drawing.c: 90:     {
 {
-"85
-[; ;Drawing.c: 85:         LCD_SegmentSelection(LCD_TOP_SEGMENT);
-[e ( _LCD_SegmentSelection (1 . `E1352 2 ]
-"86
-[; ;Drawing.c: 86:         for (uint8_t y = 0; y < LCD_SEGMENT_HEIGHT; ++y)
+"91
+[; ;Drawing.c: 91:         LCD_SetX(x);
+[e ( _LCD_SetX (1 _x ]
+"92
+[; ;Drawing.c: 92:         for (uint8_t y = 0; y < LCD_SEGMENT_HEIGHT / 2; ++y)
 {
 [v _y `uc ~T0 @X0 1 a ]
 [e = _y -> -> 0 `i `uc ]
-[e $ < -> _y `i -> . `E1358 3 `i 164  ]
-[e $U 165  ]
-[e :U 164 ]
-"87
-[; ;Drawing.c: 87:             LCD_WriteData(logoImage[x][y]);
-[e ( _LCD_WriteData (1 *U + &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 128 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 128 `i `ui `ux `ui `ux ]
-[e =+ _y -> -> 1 `i `uc ]
-[e $ < -> _y `i -> . `E1358 3 `i 164  ]
-[e :U 165 ]
-}
-"88
-[; ;Drawing.c: 88:         LCD_SegmentSelection(LCD_BOTTOM_SEGMENT);
-[e ( _LCD_SegmentSelection (1 . `E1352 1 ]
-"89
-[; ;Drawing.c: 89:         for (uint8_t y = LCD_SEGMENT_HEIGHT; y < LCD_HEIGHT; ++y)
+[e $ < -> _y `i / -> . `E1358 3 `i -> 2 `i 169  ]
+[e $U 170  ]
+[e :U 169 ]
+"93
+[; ;Drawing.c: 93:         {
 {
-[v _y `uc ~T0 @X0 1 a ]
-[e = _y -> . `E1358 3 `uc ]
-[e $ < -> _y `i -> . `E1358 1 `i 167  ]
-[e $U 168  ]
-[e :U 167 ]
-"90
-[; ;Drawing.c: 90:             LCD_WriteData(logoImage[x][y]);
-[e ( _LCD_WriteData (1 *U + &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 128 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 128 `i `ui `ux `ui `ux ]
-[e =+ _y -> -> 1 `i `uc ]
-[e $ < -> _y `i -> . `E1358 1 `i 167  ]
-[e :U 168 ]
+"94
+[; ;Drawing.c: 94:             LCD_WriteData(logoImage[x][y]);
+[e ( _LCD_WriteData (1 *U + &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux `ui `ux ]
+"95
+[; ;Drawing.c: 95:             LCD_WriteData(logoImage[x][y]);
+[e ( _LCD_WriteData (1 *U + &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux `ui `ux ]
+"96
+[; ;Drawing.c: 96:         }
 }
-"91
-[; ;Drawing.c: 91:     }
+[e =+ _y -> -> 1 `i `uc ]
+[e $ < -> _y `i / -> . `E1358 3 `i -> 2 `i 169  ]
+[e :U 170 ]
+}
+"97
+[; ;Drawing.c: 97:     }
 }
 [e =+ _x -> -> 1 `i `uc ]
-[e $ < -> _x `i -> . `E1358 2 `i 161  ]
-[e :U 162 ]
+[e $ < -> _x `i -> . `E1358 2 `i 166  ]
+[e :U 167 ]
 }
-"92
-[; ;Drawing.c: 92: }
-[e :UE 160 ]
+"99
+[; ;Drawing.c: 99:     LCD_SegmentSelection(LCD_BOTTOM_SEGMENT);
+[e ( _LCD_SegmentSelection (1 . `E1352 1 ]
+"100
+[; ;Drawing.c: 100:     LCD_SetY(0);
+[e ( _LCD_SetY (1 -> -> 0 `i `uc ]
+"101
+[; ;Drawing.c: 101:     for (uint8_t x = 0; x < LCD_NUM_PAGES; ++x)
+{
+[v _x `uc ~T0 @X0 1 a ]
+[e = _x -> -> 0 `i `uc ]
+[e $ < -> _x `i -> . `E1358 2 `i 172  ]
+[e $U 173  ]
+[e :U 172 ]
+"102
+[; ;Drawing.c: 102:     {
+{
+"103
+[; ;Drawing.c: 103:         LCD_SetX(x);
+[e ( _LCD_SetX (1 _x ]
+"104
+[; ;Drawing.c: 104:         for (uint8_t y = LCD_SEGMENT_HEIGHT / 2; y < LCD_SEGMENT_HEIGHT; ++y)
+{
+[v _y `uc ~T0 @X0 1 a ]
+[e = _y -> / -> . `E1358 3 `i -> 2 `i `uc ]
+[e $ < -> _y `i -> . `E1358 3 `i 175  ]
+[e $U 176  ]
+[e :U 175 ]
+"105
+[; ;Drawing.c: 105:         {
+{
+"106
+[; ;Drawing.c: 106:             LCD_WriteData(logoImage[x][y]);
+[e ( _LCD_WriteData (1 *U + &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux `ui `ux ]
+"107
+[; ;Drawing.c: 107:             LCD_WriteData(logoImage[x][y]);
+[e ( _LCD_WriteData (1 *U + &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux * -> _y `ux -> -> # *U &U *U + &U _logoImage * -> _x `ux -> * -> # *U &U *U &U _logoImage `ui -> -> 64 `i `ui `ux `ui `ux ]
+"108
+[; ;Drawing.c: 108:         }
+}
+[e =+ _y -> -> 1 `i `uc ]
+[e $ < -> _y `i -> . `E1358 3 `i 175  ]
+[e :U 176 ]
+}
+"109
+[; ;Drawing.c: 109:     }
+}
+[e =+ _x -> -> 1 `i `uc ]
+[e $ < -> _x `i -> . `E1358 2 `i 172  ]
+[e :U 173 ]
+}
+"110
+[; ;Drawing.c: 110: }
+[e :UE 165 ]
 }

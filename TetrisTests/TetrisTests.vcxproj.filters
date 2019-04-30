@@ -15,6 +15,26 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClearingTests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MovementTests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RotationTests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TableEquality.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DigitsTests.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="CUnit\Basic\Basic.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -33,49 +53,8 @@
     <ClCompile Include="CUnit\Framework\Util.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\Tetris\Tetris.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="CUnit\Headers\Basic.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CUnit\Headers\CUError.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CUnit\Headers\CUnit_intl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CUnit\Headers\MyMem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CUnit\Headers\TestDB.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CUnit\Headers\TestRun.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CUnit\Headers\Util.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CUnit\Headers\CUnit.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MovementTests.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TableEquality.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RotationTests.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ClearingTests.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

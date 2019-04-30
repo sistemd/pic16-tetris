@@ -27,15 +27,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "75 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdlib.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\stdlib.h: 75: extern int rand(void);
 [v _rand `(i ~T0 @X0 0 ef ]
-"329 ../Tetris/Tetris.c
-[; ;../Tetris/Tetris.c: 329:  return Tetris_units + (rand() % TETRIS_NUM_UNITS);
+"330 ../Tetris/Tetris.c
+[; ;../Tetris/Tetris.c: 330:  return Tetris_units + (rand() % TETRIS_NUM_UNITS);
 [c E292 7 .. ]
 [n E292 . TETRIS_NUM_UNITS  ]
 "16 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\string.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c90\string.h: 16: extern void * memset(void *, int, size_t);
 [v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
-"350 ../Tetris/Tetris.c
-[; ;../Tetris/Tetris.c: 350: Tetris_GameState Tetris_UpdateGame(Tetris_Game *game)
+"351 ../Tetris/Tetris.c
+[; ;../Tetris/Tetris.c: 351: Tetris_GameState Tetris_UpdateGame(Tetris_Game *game)
 [c E60 0 1 .. ]
 [n E60 . TETRIS_GAME_OVER TETRIS_GAME_CONTINUES  ]
 "67 ../Tetris/Tetris.h
@@ -689,161 +689,161 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;../Tetris/Tetris.c: 284: {
 [f ]
 "285
-[; ;../Tetris/Tetris.c: 285:  return Tetris_CountUnitBits(player->unit->bits[player->rotation]) == Tetris_CountUnitBits(player->unitBits);
+[; ;../Tetris/Tetris.c: 285:  return Tetris_CountUnitBits(player->unit->bits[player->rotation])
 [e ) -> -> == -> ( _Tetris_CountUnitBits (1 &U *U + &U . *U . *U _player 1 2 * -> . *U _player 3 `ux -> * -> # *U &U *U &U . *U . *U _player 1 2 `ui -> -> 4 `i `ui `ux `i -> ( _Tetris_CountUnitBits (1 &U . *U _player 2 `i `i `uc ]
 [e $UE 58  ]
-"286
-[; ;../Tetris/Tetris.c: 286: }
+"287
+[; ;../Tetris/Tetris.c: 287: }
 [e :UE 58 ]
 }
-"288
-[; ;../Tetris/Tetris.c: 288: static void Tetris_SetPlayerUnit(Tetris_Player *player, const Tetris_Unit *unit)
-[v _Tetris_SetPlayerUnit `(v ~T0 @X0 1 sf2`*S3`*CS2 ]
 "289
-[; ;../Tetris/Tetris.c: 289: {
+[; ;../Tetris/Tetris.c: 289: static void Tetris_SetPlayerUnit(Tetris_Player *player, const Tetris_Unit *unit)
+[v _Tetris_SetPlayerUnit `(v ~T0 @X0 1 sf2`*S3`*CS2 ]
+"290
+[; ;../Tetris/Tetris.c: 290: {
 {
 [e :U _Tetris_SetPlayerUnit ]
-"288
-[; ;../Tetris/Tetris.c: 288: static void Tetris_SetPlayerUnit(Tetris_Player *player, const Tetris_Unit *unit)
+"289
+[; ;../Tetris/Tetris.c: 289: static void Tetris_SetPlayerUnit(Tetris_Player *player, const Tetris_Unit *unit)
 [v _player `*S3 ~T0 @X0 1 r1 ]
 [v _unit `*CS2 ~T0 @X0 1 r2 ]
-"289
-[; ;../Tetris/Tetris.c: 289: {
-[f ]
 "290
-[; ;../Tetris/Tetris.c: 290:  player->unit = unit;
-[e = . *U _player 1 _unit ]
+[; ;../Tetris/Tetris.c: 290: {
+[f ]
 "291
-[; ;../Tetris/Tetris.c: 291:  Tetris_UpdatePlayerUnitBits(player);
-[e ( _Tetris_UpdatePlayerUnitBits (1 _player ]
+[; ;../Tetris/Tetris.c: 291:  player->unit = unit;
+[e = . *U _player 1 _unit ]
 "292
-[; ;../Tetris/Tetris.c: 292: }
+[; ;../Tetris/Tetris.c: 292:  Tetris_UpdatePlayerUnitBits(player);
+[e ( _Tetris_UpdatePlayerUnitBits (1 _player ]
+"293
+[; ;../Tetris/Tetris.c: 293: }
 [e :UE 59 ]
 }
-"294
-[; ;../Tetris/Tetris.c: 294: static void Tetris_ResetPlayer(Tetris_Player *player, const Tetris_Unit *playerUnit)
-[v _Tetris_ResetPlayer `(v ~T0 @X0 1 sf2`*S3`*CS2 ]
 "295
-[; ;../Tetris/Tetris.c: 295: {
+[; ;../Tetris/Tetris.c: 295: static void Tetris_ResetPlayer(Tetris_Player *player, const Tetris_Unit *playerUnit)
+[v _Tetris_ResetPlayer `(v ~T0 @X0 1 sf2`*S3`*CS2 ]
+"296
+[; ;../Tetris/Tetris.c: 296: {
 {
 [e :U _Tetris_ResetPlayer ]
-"294
-[; ;../Tetris/Tetris.c: 294: static void Tetris_ResetPlayer(Tetris_Player *player, const Tetris_Unit *playerUnit)
+"295
+[; ;../Tetris/Tetris.c: 295: static void Tetris_ResetPlayer(Tetris_Player *player, const Tetris_Unit *playerUnit)
 [v _player `*S3 ~T0 @X0 1 r1 ]
 [v _playerUnit `*CS2 ~T0 @X0 1 r2 ]
-"295
-[; ;../Tetris/Tetris.c: 295: {
-[f ]
 "296
-[; ;../Tetris/Tetris.c: 296:  player->position = Tetris_playerStartingPosition;
-[e = . *U _player 0 _Tetris_playerStartingPosition ]
+[; ;../Tetris/Tetris.c: 296: {
+[f ]
 "297
-[; ;../Tetris/Tetris.c: 297:  player->rotation = 0;
-[e = . *U _player 3 -> -> 0 `i `uc ]
+[; ;../Tetris/Tetris.c: 297:  player->position = Tetris_playerStartingPosition;
+[e = . *U _player 0 _Tetris_playerStartingPosition ]
 "298
-[; ;../Tetris/Tetris.c: 298:  Tetris_SetPlayerUnit(player, playerUnit);
-[e ( _Tetris_SetPlayerUnit (2 , _player _playerUnit ]
+[; ;../Tetris/Tetris.c: 298:  player->rotation = 0;
+[e = . *U _player 3 -> -> 0 `i `uc ]
 "299
-[; ;../Tetris/Tetris.c: 299: }
+[; ;../Tetris/Tetris.c: 299:  Tetris_SetPlayerUnit(player, playerUnit);
+[e ( _Tetris_SetPlayerUnit (2 , _player _playerUnit ]
+"300
+[; ;../Tetris/Tetris.c: 300: }
 [e :UE 60 ]
 }
-"301
-[; ;../Tetris/Tetris.c: 301: static void Tetris_ShiftTableDown(uint16_t *gameTable, uint8_t upto)
-[v _Tetris_ShiftTableDown `(v ~T0 @X0 1 sf2`*ui`uc ]
 "302
-[; ;../Tetris/Tetris.c: 302: {
+[; ;../Tetris/Tetris.c: 302: static void Tetris_ShiftTableDown(uint16_t *gameTable, uint8_t upto)
+[v _Tetris_ShiftTableDown `(v ~T0 @X0 1 sf2`*ui`uc ]
+"303
+[; ;../Tetris/Tetris.c: 303: {
 {
 [e :U _Tetris_ShiftTableDown ]
-"301
-[; ;../Tetris/Tetris.c: 301: static void Tetris_ShiftTableDown(uint16_t *gameTable, uint8_t upto)
+"302
+[; ;../Tetris/Tetris.c: 302: static void Tetris_ShiftTableDown(uint16_t *gameTable, uint8_t upto)
 [v _gameTable `*ui ~T0 @X0 1 r1 ]
 [v _upto `uc ~T0 @X0 1 r2 ]
-"302
-[; ;../Tetris/Tetris.c: 302: {
-[f ]
 "303
-[; ;../Tetris/Tetris.c: 303:  uint8_t i;
+[; ;../Tetris/Tetris.c: 303: {
+[f ]
+"304
+[; ;../Tetris/Tetris.c: 304:  uint8_t i;
 [v _i `uc ~T0 @X0 1 a ]
-"305
-[; ;../Tetris/Tetris.c: 305:  for (i = upto; i != 0; --i)
+"306
+[; ;../Tetris/Tetris.c: 306:  for (i = upto; i != 0; --i)
 {
 [e = _i _upto ]
 [e $ != -> _i `i -> 0 `i 62  ]
 [e $U 63  ]
 [e :U 62 ]
-"306
-[; ;../Tetris/Tetris.c: 306:  {
-{
 "307
-[; ;../Tetris/Tetris.c: 307:   if (gameTable[i] == 0)
-[e $ ! == *U + _gameTable * -> _i `ux -> -> # *U _gameTable `ui `ux -> -> 0 `i `ui 65  ]
+[; ;../Tetris/Tetris.c: 307:  {
+{
 "308
-[; ;../Tetris/Tetris.c: 308:    break;
+[; ;../Tetris/Tetris.c: 308:   if (gameTable[i] == 0)
+[e $ ! == *U + _gameTable * -> _i `ux -> -> # *U _gameTable `ui `ux -> -> 0 `i `ui 65  ]
+"309
+[; ;../Tetris/Tetris.c: 309:    break;
 [e $U 63  ]
 [e :U 65 ]
-"309
-[; ;../Tetris/Tetris.c: 309:   gameTable[i] = gameTable[i - 1];
-[e = *U + _gameTable * -> _i `ux -> -> # *U _gameTable `ui `ux *U + _gameTable * -> - -> _i `i -> 1 `i `x -> -> # *U _gameTable `i `x ]
 "310
-[; ;../Tetris/Tetris.c: 310:  }
+[; ;../Tetris/Tetris.c: 310:   gameTable[i] = gameTable[i - 1];
+[e = *U + _gameTable * -> _i `ux -> -> # *U _gameTable `ui `ux *U + _gameTable * -> - -> _i `i -> 1 `i `x -> -> # *U _gameTable `i `x ]
+"311
+[; ;../Tetris/Tetris.c: 311:  }
 }
 [e =- _i -> -> 1 `i `uc ]
 [e $ != -> _i `i -> 0 `i 62  ]
 [e :U 63 ]
 }
-"312
-[; ;../Tetris/Tetris.c: 312:  gameTable[i] = 0;
-[e = *U + _gameTable * -> _i `ux -> -> # *U _gameTable `ui `ux -> -> 0 `i `ui ]
 "313
-[; ;../Tetris/Tetris.c: 313: }
+[; ;../Tetris/Tetris.c: 313:  gameTable[i] = 0;
+[e = *U + _gameTable * -> _i `ux -> -> # *U _gameTable `ui `ux -> -> 0 `i `ui ]
+"314
+[; ;../Tetris/Tetris.c: 314: }
 [e :UE 61 ]
 }
-"315
-[; ;../Tetris/Tetris.c: 315: static uint8_t Tetris_ScoreForRowsCleared(uint8_t rowsCleared)
-[v _Tetris_ScoreForRowsCleared `(uc ~T0 @X0 1 sf1`uc ]
 "316
-[; ;../Tetris/Tetris.c: 316: {
+[; ;../Tetris/Tetris.c: 316: static uint8_t Tetris_ScoreForRowsCleared(uint8_t rowsCleared)
+[v _Tetris_ScoreForRowsCleared `(uc ~T0 @X0 1 sf1`uc ]
+"317
+[; ;../Tetris/Tetris.c: 317: {
 {
 [e :U _Tetris_ScoreForRowsCleared ]
-"315
-[; ;../Tetris/Tetris.c: 315: static uint8_t Tetris_ScoreForRowsCleared(uint8_t rowsCleared)
-[v _rowsCleared `uc ~T0 @X0 1 r1 ]
 "316
-[; ;../Tetris/Tetris.c: 316: {
-[f ]
+[; ;../Tetris/Tetris.c: 316: static uint8_t Tetris_ScoreForRowsCleared(uint8_t rowsCleared)
+[v _rowsCleared `uc ~T0 @X0 1 r1 ]
 "317
-[; ;../Tetris/Tetris.c: 317:  switch (rowsCleared)
-[e $U 68  ]
+[; ;../Tetris/Tetris.c: 317: {
+[f ]
 "318
-[; ;../Tetris/Tetris.c: 318:  {
-{
+[; ;../Tetris/Tetris.c: 318:  switch (rowsCleared)
+[e $U 68  ]
 "319
-[; ;../Tetris/Tetris.c: 319:  case 0: return 0;
+[; ;../Tetris/Tetris.c: 319:  {
+{
+"320
+[; ;../Tetris/Tetris.c: 320:  case 0: return 0;
 [e :U 69 ]
 [e ) -> -> 0 `i `uc ]
 [e $UE 66  ]
-"320
-[; ;../Tetris/Tetris.c: 320:  case 1: return 1;
+"321
+[; ;../Tetris/Tetris.c: 321:  case 1: return 1;
 [e :U 70 ]
 [e ) -> -> 1 `i `uc ]
 [e $UE 66  ]
-"321
-[; ;../Tetris/Tetris.c: 321:  case 2: return 3;
+"322
+[; ;../Tetris/Tetris.c: 322:  case 2: return 3;
 [e :U 71 ]
 [e ) -> -> 3 `i `uc ]
 [e $UE 66  ]
-"322
-[; ;../Tetris/Tetris.c: 322:  case 3: return 5;
+"323
+[; ;../Tetris/Tetris.c: 323:  case 3: return 5;
 [e :U 72 ]
 [e ) -> -> 5 `i `uc ]
 [e $UE 66  ]
-"323
-[; ;../Tetris/Tetris.c: 323:  default: return 7;
+"324
+[; ;../Tetris/Tetris.c: 324:  default: return 7;
 [e :U 73 ]
 [e ) -> -> 7 `i `uc ]
 [e $UE 66  ]
-"324
-[; ;../Tetris/Tetris.c: 324:  }
+"325
+[; ;../Tetris/Tetris.c: 325:  }
 }
 [e $U 67  ]
 [e :U 68 ]
@@ -853,485 +853,485 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 3 `i 72
  73 ]
 [e :U 67 ]
-"325
-[; ;../Tetris/Tetris.c: 325: }
+"326
+[; ;../Tetris/Tetris.c: 326: }
 [e :UE 66 ]
 }
-"327
-[; ;../Tetris/Tetris.c: 327: const Tetris_Unit *Tetris_GetRandomUnit(void)
-[v _Tetris_GetRandomUnit `(*CS2 ~T0 @X0 1 ef ]
 "328
-[; ;../Tetris/Tetris.c: 328: {
+[; ;../Tetris/Tetris.c: 328: const Tetris_Unit *Tetris_GetRandomUnit(void)
+[v _Tetris_GetRandomUnit `(*CS2 ~T0 @X0 1 ef ]
+"329
+[; ;../Tetris/Tetris.c: 329: {
 {
 [e :U _Tetris_GetRandomUnit ]
 [f ]
-"329
-[; ;../Tetris/Tetris.c: 329:  return Tetris_units + (rand() % TETRIS_NUM_UNITS);
+"330
+[; ;../Tetris/Tetris.c: 330:  return Tetris_units + (rand() % TETRIS_NUM_UNITS);
 [e ) + &U _Tetris_units * -> % ( _rand ..  -> . `E292 0 `i `x -> -> # *U &U _Tetris_units `i `x ]
 [e $UE 74  ]
-"330
-[; ;../Tetris/Tetris.c: 330: }
+"331
+[; ;../Tetris/Tetris.c: 331: }
 [e :UE 74 ]
 }
-"332
-[; ;../Tetris/Tetris.c: 332: const Tetris_Unit *Tetris_GetUnit(char designator)
-[v _Tetris_GetUnit `(*CS2 ~T0 @X0 1 ef1`uc ]
 "333
-[; ;../Tetris/Tetris.c: 333: {
+[; ;../Tetris/Tetris.c: 333: const Tetris_Unit *Tetris_GetUnit(char designator)
+[v _Tetris_GetUnit `(*CS2 ~T0 @X0 1 ef1`uc ]
+"334
+[; ;../Tetris/Tetris.c: 334: {
 {
 [e :U _Tetris_GetUnit ]
-"332
-[; ;../Tetris/Tetris.c: 332: const Tetris_Unit *Tetris_GetUnit(char designator)
-[v _designator `uc ~T0 @X0 1 r1 ]
 "333
-[; ;../Tetris/Tetris.c: 333: {
-[f ]
+[; ;../Tetris/Tetris.c: 333: const Tetris_Unit *Tetris_GetUnit(char designator)
+[v _designator `uc ~T0 @X0 1 r1 ]
 "334
-[; ;../Tetris/Tetris.c: 334:  for (const Tetris_Unit *i = Tetris_units; i != Tetris_units + TETRIS_NUM_UNITS; ++i)
+[; ;../Tetris/Tetris.c: 334: {
+[f ]
+"335
+[; ;../Tetris/Tetris.c: 335:  for (const Tetris_Unit *i = Tetris_units; i != Tetris_units + TETRIS_NUM_UNITS; ++i)
 {
 [v _i `*CS2 ~T0 @X0 1 a ]
 [e = _i &U _Tetris_units ]
 [e $ != _i + &U _Tetris_units * -> . `E292 0 `x -> -> # *U &U _Tetris_units `i `x 76  ]
 [e $U 77  ]
 [e :U 76 ]
-"335
-[; ;../Tetris/Tetris.c: 335:  {
-{
 "336
-[; ;../Tetris/Tetris.c: 336:   if (i->designator == designator)
-[e $ ! == -> . *U _i 0 `i -> _designator `i 79  ]
+[; ;../Tetris/Tetris.c: 336:  {
+{
 "337
-[; ;../Tetris/Tetris.c: 337:    return i;
+[; ;../Tetris/Tetris.c: 337:   if (i->designator == designator)
+[e $ ! == -> . *U _i 0 `i -> _designator `i 79  ]
+"338
+[; ;../Tetris/Tetris.c: 338:    return i;
 [e ) _i ]
 [e $UE 75  ]
 [e :U 79 ]
-"338
-[; ;../Tetris/Tetris.c: 338:  }
+"339
+[; ;../Tetris/Tetris.c: 339:  }
 }
 [e =+ _i * -> -> 1 `i `x -> -> # *U _i `i `x ]
 [e $ != _i + &U _Tetris_units * -> . `E292 0 `x -> -> # *U &U _Tetris_units `i `x 76  ]
 [e :U 77 ]
 }
-"340
-[; ;../Tetris/Tetris.c: 340:  return (0);
+"341
+[; ;../Tetris/Tetris.c: 341:  return (0);
 [e ) -> -> 0 `i `*CS2 ]
 [e $UE 75  ]
-"341
-[; ;../Tetris/Tetris.c: 341: }
+"342
+[; ;../Tetris/Tetris.c: 342: }
 [e :UE 75 ]
 }
-"343
-[; ;../Tetris/Tetris.c: 343: void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit)
-[v _Tetris_ResetGame `(v ~T0 @X0 1 ef2`*S4`*CS2 ]
 "344
-[; ;../Tetris/Tetris.c: 344: {
+[; ;../Tetris/Tetris.c: 344: void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit)
+[v _Tetris_ResetGame `(v ~T0 @X0 1 ef2`*S4`*CS2 ]
+"345
+[; ;../Tetris/Tetris.c: 345: {
 {
 [e :U _Tetris_ResetGame ]
-"343
-[; ;../Tetris/Tetris.c: 343: void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit)
+"344
+[; ;../Tetris/Tetris.c: 344: void Tetris_ResetGame(Tetris_Game *game, const Tetris_Unit *playerUnit)
 [v _game `*S4 ~T0 @X0 1 r1 ]
 [v _playerUnit `*CS2 ~T0 @X0 1 r2 ]
-"344
-[; ;../Tetris/Tetris.c: 344: {
-[f ]
 "345
-[; ;../Tetris/Tetris.c: 345:  memset(game, 0, sizeof *game);
-[e ( _memset (3 , , -> _game `*v -> 0 `i -> # *U _game `ui ]
+[; ;../Tetris/Tetris.c: 345: {
+[f ]
 "346
-[; ;../Tetris/Tetris.c: 346:  Tetris_ResetPlayer(&game->player, playerUnit);
-[e ( _Tetris_ResetPlayer (2 , &U . *U _game 1 _playerUnit ]
+[; ;../Tetris/Tetris.c: 346:  memset(game, 0, sizeof *game);
+[e ( _memset (3 , , -> _game `*v -> 0 `i -> # *U _game `ui ]
 "347
-[; ;../Tetris/Tetris.c: 347:  Tetris_ApplyPlayerToTable(game);
-[e ( _Tetris_ApplyPlayerToTable (1 _game ]
+[; ;../Tetris/Tetris.c: 347:  Tetris_ResetPlayer(&game->player, playerUnit);
+[e ( _Tetris_ResetPlayer (2 , &U . *U _game 1 _playerUnit ]
 "348
-[; ;../Tetris/Tetris.c: 348: }
+[; ;../Tetris/Tetris.c: 348:  Tetris_ApplyPlayerToTable(game);
+[e ( _Tetris_ApplyPlayerToTable (1 _game ]
+"349
+[; ;../Tetris/Tetris.c: 349: }
 [e :UE 80 ]
 }
-"350
-[; ;../Tetris/Tetris.c: 350: Tetris_GameState Tetris_UpdateGame(Tetris_Game *game)
-[v _Tetris_UpdateGame `(E60 ~T0 @X0 1 ef1`*S4 ]
 "351
-[; ;../Tetris/Tetris.c: 351: {
+[; ;../Tetris/Tetris.c: 351: Tetris_GameState Tetris_UpdateGame(Tetris_Game *game)
+[v _Tetris_UpdateGame `(E60 ~T0 @X0 1 ef1`*S4 ]
+"352
+[; ;../Tetris/Tetris.c: 352: {
 {
 [e :U _Tetris_UpdateGame ]
-"350
-[; ;../Tetris/Tetris.c: 350: Tetris_GameState Tetris_UpdateGame(Tetris_Game *game)
-[v _game `*S4 ~T0 @X0 1 r1 ]
 "351
-[; ;../Tetris/Tetris.c: 351: {
-[f ]
+[; ;../Tetris/Tetris.c: 351: Tetris_GameState Tetris_UpdateGame(Tetris_Game *game)
+[v _game `*S4 ~T0 @X0 1 r1 ]
 "352
-[; ;../Tetris/Tetris.c: 352:  if (!Tetris_MovePlayerDown(game))
-[e $ ! ! != -> ( _Tetris_MovePlayerDown (1 _game `i -> 0 `i 82  ]
+[; ;../Tetris/Tetris.c: 352: {
+[f ]
 "353
-[; ;../Tetris/Tetris.c: 353:  {
-{
+[; ;../Tetris/Tetris.c: 353:  if (!Tetris_MovePlayerDown(game))
+[e $ ! ! != -> ( _Tetris_MovePlayerDown (1 _game `i -> 0 `i 82  ]
 "354
-[; ;../Tetris/Tetris.c: 354:   uint8_t rowsCleared = Tetris_ClearFilledRows(game->table);
+[; ;../Tetris/Tetris.c: 354:  {
+{
+"355
+[; ;../Tetris/Tetris.c: 355:   uint8_t rowsCleared = Tetris_ClearFilledRows(game->table);
 [v _rowsCleared `uc ~T0 @X0 1 a ]
 [e = _rowsCleared ( _Tetris_ClearFilledRows (1 &U . *U _game 0 ]
-"355
-[; ;../Tetris/Tetris.c: 355:   game->currentScore += Tetris_ScoreForRowsCleared(rowsCleared);
+"356
+[; ;../Tetris/Tetris.c: 356:   game->currentScore += Tetris_ScoreForRowsCleared(rowsCleared);
 [e =+ . *U _game 2 -> ( _Tetris_ScoreForRowsCleared (1 _rowsCleared `ui ]
-"357
-[; ;../Tetris/Tetris.c: 357:   Tetris_ResetPlayer(&game->player, Tetris_GetRandomUnit());
-[e ( _Tetris_ResetPlayer (2 , &U . *U _game 1 ( _Tetris_GetRandomUnit ..  ]
 "358
-[; ;../Tetris/Tetris.c: 358:   if (Tetris_PlayerOverlapsEnvironment(game))
-[e $ ! != -> ( _Tetris_PlayerOverlapsEnvironment (1 _game `i -> 0 `i 83  ]
+[; ;../Tetris/Tetris.c: 358:   Tetris_ResetPlayer(&game->player, Tetris_GetRandomUnit());
+[e ( _Tetris_ResetPlayer (2 , &U . *U _game 1 ( _Tetris_GetRandomUnit ..  ]
 "359
-[; ;../Tetris/Tetris.c: 359:    return TETRIS_GAME_OVER;
+[; ;../Tetris/Tetris.c: 359:   if (Tetris_PlayerOverlapsEnvironment(game))
+[e $ ! != -> ( _Tetris_PlayerOverlapsEnvironment (1 _game `i -> 0 `i 83  ]
+"360
+[; ;../Tetris/Tetris.c: 360:    return TETRIS_GAME_OVER;
 [e ) . `E60 0 ]
 [e $UE 81  ]
 [e :U 83 ]
-"360
-[; ;../Tetris/Tetris.c: 360:   Tetris_ApplyPlayerToTable(game);
-[e ( _Tetris_ApplyPlayerToTable (1 _game ]
 "361
-[; ;../Tetris/Tetris.c: 361:  }
+[; ;../Tetris/Tetris.c: 361:   Tetris_ApplyPlayerToTable(game);
+[e ( _Tetris_ApplyPlayerToTable (1 _game ]
+"362
+[; ;../Tetris/Tetris.c: 362:  }
 }
 [e :U 82 ]
-"363
-[; ;../Tetris/Tetris.c: 363:  return TETRIS_GAME_CONTINUES;
+"364
+[; ;../Tetris/Tetris.c: 364:  return TETRIS_GAME_CONTINUES;
 [e ) . `E60 1 ]
 [e $UE 81  ]
-"364
-[; ;../Tetris/Tetris.c: 364: }
+"365
+[; ;../Tetris/Tetris.c: 365: }
 [e :UE 81 ]
 }
-"366
-[; ;../Tetris/Tetris.c: 366: uint8_t Tetris_ClearFilledRows(uint16_t *gameTable)
-[v _Tetris_ClearFilledRows `(uc ~T0 @X0 1 ef1`*ui ]
 "367
-[; ;../Tetris/Tetris.c: 367: {
+[; ;../Tetris/Tetris.c: 367: uint8_t Tetris_ClearFilledRows(uint16_t *gameTable)
+[v _Tetris_ClearFilledRows `(uc ~T0 @X0 1 ef1`*ui ]
+"368
+[; ;../Tetris/Tetris.c: 368: {
 {
 [e :U _Tetris_ClearFilledRows ]
-"366
-[; ;../Tetris/Tetris.c: 366: uint8_t Tetris_ClearFilledRows(uint16_t *gameTable)
-[v _gameTable `*ui ~T0 @X0 1 r1 ]
 "367
-[; ;../Tetris/Tetris.c: 367: {
-[f ]
+[; ;../Tetris/Tetris.c: 367: uint8_t Tetris_ClearFilledRows(uint16_t *gameTable)
+[v _gameTable `*ui ~T0 @X0 1 r1 ]
 "368
-[; ;../Tetris/Tetris.c: 368:  uint8_t rowsCleared = 0;
+[; ;../Tetris/Tetris.c: 368: {
+[f ]
+"369
+[; ;../Tetris/Tetris.c: 369:  uint8_t rowsCleared = 0;
 [v _rowsCleared `uc ~T0 @X0 1 a ]
 [e = _rowsCleared -> -> 0 `i `uc ]
-"370
-[; ;../Tetris/Tetris.c: 370:  for (uint8_t i = 0; i < TETRIS_TABLE_HEIGHT;)
+"371
+[; ;../Tetris/Tetris.c: 371:  for (uint8_t i = 0; i < TETRIS_TABLE_HEIGHT;)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> . `E32 1 `i 85  ]
 [e $U 86  ]
 [e :U 85 ]
-"371
-[; ;../Tetris/Tetris.c: 371:  {
-{
 "372
-[; ;../Tetris/Tetris.c: 372:   if (gameTable[i] == 0xFFFF)
-[e $ ! == *U + _gameTable * -> _i `ux -> -> # *U _gameTable `ui `ux -> 65535 `ui 88  ]
-"373
-[; ;../Tetris/Tetris.c: 373:   {
+[; ;../Tetris/Tetris.c: 372:  {
 {
+"373
+[; ;../Tetris/Tetris.c: 373:   if (gameTable[i] == 0xFFFF)
+[e $ ! == *U + _gameTable * -> _i `ux -> -> # *U _gameTable `ui `ux -> 65535 `ui 88  ]
 "374
-[; ;../Tetris/Tetris.c: 374:    Tetris_ShiftTableDown(gameTable, i);
-[e ( _Tetris_ShiftTableDown (2 , _gameTable _i ]
+[; ;../Tetris/Tetris.c: 374:   {
+{
 "375
-[; ;../Tetris/Tetris.c: 375:    ++rowsCleared;
-[e =+ _rowsCleared -> -> 1 `i `uc ]
+[; ;../Tetris/Tetris.c: 375:    Tetris_ShiftTableDown(gameTable, i);
+[e ( _Tetris_ShiftTableDown (2 , _gameTable _i ]
 "376
-[; ;../Tetris/Tetris.c: 376:   }
+[; ;../Tetris/Tetris.c: 376:    ++rowsCleared;
+[e =+ _rowsCleared -> -> 1 `i `uc ]
+"377
+[; ;../Tetris/Tetris.c: 377:   }
 }
 [e $U 89  ]
-"377
-[; ;../Tetris/Tetris.c: 377:   else
-[e :U 88 ]
 "378
-[; ;../Tetris/Tetris.c: 378:   {
-{
+[; ;../Tetris/Tetris.c: 378:   else
+[e :U 88 ]
 "379
-[; ;../Tetris/Tetris.c: 379:    ++i;
-[e =+ _i -> -> 1 `i `uc ]
+[; ;../Tetris/Tetris.c: 379:   {
+{
 "380
-[; ;../Tetris/Tetris.c: 380:   }
+[; ;../Tetris/Tetris.c: 380:    ++i;
+[e =+ _i -> -> 1 `i `uc ]
+"381
+[; ;../Tetris/Tetris.c: 381:   }
 }
 [e :U 89 ]
-"381
-[; ;../Tetris/Tetris.c: 381:  }
+"382
+[; ;../Tetris/Tetris.c: 382:  }
 }
 [e $ < -> _i `i -> . `E32 1 `i 85  ]
 [e :U 86 ]
 }
-"383
-[; ;../Tetris/Tetris.c: 383:  return rowsCleared;
+"384
+[; ;../Tetris/Tetris.c: 384:  return rowsCleared;
 [e ) _rowsCleared ]
 [e $UE 84  ]
-"384
-[; ;../Tetris/Tetris.c: 384: }
+"385
+[; ;../Tetris/Tetris.c: 385: }
 [e :UE 84 ]
 }
-"386
-[; ;../Tetris/Tetris.c: 386: uint8_t Tetris_MovePlayerDown(Tetris_Game *game)
-[v _Tetris_MovePlayerDown `(uc ~T0 @X0 1 ef1`*S4 ]
 "387
-[; ;../Tetris/Tetris.c: 387: {
+[; ;../Tetris/Tetris.c: 387: uint8_t Tetris_MovePlayerDown(Tetris_Game *game)
+[v _Tetris_MovePlayerDown `(uc ~T0 @X0 1 ef1`*S4 ]
+"388
+[; ;../Tetris/Tetris.c: 388: {
 {
 [e :U _Tetris_MovePlayerDown ]
-"386
-[; ;../Tetris/Tetris.c: 386: uint8_t Tetris_MovePlayerDown(Tetris_Game *game)
-[v _game `*S4 ~T0 @X0 1 r1 ]
 "387
-[; ;../Tetris/Tetris.c: 387: {
-[f ]
+[; ;../Tetris/Tetris.c: 387: uint8_t Tetris_MovePlayerDown(Tetris_Game *game)
+[v _game `*S4 ~T0 @X0 1 r1 ]
 "388
-[; ;../Tetris/Tetris.c: 388:  Tetris_RemovePlayerFromTable(game);
-[e ( _Tetris_RemovePlayerFromTable (1 _game ]
+[; ;../Tetris/Tetris.c: 388: {
+[f ]
 "389
-[; ;../Tetris/Tetris.c: 389:  ++game->player.position.y;
+[; ;../Tetris/Tetris.c: 389:  Tetris_RemovePlayerFromTable(game);
+[e ( _Tetris_RemovePlayerFromTable (1 _game ]
+"390
+[; ;../Tetris/Tetris.c: 390:  ++game->player.position.y;
 [e =+ . . . *U _game 1 0 1 -> -> 1 `i `uc ]
-"391
-[; ;../Tetris/Tetris.c: 391:  if (Tetris_PlayerOverlapsEnvironment(game) || !Tetris_ApplyPlayerToTable(game))
-[e $ ! || != -> ( _Tetris_PlayerOverlapsEnvironment (1 _game `i -> 0 `i ! != -> ( _Tetris_ApplyPlayerToTable (1 _game `i -> 0 `i 91  ]
 "392
-[; ;../Tetris/Tetris.c: 392:  {
-{
+[; ;../Tetris/Tetris.c: 392:  if (Tetris_PlayerOverlapsEnvironment(game) || !Tetris_ApplyPlayerToTable(game))
+[e $ ! || != -> ( _Tetris_PlayerOverlapsEnvironment (1 _game `i -> 0 `i ! != -> ( _Tetris_ApplyPlayerToTable (1 _game `i -> 0 `i 91  ]
 "393
-[; ;../Tetris/Tetris.c: 393:   --game->player.position.y;
-[e =- . . . *U _game 1 0 1 -> -> 1 `i `uc ]
+[; ;../Tetris/Tetris.c: 393:  {
+{
 "394
-[; ;../Tetris/Tetris.c: 394:   Tetris_ApplyPlayerToTable(game);
-[e ( _Tetris_ApplyPlayerToTable (1 _game ]
+[; ;../Tetris/Tetris.c: 394:   --game->player.position.y;
+[e =- . . . *U _game 1 0 1 -> -> 1 `i `uc ]
 "395
-[; ;../Tetris/Tetris.c: 395:   return 0;
+[; ;../Tetris/Tetris.c: 395:   Tetris_ApplyPlayerToTable(game);
+[e ( _Tetris_ApplyPlayerToTable (1 _game ]
+"396
+[; ;../Tetris/Tetris.c: 396:   return 0;
 [e ) -> -> 0 `i `uc ]
 [e $UE 90  ]
-"396
-[; ;../Tetris/Tetris.c: 396:  }
+"397
+[; ;../Tetris/Tetris.c: 397:  }
 }
 [e :U 91 ]
-"398
-[; ;../Tetris/Tetris.c: 398:  return 1;
+"399
+[; ;../Tetris/Tetris.c: 399:  return 1;
 [e ) -> -> 1 `i `uc ]
 [e $UE 90  ]
-"399
-[; ;../Tetris/Tetris.c: 399: }
+"400
+[; ;../Tetris/Tetris.c: 400: }
 [e :UE 90 ]
 }
-"401
-[; ;../Tetris/Tetris.c: 401: void Tetris_MovePlayerLeft(Tetris_Game *game)
-[v _Tetris_MovePlayerLeft `(v ~T0 @X0 1 ef1`*S4 ]
 "402
-[; ;../Tetris/Tetris.c: 402: {
+[; ;../Tetris/Tetris.c: 402: void Tetris_MovePlayerLeft(Tetris_Game *game)
+[v _Tetris_MovePlayerLeft `(v ~T0 @X0 1 ef1`*S4 ]
+"403
+[; ;../Tetris/Tetris.c: 403: {
 {
 [e :U _Tetris_MovePlayerLeft ]
-"401
-[; ;../Tetris/Tetris.c: 401: void Tetris_MovePlayerLeft(Tetris_Game *game)
-[v _game `*S4 ~T0 @X0 1 r1 ]
 "402
-[; ;../Tetris/Tetris.c: 402: {
-[f ]
+[; ;../Tetris/Tetris.c: 402: void Tetris_MovePlayerLeft(Tetris_Game *game)
+[v _game `*S4 ~T0 @X0 1 r1 ]
 "403
-[; ;../Tetris/Tetris.c: 403:  if (Tetris_PlayerTouchingLeftBound(&game->player))
-[e $ ! != -> ( _Tetris_PlayerTouchingLeftBound (1 &U . *U _game 1 `i -> 0 `i 93  ]
+[; ;../Tetris/Tetris.c: 403: {
+[f ]
 "404
-[; ;../Tetris/Tetris.c: 404:   return;
+[; ;../Tetris/Tetris.c: 404:  if (Tetris_PlayerTouchingLeftBound(&game->player))
+[e $ ! != -> ( _Tetris_PlayerTouchingLeftBound (1 &U . *U _game 1 `i -> 0 `i 93  ]
+"405
+[; ;../Tetris/Tetris.c: 405:   return;
 [e $UE 92  ]
 [e :U 93 ]
-"406
-[; ;../Tetris/Tetris.c: 406:  Tetris_RemovePlayerFromTable(game);
+"407
+[; ;../Tetris/Tetris.c: 407:  Tetris_RemovePlayerFromTable(game);
 [e ( _Tetris_RemovePlayerFromTable (1 _game ]
-"408
-[; ;../Tetris/Tetris.c: 408:  for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
+"409
+[; ;../Tetris/Tetris.c: 409:  for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> . `E36 0 `i 94  ]
 [e $U 95  ]
 [e :U 94 ]
-"409
-[; ;../Tetris/Tetris.c: 409:   game->player.unitBits[i] <<= 1;
+"410
+[; ;../Tetris/Tetris.c: 410:   game->player.unitBits[i] <<= 1;
 [e =<< *U + &U . . *U _game 1 2 * -> _i `ux -> -> # *U &U . . *U _game 1 2 `ui `ux -> -> 1 `i `ui ]
 [e =+ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> . `E36 0 `i 94  ]
 [e :U 95 ]
 }
-"411
-[; ;../Tetris/Tetris.c: 411:  if (Tetris_PlayerOverlapsEnvironment(game))
-[e $ ! != -> ( _Tetris_PlayerOverlapsEnvironment (1 _game `i -> 0 `i 97  ]
 "412
-[; ;../Tetris/Tetris.c: 412:  {
-{
+[; ;../Tetris/Tetris.c: 412:  if (Tetris_PlayerOverlapsEnvironment(game))
+[e $ ! != -> ( _Tetris_PlayerOverlapsEnvironment (1 _game `i -> 0 `i 97  ]
 "413
-[; ;../Tetris/Tetris.c: 413:   for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
+[; ;../Tetris/Tetris.c: 413:  {
+{
+"414
+[; ;../Tetris/Tetris.c: 414:   for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> . `E36 0 `i 98  ]
 [e $U 99  ]
 [e :U 98 ]
-"414
-[; ;../Tetris/Tetris.c: 414:    game->player.unitBits[i] >>= 1;
+"415
+[; ;../Tetris/Tetris.c: 415:    game->player.unitBits[i] >>= 1;
 [e =>> *U + &U . . *U _game 1 2 * -> _i `ux -> -> # *U &U . . *U _game 1 2 `ui `ux -> -> 1 `i `ui ]
 [e =+ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> . `E36 0 `i 98  ]
 [e :U 99 ]
 }
-"415
-[; ;../Tetris/Tetris.c: 415:  }
+"416
+[; ;../Tetris/Tetris.c: 416:  }
 }
 [e $U 101  ]
-"416
-[; ;../Tetris/Tetris.c: 416:  else
-[e :U 97 ]
 "417
-[; ;../Tetris/Tetris.c: 417:  {
-{
+[; ;../Tetris/Tetris.c: 417:  else
+[e :U 97 ]
 "418
-[; ;../Tetris/Tetris.c: 418:   --game->player.position.x;
-[e =- . . . *U _game 1 0 0 -> -> 1 `i `uc ]
+[; ;../Tetris/Tetris.c: 418:  {
+{
 "419
-[; ;../Tetris/Tetris.c: 419:  }
+[; ;../Tetris/Tetris.c: 419:   --game->player.position.x;
+[e =- . . . *U _game 1 0 0 -> -> 1 `i `uc ]
+"420
+[; ;../Tetris/Tetris.c: 420:  }
 }
 [e :U 101 ]
-"421
-[; ;../Tetris/Tetris.c: 421:  Tetris_ApplyPlayerToTable(game);
-[e ( _Tetris_ApplyPlayerToTable (1 _game ]
 "422
-[; ;../Tetris/Tetris.c: 422: }
+[; ;../Tetris/Tetris.c: 422:  Tetris_ApplyPlayerToTable(game);
+[e ( _Tetris_ApplyPlayerToTable (1 _game ]
+"423
+[; ;../Tetris/Tetris.c: 423: }
 [e :UE 92 ]
 }
-"424
-[; ;../Tetris/Tetris.c: 424: void Tetris_MovePlayerRight(Tetris_Game *game)
-[v _Tetris_MovePlayerRight `(v ~T0 @X0 1 ef1`*S4 ]
 "425
-[; ;../Tetris/Tetris.c: 425: {
+[; ;../Tetris/Tetris.c: 425: void Tetris_MovePlayerRight(Tetris_Game *game)
+[v _Tetris_MovePlayerRight `(v ~T0 @X0 1 ef1`*S4 ]
+"426
+[; ;../Tetris/Tetris.c: 426: {
 {
 [e :U _Tetris_MovePlayerRight ]
-"424
-[; ;../Tetris/Tetris.c: 424: void Tetris_MovePlayerRight(Tetris_Game *game)
-[v _game `*S4 ~T0 @X0 1 r1 ]
 "425
-[; ;../Tetris/Tetris.c: 425: {
-[f ]
+[; ;../Tetris/Tetris.c: 425: void Tetris_MovePlayerRight(Tetris_Game *game)
+[v _game `*S4 ~T0 @X0 1 r1 ]
 "426
-[; ;../Tetris/Tetris.c: 426:  if (Tetris_PlayerTouchingRightBound(&game->player))
-[e $ ! != -> ( _Tetris_PlayerTouchingRightBound (1 &U . *U _game 1 `i -> 0 `i 103  ]
+[; ;../Tetris/Tetris.c: 426: {
+[f ]
 "427
-[; ;../Tetris/Tetris.c: 427:   return;
+[; ;../Tetris/Tetris.c: 427:  if (Tetris_PlayerTouchingRightBound(&game->player))
+[e $ ! != -> ( _Tetris_PlayerTouchingRightBound (1 &U . *U _game 1 `i -> 0 `i 103  ]
+"428
+[; ;../Tetris/Tetris.c: 428:   return;
 [e $UE 102  ]
 [e :U 103 ]
-"429
-[; ;../Tetris/Tetris.c: 429:  Tetris_RemovePlayerFromTable(game);
+"430
+[; ;../Tetris/Tetris.c: 430:  Tetris_RemovePlayerFromTable(game);
 [e ( _Tetris_RemovePlayerFromTable (1 _game ]
-"431
-[; ;../Tetris/Tetris.c: 431:  for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
+"432
+[; ;../Tetris/Tetris.c: 432:  for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> . `E36 0 `i 104  ]
 [e $U 105  ]
 [e :U 104 ]
-"432
-[; ;../Tetris/Tetris.c: 432:   game->player.unitBits[i] >>= 1;
+"433
+[; ;../Tetris/Tetris.c: 433:   game->player.unitBits[i] >>= 1;
 [e =>> *U + &U . . *U _game 1 2 * -> _i `ux -> -> # *U &U . . *U _game 1 2 `ui `ux -> -> 1 `i `ui ]
 [e =+ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> . `E36 0 `i 104  ]
 [e :U 105 ]
 }
-"434
-[; ;../Tetris/Tetris.c: 434:  if (Tetris_PlayerOverlapsEnvironment(game))
-[e $ ! != -> ( _Tetris_PlayerOverlapsEnvironment (1 _game `i -> 0 `i 107  ]
 "435
-[; ;../Tetris/Tetris.c: 435:  {
-{
+[; ;../Tetris/Tetris.c: 435:  if (Tetris_PlayerOverlapsEnvironment(game))
+[e $ ! != -> ( _Tetris_PlayerOverlapsEnvironment (1 _game `i -> 0 `i 107  ]
 "436
-[; ;../Tetris/Tetris.c: 436:   for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
+[; ;../Tetris/Tetris.c: 436:  {
+{
+"437
+[; ;../Tetris/Tetris.c: 437:   for (uint8_t i = 0; i < TETRIS_UNIT_HEIGHT; ++i)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i -> . `E36 0 `i 108  ]
 [e $U 109  ]
 [e :U 108 ]
-"437
-[; ;../Tetris/Tetris.c: 437:    game->player.unitBits[i] <<= 1;
+"438
+[; ;../Tetris/Tetris.c: 438:    game->player.unitBits[i] <<= 1;
 [e =<< *U + &U . . *U _game 1 2 * -> _i `ux -> -> # *U &U . . *U _game 1 2 `ui `ux -> -> 1 `i `ui ]
 [e =+ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i -> . `E36 0 `i 108  ]
 [e :U 109 ]
 }
-"438
-[; ;../Tetris/Tetris.c: 438:  }
+"439
+[; ;../Tetris/Tetris.c: 439:  }
 }
 [e $U 111  ]
-"439
-[; ;../Tetris/Tetris.c: 439:  else
-[e :U 107 ]
 "440
-[; ;../Tetris/Tetris.c: 440:  {
-{
+[; ;../Tetris/Tetris.c: 440:  else
+[e :U 107 ]
 "441
-[; ;../Tetris/Tetris.c: 441:   ++game->player.position.x;
-[e =+ . . . *U _game 1 0 0 -> -> 1 `i `uc ]
+[; ;../Tetris/Tetris.c: 441:  {
+{
 "442
-[; ;../Tetris/Tetris.c: 442:  }
+[; ;../Tetris/Tetris.c: 442:   ++game->player.position.x;
+[e =+ . . . *U _game 1 0 0 -> -> 1 `i `uc ]
+"443
+[; ;../Tetris/Tetris.c: 443:  }
 }
 [e :U 111 ]
-"444
-[; ;../Tetris/Tetris.c: 444:  Tetris_ApplyPlayerToTable(game);
-[e ( _Tetris_ApplyPlayerToTable (1 _game ]
 "445
-[; ;../Tetris/Tetris.c: 445: }
+[; ;../Tetris/Tetris.c: 445:  Tetris_ApplyPlayerToTable(game);
+[e ( _Tetris_ApplyPlayerToTable (1 _game ]
+"446
+[; ;../Tetris/Tetris.c: 446: }
 [e :UE 102 ]
 }
-"447
-[; ;../Tetris/Tetris.c: 447: void Tetris_RotatePlayer(Tetris_Game *game)
-[v _Tetris_RotatePlayer `(v ~T0 @X0 1 ef1`*S4 ]
 "448
-[; ;../Tetris/Tetris.c: 448: {
+[; ;../Tetris/Tetris.c: 448: void Tetris_RotatePlayer(Tetris_Game *game)
+[v _Tetris_RotatePlayer `(v ~T0 @X0 1 ef1`*S4 ]
+"449
+[; ;../Tetris/Tetris.c: 449: {
 {
 [e :U _Tetris_RotatePlayer ]
-"447
-[; ;../Tetris/Tetris.c: 447: void Tetris_RotatePlayer(Tetris_Game *game)
-[v _game `*S4 ~T0 @X0 1 r1 ]
 "448
-[; ;../Tetris/Tetris.c: 448: {
-[f ]
+[; ;../Tetris/Tetris.c: 448: void Tetris_RotatePlayer(Tetris_Game *game)
+[v _game `*S4 ~T0 @X0 1 r1 ]
 "449
-[; ;../Tetris/Tetris.c: 449:  Tetris_RemovePlayerFromTable(game);
+[; ;../Tetris/Tetris.c: 449: {
+[f ]
+"450
+[; ;../Tetris/Tetris.c: 450:  Tetris_RemovePlayerFromTable(game);
 [e ( _Tetris_RemovePlayerFromTable (1 _game ]
-"451
-[; ;../Tetris/Tetris.c: 451:  uint8_t oldRotation = game->player.rotation;
+"452
+[; ;../Tetris/Tetris.c: 452:  uint8_t oldRotation = game->player.rotation;
 [v _oldRotation `uc ~T0 @X0 1 a ]
 [e = _oldRotation . . *U _game 1 3 ]
-"452
-[; ;../Tetris/Tetris.c: 452:  ++game->player.rotation;
-[e =+ . . *U _game 1 3 -> -> 1 `i `uc ]
 "453
-[; ;../Tetris/Tetris.c: 453:  game->player.rotation %= game->player.unit->numRotations;
-[e =% . . *U _game 1 3 -> . *U . . *U _game 1 1 1 `i ]
+[; ;../Tetris/Tetris.c: 453:  ++game->player.rotation;
+[e =+ . . *U _game 1 3 -> -> 1 `i `uc ]
 "454
-[; ;../Tetris/Tetris.c: 454:  Tetris_UpdatePlayerUnitBits(&game->player);
-[e ( _Tetris_UpdatePlayerUnitBits (1 &U . *U _game 1 ]
+[; ;../Tetris/Tetris.c: 454:  game->player.rotation %= game->player.unit->numRotations;
+[e =% . . *U _game 1 3 -> . *U . . *U _game 1 1 1 `i ]
 "455
-[; ;../Tetris/Tetris.c: 455:  if (!Tetris_PlayerUnitBitsAreValid(&game->player) || Tetris_PlayerOverlapsEnvironment(game))
-[e $ ! || ! != -> ( _Tetris_PlayerUnitBitsAreValid (1 -> &U . *U _game 1 `*CS3 `i -> 0 `i != -> ( _Tetris_PlayerOverlapsEnvironment (1 _game `i -> 0 `i 113  ]
-"456
-[; ;../Tetris/Tetris.c: 456:  {
-{
-"457
-[; ;../Tetris/Tetris.c: 457:   game->player.rotation = oldRotation;
-[e = . . *U _game 1 3 _oldRotation ]
-"458
-[; ;../Tetris/Tetris.c: 458:   Tetris_UpdatePlayerUnitBits(&game->player);
+[; ;../Tetris/Tetris.c: 455:  Tetris_UpdatePlayerUnitBits(&game->player);
 [e ( _Tetris_UpdatePlayerUnitBits (1 &U . *U _game 1 ]
+"456
+[; ;../Tetris/Tetris.c: 456:  if (!Tetris_PlayerUnitBitsAreValid(&game->player) || Tetris_PlayerOverlapsEnvironment(game))
+[e $ ! || ! != -> ( _Tetris_PlayerUnitBitsAreValid (1 -> &U . *U _game 1 `*CS3 `i -> 0 `i != -> ( _Tetris_PlayerOverlapsEnvironment (1 _game `i -> 0 `i 113  ]
+"457
+[; ;../Tetris/Tetris.c: 457:  {
+{
+"458
+[; ;../Tetris/Tetris.c: 458:   game->player.rotation = oldRotation;
+[e = . . *U _game 1 3 _oldRotation ]
 "459
-[; ;../Tetris/Tetris.c: 459:  }
+[; ;../Tetris/Tetris.c: 459:   Tetris_UpdatePlayerUnitBits(&game->player);
+[e ( _Tetris_UpdatePlayerUnitBits (1 &U . *U _game 1 ]
+"460
+[; ;../Tetris/Tetris.c: 460:  }
 }
 [e :U 113 ]
-"461
-[; ;../Tetris/Tetris.c: 461:  Tetris_ApplyPlayerToTable(game);
-[e ( _Tetris_ApplyPlayerToTable (1 _game ]
 "462
-[; ;../Tetris/Tetris.c: 462: }
+[; ;../Tetris/Tetris.c: 462:  Tetris_ApplyPlayerToTable(game);
+[e ( _Tetris_ApplyPlayerToTable (1 _game ]
+"463
+[; ;../Tetris/Tetris.c: 463: }
 [e :UE 112 ]
 }

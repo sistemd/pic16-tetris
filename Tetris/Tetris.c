@@ -91,9 +91,9 @@ static Tetris_Unit const Tetris_units[TETRIS_NUM_UNITS] = {
 			},
 			{
 				0b00000000,
-				0b00001000,
-				0b00111000,
 				0b00000000,
+				0b00111000,
+				0b00100000,
 			},
 			{
 				0b00000000,
@@ -103,9 +103,9 @@ static Tetris_Unit const Tetris_units[TETRIS_NUM_UNITS] = {
 			},
 			{
 				0b00000000,
-				0b00000000,
+				0b00001000,
 				0b00111000,
-				0b00100000,
+				0b00000000,
 			},
 		},
 	},
@@ -133,9 +133,9 @@ static Tetris_Unit const Tetris_units[TETRIS_NUM_UNITS] = {
 			},
 			{
 				0b00000000,
-				0b00100000,
-				0b00111000,
 				0b00000000,
+				0b00111000,
+				0b00001000,
 			},
 		},
 	},
@@ -282,7 +282,8 @@ static void Tetris_UpdatePlayerUnitBits(Tetris_Player *player)
 
 static uint8_t Tetris_PlayerUnitBitsAreValid(const Tetris_Player *player)
 {
-	return Tetris_CountUnitBits(player->unit->bits[player->rotation]) == Tetris_CountUnitBits(player->unitBits);
+	return Tetris_CountUnitBits(player->unit->bits[player->rotation])
+		== Tetris_CountUnitBits(player->unitBits);
 }
 
 static void Tetris_SetPlayerUnit(Tetris_Player *player, const Tetris_Unit *unit)

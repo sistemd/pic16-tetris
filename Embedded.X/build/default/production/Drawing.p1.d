@@ -3,4 +3,6 @@ Drawing.c  \
 Drawing.h  \
 ../Tetris/Tetris.h  \
 LCD.h  \
-LogoImage.h 
+LogoImage.h  \
+Digits.h  \
+Compatibility.h 

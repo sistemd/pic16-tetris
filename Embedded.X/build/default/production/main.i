@@ -2921,7 +2921,7 @@ enum
 
 typedef enum {
     FAST_TIMER_PRESCALER = 1,
-    DEFAULT_TIMER_PRESCALER = 16,
+    DEFAULT_TIMER_PRESCALER = 12,
 } TimerPrescaler;
 
 static uint8_t timerPrescaler = DEFAULT_TIMER_PRESCALER;
@@ -2980,12 +2980,11 @@ static void SetupRandomness(void)
     ++uniqueSeed;
 }
 
-void main(void)
+static void Setup(void)
 {
-
-
     SetupOscillator();
     SetupRandomness();
+    SetupTimer();
 
     Buttons_SetupPortsAndInterrups();
 
@@ -2994,11 +2993,23 @@ void main(void)
     LCD_SegmentSelection(LCD_BOTH_SEGMENTS);
     LCD_Clear();
     LCD_TurnOn();
+}
+
+static void ShowLogo(void)
+{
+    DrawLogo();
+    _delay((unsigned long)((2800)*(8000000/4000.0)));
+}
+
+void main(void)
+{
+
+    Setup();
 
     Buttons buttons;
     Tetris_Game tetrisGame;
 
-    SetupTimer();
+    ShowLogo();
 
     while (1)
     {

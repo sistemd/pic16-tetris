@@ -19,6 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ClearingTests.h" />
+    <ClInclude Include="DigitsTests.h" />
+    <ClInclude Include="MovementTests.h" />
+    <ClInclude Include="RotationTests.h" />
+    <ClInclude Include="TableEquality.h" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="..\Tetris\Tetris.c" />
     <ClCompile Include="CUnit\Basic\Basic.c" />
     <ClCompile Include="CUnit\Framework\CUError.c" />
@@ -28,26 +35,13 @@
     <ClCompile Include="CUnit\Framework\Util.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ClearingTests.h" />
-    <ClInclude Include="CUnit\Headers\Basic.h" />
-    <ClInclude Include="CUnit\Headers\CUError.h" />
-    <ClInclude Include="CUnit\Headers\CUnit.h" />
-    <ClInclude Include="CUnit\Headers\CUnit_intl.h" />
-    <ClInclude Include="CUnit\Headers\MyMem.h" />
-    <ClInclude Include="CUnit\Headers\TestDB.h" />
-    <ClInclude Include="CUnit\Headers\TestRun.h" />
-    <ClInclude Include="CUnit\Headers\Util.h" />
-    <ClInclude Include="TableEquality.h" />
-    <ClInclude Include="MovementTests.h" />
-    <ClInclude Include="RotationTests.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <ProjectGuid>{33EE3039-A5EA-4D10-B443-0AF5881EC47F}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>TetrisTests</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>TetrisTests</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -96,7 +90,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Alec Eiffel\source\repos\Tetris\Tetris;C:\Users\Alec Eiffel\source\repos\Tetris\TetrisTests\CUnit\Headers;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\Tetris;$(SolutionDir)\Embedded.X;$(ProjectDir)\CUnit\Headers;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
