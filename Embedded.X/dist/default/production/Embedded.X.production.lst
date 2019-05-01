@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.05 build -831301201 
-                                                                                               Tue Apr 30 21:10:41 2019
+                                                                                               Wed May 01 21:23:02 2019
 
 Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1 
      1                           	processor	16F884
@@ -957,8 +957,8 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
    943  0008                     _PORTD	set	8
    944  0006                     _PORTB	set	6
    945  0005                     _PORTA	set	5
-   946  0039                     _RC1	set	57
-   947  0038                     _RC0	set	56
+   946  0038                     _RC0	set	56
+   947  0039                     _RC1	set	57
    948  0041                     _RD1	set	65
    949  0040                     _RD0	set	64
    950  003A                     _RC2	set	58
@@ -8753,34 +8753,34 @@ Microchip MPLAB XC8 C Compiler v2.05 (Free license) build 20181220022703 Og1
   8589  0932  1CF3               	btfss	LCD_SegmentSelection@segments,1
   8590  0933  2938               	goto	l408
   8591                           
-  8592                           ;LCD.c: 110:         RC0 = 0;
+  8592                           ;LCD.c: 110:         RC1 = 0;
   8593  0934  1283               	bcf	3,5	;RP0=0, select bank0
   8594  0935  1303               	bcf	3,6	;RP1=0, select bank0
-  8595  0936  1007               	bcf	7,0	;volatile
+  8595  0936  1087               	bcf	7,1	;volatile
   8596  0937  293B               	goto	l409
   8597  0938                     l408:	
   8598                           ;LCD.c: 111:     else
   8599                           
   8600                           
-  8601                           ;LCD.c: 112:         RC0 = 1;
+  8601                           ;LCD.c: 112:         RC1 = 1;
   8602  0938  1283               	bcf	3,5	;RP0=0, select bank0
   8603  0939  1303               	bcf	3,6	;RP1=0, select bank0
-  8604  093A  1407               	bsf	7,0	;volatile
+  8604  093A  1487               	bsf	7,1	;volatile
   8605  093B                     l409:	
   8606                           
   8607                           ;LCD.c: 114:     if (segments & LCD_BOTTOM_SEGMENT)
   8608  093B  1C73               	btfss	LCD_SegmentSelection@segments,0
   8609  093C  293F               	goto	l410
   8610                           
-  8611                           ;LCD.c: 115:         RC1 = 0;
-  8612  093D  1087               	bcf	7,1	;volatile
+  8611                           ;LCD.c: 115:         RC0 = 0;
+  8612  093D  1007               	bcf	7,0	;volatile
   8613  093E  0008               	return
   8614  093F                     l410:	
   8615                           ;LCD.c: 116:     else
   8616                           
   8617                           
-  8618                           ;LCD.c: 117:         RC1 = 1;
-  8619  093F  1487               	bsf	7,1	;volatile
+  8618                           ;LCD.c: 117:         RC0 = 1;
+  8619  093F  1407               	bsf	7,0	;volatile
   8620  0940  0008               	return
   8621  0941                     __end_of_LCD_SegmentSelection:	
   8622                           
@@ -10578,7 +10578,7 @@ EEDATA             100      0       4       0        1.6%
 
 
 Microchip Technology PIC Macro Assembler V2.05 build -831301201 
-Symbol Table                                                                                   Tue Apr 30 21:10:41 2019
+Symbol Table                                                                                   Wed May 01 21:23:02 2019
 
                         ?_UpdateDifficulty 0070                             _LCD_ReadStatus 0941  
                   __end_of_SetupRandomness 0A4E                                ?_LCD_IsBusy 0070  

@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\ALECEI~1\AppData\Local\Temp\s49c.o
+$C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 B B 2 2
 config CONFIG 0 2007 2007 2 2
@@ -140,33 +140,33 @@ STRING 800-881 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\Embedded.X.production.o
-D cinit CODE >1669:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-D cinit CODE >1672:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-D cinit CODE >1731:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-E cinit CODE >1732:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-F cinit CODE >1733:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-12 cinit CODE >1734:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-13 cinit CODE >1735:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-16 cinit CODE >1736:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-17 cinit CODE >1740:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-18 cinit CODE >1741:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-19 cinit CODE >1742:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-1C cinit CODE >1743:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-1D cinit CODE >1744:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-20 cinit CODE >1745:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-21 cinit CODE >1746:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-24 cinit CODE >1747:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-25 cinit CODE >1748:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-28 cinit CODE >1749:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-29 cinit CODE >1753:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-2B cinit CODE >1754:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-2C cinit CODE >1758:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-2D cinit CODE >1759:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-2E cinit CODE >1760:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-2F cinit CODE >1763:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-30 cinit CODE >1769:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-30 cinit CODE >1771:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
-31 cinit CODE >1772:C:\Users\ALECEI~1\AppData\Local\Temp\s49c.
+D cinit CODE >1669:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+D cinit CODE >1672:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+D cinit CODE >1731:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+E cinit CODE >1732:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+F cinit CODE >1733:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+12 cinit CODE >1734:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+13 cinit CODE >1735:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+16 cinit CODE >1736:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+17 cinit CODE >1740:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+18 cinit CODE >1741:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+19 cinit CODE >1742:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+1C cinit CODE >1743:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+1D cinit CODE >1744:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+20 cinit CODE >1745:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+21 cinit CODE >1746:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+24 cinit CODE >1747:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+25 cinit CODE >1748:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+28 cinit CODE >1749:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+29 cinit CODE >1753:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+2B cinit CODE >1754:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+2C cinit CODE >1758:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+2D cinit CODE >1759:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+2E cinit CODE >1760:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+2F cinit CODE >1763:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+30 cinit CODE >1769:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+30 cinit CODE >1771:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
+31 cinit CODE >1772:C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.
 4 intentry CODE >80:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
 BC9 text69 CODE >80:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
 BC9 text69 CODE >84:C:\Users\Alec Eiffel\source\repos\Tetris\Embedded.X\main.c
@@ -818,13 +818,13 @@ _INTF 59 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _PEIE 5E 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _TMR1 E 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _WPUB 95 0 ABS 0 - dist/default/production\Embedded.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\ALECEI~1\AppData\Local\Temp\s49c.o
+___sp 0 0 STACK 2 stack C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.o
 _main 90A 0 CODE 0 maintext dist/default/production\Embedded.X.production.o
 _rand 1E36 0 CODE 0 text6 dist/default/production\Embedded.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\Embedded.X.production.o
 main@buttons A1 0 BANK1 1 cstackBANK1 dist/default/production\Embedded.X.production.o
 _DrawCurrentScore 706 0 CODE 0 text53 dist/default/production\Embedded.X.production.o
-start 16 0 CODE 0 init C:\Users\ALECEI~1\AppData\Local\Temp\s49c.o
+start 16 0 CODE 0 init C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.o
 __end_of_LCD_WriteData 1196 0 CODE 0 text54 dist/default/production\Embedded.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __size_of___eetoi 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
@@ -876,12 +876,12 @@ ___memcpyee 1BA8 0 CODE 0 text33 dist/default/production\Embedded.X.production.o
 __HdataCOMMON 0 0 ABS 0 dataCOMMON -
 __end_of_Tetris_MovePlayerRight FD4 0 CODE 0 text20 dist/default/production\Embedded.X.production.o
 _LCD_TurnOff 1158 0 CODE 0 text46 dist/default/production\Embedded.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s49c.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s49c.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s49c.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s49c.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s49c.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s49c.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.o
 __end_of_LCD_SetX 11C6 0 CODE 0 text56 dist/default/production\Embedded.X.production.o
 __end_of_LCD_SetY 11DE 0 CODE 0 text55 dist/default/production\Embedded.X.production.o
 __end_of_LCD_SetZ 11F6 0 CODE 0 text39 dist/default/production\Embedded.X.production.o
@@ -956,8 +956,8 @@ __end_of___lwdiv 1BA8 0 CODE 0 text63 dist/default/production\Embedded.X.product
 __size_of_DrawCurrentScore 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 _INTEDG 40E 0 ABS 0 - dist/default/production\Embedded.X.production.o
 DrawTetrisGameColumn@leftMask 26 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\ALECEI~1\AppData\Local\Temp\s49c.o
-___stacklo 0 0 ABS 0 - C:\Users\ALECEI~1\AppData\Local\Temp\s49c.o
+___stackhi 0 0 ABS 0 - C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.o
+___stacklo 0 0 ABS 0 - C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.o
 __end_of_UpdateDifficulty 114 0 CODE 0 text1 dist/default/production\Embedded.X.production.o
 FlashVictoriously@i 2C 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 _uniqueSeed 0 4200 EEDATA 3 bssEEDATA dist/default/production\Embedded.X.production.o
@@ -1006,7 +1006,7 @@ __end_ofDrawHighscoreText@baseX 310 0 STRCODE 0 stringtext dist/default/producti
 __end_ofDrawHighscoreText@baseY 30E 0 STRCODE 0 stringtext dist/default/production\Embedded.X.production.o
 __end_of_Tetris_PlayerUnitBitsAreValid 1A4C 0 CODE 0 text14 dist/default/production\Embedded.X.production.o
 __end_of_LCD_Clear 1640 0 CODE 0 text47 dist/default/production\Embedded.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\ALECEI~1\AppData\Local\Temp\s49c.o
+___int_sp 0 0 STACK 2 stack C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.o
 __size_of_SetupTimer 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 __end_of_LCD_Reset 1336 0 CODE 0 text38 dist/default/production\Embedded.X.production.o
 __end_of_LCD_Write 1370 0 CODE 0 text57 dist/default/production\Embedded.X.production.o
@@ -1120,7 +1120,7 @@ __size_of_Tetris_MovePlayerLeft 0 0 ABS 0 - dist/default/production\Embedded.X.p
 __size_of_LCD_IsBusy 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 Tetris_ApplyPlayerToTable@game 2B 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __size_of_Tetris_UpdateGame 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\ALECEI~1\AppData\Local\Temp\s49c.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\ALECEI~1\AppData\Local\Temp\s5i8.o
 __size_of_Tetris_UpdatePlayerUnitBits 0 0 ABS 0 - dist/default/production\Embedded.X.production.o
 Tetris_PlayerUnitBitsAreValid@player 2A 0 BANK0 1 cstackBANK0 dist/default/production\Embedded.X.production.o
 __size_of___memcpyee 0 0 ABS 0 - dist/default/production\Embedded.X.production.o

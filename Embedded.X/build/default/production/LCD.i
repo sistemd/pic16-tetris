@@ -2769,14 +2769,14 @@ void LCD_WriteData(uint8_t data)
 void LCD_SegmentSelection(LCD_Segments segments)
 {
     if (segments & LCD_TOP_SEGMENT)
-        RC0 = 0;
-    else
-        RC0 = 1;
-
-    if (segments & LCD_BOTTOM_SEGMENT)
         RC1 = 0;
     else
         RC1 = 1;
+
+    if (segments & LCD_BOTTOM_SEGMENT)
+        RC0 = 0;
+    else
+        RC0 = 1;
 }
 
 void LCD_TurnOn(void)

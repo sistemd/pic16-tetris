@@ -74,12 +74,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LCD.c: 107: void LCD_SegmentSelection(LCD_Segments segments)
 [c E1292 0 1 2 3 .. ]
 [n E1292 . LCD_NO_SEGMENT LCD_BOTTOM_SEGMENT LCD_TOP_SEGMENT LCD_BOTH_SEGMENTS  ]
-"4133 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 4133: extern volatile __bit RC0 __attribute__((address(0x38)));
-[v _RC0 `Vb ~T0 @X0 0 e@56 ]
-"4136
+"4136 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 4136: extern volatile __bit RC1 __attribute__((address(0x39)));
 [v _RC1 `Vb ~T0 @X0 0 e@57 ]
+"4133
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f884.h: 4133: extern volatile __bit RC0 __attribute__((address(0x38)));
+[v _RC0 `Vb ~T0 @X0 0 e@56 ]
 "147 LCD.c
 [; ;LCD.c: 147:     for (uint8_t x = 0; x < LCD_NUM_PAGES; ++x)
 [c E1298 64 128 8 64 .. ]
@@ -601,29 +601,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LCD.c: 109:     if (segments & LCD_TOP_SEGMENT)
 [e $ ! != & -> _segments `ui -> . `E1292 2 `ui -> -> 0 `i `ui 150  ]
 "110
-[; ;LCD.c: 110:         RC0 = 0;
-[e = _RC0 -> -> 0 `i `b ]
+[; ;LCD.c: 110:         RC1 = 0;
+[e = _RC1 -> -> 0 `i `b ]
 [e $U 151  ]
 "111
 [; ;LCD.c: 111:     else
 [e :U 150 ]
 "112
-[; ;LCD.c: 112:         RC0 = 1;
-[e = _RC0 -> -> 1 `i `b ]
+[; ;LCD.c: 112:         RC1 = 1;
+[e = _RC1 -> -> 1 `i `b ]
 [e :U 151 ]
 "114
 [; ;LCD.c: 114:     if (segments & LCD_BOTTOM_SEGMENT)
 [e $ ! != & -> _segments `ui -> . `E1292 1 `ui -> -> 0 `i `ui 152  ]
 "115
-[; ;LCD.c: 115:         RC1 = 0;
-[e = _RC1 -> -> 0 `i `b ]
+[; ;LCD.c: 115:         RC0 = 0;
+[e = _RC0 -> -> 0 `i `b ]
 [e $U 153  ]
 "116
 [; ;LCD.c: 116:     else
 [e :U 152 ]
 "117
-[; ;LCD.c: 117:         RC1 = 1;
-[e = _RC1 -> -> 1 `i `b ]
+[; ;LCD.c: 117:         RC0 = 1;
+[e = _RC0 -> -> 1 `i `b ]
 [e :U 153 ]
 "118
 [; ;LCD.c: 118: }
