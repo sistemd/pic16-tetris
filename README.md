@@ -11,3 +11,7 @@ They were made using KiCad.
 ### Demo video
 
 https://www.youtube.com/watch?v=IU35cAhXwaM
+
+### Schematic
+
+![Schematic](/scheme_image.png)
